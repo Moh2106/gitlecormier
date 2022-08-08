@@ -1,20 +1,29 @@
 <template>
-  <div class="footer">
+  <div class="footer flex justify-around">
     <div>
-        <p> <font-awesome-icon icon="fa-solid fa-phone" /> 00 33 2 32 42 40 23</p>
-        <p> <font-awesome-icon icon="fa-solid fa-phone" /> 00 33 6 50 04 73 88</p>
+        <p><font-awesome-icon icon="fa-solid fa-user-secret"/> Adresse</p>
     </div>
 
+    <div class="a">
+        <h1 class="mb-5">Nous contacter sur : </h1>
 
+        <div class="flex justify-between a">
+            <div class="mr-36 scroll-mr-36">
+                <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl "/> 00 33 2 32 42 40 23</p>
+                <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl "/> 00 33 6 50 04 73 88</p>
+                <p> <font-awesome-icon icon="fa-solid fa-envelope" class=" text-2xl "/> Mail</p>
+            </div>
 
-    <div>
-        <p><i class="fa-solid fa-envelope"></i> Mail</p>
-        <font-awesome-icon icon="fa-solid fa-user-secret" />
+            <div>
+                <p>
+                    <a href="https://www.facebook.com/gitelecormier/" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-facebook" class=" text-2xl hover:bg-blue-700 hover:scale-150 "/></a>
+                </p>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <p><font-awesome-icon icon="fa-brands fa-facebook" /></p>
-    </div>
+    
+    
   </div>
 </template>
 
@@ -29,5 +38,6 @@ export default {
         background: #bc6c25;
         height: 30vh;
         color: #fff;
+        
     }
 </style>

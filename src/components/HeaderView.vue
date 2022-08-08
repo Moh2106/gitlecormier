@@ -1,8 +1,9 @@
 <template>
   <div class="flex justify-between header">
     <div>
-        <!---<img src="" alt="">-->
-        <h1>Gites le Cormier</h1>
+        <!--<img src="../assets/Cormier/cormier_logo.png" alt="logo du cormier" class="h-full">-->
+        <h1 class="header__title">Gite <br> 
+          <span>Le Cormier</span> </h1>
     </div>
 
     <nav>
@@ -28,12 +29,35 @@ export default {
 .header{ 
   background: #dda15e;
   color: #fff;
-  height: 5vh;
+  height: 7.5vh;
   font-family: 'Oleo Script Swash Caps', cursive;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100000;
+
+  &__title{ 
+    border: 3px solid #fff;
+    border-radius: 25%;
+    background: #fff;
+    color: #bc6c25;
+    margin-left: 1em;
+    padding: 0 1em;
+
+    span{ 
+      margin-left: 1em;
+      color: red;
+    }
+  }
 
   nav{ 
+    margin: auto;
+
   a{ 
-    padding: 0 1.5em;
+    padding: 0 1.5em 0.5em 1.5em;
+    align-items: center;
 
     &:hover{ 
       transition: 0.5s ease-in-out;
@@ -42,18 +66,12 @@ export default {
     }
 
     &.router-link-exact-active{ 
-      text-decoration: underline;
-      text-decoration-color: #fff;
-      transition: 0.5s ease-in-out;
+      border-bottom: 3px solid #fff;
     }
 
-    
   }
-
 
   }
 }
-
-
 
 </style>
