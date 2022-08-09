@@ -17,13 +17,18 @@ export default {
 </script>
 
 <style lang="scss">
+* { 
+  margin: 0;
+  box-sizing: border-box;
+}
 #app {
   font-family: 'Oleo Script Swash Caps', cursive;
   background: #eef;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  //color: #2c3e50;
+  background: url('../src/assets/Cormier/cormier_background.jpg');
+  background-attachment: fixed;
 }
 
 </style>

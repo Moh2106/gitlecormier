@@ -1,7 +1,7 @@
 <template>
   <div class="footer flex justify-around">
     <div>
-        <p><font-awesome-icon icon="fa-solid fa-user-secret"/> Adresse</p>
+        <p class="mt-9"><font-awesome-icon icon="fa-solid fa-user-secret"/> 1 rue du cormier 27350 Hauville</p>
     </div>
 
     <div class="a">
@@ -11,7 +11,6 @@
             <div class="mr-36 scroll-mr-36">
                 <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl "/> 00 33 2 32 42 40 23</p>
                 <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl "/> 00 33 6 50 04 73 88</p>
-                <p> <font-awesome-icon icon="fa-solid fa-envelope" class=" text-2xl "/> Mail</p>
             </div>
 
             <div>

@@ -84,20 +84,12 @@
 
     <!--La partie de description de la maison-->
 
-    <div class="accueil__details">
+    <div class="accueil__details m-2 p-2">
         <p>Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.</p>
 
-        <br>
+       
 
-        <div class="flex justify-around mb-2">
-            <div class="accueil__details--capacite">
-                <p>Capacité : 5 personnes</p>
-                <p>Nombre de chambres : 3</p>
-                <p>Surface : 74 m²</p>
-                <p>Orientation : Sud</p>
-                <p>Animaux : Autorisés (gratuit)</p>
-                <p>Internet : Oui</p>
-            </div>
+        <!---<div class="flex justify-around mb-2">
 
             <div class="flex justify-center mr-2">
                 <div class="rounded-lg shadow-lg bg-white max-w-sm">
@@ -113,25 +105,76 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 
     <br><br>
 
-    <br><br>
+    <!---------------Gallerie ---------------------------------------------->
+    <div class="accueil__gallery flex mb-5">
+        <div class="accueil__gallery--items">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp" alt="" @click="grandir">
+        </div>
+
+        <div class="accueil__gallery--items w-1/4" >
+            <img src="../assets/Cormier/cormier_deco2.jpg" alt="" @click="grandir">
+        </div>
+
+        <div class="accueil__gallery--items" >
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/4.webp" alt="" @click="grandir">
+        </div>
+
+        <div class="accueil__gallery--items w-1/4" >
+            <img src="../assets/Cormier/cormier_chemine.jpg" alt="" @click="grandir">
+        </div>
+    </div>
+
+
+
+    <div class="accueil__popup">
+        <span @click="fermer">&times;</span>
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp" alt="">
+    </div>
+
+    
   </div>
 </template>
 
 <script>
 
 export default {
+    setup(){ 
 
+        const grandir = () =>{ 
+            document.querySelectorAll('.accueil__gallery img').forEach(image => { 
+                image.onclick = () => { 
+                document.querySelector('.accueil__popup').style.display = 'block'
+
+                document.querySelector('.accueil__popup img').src = image.getAttribute('src')
+            }
+            })
+        }
+
+        const fermer = () =>{ 
+            document.querySelector('.accueil__popup span').onclick = () => { 
+                document.querySelector('.accueil__popup').style.display = 'none'
+            }
+        }
+
+        return{ 
+            grandir,
+            fermer,
+        }
+
+    }
+    
 }
 </script>
 
 <style lang="scss" scoped>
 
     .accueil{ 
+        background: url("https://mdbcdn.b-cdn.net/img/video/Tropical.mp4");
 
         &__description{ 
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -162,6 +205,58 @@ export default {
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                 background: #0f4c5c;
                 color: #fff;
+            }
+        }
+
+        &__gallery{ 
+            width: 90%;
+            margin: auto;
+
+            &--items{ 
+                padding: 0.5em;
+                img{ 
+                    cursor: pointer;
+
+                    &:hover{ 
+                        transform: scale(1.1em);
+                        font-size: 2em;
+                    }
+                }
+                
+            }
+        }
+
+        &__popup{ 
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 100000;
+            display: none;
+            transition: .35s ease-in-out;
+            backdrop-filter: blur(20px);
+
+            span{ 
+                position: absolute;
+                top: 0;
+                right: 10px;
+                font-size: 100px;
+                font-weight: bolder;
+                color: #fff;
+                cursor: pointer;
+                z-index: 100000;
+            }
+
+            img{ 
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                object-fit: cover;
+                width: 700px;
+                height: 400px;
+                
             }
         }
 
