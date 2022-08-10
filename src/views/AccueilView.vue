@@ -185,7 +185,9 @@ export default {
             border-radius: 0.5em;
             width: 80%;
             margin: auto;
-            background: #fff;
+            //background: #fff;
+            background: #606c38;
+            color: #fff;
             
             h1{
                 font-size: 2em;
