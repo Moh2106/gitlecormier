@@ -14,14 +14,6 @@
                 />
                 </div>
 
-                <!---<div class="carousel-item active relative float-left w-full">
-                <img
-                    src="../assets/Cormier/cormier2.jpg"
-                    class="block w-full"
-                    alt="Wild Landscape"
-                />
-                </div>-->
-
                 <div class="carousel-item active relative float-left w-full">
                 <img
                     src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
@@ -82,10 +74,18 @@
 
     <br>
 
+    <!--La partie vidéo -->
+    <div class="accueil__video">
+        <video src="../assets/Vidéo/cormier_video.mp4" autoplay type="video/mp4" controls></video>
+    </div>
+
     <!--La partie de description de la maison-->
 
     <div class="accueil__details m-2 p-2">
-        <p>Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.</p>
+        <p>Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.
+            <br>
+            <a href="https://maps.app.goo.gl/Ei1pMxb8VUCkMgV49" target="_blank" rel="noopener noreferrer" class="red">Google maps</a>
+        </p>
 
        
 
@@ -112,8 +112,12 @@
 
     <!---------------Gallerie ---------------------------------------------->
     <div class="accueil__gallery flex mb-5">
-        <div class="accueil__gallery--items">
+        <!---<div class="accueil__gallery--items">
             <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp" alt="" @click="grandir">
+        </div>-->
+
+        <div class="accueil__gallery--items w-1/4" >
+            <img src="../assets/Cormier/cormier_pingpong.jpg" alt="Terrain de Ping Pong" @click="grandir">
         </div>
 
         <div class="accueil__gallery--items w-1/4" >
@@ -188,6 +192,17 @@ export default {
             }
         }
 
+        &__video{ 
+            width: 100%;
+            margin: auto;
+            margin-bottom: 2em;
+
+            video{ 
+                width: auto;
+                margin: auto;
+            }
+        }
+
         &__details{ 
             margin-top: 1em;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -216,11 +231,14 @@ export default {
                 padding: 0.5em;
                 img{ 
                     cursor: pointer;
+                    border-radius: 0.5em;
+                    height: 100%;
 
-                    &:hover{ 
-                        transform: scale(1.1em);
-                        font-size: 2em;
+                    &:hover{
+                        //transform: scaleX(20em);
+                        border-radius: 20%;
                     }
+
                 }
                 
             }

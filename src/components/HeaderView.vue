@@ -43,6 +43,7 @@ export default {
     border-radius: 25%;
     background: #fff;
     color: #bc6c25;
+    //color: #0ead69;
     margin-left: 1em;
     padding: 0 1em;
 
