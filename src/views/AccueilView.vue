@@ -238,7 +238,7 @@ export default {
 
                     &:hover{
                         //transform: scaleX(20em);
-                        border-radius: 20%;
+                        border-radius: 10%;
                     }
 
                 }
