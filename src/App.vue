@@ -28,7 +28,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background: url('../src/assets/Cormier/cormier_background.jpg');
-  background-attachment: fixed;
+  //background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 </style>

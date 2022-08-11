@@ -84,28 +84,8 @@
     <div class="accueil__details m-2 p-2">
         <p>Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.
             <br>
-            <a href="https://maps.app.goo.gl/Ei1pMxb8VUCkMgV49" target="_blank" rel="noopener noreferrer" class="red">Google maps</a>
         </p>
 
-       
-
-        <!---<div class="flex justify-around mb-2">
-
-            <div class="flex justify-center mr-2">
-                <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                    <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                    <img class="rounded-t-lg" src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt=""/>
-                    </a>
-                    <div class="p-6">
-                    <h5 class="text-gray-900 text-xl font-medium mb-2">La maison</h5>
-                    <p class="text-gray-700 text-base mb-4">
-                        Cliquez ici pour voir plus de détails sur la maison
-                    </p>
-                    <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Plus de détails</button>
-                    </div>
-                </div>
-            </div>
-        </div>-->
     </div>
 
     <br><br>
