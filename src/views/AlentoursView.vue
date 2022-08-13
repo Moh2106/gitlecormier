@@ -121,7 +121,7 @@
         </div>
     </div>
 
-    <!------------------Pont-Audemer Val de Risle---------------------->
+    <!------------------ Pont-Audemer Val de Risle ---------------------->
     <div class="alentours__elements flex justify-around">
         <div>
           <img src="../assets/Alentours/pont_audemar.png" alt="Pont-Audemer Val de Risle">
@@ -137,7 +137,40 @@
             </p>
         </div>
     </div>
-    <!--------------------------------------------->
+
+    <!------------------ La ferme du Bec --------------------------->
+    <div class="alentours__elements flex justify-around">
+        <div>
+          <img src="../assets/Alentours/ferme_du_bec.png" alt="Ferme du bec">
+        </div>
+
+        <div>
+            <h1>PONT-AUDEMAR VAL DE RISLE</h1>
+            <p>La Ferme biologique du Bec Hellouin un lieu de production, de recherche et de transmission. Plus de 800 variétés de fruits et légumes croissent dans ses jardins, dans un respect absolu de l’environnement, grâce aux concepts de la permaculture. De nombreuses recherches y sont menées pour explorer des pratiques agricoles naturelles et efficaces, qui contribuent à la régénération de la biosphère.
+            </p>
+
+            <p>
+              <a href="http://https://www.fermedubec.com/" target="_blank" rel="noopener noreferrer">https://www.fermedubec.com/</a>
+            </p>
+        </div>
+    </div>
+
+    <!------------------ Abbaye du bec --------------------------->
+    <div class="alentours__elements flex justify-around">
+        <div>
+          <img src="../assets/Alentours/abbaye_du_bec.png" alt="">
+        </div>
+
+        <div>
+            <h1>ABBAYE DU BEC</h1>
+            <p> A ajouter
+            </p>
+
+            <p>
+              <a href="https://abbayedubec.org/" target="_blank" rel="noopener noreferrer">https://abbayedubec.org/</a>
+            </p>
+        </div>
+    </div>
   </div>
 </template>
 

@@ -81,35 +81,45 @@
 
     <!--La partie de description de la maison-->
 
-    <div class="accueil__details m-2 p-2">
+    <!---<div class="accueil__details m-2 p-2">
         <p>Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.
             <br>
         </p>
 
-    </div>
+    </div> -->
 
-    <br><br>
+    <br>
 
     <!---------------Gallerie ---------------------------------------------->
-    <div class="accueil__gallery flex mb-5">
-        <!---<div class="accueil__gallery--items">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp" alt="" @click="grandir">
-        </div>-->
+    <div class="accueil__gallery flex mb-6">
 
-        <div class="accueil__gallery--items w-1/4" >
-            <img src="../assets/Cormier/cormier_pingpong.jpg" alt="Terrain de Ping Pong" @click="grandir">
+        <div class="accueil__gallery--items w-1/4" @click="Cliquer">
+            <img src="../assets/Cormier/cormier_pingpong.jpg" alt="Terrain de Ping Pong">
+            <div>
+                <h1>Voir plus</h1>
+            </div>
         </div>
 
-        <div class="accueil__gallery--items w-1/4" >
-            <img src="../assets/Cormier/cormier_deco2.jpg" alt="" @click="grandir">
+        <div class="accueil__gallery--items w-1/4" @click="Cliquer">
+            <img src="../assets/Cormier/cormier_deco2.jpg" alt="" >
+            <div>
+                <h1>Voir plus</h1>
+            </div>
         </div>
 
-        <div class="accueil__gallery--items" >
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/4.webp" alt="" @click="grandir">
+        <div class="accueil__gallery--items" @click="Cliquer">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/4.webp" alt="">
+            <div>
+                <h1>Voir plus</h1>
+            </div>
         </div>
 
-        <div class="accueil__gallery--items w-1/4" >
-            <img src="../assets/Cormier/cormier_chemine.jpg" alt="" @click="grandir">
+        <div class="accueil__gallery--items w-1/4" @click="Cliquer">
+            <img src="../assets/Cormier/cormier_chemine.jpg" alt="">
+            <div>
+                <h1>Voir plus</h1>
+            </div>
+            
         </div>
     </div>
 
@@ -127,27 +137,35 @@
 <script>
 
 export default {
+
     setup(){ 
 
-        const grandir = () =>{ 
-            document.querySelectorAll('.accueil__gallery img').forEach(image => { 
-                image.onclick = () => { 
-                document.querySelector('.accueil__popup').style.display = 'block'
+        // Cette fonction permet d'agrandir l'image en cliquant sur son div parent
 
-                document.querySelector('.accueil__popup img').src = image.getAttribute('src')
-            }
+        const Cliquer = () => { 
+            const items = document.querySelectorAll('.accueil__gallery--items')
+            
+
+            items.forEach(image => { 
+                image.onclick = (e) => { 
+                    const source = e.currentTarget.querySelector('img').src;
+                    document.querySelector('.accueil__popup').style.display = 'block'
+                    document.querySelector('.accueil__popup img').src = source
+                }
             })
         }
 
+        // Cette fonction permet de fermer l'image qui sera affiché
         const fermer = () =>{ 
             document.querySelector('.accueil__popup span').onclick = () => { 
                 document.querySelector('.accueil__popup').style.display = 'none'
             }
         }
+        
 
         return{ 
-            grandir,
             fermer,
+            Cliquer,
         }
 
     }
@@ -208,19 +226,49 @@ export default {
         &__gallery{ 
             width: 90%;
             margin: auto;
+            max-height: 95%;
+            overflow: hidden;
 
             &--items{ 
                 padding: 0.5em;
-                img{ 
-                    cursor: pointer;
+                max-height: 100%;
+                position: relative;
+
+                img{
                     border-radius: 0.5em;
                     height: 100%;
+                }
 
-                    &:hover{
-                        //transform: scaleX(20em);
-                        border-radius: 10%;
+                div{ 
+                    position: absolute;
+                    cursor: pointer;
+                    top: 5px;
+                    width: 96%;
+                    height: 95%;
+                    opacity: 0;
+                    transition: all 0.5s ease-in-out;
+                    //backdrop-filter: blur(2px);
+                    //background: rgb(239, 10, 10);
+
+                    &:hover{ 
+                        opacity: 1;
+
+                        h1{ 
+                            transform: translateY(00%);
+                            transition: 0.5s;
+                        }
                     }
 
+                    h1{ 
+                        font-size: 32px;
+                        color: #fff;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transform: translateY(100%);
+
+                    }
                 }
                 
             }
@@ -263,6 +311,7 @@ export default {
         .gite{ 
         height: 675px;
     }
+
     }
     
 </style>

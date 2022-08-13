@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-white ">
+    <div>
         <GoogleMap 
             api-key="AIzaSyBUeHIupxp0Xs46su0HS87zMbKyS1KNIOo" 
             style="width: 100%; height: 500px" 
