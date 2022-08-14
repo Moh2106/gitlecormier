@@ -96,28 +96,28 @@
         <div class="accueil__gallery--items w-1/4" @click="Cliquer">
             <img src="../assets/Cormier/cormier_pingpong.jpg" alt="Terrain de Ping Pong">
             <div>
-                <h1>Voir plus</h1>
+                <h1>Cliquez pour plus de visibilité</h1>
             </div>
         </div>
 
         <div class="accueil__gallery--items w-1/4" @click="Cliquer">
             <img src="../assets/Cormier/cormier_deco2.jpg" alt="" >
             <div>
-                <h1>Voir plus</h1>
+                <h1>Cliquez pour plus de visibilité</h1>
             </div>
         </div>
 
         <div class="accueil__gallery--items" @click="Cliquer">
             <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/4.webp" alt="">
             <div>
-                <h1>Voir plus</h1>
+                <h1>Cliquez pour plus de visibilité</h1>
             </div>
         </div>
 
         <div class="accueil__gallery--items w-1/4" @click="Cliquer">
             <img src="../assets/Cormier/cormier_chemine.jpg" alt="">
             <div>
-                <h1>Voir plus</h1>
+                <h1>Cliquez pour plus de visibilité</h1>
             </div>
             
         </div>
@@ -156,6 +156,7 @@ export default {
         }
 
         // Cette fonction permet de fermer l'image qui sera affiché
+
         const fermer = () =>{ 
             document.querySelector('.accueil__popup span').onclick = () => { 
                 document.querySelector('.accueil__popup').style.display = 'none'
@@ -242,9 +243,9 @@ export default {
                 div{ 
                     position: absolute;
                     cursor: pointer;
-                    top: 5px;
-                    width: 96%;
-                    height: 95%;
+                    top: 6px;
+                    width: 95%;
+                    height: 94%;
                     opacity: 0;
                     transition: all 0.5s ease-in-out;
                     //backdrop-filter: blur(2px);
@@ -260,13 +261,18 @@ export default {
                     }
 
                     h1{ 
-                        font-size: 32px;
+                        font-size: 1.5em;
                         color: #fff;
                         height: 100%;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         transform: translateY(100%);
+                        //border: 1px solid #fff;
+                        border-radius: 0.5em;
+                        //background: rgba(15, 76, 92,0.3);
+                        background: rgba(0, 0, 0, 0.5);
+                        
 
                     }
                 }
