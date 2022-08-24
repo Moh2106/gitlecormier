@@ -79,42 +79,40 @@
         <video src="../assets/Vidéo/cormier_video.mp4" autoplay type="video/mp4" controls></video>
     </div>
 
-    <!--La partie de description de la maison-->
-
-    <!---<div class="accueil__details m-2 p-2">
-        <p>Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.
-            <br>
-        </p>
-
-    </div> -->
-
     <br>
 
     <!---------------Gallerie ---------------------------------------------->
-    <div class="accueil__gallery flex mb-6">
+    <div class="accueil__gallery mb-6">
 
-        <div class="accueil__gallery--items w-1/4" @click="Cliquer">
+        <div class="accueil__gallery--items" @click="Cliquer">
             <img src="../assets/Cormier/cormier_pingpong.jpg" alt="Terrain de Ping Pong">
             <div>
                 <h1>Cliquez pour plus de visibilité</h1>
             </div>
         </div>
 
-        <div class="accueil__gallery--items w-1/4" @click="Cliquer">
+        <div class="accueil__gallery--items" @click="Cliquer">
             <img src="../assets/Cormier/cormier_deco2.jpg" alt="" >
             <div>
                 <h1>Cliquez pour plus de visibilité</h1>
             </div>
         </div>
 
-        <div class="accueil__gallery--items" @click="Cliquer">
+        <!----<div class="accueil__gallery--items" @click="Cliquer">
             <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/4.webp" alt="">
+            <div>
+                <h1>Cliquez pour plus de visibilité</h1>
+            </div>
+        </div>-->
+
+        <div class="accueil__gallery--items" @click="Cliquer">
+            <img src="../assets/Cormier/cormier_jaccuzzi.jpg" alt="">
             <div>
                 <h1>Cliquez pour plus de visibilité</h1>
             </div>
         </div>
 
-        <div class="accueil__gallery--items w-1/4" @click="Cliquer">
+        <div class="accueil__gallery--items" @click="Cliquer">
             <img src="../assets/Cormier/cormier_chemine.jpg" alt="">
             <div>
                 <h1>Cliquez pour plus de visibilité</h1>
@@ -184,7 +182,6 @@ export default {
             border-radius: 0.5em;
             width: 80%;
             margin: auto;
-            //background: #fff;
             background: #606c38;
             color: #fff;
             
@@ -229,6 +226,9 @@ export default {
             margin: auto;
             max-height: 95%;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             &--items{ 
                 padding: 0.5em;
@@ -237,7 +237,10 @@ export default {
 
                 img{
                     border-radius: 0.5em;
-                    height: 100%;
+                    width: 300px;
+                    height: 200px;
+                    //height: 100%;
+                    
                 }
 
                 div{ 
@@ -248,8 +251,6 @@ export default {
                     height: 94%;
                     opacity: 0;
                     transition: all 0.5s ease-in-out;
-                    //backdrop-filter: blur(2px);
-                    //background: rgb(239, 10, 10);
 
                     &:hover{ 
                         opacity: 1;
@@ -268,12 +269,8 @@ export default {
                         align-items: center;
                         justify-content: center;
                         transform: translateY(100%);
-                        //border: 1px solid #fff;
                         border-radius: 0.5em;
-                        //background: rgba(15, 76, 92,0.3);
                         background: rgba(0, 0, 0, 0.5);
-                        
-
                     }
                 }
                 
@@ -288,7 +285,7 @@ export default {
             width: 100%;
             z-index: 100000;
             display: none;
-            transition: .35s ease-in-out;
+            transition: .5s ease-in-out;
             backdrop-filter: blur(20px);
 
             span{ 
@@ -310,6 +307,7 @@ export default {
                 object-fit: cover;
                 width: 700px;
                 height: 400px;
+                object-fit: fill;
                 
             }
         }

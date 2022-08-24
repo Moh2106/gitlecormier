@@ -8,8 +8,8 @@
 
     <nav>
         <router-link to="/" class="hover:bg-orange-600">Accueil</router-link>
-        <router-link to="/about" class="hover:bg-orange-600">Liens</router-link>
-        <router-link to="/about" class="hover:bg-orange-600">Descriptifs</router-link>
+        <router-link to="/liens" class="hover:bg-orange-600">Liens</router-link>
+        <router-link to="/descriptifs" class="hover:bg-orange-600">Descriptifs</router-link>
         <router-link to="/arrive" class="hover:bg-orange-600">Comment arriver</router-link>
         <router-link to="/alentours" class="hover:bg-orange-600">Aux Alentours</router-link>
         <router-link to="/about" class="hover:bg-orange-600">Livres d'or</router-link>
@@ -37,15 +37,18 @@ export default {
   right: 0;
   left: 0;
   z-index: 100000;
+  box-shadow: 0px 1px 0px 1px #bc6c25;
+-webkit-box-shadow: 0px 1px 0px 1px #bc6c25;
+-moz-box-shadow: 0px 1px 0px 1px #bc6c25;
 
   &__title{ 
     border: 3px solid #fff;
     border-radius: 25%;
     background: #fff;
     color: #bc6c25;
-    //color: #0ead69;
     margin-left: 1em;
     padding: 0 1em;
+    //line-height: 1.2em;
 
     span{ 
       margin-left: 1em;

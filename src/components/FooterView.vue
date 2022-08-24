@@ -15,7 +15,7 @@
 
             <div>
                 <p>
-                    <a href="https://www.facebook.com/gitelecormier/" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-facebook" class=" text-2xl hover:bg-blue-700 hover:scale-150 "/></a>
+                    <a href="https://www.facebook.com/gitelecormier/" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-facebook" class=" text-2xl hover:bg-blue-700 hover:scale-125 b"/></a>
                 </p>
             </div>
         </div>

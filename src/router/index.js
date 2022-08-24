@@ -1,13 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AccueilView from '../views/AccueilView'
+import LienView from '../views/LienView'
 import VisiterView from '../views/VisiterView'
 import AlentoursView from '../views/AlentoursView'
+import DescriptionView from '../views/DescriptionView'
 
 const routes = [
   {
     path: '/',
     name: 'accueil',
     component: AccueilView
+  },
+
+  {
+    path: '/liens',
+    name: 'lien',
+    component: LienView
+  },
+
+  {
+    path: '/descriptifs',
+    name: 'descriptifs',
+    component: DescriptionView
   },
 
   {
