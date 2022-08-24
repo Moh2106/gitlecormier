@@ -232,7 +232,7 @@
 
         <!--Debut du slide -->
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide relative carousel-fade" data-bs-ride="carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide relative carousel-fade taille" data-bs-ride="carousel">
   <div class="carousel-inner relative w-full overflow-hidden">
     <div class="carousel-item active relative float-left w-full">
       <img
