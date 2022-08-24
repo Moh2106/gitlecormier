@@ -127,7 +127,6 @@
         <span @click="fermer">&times;</span>
         <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp" alt="">
     </div>
-
     
   </div>
 </template>
