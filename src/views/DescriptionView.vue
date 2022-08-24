@@ -234,6 +234,14 @@
 
         <div id="carouselExampleSlidesOnly" class="carousel slide relative carousel-fade taille" data-bs-ride="carousel">
   <div class="carousel-inner relative w-full overflow-hidden">
+    <div class="carousel-item relative float-left w-full">
+      <img
+        src="../assets/RezDeChaussee/rdc1.jpg"
+        class="block w-full"
+        alt="Exotic Fruits"
+      />
+    </div>
+
     <div class="carousel-item active relative float-left w-full">
       <img
         src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
@@ -305,6 +313,12 @@
       data-bs-slide-to="2"
       aria-label="Slide 3"
     ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="3"
+      aria-label="Slide 4"
+    ></button>
   </div>
   <div class="carousel-inner relative w-full overflow-hidden">
     <div class="carousel-item active relative float-left w-full">
@@ -327,6 +341,17 @@
       <div class="carousel-caption hidden md:block absolute text-center">
         <h5 class="text-xl">Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item active relative float-left w-full">
+      <img
+        src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
+        class="block w-full"
+        alt="..."
+      />
+      <div class="carousel-caption hidden md:block absolute text-center">
+        <h5 class="text-xl">First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item relative float-left w-full">

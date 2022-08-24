@@ -85,7 +85,7 @@
     <div class="accueil__gallery mb-6">
 
         <div class="accueil__gallery--items" @click="Cliquer">
-            <img src="../assets/Cormier/cormier_pingpong.jpg" alt="Terrain de Ping Pong">
+            <img src="../assets/Cormier/cormier_ping_pong.jpg" alt="Terrain de Ping Pong">
             <div>
                 <h1>Cliquez pour plus de visibilité</h1>
             </div>
