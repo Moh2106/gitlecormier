@@ -1,281 +1,247 @@
 <template>
-  <div class="descriptif pt-14">
+  <div class="descriptif pt-20">
 
+    <div class= "descriptif__paragraph">
+      <p>
+        Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.
+      </p>
+    </div>
+
+    <!------------------Rez de chaussee --------------------------->
     <div class="descriptif__slide pb-4">
 
-        <h1>Rez-de-chaussée</h1>
-
-        <div class="descriptif__slide--rezchausse">
-
-        <!--Debut du slide -->
-
-        <div id="carouselExampleCaptions" class="carousel slide relative taille carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-                <button
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-                ></button>
-                <button
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-                ></button>
-                <button
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-                ></button>
-            </div>
-
-            <div class="carousel-inner relative w-full overflow-hidden">
-                <div class="carousel-item active relative float-left w-full">
-                <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
-                    <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(123).jpg" class="block w-full" />
-                    <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
-                </div>
-                <div class="carousel-caption hidden md:block absolute text-center">
-                    <h5 class="text-xl">First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
-                </div>
-                <div class="carousel-item relative float-left w-full">
-                <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
-                    <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(124).jpg" class="block w-full" />
-                    <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
-                </div>
-                <div class="carousel-caption hidden md:block absolute text-center">
-                    <h5 class="text-xl">Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-                </div>
-                <div class="carousel-item relative float-left w-full">
-                <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
-                    <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="block w-full" />
-                    <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
-                </div>
-                <div class="carousel-caption hidden md:block absolute text-center">
-                    <h5 class="text-xl">Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-                </div>
-            </div>
-
-            <button
-                class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev"
-            >
-                <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-
-            <button
-                class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next"
-            >
-                <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-            <!-- Texte descriptifs -->
-        <div class="descriptif__slide--text">
-            <h1>Au rez-de-chaussée :</h1>
-            <ul>
-                <li>Salle à manger</li>
-                <li>Salon</li>
-                <li>Cuisine</li>
-                <li>Buanderie</li>
-                <li>1 chambre (1 lit 2 personnes)</li>
-                <li>Salle d'eau</li>
-                <li>WC</li>
-            </ul>
-            
-        </div>
-    </div>
-
-    </div>
-
-    <!----------------- 1er ETAGE -------------------------->
-
-    <div class="descriptif__slide pb-4">
-
-        <h1>Rez-de-chaussée</h1>
-
-        <div class="descriptif__slide--rezchausse">
-
-        <!--Debut du slide -->
-        <div
-  id="carouselDarkVariant"
-  class="carousel slide carousel-fade carousel-dark relative taille"
-  data-bs-ride="carousel"
->
-  <!-- Indicators -->
-  <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-    <button
-      data-bs-target="#carouselDarkVariant"
-      data-bs-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="Slide 1"
-    ></button>
-    <button
-      data-bs-target="#carouselDarkVariant"
-      data-bs-slide-to="1"
-      aria-label="Slide 1"
-    ></button>
-    <button
-      data-bs-target="#carouselDarkVariant"
-      data-bs-slide-to="2"
-      aria-label="Slide 1"
-    ></button>
-  </div>
-
-  <!-- Inner -->
-  <div class="carousel-inner relative w-full overflow-hidden">
-    <!-- Single item -->
-    <div class="carousel-item active relative float-left w-full">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp"
-        class="block w-full"
-        alt="Motorbike Smoke"
-      />
-      <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl">First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-
-    <!-- Single item -->
-    <div class="carousel-item relative float-left w-full">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(35).webp"
-        class="block w-full"
-        alt="Mountaintop"
-      />
-      <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl">Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-
-    <!-- Single item -->
-    <div class="carousel-item relative float-left w-full">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(40).webp"
-        class="block w-full"
-        alt="Woman Reading a Book"
-      />
-      <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl">Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <!-- Inner -->
-
-  <!-- Controls -->
-  <button
-    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-    type="button"
-    data-bs-target="#carouselDarkVariant"
-    data-bs-slide="prev"
-  >
-    <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-    type="button"
-    data-bs-target="#carouselDarkVariant"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-
-            <!-- Texte descriptifs -->
-        <div class="descriptif__slide--text">
-            <h1>Au rez-de-chaussée :</h1>
-            <ul>
-                <li>Salle à manger</li>
-                <li>Salon</li>
-                <li>Cuisine</li>
-                <li>Buanderie</li>
-                <li>1 chambre (1 lit 2 personnes)</li>
-                <li>Salle d'eau</li>
-                <li>WC</li>
-            </ul>
-            
-        </div>
-    </div>
-
-    </div>
-
-    <!------------------- Le jardin ------------------------------------->
-    <div class="descriptif__slide pb-4">
-
-        <h1>Rez-de-chaussée</h1>
+        <h1 class="title">Rez-de-chaussée</h1>
 
         <div class="descriptif__slide--rezchausse">
 
         <!--Debut du slide -->
 
         <div id="carouselExampleSlidesOnly" class="carousel slide relative carousel-fade taille" data-bs-ride="carousel">
-  <div class="carousel-inner relative w-full overflow-hidden">
-    <div class="carousel-item relative float-left w-full h-fit">
-      <img
-        src="../assets/RezDeChaussee/rdc1.jpg"
-        class="block w-full"
-        alt="Exotic Fruits"
-      />
+          <div class="carousel-inner relative w-full overflow-hidden">
+
+            <div class="carousel-item relative active float-left w-full a object-contain">
+              <img
+                src="../assets/RezDeChaussee/rdc1.jpg"
+                class="block w-full b"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/RezDeChaussee/rdc2.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/RezDeChaussee/rdc3.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/RezDeChaussee/rdc4.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/RezDeChaussee/rdc5.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/RezDeChaussee/rdc6.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/RezDeChaussee/rdc7.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/RezDeChaussee/rdc8.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/RezDeChaussee/rdc9.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/RezDeChaussee/rdc10.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/RezDeChaussee/rdc11.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+          </div>
+        </div>
+
+
+            <!-- Texte descriptifs -->
+            <div class="descriptif__slide--text">
+              <h1>Au rez-de-chaussée :</h1>
+              <ul>
+                  <li>Salle à manger</li>
+                  <li>Salon</li>
+                  <li>Cuisine</li>
+                  <li>Buanderie</li>
+                  <li>1 chambre (1 lit 2 personnes)</li>
+                  <li>Salle d'eau</li>
+                  <li>WC</li>
+              </ul>
+              
+          </div>
     </div>
 
-    <div class="carousel-item active relative float-left w-full">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-        class="block w-full"
-        alt="Wild Landscape"
-      />
     </div>
-    <div class="carousel-item relative float-left w-full">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-        class="block w-full"
-        alt="Camera"
-      />
-    </div>
-    <div class="carousel-item relative float-left w-full">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-        class="block w-full"
-        alt="Exotic Fruits"
-      />
-    </div>
-  </div>
-</div>
+
+    <!--------------------- 1ER ETAGE ----------------------------->
+    <div class="descriptif__slide pb-4">
+
+        <h1 class="title"> Au 1er Etage</h1>
+
+        <div class="descriptif__slide--rezchausse">
+
+        <!--Debut du slide -->
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide relative carousel-fade taille" data-bs-ride="carousel">
+          <div class="carousel-inner relative w-full overflow-hidden">
+
+            <div class="carousel-item relative active float-left w-full a object-contain">
+              <img
+                src="../assets/Etage/etage1.jpg"
+                class="block w-full b"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Etage/etage2.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Etage/etage3.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Etage/etage4.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Etage/etage5.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Etage/etage6.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Etage/etage7.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Etage/etage8.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Etage/etage9.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Etage/etage10.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Etage/etage11.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+          </div>
+        </div>
 
 
             <!-- Texte descriptifs -->
         <div class="descriptif__slide--text">
-            <h1>Au rez-de-chaussée :</h1>
+            <h1>Au 1 er : </h1>
             <ul>
-                <li>Salle à manger</li>
-                <li>Salon</li>
-                <li>Cuisine</li>
-                <li>Buanderie</li>
-                <li>1 chambre (1 lit 2 personnes)</li>
+                <li>1 chambre palière</li>
+                <li>(1 lit 1 personne)</li>
+                <li>Bureau</li>
+                <li>Placard</li>
+                <li>1 chambre (2 litS 1 personnes)</li>
                 <li>Salle d'eau</li>
                 <li>WC</li>
             </ul>
@@ -284,12 +250,133 @@
     </div>
 
     </div>
+
+    <!------------------- LE JARDIN --------------------------------------------->
+    <div class="descriptif__slide pb-4">
+
+        <h1 class="title">Le jardin</h1>
+
+        <div class="descriptif__slide--rezchausse">
+
+        <!--Debut du slide -->
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide relative carousel-fade taille" data-bs-ride="carousel">
+          <div class="carousel-inner relative w-full overflow-hidden">
+
+            <div class="carousel-item relative active float-left w-full a object-contain">
+              <img
+                src="../assets/Jardin/jardin1.jpg"
+                class="block w-full b"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Jardin/jardin2.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Jardin/jardin3.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Jardin/jardin4.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Jardin/jardin5.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Jardin/jardin6.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Jardin/jardin7.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Jardin/jardin8.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Jardin/jardin9.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Jardin/jardin10.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+            <div class="carousel-item relative float-left w-full a">
+              <img
+                src="../assets/Jardin/jardin11.jpg"
+                class="block w-full"
+                alt="Exotic Fruits"
+              />
+            </div>
+
+          </div>
+        </div>
+
+
+            <!-- Texte descriptifs -->
+        <div class="descriptif__slide--text">
+            <h1>Dans le jardin :</h1>
+            <ul>
+                <li>3000 m2</li>
+                <li>SPA (Jaccuzzi)</li>
+                <li>Garage</li>
+                <li>Bassin (avec poissons rouges)</li>
+                <li>Jeux</li>
+                <li>Barbecue</li>
+            </ul>
+            
+        </div>
+    </div>
+
+    </div>
+
+    <!----------------------Lien vers gallery photo ----------------------------->
+    <div class="descriptif__gallery">
+      <button>Gallerie photo</button>
+    </div>
  
-
-<!----------------------------------------------------------->
-
-
-    
   </div>
 </template>
 
@@ -302,35 +389,69 @@ export default {
 <style lang="scss" scoped>
 
     .descriptif{ 
-        width: 80%;
-        margin: auto;
+         width: 80%;
+         margin: auto;
 
-        &__slide{ 
-            //background: #fff;
+        &__paragraph{ 
+          background: #386641;
+          color: #fff;
+          border-radius: 0.5em;
+          padding: 1em;
+          margin-bottom: 1em;
+        }
+         .title{ 
+          background: #fff;
+          width: 20%;
+          margin: auto;
+          border-radius: 50%;
+          margin-bottom: 0.5em;
+         }
+
+        &__slide{
             color: #000;
-            width: auto;
+            margin-bottom: 1em;
 
             &--rezchausse{
             display: flex;
             justify-content: center;
             align-items: center;
             width: 70%;
+            margin: auto;
             background: #fff;
-            
+
 
             .taille{
                 width: 70%;
+                height: 50%;
+                text-align: center;
+
+                img{ 
+                  width: 100%;
+                  height: 350px;
+                  object-fit: fill;
+                }
             }
         }
 
         &--text{ 
-            //background: #fff;
-            //padding: 1.6em;
             width: 30%;
         }
 
         }
 
-        
+        &__gallery{ 
+            text-align: right;
+            margin: 1em;
+
+          button{ 
+            background: #386641;
+            color: #fff;
+            padding: 0.5em;
+            border-radius: 0.5em;
+            
+          }
+          
+        }
+
     }
 </style>

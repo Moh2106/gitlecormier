@@ -37,6 +37,12 @@ export default {
         background: #bc6c25;
         height: 30vh;
         color: #fff;
-        
+
+        .b{
+            &:hover{ 
+                    border-radius: 0.5em;
+                }
+        }
+
     }
 </style>
