@@ -374,7 +374,9 @@
 
     <!----------------------Lien vers gallery photo ----------------------------->
     <div class="descriptif__gallery">
-      <button>Gallerie photo</button>
+      <button>
+        <router-link to="/gallerie"> Gallerie photo </router-link>
+      </button>
     </div>
  
   </div>
@@ -429,6 +431,7 @@ export default {
                   width: 100%;
                   height: 350px;
                   object-fit: fill;
+                  object-position: center;
                 }
             }
         }
@@ -444,7 +447,7 @@ export default {
             margin: 1em;
 
           button{ 
-            background: #386641;
+            background: red;
             color: #fff;
             padding: 0.5em;
             border-radius: 0.5em;

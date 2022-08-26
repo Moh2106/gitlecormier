@@ -8,9 +8,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
-//import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons'
 import {faFacebook} from '@fortawesome/free-brands-svg-icons'
-library.add(faUserSecret, faPhone, faFacebook)
+library.add(faUserSecret, faPhone, faFacebook, faMagnifyingGlassPlus)
 
 /*vue.use(VueGoogleMaps, { 
     load: { 

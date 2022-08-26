@@ -4,17 +4,34 @@
     <!--La partie du slide-->
 
     <div>
-        <div id="carouselExampleControls" class="carousel slide relative" data-bs-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide relative accueil__slide" data-bs-ride="carousel">
             <div class="carousel-inner relative w-full overflow-hidden">
-                <div class="carousel-item relative float-left w-full">
+
+                <div class="carousel-item active relative float-left w-full">
                 <img
-                    src="../assets/Cormier/cormier1.jpg"
+                    src="../assets/Jardin/jardin12.jpg"
                     class="block w-full gite h-1/4 "
                     alt="Chambre"
                 />
                 </div>
 
-                <div class="carousel-item active relative float-left w-full">
+                <div class="carousel-item relative float-left w-full">
+                <img
+                    src="../assets/Cormier/cormier1.jpg"
+                    class="block w-full gite h-1/4 "
+                    alt="La maison"
+                />
+                </div>
+
+                <div class="carousel-item relative float-left w-full">
+                <img
+                    src="../assets/Jardin/jardin13.jpg"
+                    class="block w-full gite h-1/4 "
+                    alt="Le jardin"
+                />
+                </div>
+
+                <div class="carousel-item relative float-left w-full">
                 <img
                     src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
                     class="block w-full"
@@ -87,35 +104,36 @@
         <div class="accueil__gallery--items" @click="Cliquer">
             <img src="../assets/Cormier/cormier_ping_pong.jpg" alt="Terrain de Ping Pong">
             <div>
-                <h1>Cliquez pour plus de visibilité</h1>
+                <h1>
+                    <font-awesome-icon icon="fa-solid fa-magnifying-glass-plus" class="plus"/>
+                </h1>
             </div>
         </div>
 
         <div class="accueil__gallery--items" @click="Cliquer">
             <img src="../assets/Cormier/cormier_deco2.jpg" alt="" >
             <div>
-                <h1>Cliquez pour plus de visibilité</h1>
+                <h1>
+                    <font-awesome-icon icon="fa-solid fa-magnifying-glass-plus" class="plus"/>
+                </h1>
             </div>
         </div>
-
-        <!----<div class="accueil__gallery--items" @click="Cliquer">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/4.webp" alt="">
-            <div>
-                <h1>Cliquez pour plus de visibilité</h1>
-            </div>
-        </div>-->
 
         <div class="accueil__gallery--items" @click="Cliquer">
             <img src="../assets/Cormier/cormier_jaccuzzi.jpg" alt="">
             <div>
-                <h1>Cliquez pour plus de visibilité</h1>
+                <h1>
+                    <font-awesome-icon icon="fa-solid fa-magnifying-glass-plus" class="plus"/>
+                </h1>
             </div>
         </div>
 
         <div class="accueil__gallery--items" @click="Cliquer">
             <img src="../assets/Cormier/cormier_chemine.jpg" alt="">
             <div>
-                <h1>Cliquez pour plus de visibilité</h1>
+                <h1>
+                    <font-awesome-icon icon="fa-solid fa-magnifying-glass-plus" class="plus"/>
+                </h1>
             </div>
             
         </div>
@@ -174,7 +192,11 @@ export default {
 <style lang="scss" scoped>
 
     .accueil{ 
-        background: url("https://mdbcdn.b-cdn.net/img/video/Tropical.mp4");
+
+        &__slide{ 
+            width: 90%;
+            margin: auto;
+        }
 
         &__description{ 
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -238,8 +260,6 @@ export default {
                     border-radius: 0.5em;
                     width: 300px;
                     height: 200px;
-                    //height: 100%;
-                    
                 }
 
                 div{ 
@@ -270,6 +290,14 @@ export default {
                         transform: translateY(100%);
                         border-radius: 0.5em;
                         background: rgba(0, 0, 0, 0.5);
+
+                        .plus{ 
+                            font-size: 1.5em;
+
+                            &:hover{ 
+                                font-size: 2.5em;
+                            }
+                        }
                     }
                 }
                 

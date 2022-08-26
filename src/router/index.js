@@ -4,6 +4,7 @@ import LienView from '../views/LienView'
 import VisiterView from '../views/VisiterView'
 import AlentoursView from '../views/AlentoursView'
 import DescriptionView from '../views/DescriptionView'
+import GalleryView from '../views/GalleryView'
 
 const routes = [
   {
@@ -22,6 +23,12 @@ const routes = [
     path: '/descriptifs',
     name: 'descriptifs',
     component: DescriptionView
+  },
+
+  {
+    path: '/gallerie',
+    name: 'gallerie',
+    component: GalleryView
   },
 
   {
