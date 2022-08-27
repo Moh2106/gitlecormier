@@ -447,7 +447,7 @@ export default {
             margin: 1em;
 
           button{ 
-            background: red;
+            background: rgba($color: #f00, $alpha: 1);
             color: #fff;
             padding: 0.5em;
             border-radius: 0.5em;

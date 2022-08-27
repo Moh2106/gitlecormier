@@ -15,71 +15,71 @@
             </div>
           </div>
 
-          <div class="flex flex-wrap w-1/4 hauteur items" @click="Cliquer">
-            <div class="w-full h-full p-1 md:p-2">
+          <div class="flex flex-wrap w-1/4 hauteur">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block cursor-pointer object-cover object-center w-full h-full rounded-lg"
                 src="../assets/RezDeChaussee/rdc2.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/RezDeChaussee/rdc3.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/RezDeChaussee/rdc4.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/RezDeChaussee/rdc5.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/RezDeChaussee/rdc6.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/RezDeChaussee/rdc7.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/RezDeChaussee/rdc8.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/RezDeChaussee/rdc9.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/RezDeChaussee/rdc10.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/RezDeChaussee/rdc11.jpg">
             </div>
@@ -98,84 +98,84 @@
         <div class="flex flex-wrap -m-1 md:-m-2">
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 ">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-fill object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage1.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage2.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage3.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage4.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage5.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage6.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage7.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage8.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage9.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage10.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage11.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Etage/etage12.jpg">
             </div>
@@ -195,84 +195,84 @@
         <div class="flex flex-wrap -m-1 md:-m-2">
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 ">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-fill object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin1.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin2.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin3.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin4.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin5.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin6.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin7.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin8.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin9.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin10.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin11.jpg">
             </div>
           </div>
 
           <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2">
+            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
               <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
                 src="../assets/Jardin/jardin12.jpg">
             </div>
@@ -282,7 +282,6 @@
 
       </div>
     </section> 
-
 
     <!-------------------------------------------------------------->
 
@@ -309,7 +308,6 @@ export default {
           items.forEach(image => { 
               image.onclick = (e) => { 
                   const source = e.currentTarget.querySelector('img').src;
-                  //document.querySelector('.gallerie').style.height = '100vh' 
                   document.querySelector('.gallerie__popup').style.display = 'block'
                   document.querySelector('.gallerie__popup img').src = source
                 }
@@ -334,8 +332,8 @@ export default {
 
 <style lang="scss" scoped>
   .gallerie{ 
-    backdrop-filter: blur(5px);
-    //position: relative;
+    background: rgba($color: #fff, $alpha: 0.3);
+    
 
     .hauteur{ 
       height: 30%;
@@ -358,7 +356,6 @@ export default {
       position: relative;
       width: var(--size);
       height: calc(var(--size) * 0.25);
-      //background: #333;
       border-radius: 10px;
 
       &::after{ 
@@ -376,17 +373,16 @@ export default {
       }
     }
 
-    &__popup{ 
-      //position: absolute;
+    &__popup{
       position: fixed;
       top: 0;
       left: 0;
-      height: 100vh;
+      height: 100%;
       width: 100%;
       z-index: 100000;
       display: none;
       transition: .5s ease-in-out;
-
+      backdrop-filter: blur(15px);
 
         span{ 
           position: absolute;
@@ -401,7 +397,6 @@ export default {
 
         img{ 
             position: absolute;
-            border: 3px solid red;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
