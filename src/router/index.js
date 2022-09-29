@@ -5,6 +5,7 @@ import VisiterView from '../views/VisiterView'
 import AlentoursView from '../views/AlentoursView'
 import DescriptionView from '../views/DescriptionView'
 import GalleryView from '../views/GalleryView'
+import TarifsView from '../views/TarifsView'
 
 const routes = [
   {
@@ -41,6 +42,12 @@ const routes = [
     path: '/alentours',
     name: 'alentours',
     component: AlentoursView
+  },
+
+  {
+    path: '/tarifs',
+    name: 'tarifs',
+    component: TarifsView
   },
 
   {

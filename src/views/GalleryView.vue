@@ -285,6 +285,14 @@
 
     <!-------------------------------------------------------------->
 
+    <!----<div v-for="image in simple" :key="image.id">
+      <div v-text="image.id"></div>
+      <img :src="`../assets/Jardin/${image.img}`" alt="">
+    </div> -->
+
+
+    <!--------------------------------------------------------------->
+
     <div class="gallerie__popup">
         <span @click="fermer">&times;</span>
         <img src="../assets/RezDeChaussee/rdc1.jpg" alt="">
@@ -297,6 +305,28 @@
 
 export default {
   setup(){ 
+
+    /*let simple = { 
+      image1 : { 
+        id: 1,
+        img: 'jardin1.jpg'
+      },
+
+      image2 : { 
+        id: 2,
+        img: 'jardin2.jpg'
+      },
+
+      image3 : { 
+        id: 3,
+        img: "jardin3.jpg"
+      },
+
+      image4 : { 
+        id: 4,
+        img: "etage1.jpg"
+      }
+    }*/
    
    // Cette fonction permet d'agrandir l'image en cliquant sur son div parent
 
@@ -325,7 +355,6 @@ export default {
           fermer,
         }
   
-    
   }
 }
 </script>
@@ -334,7 +363,6 @@ export default {
   .gallerie{ 
     background: rgba($color: #fff, $alpha: 0.3);
     
-
     .hauteur{ 
       height: 30%;
     }

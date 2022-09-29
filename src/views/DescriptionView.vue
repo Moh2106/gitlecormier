@@ -7,7 +7,7 @@
       </p>
     </div>
 
-    <!------------------Rez de chaussee --------------------------->
+    <!------------------ Rez de chaussee --------------------------->
     <div class="descriptif__slide pb-4">
 
         <h1 class="title">Rez-de-chaussée</h1>
