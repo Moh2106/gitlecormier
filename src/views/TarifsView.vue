@@ -1,6 +1,7 @@
 <template>
   <div class="pt-16">
-    <div class="flex flex-wrap w-4/5 mx-auto">
+    <!-- Insertion des saisons, dates et prix à partir de tarifs de script -->
+    <div class="flex flex-wrap w-4/5 mx-auto pb-4">
       <div v-for="tarif in tarifs" :key="tarif.id" class="w-1/3 ">
         <div class="bg-slate-100 m-4 h-3/4 rounded-lg ">
           <h1 v-text="tarif.saison" class="bg-green-700 text-yellow-50 "></h1>
@@ -11,17 +12,23 @@
       </div>
     </div>
 
+    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 ">
+      <p>Attention le chauffage est en plus, compter environ <span class="text-green-600">10€</span> par   jour en plein hiver.
+        Une caution de <span class="text-green-600">300€</span> vous sera demandée lors de votre arrivée puis restituée à votre départ si les écrans plats sont toujours là.
+      </p>
+
+      <p>Par semaine, préparation d'un lit 2 personnes : <span class="text-green-600">8€</span> , d'un lit 1 personne : <span class="text-green-600">6€</span>, mise à disposition des serviettes de bain : <span class="text-green-600">6€</span> par personne, forfait ménage : <span class="text-green-600">40€</span>. A préciser à la réservation.
+      </p>
+    </div>
+
     <!--<div>
       <div data-widget-itea="dispo" data-key="vk3_8_ia" data-numgite="818" data-sanscss=1 data-nbmois=6 data-nbmois-ligne=3></div>
     </div>-->
 
-    <!----<div>
-      <div data-widget-itea="promos" data-key="vk3_8_ia" data-numgite="818"></div>
-    </div>-->
-
-    <iframe style="overflow:auto; -webkit-overflow-scrolling:touch;border:none" height="500" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=dispo&nbmois=6&nbmoisLigne=3"></iframe>
-
-    
+    <div class="w-1/3 m-auto ">
+      <iframe style="overflow:auto; -webkit-overflow-scrolling:touch;border:none" height="500" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=dispo&nbmois=6&nbmoisLigne=3"></iframe>
+    </div>
+ 
   </div>
 </template>
 

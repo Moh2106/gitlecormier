@@ -19,7 +19,7 @@
                 </p>
 
                 <p>
-                    <a href="https://maps.app.goo.gl/kHyGBUjkW6jomJoz8" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-solid fa-location-dot" class="text-2xl hover:scale-125 active:bg-green-600 focus:bg-green-600" /></a>
+                    <a href="https://maps.app.goo.gl/kHyGBUjkW6jomJoz8" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-solid fa-location-dot" class="text-2xl hover:scale-125 " /></a>
                 </p>
                 
             </div>

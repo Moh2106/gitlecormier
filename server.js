@@ -2,20 +2,12 @@ const express = require('express')
 const serveStatic = require('serve-static')
 const path = require('path')
 const app = express()
-const cors = require('cors')
-//we are configuring dist to serve site files
+
 app.use('/', serveStatic(path.join(__dirname, '/dist')))
 // this * route is to serve project on different page routes except root `/`
 app.get(/.*/, function (req, res) {
  res.sendFile(path.join(__dirname, '/dist/index.html'))
 })
-
-app.use(cors({ 
-    origin: ['http://widget.itea.fr/', 'http://localhost:8080/'],
-    methods: ["GET", "POST", "PUT"],
-    credentials: true,
-}))
-
 
 const port = process.env.PORT || 8080
 app.listen(port)
