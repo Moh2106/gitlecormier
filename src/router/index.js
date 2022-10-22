@@ -6,6 +6,8 @@ import AlentoursView from '../views/AlentoursView'
 import DescriptionView from '../views/DescriptionView'
 import GalleryView from '../views/GalleryView'
 import TarifsView from '../views/TarifsView'
+import LivreView from '../views/LivreView'
+import ReservationView from '../views/ReservationView'
 
 const routes = [
   {
@@ -42,6 +44,18 @@ const routes = [
     path: '/alentours',
     name: 'alentours',
     component: AlentoursView
+  },
+
+  {
+    path: '/livredor',
+    name: 'livre',
+    component: LivreView
+  },
+
+  {
+    path: '/reservation',
+    name: 'reservation',
+    component: ReservationView
   },
 
   {

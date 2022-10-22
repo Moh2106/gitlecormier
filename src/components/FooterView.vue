@@ -9,14 +9,19 @@
 
         <div class="flex justify-between a">
             <div class="mr-36 scroll-mr-36">
-                <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl "/> 00 33 2 32 42 40 23</p>
-                <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl "/> 00 33 6 50 04 73 88</p>
+                <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl pr-4"/> 00 33 2 32 42 40 23</p>
+                <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl pr-4"/> 00 33 6 50 04 73 88</p>
             </div>
 
-            <div>
-                <p>
+            <div class="flex justify-around">
+                <p class="px-8">
                     <a href="https://www.facebook.com/gitelecormier/" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-facebook" class=" text-2xl hover:bg-blue-700 hover:scale-125 b"/></a>
                 </p>
+
+                <p>
+                    <a href="https://maps.app.goo.gl/kHyGBUjkW6jomJoz8" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-solid fa-location-dot" class="text-2xl hover:scale-125 active:bg-green-600 focus:bg-green-600" /></a>
+                </p>
+                
             </div>
         </div>
     </div>

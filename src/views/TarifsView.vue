@@ -11,12 +11,17 @@
       </div>
     </div>
 
-    <div class="bg-green-500">
-      <div data-widget-itea="prix" data-key="62kfdsgn6tu" data-numgite="G9923"></div>
-    </div>
+    <!--<div>
+      <div data-widget-itea="dispo" data-key="vk3_8_ia" data-numgite="818" data-sanscss=1 data-nbmois=6 data-nbmois-ligne=3></div>
+    </div>-->
 
-    <iframe height="450" src="https://widget.itea.fr/widget.php?key=62kfdsgn6tu&numgite=G9923&nbmois=3&widget-itea=RESA&ope=WEBWID" class="bg-green-500"></iframe>
+    <!----<div>
+      <div data-widget-itea="promos" data-key="vk3_8_ia" data-numgite="818"></div>
+    </div>-->
 
+    <iframe style="overflow:auto; -webkit-overflow-scrolling:touch;border:none" height="500" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=dispo&nbmois=6&nbmoisLigne=3"></iframe>
+
+    
   </div>
 </template>
 

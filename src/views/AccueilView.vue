@@ -7,9 +7,17 @@
         <div id="carouselExampleControls" class="carousel slide relative accueil__slide" data-bs-ride="carousel">
             <div class="carousel-inner relative w-full overflow-hidden">
 
-                <div class="carousel-item active relative float-left w-full">
+                <!----<div class="carousel-item active relative float-left w-full">
                 <img
                     src="../assets/Jardin/jardin12.jpg"
+                    class="block w-full gite h-1/4 "
+                    alt="Chambre"
+                />
+                </div>-->
+
+                <div class="carousel-item active relative float-left w-full">
+                <img
+                    src="../assets/Cormier/cormier3.jpg"
                     class="block w-full gite h-1/4 "
                     alt="Chambre"
                 />

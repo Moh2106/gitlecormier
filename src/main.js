@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+//import { axios } from 'axios'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -10,13 +11,8 @@ import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons'
 import {faFacebook} from '@fortawesome/free-brands-svg-icons'
-library.add(faUserSecret, faPhone, faFacebook, faMagnifyingGlassPlus)
-
-
-/*axios.defaults.baseURL = process.env.BASE_URL;
-axios.defaults.headers.get['Accepts'] = 'application/json';
-axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-axios.defaults.headers.common['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept';*/
+import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
+library.add(faUserSecret, faPhone, faFacebook, faMagnifyingGlassPlus, faLocationDot)
 
 /*vue.use(VueGoogleMaps, { 
     load: { 
@@ -24,6 +20,7 @@ axios.defaults.headers.common['Access-Control-Allow-Headers'] = 'Origin, X-Reque
         libraries: 'places',
     }
 }),*/
+
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)

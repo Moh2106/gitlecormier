@@ -12,8 +12,8 @@
         <router-link to="/descriptifs" class="hover:bg-orange-600">Descriptifs</router-link>
         <router-link to="/arrive" class="hover:bg-orange-600">Comment arriver</router-link>
         <router-link to="/alentours" class="hover:bg-orange-600">Aux Alentours</router-link>
-        <router-link to="/about" class="hover:bg-orange-600">Livres d'or</router-link>
-        <router-link to="/about" class="hover:bg-orange-600">Page de réservation</router-link>
+        <router-link to="/livredor" class="hover:bg-orange-600">Livres d'or</router-link>
+        <router-link to="/reservation" class="hover:bg-orange-600">Page de réservation</router-link>
         <router-link to="/tarifs" class="hover:bg-orange-600">Tarifs</router-link>
     </nav>
   </div>

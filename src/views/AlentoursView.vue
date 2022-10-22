@@ -1,5 +1,22 @@
 <template>
   <div class="alentours">
+
+    <div class="flex justify-center m-4 w-1/3">
+        <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg ">
+            <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="../assets/Alentours/eure_tourisme.png" alt="Eure tourisme">
+            <div class="p-6 flex flex-col justify-start">
+                <h5 class="text-gray-900 text-xl font-medium mb-2">Gite le cormier sur le site de Gite de France</h5>
+                <p class="text-gray-700 text-base mb-4">
+                    Vous pouvez faire des réservations via ce site.
+                </p>
+                
+                <button>
+                    <a href="https://www.gites-de-france.com/fr/normandie/eure/gite-du-cormier-27g818" target="_blank" rel="noopener noreferrer">Allez sur le site de réservation</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    
     <!-- EURE TOURISME -->
     <div class="alentours__elements flex justify-around">
         <div>
