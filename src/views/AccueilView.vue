@@ -89,7 +89,7 @@
     <br>
 
     <!--La partie de Bienvenue-->
-    <div class="accueil__description">
+    <div class="accueil__description bg-green-800 bg-opacity-90">
         <h1>Bienvenue à Hauville dans la chaumière du gîte du Cormier.</h1>
         <p>Cécile et Gérard vous accueillent au cœur de l’arrière pays normand. <br>
         Dans les boucles de la Seine. <br>
@@ -211,7 +211,7 @@ export default {
             border-radius: 0.5em;
             width: 80%;
             margin: auto;
-            background: #606c38;
+            //background: #606c38;
             color: #fff;
             
             h1{

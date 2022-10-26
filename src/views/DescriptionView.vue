@@ -1,7 +1,7 @@
 <template>
   <div class="descriptif pt-20">
 
-    <div class= "descriptif__paragraph">
+    <div class= "descriptif__paragraph bg-green-800 bg-opacity-90">
       <p>
         Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.
       </p>
@@ -251,146 +251,121 @@
 
     </div>
 
-    <!------------------- LE JARDIN --------------------------------------------->
-    <div class="descriptif__slide pb-4">
+    <!---------------- LE JARDIN ------------------------------------------>
+    <h1 class="title">Le jardin</h1>
+    <div class="flex justify-between w-4/5 m-auto">
+      <swiper
+        :slidesPerView="1"
+        :spaceBetween="30"
+        :loop="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="modules"
+        class="mySwiper w-2/3 m-auto a"
+      >
 
-        <h1 class="title">Le jardin</h1>
+      <swiper-slide>
+      <img 
+        src="../assets/Jardin/jardin1.jpg" 
+        alt=""
+        class="b"
+        >
+      </swiper-slide>
 
-        <div class="descriptif__slide--rezchausse">
+      <swiper-slide>
+        <img 
+          src="../assets/Jardin/jardin2.jpg" 
+          alt=""
+          class="b "
+        >
+      </swiper-slide>
+        
+      <swiper-slide>
+        <img 
+          src="../assets/Jardin/jardin3.jpg" 
+          alt=""
+          class="b "
+        >
+      </swiper-slide>
+      
+      <swiper-slide>
+        <img 
+          src="../assets/Jardin/jardin4.jpg" 
+          alt=""
+          class="b "
+        >
+        </swiper-slide>
+        
+        <swiper-slide>
+          <img 
+          src="../assets/Jardin/jardin5.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
+        
+        <swiper-slide>
+          <img 
+          src="../assets/Jardin/jardin6.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-        <!--Debut du slide -->
+        <swiper-slide>
+          <img 
+          src="../assets/Jardin/jardin7.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide relative carousel-fade taille" data-bs-ride="carousel">
-          <div class="carousel-inner relative w-full overflow-hidden">
+        <swiper-slide>
+          <img 
+          src="../assets/Jardin/jardin8.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-            <div class="carousel-item relative active float-left w-full a object-contain">
-              <img
-                src="../assets/Jardin/jardin1.jpg"
-                class="block w-full b"
-                alt="Exotic Fruits"
-              />
-            </div>
+        <swiper-slide>
+          <img 
+          src="../assets/Jardin/jardin9.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Jardin/jardin2.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+        <swiper-slide>
+          <img 
+          src="../assets/Jardin/jardin10.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Jardin/jardin3.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+      </swiper>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Jardin/jardin4.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+      <!----------------Texte descriptif -------------------------------->
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8">
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Jardin/jardin5.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+        <h1 class="text-green-700">Dans le jardin :</h1>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Jardin/jardin6.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Jardin/jardin7.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Jardin/jardin8.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Jardin/jardin9.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Jardin/jardin10.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Jardin/jardin11.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-          </div>
-        </div>
-
-
-            <!-- Texte descriptifs -->
-        <div class="descriptif__slide--text">
-            <h1>Dans le jardin :</h1>
-            <ul>
-                <li>3000 m2</li>
-                <li>SPA (Jaccuzzi)</li>
-                <li>Garage</li>
-                <li>Bassin (avec poissons rouges)</li>
-                <li>Jeux</li>
-                <li>Barbecue</li>
-            </ul>
-            
-        </div>
-    </div>
+          <ul>
+              <li>3000 m2</li>
+              <li>SPA (Jaccuzzi)</li>
+              <li>Garage</li>
+              <li>Bassin (avec poissons rouges)</li>
+              <li>Jeux</li>
+              <li>Barbecue</li>
+          </ul>
+        
+      </div>
 
     </div>
-
-    <!----------------ESSAIE DU SWIPER ------------------------------------------>
-
-    <swiper
-    :slidesPerView="1"
-    :spaceBetween="30"
-    :loop="true"
-    :pagination="{
-      clickable: true,
-    }"
-    :navigation="true"
-    :modules="modules"
-    class="mySwiper"
-  >
-    <swiper-slide>Slide 1</swiper-slide><swiper-slide>Slide 2</swiper-slide
-    ><swiper-slide>Slide 3</swiper-slide><swiper-slide>Slide 4</swiper-slide
-    ><swiper-slide>Slide 5</swiper-slide><swiper-slide>Slide 6</swiper-slide
-    ><swiper-slide>Slide 7</swiper-slide><swiper-slide>Slide 8</swiper-slide
-    ><swiper-slide>Slide 9</swiper-slide>
-  </swiper>
+    
 
     <!----------------------Lien vers gallery photo ----------------------------->
     <div class="descriptif__gallery">
@@ -433,12 +408,22 @@ export default {
 
 <style lang="scss" scoped>
 
+    .a{ 
+      height: 50vh;
+    }
+
+    .b{
+      //object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
     .descriptif{ 
          width: 80%;
          margin: auto;
 
         &__paragraph{ 
-          background: #386641;
+          //background: #386641;
           color: #fff;
           border-radius: 0.5em;
           padding: 1em;
