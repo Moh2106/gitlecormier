@@ -8,234 +8,237 @@
     </div>
 
     <!------------------ Rez de chaussee --------------------------->
-    <div class="descriptif__slide pb-4">
+    <h1 class="title">Rez-de-chaussée</h1>
+    <div class="flex justify-between w-4/5 m-auto mb-8">
+      <swiper
+        :slidesPerView="1"
+        :spaceBetween="30"
+        :loop="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="modules"
+        class="mySwiper w-2/3 m-auto a"
+      >
 
-        <h1 class="title">Rez-de-chaussée</h1>
+      <swiper-slide>
+      <img 
+        src="../assets/RezDeChaussee/rdc1.jpg" 
+        alt=""
+        class="b"
+        >
+      </swiper-slide>
 
-        <div class="descriptif__slide--rezchausse">
+      <swiper-slide>
+        <img 
+          src="../assets/RezDeChaussee/rdc2.jpg" 
+          alt=""
+          class="b "
+        >
+      </swiper-slide>
+        
+      <swiper-slide>
+        <img 
+          src="../assets/RezDeChaussee/rdc3.jpg" 
+          alt=""
+          class="b "
+        >
+      </swiper-slide>
+      
+      <swiper-slide>
+        <img 
+          src="../assets/RezDeChaussee/rdc4.jpg" 
+          alt=""
+          class="b "
+        >
+        </swiper-slide>
+        
+        <swiper-slide>
+          <img 
+          src="../assets/RezDeChaussee/rdc5.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
+        
+        <swiper-slide>
+          <img 
+          src="../assets/RezDeChaussee/rdc6.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-        <!--Debut du slide -->
+        <swiper-slide>
+          <img 
+          src="../assets/RezDeChaussee/rdc7.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide relative carousel-fade taille" data-bs-ride="carousel">
-          <div class="carousel-inner relative w-full overflow-hidden">
+        <swiper-slide>
+          <img 
+          src="../assets/RezDeChaussee/rdc8.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-            <div class="carousel-item relative active float-left w-full a object-contain">
-              <img
-                src="../assets/RezDeChaussee/rdc1.jpg"
-                class="block w-full b"
-                alt="Exotic Fruits"
-              />
-            </div>
+        <swiper-slide>
+          <img 
+          src="../assets/RezDeChaussee/rdc9.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/RezDeChaussee/rdc2.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+        <swiper-slide>
+          <img 
+          src="../assets/RezDeChaussee/rdc10.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/RezDeChaussee/rdc3.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+        <swiper-slide>
+          <img 
+          src="../assets/RezDeChaussee/rdc11.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/RezDeChaussee/rdc4.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+      </swiper>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/RezDeChaussee/rdc5.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+      <!----------------Texte descriptif -------------------------------->
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8">
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/RezDeChaussee/rdc6.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+        <h1 class="text-green-700">Au rez-de-chaussée :</h1>
+            <ul>
+                <li>Salle à manger</li>
+                <li>Salon</li>
+                <li>Cuisine</li>
+                <li>Buanderie</li>
+                <li>1 chambre (1 lit 2 personnes)</li>
+                <li>Salle d'eau</li>
+                <li>WC</li>
+            </ul>
+        
+      </div>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/RezDeChaussee/rdc7.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/RezDeChaussee/rdc8.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/RezDeChaussee/rdc9.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/RezDeChaussee/rdc10.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/RezDeChaussee/rdc11.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-          </div>
-        </div>
-
-
-            <!-- Texte descriptifs -->
-            <div class="descriptif__slide--text">
-              <h1>Au rez-de-chaussée :</h1>
-              <ul>
-                  <li>Salle à manger</li>
-                  <li>Salon</li>
-                  <li>Cuisine</li>
-                  <li>Buanderie</li>
-                  <li>1 chambre (1 lit 2 personnes)</li>
-                  <li>Salle d'eau</li>
-                  <li>WC</li>
-              </ul>
-              
-          </div>
     </div>
 
-    </div>
+    <!--------------------- 1ER ETAGE  ----------------------------->
+    <h1 class="title">Au 1er Etage</h1>
+    <div class="flex justify-between w-4/5 m-auto mb-8">
+      <swiper
+        :slidesPerView="1"
+        :spaceBetween="30"
+        :loop="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="modules"
+        class="mySwiper w-2/3 m-auto a"
+      >
 
-    <!--------------------- 1ER ETAGE ----------------------------->
-    <div class="descriptif__slide pb-4">
+      <swiper-slide>
+      <img 
+        src="../assets/Etage/etage1.jpg" 
+        alt=""
+        class="b"
+        >
+      </swiper-slide>
 
-        <h1 class="title"> Au 1er Etage</h1>
+      <swiper-slide>
+        <img 
+          src="../assets/Etage/etage2.jpg" 
+          alt=""
+          class="b "
+        >
+      </swiper-slide>
+        
+      <swiper-slide>
+        <img 
+          src="../assets/Etage/etage3.jpg" 
+          alt=""
+          class="b "
+        >
+      </swiper-slide>
+      
+      <swiper-slide>
+        <img 
+          src="../assets/Etage/etage4.jpg" 
+          alt=""
+          class="b "
+        >
+        </swiper-slide>
+        
+        <swiper-slide>
+          <img 
+          src="../assets/Etage/etage5.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
+        
+        <swiper-slide>
+          <img 
+          src="../assets/Etage/etage6.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-        <div class="descriptif__slide--rezchausse">
+        <swiper-slide>
+          <img 
+          src="../assets/Etage/etage7.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-        <!--Debut du slide -->
+        <swiper-slide>
+          <img 
+          src="../assets/Etage/etage8.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide relative carousel-fade taille" data-bs-ride="carousel">
-          <div class="carousel-inner relative w-full overflow-hidden">
+        <swiper-slide>
+          <img 
+          src="../assets/Etage/etage9.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-            <div class="carousel-item relative active float-left w-full a object-contain">
-              <img
-                src="../assets/Etage/etage1.jpg"
-                class="block w-full b"
-                alt="Exotic Fruits"
-              />
-            </div>
+        <swiper-slide>
+          <img 
+          src="../assets/Etage/etage10.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Etage/etage2.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+        <swiper-slide>
+          <img 
+          src="../assets/Etage/etage11.jpg" 
+          alt=""
+          class="b "
+          >
+        </swiper-slide>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Etage/etage3.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+      </swiper>
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Etage/etage4.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
+      <!----------------Texte descriptif -------------------------------->
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8">
 
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Etage/etage5.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Etage/etage6.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Etage/etage7.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Etage/etage8.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Etage/etage9.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Etage/etage10.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-            <div class="carousel-item relative float-left w-full a">
-              <img
-                src="../assets/Etage/etage11.jpg"
-                class="block w-full"
-                alt="Exotic Fruits"
-              />
-            </div>
-
-          </div>
-        </div>
-
-
-            <!-- Texte descriptifs -->
-        <div class="descriptif__slide--text">
-            <h1>Au 1 er : </h1>
+        <h1 class="text-green-700">Au 1 er étage : </h1>
             <ul>
                 <li>1 chambre palière</li>
                 <li>(1 lit 1 personne)</li>
@@ -245,9 +248,8 @@
                 <li>Salle d'eau</li>
                 <li>WC</li>
             </ul>
-            
-        </div>
-    </div>
+        
+      </div>
 
     </div>
 
