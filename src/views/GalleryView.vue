@@ -10,8 +10,8 @@
 
           <div class="flex flex-wrap w-1/4 hauteur " >
             <div class="w-full h-full items cursor-pointer p-1 md:p-2 " @click="Cliquer">
-              <img alt="gallery" class="block object-fill object-center w-full h-full rounded-lg"
-                src="../assets/RezDeChaussee/rdc1.jpg">
+              <img alt="gallery" class="block object-fill object-center w-full h-full rounded-lg hover:scale-105 overflow-hidden"
+                src="../assets/RezDeChaussee/rdc1.jpg  ">
             </div>
           </div>
 

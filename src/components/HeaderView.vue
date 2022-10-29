@@ -1,13 +1,13 @@
 <template>
-  <div class="flex justify-between header">
-    <div>
-        <!--<img src="../assets/Cormier/cormier_logo.png" alt="logo du cormier" class="h-full">-->
+  <div class="flex justify-between header ">
+    <div class="first">
         <h1 class="header__title">Gite <br> 
-          <span>Le Cormier</span> </h1>
+          <span>Le Cormier</span> 
+        </h1>
     </div>
 
     <nav>
-        <router-link to="/" class="hover:bg-orange-600">Accueil</router-link>
+        <router-link to="/" class="hover:bg-orange-600 ">Accueil</router-link>
         <router-link to="/liens" class="hover:bg-orange-600">Liens</router-link>
         <router-link to="/descriptifs" class="hover:bg-orange-600">Descriptifs</router-link>
         <router-link to="/arrive" class="hover:bg-orange-600">Comment arriver</router-link>
@@ -41,6 +41,16 @@ export default {
 -webkit-box-shadow: 0px 1px 0px 1px #bc6c25;
 -moz-box-shadow: 0px 1px 0px 1px #bc6c25;
 
+  @media screen and (max-width : 768px) {
+    display: block;
+  }
+
+  .first{ 
+    @media screen and (max-width : 768px) {
+      background: #fff;
+    }
+  }
+
   &__title{ 
     border: 3px solid #fff;
     border-radius: 25%;
@@ -49,6 +59,13 @@ export default {
     margin-left: 1em;
     padding: 0 1em;
     //line-height: 1.2em;
+
+    @media screen and (max-width : 768px) {
+      width: 25%;
+      margin: auto;
+      border: 3px solid #bc6c25;
+      //background: transparent;
+    }
 
     span{ 
       margin-left: 1em;
@@ -59,18 +76,41 @@ export default {
   nav{ 
     margin: auto;
 
+    @media screen and (max-width : 768px) {
+      padding: 0 0.5em 0.5em 0.5em;
+      font-size: 0.8em;
+      background: #dda15e;
+      width: 100%;
+    }
+
+
   a{ 
     padding: 0 1.5em 0.5em 1.5em;
     align-items: center;
+
+    @media screen and (max-width : 768px) {
+      padding: 0 0.5em 0.5em 0.5em;
+      font-size: 0.8em;
+    }
 
     &:hover{ 
       transition: 0.5s ease-in-out;
       transform: translateX(2em);
       font-size: 1.1em;
+
+      @media screen and (max-width : 768px) {
+        transform: translateX(0.2em);
+        font-size: 1em;
+      }
     }
 
     &.router-link-exact-active{ 
       border-bottom: 3px solid #fff;
+
+      @media screen and (max-width : 768px) {
+        border-bottom: 2px solid #fff;
+        
+      }
     }
 
   }

@@ -1,38 +1,31 @@
 <template>
   <div class="alentours">
 
-    <div class="flex justify-center m-4 w-1/3">
-        <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg ">
-            <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="../assets/Alentours/eure_tourisme.png" alt="Eure tourisme">
-            <div class="p-6 flex flex-col justify-start">
-                <h5 class="text-gray-900 text-xl font-medium mb-2">Gite le cormier sur le site de Gite de France</h5>
-                <p class="text-gray-700 text-base mb-4">
-                    Vous pouvez faire des réservations via ce site.
-                </p>
-                
-                <button>
-                    <a href="https://www.gites-de-france.com/fr/normandie/eure/gite-du-cormier-27g818" target="_blank" rel="noopener noreferrer">Allez sur le site de réservation</a>
-                </button>
-            </div>
-        </div>
-    </div>
-    
     <!-- EURE TOURISME -->
-    <div class="alentours__elements flex justify-around">
+    <div class=" alentours__design">
         <div>
             <img src="../assets/Alentours/eure_tourisme.png" alt="Eure tourisme">
         </div>
 
         <div>
             <h1>EURE TOURISME</h1>
-            <p>
-              <a href="https://www.eure-tourisme.fr/" target="_blank" rel="noopener noreferrer">https://www.eure-tourisme.fr/</a>
-            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500">
+                <a href="https://www.eure-tourisme.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+
         </div>
     </div>
 
     <!-- CENTAURE PARIS - NORMANDIE -->
-    <div class="alentours__elements flex justify-around">
+    <div class="alentours__design">
         <div>
             <img src="../assets/Alentours/centaure_normandie.png" alt="centaure paris normandie">
         </div>
@@ -51,27 +44,46 @@
               Stage Groupama
               Spécial clients Groupama. Réservez votre stage de prévention !
               <br>
-               http://paris-normandie.centaure.com/
+               
             </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500">
+                <a href="http://paris-normandie.centaure.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
         </div>
     </div>
 
     <!-- PARC NATUREL RéGIONAL DES BOUCLES DE LA SEINE NORM -->
-    <div class="alentours__elements flex justify-around">
+    <div class="alentours__design">
         <div>
             <img src="../assets/Alentours/parc_nationale_seine.png" alt="Parc naturel régional des boucles de la seine norm">
         </div>
 
         <div>
             <h1>PARC NATUREL RéGIONAL DES BOUCLES DE LA SEINE NORM</h1>
-            <p>
-              <a href="http://www.pnr-seine-normande.com/" target="_blank" rel="noopener noreferrer">http://www.pnr-seine-normande.com/</a>
-            </p>
+  
+            <div>
+              <button class="mr-4 p-1 bg-red-500">
+                <a href="http://www.pnr-seine-normande.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
         </div>
     </div>
 
     <!---------------- ABBAYE DE JUMIEGES----------------------->
-    <div class="alentours__elements flex justify-around">
+    <div class="alentours__design">
         <div>
           <img src="../assets/Alentours/abbaye_jumiege.png" alt="Abbaye de jumieges">
         </div>
@@ -81,15 +93,22 @@
             <p> Ses tours blanches, qui s’élèvent à presque 50 mètres au fond d’une boucle de la Seine, créent toujours la surprise et l’admiration du visiteur. Sa destruction, au XIXe siècle, lui a valu le nom de «plus belle ruine de France» et l’image d’un site à ciel ouvert fortement marqué de romantisme
             </p>
 
-            <p>
-              <a href="http://www.abbayedejumieges.fr/" target="_blank" rel="noopener noreferrer">http://www.abbayedejumieges.fr/</a>
-            </p>
+            <div>
+              <button class="mr-4 p-1 bg-red-500">
+                <a href="http://http://www.abbayedejumieges.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
         </div>
     </div>
 
         <!---------------ABBAYE DE SAINT-WANDRILLE ------------------------------>
 
-    <div class="alentours__elements flex justify-around">
+    <div class="alentours__design">
         <div>
             <img src="../assets/Alentours/abbaye_st_wandrille.png" alt="abbaye de saint-wandrille">
         </div>
@@ -98,14 +117,23 @@
             <h1>CENTAURE PARIS - NORMANDIE</h1>
             <p>La communauté monastique de l'abbaye Saint-Wandrille perpétue une longue tradition de prière dans le recueillement et le travail, la solitude et la communion.
             </p>
-            <p>
-              <a href="https://st-wandrille.com/" target="_blank" rel="noopener noreferrer">https://st-wandrille.com/</a>
-            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500">
+                <a href="https://st-wandrille.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+
         </div>
     </div>
 
     <!-----------------MANOIR DE VILLERS------------------->
-    <div class="alentours__elements flex justify-around">
+    <div class="alentours__design">
         <div>
             <img src="../assets/Alentours/manoir_des_villers.png" alt="Manoir de villers">
         </div>
@@ -114,14 +142,23 @@
             <h1>MANOIR DE VILLERS</h1>
             <p>Implanté entre cour et jardin le Manoir de Villers était en 1581, une Maison de Maitre construite en pierre de Caumont avec un étage à pans de bois et recouverte de petites tuiles. Il fut transformé et agrandi au cours des siècles, jusqu'à devenir ce grand manoir néo-normand aux toitures inspirées des plus belles maisons de Rouen et aux facades habillées d'un curieux trompe l'oeil (architecte : Lassire).
             </p>
-            <p>
-              <a href="http://www.manoirdevillers.com/" target="_blank" rel="noopener noreferrer">http://www.manoirdevillers.com/</a>
-            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500">
+                <a href="http://www.manoirdevillers.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+
         </div>
     </div>
 
     <!-------------------Base de Loisirs de Jumièges-------------------------->
-    <div class="alentours__elements flex justify-around">
+    <div class="alentours__design">
         <div>
             <img src="../assets/Alentours/base_de_jumiege.png" alt="Base de Loisirs de Jumièges">
         </div>
@@ -132,14 +169,22 @@
             Vous pouvez également vous restaurer sur la Base de Loisirs.
             </p>
 
-            <p>
-              <a href="https://www.basedejumieges.com/fr" target="_blank" rel="noopener noreferrer">https://www.basedejumieges.com/fr</a>
-            </p>
+            <div>
+              <button class="mr-4 p-1 bg-red-500">
+                <a href="https://www.basedejumieges.com/fr" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+
         </div>
     </div>
 
     <!------------------ Pont-Audemer Val de Risle ---------------------->
-    <div class="alentours__elements flex justify-around">
+    <div class="alentours__design">
         <div>
           <img src="../assets/Alentours/pont_audemar.png" alt="Pont-Audemer Val de Risle">
         </div>
@@ -149,14 +194,22 @@
             <p>Au cœur d’une vallée sauvage et accueillante, Pont-Audemer  Val de Risle offre un visage authentique qui saura séduire les amoureux de la nature. Ici se mêlent l’eau de la Risle, le bois de la forêt, la terre des sentiers et la pierre d’autrefois. La promesse d’un séjour à Pont-Audemer et dans le Val de Risle c’est l’expérience de ces éléments simples mais indispensables. C’est un véritable retour à la source du bien-être dans le calme absolu, à proximité de sites incontournables en Normandie tels que Honfleur, Deauville, Trouville, Rouen, Étretat ou Le Havre…
             </p>
 
-            <p>
-              <a href="https://www.tourisme-pontaudemer-rislenormande.com/" target="_blank" rel="noopener noreferrer">https://www.tourisme-pontaudemer-rislenormande.com/</a>
-            </p>
+            <div>
+              <button class="mr-4 p-1 bg-red-500">
+                <a href="https://www.tourisme-pontaudemer-rislenormande.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+
         </div>
     </div>
 
     <!------------------ La ferme du Bec --------------------------->
-    <div class="alentours__elements flex justify-around">
+    <div class="alentours__design">
         <div>
           <img src="../assets/Alentours/ferme_du_bec.png" alt="Ferme du bec">
         </div>
@@ -166,14 +219,22 @@
             <p>La Ferme biologique du Bec Hellouin un lieu de production, de recherche et de transmission. Plus de 800 variétés de fruits et légumes croissent dans ses jardins, dans un respect absolu de l’environnement, grâce aux concepts de la permaculture. De nombreuses recherches y sont menées pour explorer des pratiques agricoles naturelles et efficaces, qui contribuent à la régénération de la biosphère.
             </p>
 
-            <p>
-              <a href="http://https://www.fermedubec.com/" target="_blank" rel="noopener noreferrer">https://www.fermedubec.com/</a>
-            </p>
+            <div>
+              <button class="mr-4 p-1 bg-red-500">
+                <a href="http://https://www.fermedubec.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+
         </div>
     </div>
 
     <!------------------ Abbaye du bec --------------------------->
-    <div class="alentours__elements flex justify-around">
+    <div class="alentours__design">
         <div>
           <img src="../assets/Alentours/abbaye_du_bec.png" alt="">
         </div>
@@ -183,9 +244,16 @@
             <p> A ajouter
             </p>
 
-            <p>
-              <a href="https://abbayedubec.org/" target="_blank" rel="noopener noreferrer">https://abbayedubec.org/</a>
-            </p>
+            <div>
+              <button class="mr-4 p-1 bg-red-500">
+                <a href="https://abbayedubec.org/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
         </div>
     </div>
   </div>
@@ -198,9 +266,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .alentours{ 
+    .alentours{ 
     margin-top: 3em;
     padding-top: 2em;
+
+    &__design{ 
+      background: #ecd;
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      margin-bottom: 1em;
+      border-radius: 0.5em;
+    }
 
     &__elements{ 
       //background: #fff;
