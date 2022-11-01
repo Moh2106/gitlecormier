@@ -12,7 +12,9 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons'
 import {faFacebook} from '@fortawesome/free-brands-svg-icons'
 import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
-library.add(faUserSecret, faPhone, faFacebook, faMagnifyingGlassPlus, faLocationDot)
+import {faArrowUp } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faUserSecret, faPhone, faFacebook, faMagnifyingGlassPlus, faLocationDot, faArrowUp)
 
 /*vue.use(VueGoogleMaps, { 
     load: { 

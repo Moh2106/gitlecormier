@@ -31,4 +31,8 @@ export default {
   background-attachment: scroll;
 }
 
+html{ 
+  scroll-behavior: smooth;
+}
+
 </style>

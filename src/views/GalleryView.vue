@@ -1,6 +1,10 @@
 <template>
   <div class="pt-14 gallerie">
 
+    <h1 id="haut">
+
+    </h1>
+
     <!------------------- REZ DE CHAUSSE -------------------------------------->
     <section class="overflow-hidden">
       <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
@@ -283,19 +287,23 @@
       </div>
     </section> 
 
-    <!-------------------------------------------------------------->
-
-    <!----<div v-for="image in simple" :key="image.id">
-      <div v-text="image.id"></div>
-      <img :src="`../assets/Jardin/${image.img}`" alt="">
-    </div> -->
-
-
     <!--------------------------------------------------------------->
 
     <div class="gallerie__popup">
         <span @click="fermer">&times;</span>
         <img src="../assets/RezDeChaussee/rdc1.jpg" alt="">
+    </div>
+
+    <!--------------------------------------------------------------->
+    <div class="text-right ">
+      <button>
+        <a href="#haut">
+          <font-awesome-icon 
+            icon="fa-solid fa-arrow-up"
+            class="gallerie__font "
+            />
+        </a>
+      </button>
     </div>
 
   </div>
@@ -433,6 +441,16 @@ export default {
             object-fit: fill;
             
         }
+    }
+
+    &__font{ 
+      font-size: 1.5em;
+      border: 2px solid green;
+      padding: 0.7em;
+      border-radius: 50%;
+      color: green;
+      margin-right: 0.5em;
+      background: #fff;
     }
 
   }
