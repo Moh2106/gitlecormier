@@ -1,9 +1,5 @@
 <template>
-  <div class="pt-14 gallerie">
-
-    <h1 id="haut">
-
-    </h1>
+  <div class="pt-14 gallerie" id="haut">
 
     <!------------------- REZ DE CHAUSSE -------------------------------------->
     <section class="overflow-hidden">
@@ -451,6 +447,7 @@ export default {
       color: green;
       margin-right: 0.5em;
       background: #fff;
+      //font-weight: bold;
     }
 
   }

@@ -11,11 +11,11 @@
             <h1>EURE TOURISME</h1>
 
             <div>
-              <button class="mr-4 p-1 bg-red-500">
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
                 <a href="https://www.eure-tourisme.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
               </button>
 
-              <button class="bg-green-500 p-1">
+              <button class="bg-green-500 p-1 rounded-lg">
                 <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
@@ -48,11 +48,11 @@
             </p>
 
             <div>
-              <button class="mr-4 p-1 bg-red-500">
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
                 <a href="http://paris-normandie.centaure.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
               </button>
 
-              <button class="bg-green-500 p-1">
+              <button class="bg-green-500 p-1 rounded-lg">
                 <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
@@ -70,11 +70,11 @@
             <h1>PARC NATUREL RéGIONAL DES BOUCLES DE LA SEINE NORM</h1>
   
             <div>
-              <button class="mr-4 p-1 bg-red-500">
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
                 <a href="http://www.pnr-seine-normande.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
               </button>
 
-              <button class="bg-green-500 p-1">
+              <button class="bg-green-500 p-1 rounded-lg">
                 <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
@@ -94,11 +94,11 @@
             </p>
 
             <div>
-              <button class="mr-4 p-1 bg-red-500">
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
                 <a href="http://http://www.abbayedejumieges.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
               </button>
 
-              <button class="bg-green-500 p-1">
+              <button class="bg-green-500 p-1 rounded-lg">
                 <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
@@ -119,11 +119,11 @@
             </p>
 
             <div>
-              <button class="mr-4 p-1 bg-red-500">
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
                 <a href="https://st-wandrille.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
               </button>
 
-              <button class="bg-green-500 p-1">
+              <button class="bg-green-500 p-1 rounded-lg">
                 <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
@@ -144,11 +144,11 @@
             </p>
 
             <div>
-              <button class="mr-4 p-1 bg-red-500">
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
                 <a href="http://www.manoirdevillers.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
               </button>
 
-              <button class="bg-green-500 p-1">
+              <button class="bg-green-500 p-1 rounded-lg">
                 <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
@@ -170,11 +170,11 @@
             </p>
 
             <div>
-              <button class="mr-4 p-1 bg-red-500">
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
                 <a href="https://www.basedejumieges.com/fr" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
               </button>
 
-              <button class="bg-green-500 p-1">
+              <button class="bg-green-500 p-1 rounded-lg">
                 <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
@@ -186,7 +186,7 @@
     <!------------------ Pont-Audemer Val de Risle ---------------------->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/pont_audemar.png" alt="Pont-Audemer Val de Risle">
+          <img src="../assets/Alentours/pont_audemar2.png" alt="Pont-Audemer Val de Risle">
         </div>
 
         <div>
@@ -195,11 +195,11 @@
             </p>
 
             <div>
-              <button class="mr-4 p-1 bg-red-500">
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
                 <a href="https://www.tourisme-pontaudemer-rislenormande.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
               </button>
 
-              <button class="bg-green-500 p-1">
+              <button class="bg-green-500 p-1 rounded-lg">
                 <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
@@ -220,11 +220,11 @@
             </p>
 
             <div>
-              <button class="mr-4 p-1 bg-red-500">
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
                 <a href="http://https://www.fermedubec.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
               </button>
 
-              <button class="bg-green-500 p-1">
+              <button class="bg-green-500 p-1 rounded-lg">
                 <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
@@ -245,11 +245,11 @@
             </p>
 
             <div>
-              <button class="mr-4 p-1 bg-red-500">
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
                 <a href="https://abbayedubec.org/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
               </button>
 
-              <button class="bg-green-500 p-1">
+              <button class="bg-green-500 p-1 rounded-lg">
                 <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
