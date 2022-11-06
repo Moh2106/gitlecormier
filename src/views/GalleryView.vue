@@ -290,7 +290,7 @@
         <img src="../assets/RezDeChaussee/rdc1.jpg" alt="">
     </div>
 
-    <!--------------------------------------------------------------->
+    <!--------------Boutton de redirection------------------------------>
     <div class="text-right ">
       <button>
         <a href="#haut">

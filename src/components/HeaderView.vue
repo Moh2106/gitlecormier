@@ -61,10 +61,9 @@ export default {
     //line-height: 1.2em;
 
     @media screen and (max-width : 768px) {
-      width: 25%;
+      width: 20%;
       margin: auto;
       border: 3px solid #bc6c25;
-      //background: transparent;
     }
 
     span{ 
@@ -99,6 +98,7 @@ export default {
       font-size: 1.1em;
 
       @media screen and (max-width : 768px) {
+        transition: 0.5s ease-in-out;
         transform: translateX(0.2em);
         font-size: 1em;
       }
