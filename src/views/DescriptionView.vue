@@ -9,7 +9,7 @@
 
     <!------------------ Rez de chaussee --------------------------->
     <h1 class="title">Rez-de-chaussée</h1>
-    <div class="flex justify-between w-4/5 m-auto mb-8">
+    <div class="flex justify-between w-4/5 m-auto mb-8 descriptif__section">
       <swiper
         :slidesPerView="1"
         :spaceBetween="30"
@@ -424,6 +424,11 @@ export default {
          width: 80%;
          margin: auto;
 
+         @media screen and (max-width: 768px) {
+            width: 90%;
+            //display: block;
+          }
+
         &__paragraph{ 
           //background: #386641;
           color: #fff;
@@ -437,6 +442,13 @@ export default {
           margin: auto;
           border-radius: 50%;
           margin-bottom: 0.5em;
+         }
+
+         &__section{ 
+          @media screen and (max-width: 768px) {
+            display: block;
+          }
+          
          }
 
         &__slide{

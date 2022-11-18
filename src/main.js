@@ -13,15 +13,9 @@ import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons'
 import {faFacebook} from '@fortawesome/free-brands-svg-icons'
 import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
 import {faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faUserSecret, faPhone, faFacebook, faMagnifyingGlassPlus, faLocationDot, faArrowUp)
-
-/*vue.use(VueGoogleMaps, { 
-    load: { 
-        key: 'AIzaSyBUeHIupxp0Xs46su0HS87zMbKyS1KNIOo',
-        libraries: 'places',
-    }
-}),*/
+library.add(faUserSecret, faPhone, faFacebook, faMagnifyingGlassPlus, faLocationDot, faArrowUp, faBars)
 
 
 createApp(App)

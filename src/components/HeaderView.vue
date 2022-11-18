@@ -1,12 +1,12 @@
-<template>
+<template class="relative">
   <div class="flex justify-between header ">
     <div class="first">
-        <h1 class="header__title">Gite <br> 
+        <h1 class="header__title ">Gite <br> 
           <span>Le Cormier</span> 
         </h1>
     </div>
 
-    <nav>
+    <nav id="afficheMenu" class="a">
         <router-link to="/" class="hover:bg-orange-600 ">Accueil</router-link>
         <router-link to="/liens" class="hover:bg-orange-600">Liens</router-link>
         <router-link to="/descriptifs" class="hover:bg-orange-600">Descriptifs</router-link>
@@ -16,12 +16,27 @@
         <router-link to="/reservation" class="hover:bg-orange-600">Page de réservation</router-link>
         <router-link to="/tarifs" class="hover:bg-orange-600">Tarifs</router-link>
     </nav>
+
+    <div class="header__menu" >
+      <font-awesome-icon icon="fa-solid fa-bars" v-on:click="afficheMenu" />
+    </div>
+
   </div>
 </template>
 
 <script>
-export default {
 
+export default {
+  setup(){ 
+    var afficheMenu = () => {
+      var e = document.getElementById("afficheMenu")
+      e.classList.toggle('isActive')
+    }
+    
+    return{ 
+      afficheMenu
+    }
+  }
 }
 </script>
 
@@ -45,6 +60,10 @@ export default {
     display: block;
   }
 
+  @media screen and (max-width : 550px) {
+    display: flex;
+  }
+
   .first{ 
     @media screen and (max-width : 768px) {
       background: #fff;
@@ -58,12 +77,15 @@ export default {
     color: #bc6c25;
     margin-left: 1em;
     padding: 0 1em;
-    //line-height: 1.2em;
 
     @media screen and (max-width : 768px) {
-      width: 20%;
+      width: 25%;
       margin: auto;
       border: 3px solid #bc6c25;
+    }
+
+    @media screen and (max-width : 550px) {
+      width: 100%;
     }
 
     span{ 
@@ -72,14 +94,42 @@ export default {
     }
   }
 
-  nav{ 
-    margin: auto;
+  &__menu{ 
+    display: none;
+
+    @media screen and (max-width : 550px) {
+      font-size: 2em;
+      font-weight: 900;
+      margin-right: 0.5em;
+      z-index: 1000;
+      display: block;
+    }
+  }
+
+  nav{
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-2em);
+    position: relative;
 
     @media screen and (max-width : 768px) {
       padding: 0 0.5em 0.5em 0.5em;
       font-size: 0.8em;
       background: #dda15e;
       width: 100%;
+    }
+
+    @media screen and (max-width : 550px) {
+      display: block;
+      background: rgb(112, 7, 165);
+      width: 50%;
+      position: absolute;
+      left: 600px;
+      transition: .30s ease-in-out;
+      border-radius: 0.2em;
+      opacity: 0;
     }
 
 
@@ -92,15 +142,18 @@ export default {
       font-size: 0.8em;
     }
 
+    @media screen and (max-width : 550px) {
+      display: block;
+    }
+
     &:hover{ 
       transition: 0.5s ease-in-out;
-      transform: translateX(2em);
+      transform: translateX(0.5em);
       font-size: 1.1em;
 
       @media screen and (max-width : 768px) {
-        transition: 0.5s ease-in-out;
         transform: translateX(0.2em);
-        font-size: 1em;
+        font-size: 0.8em;
       }
     }
 
@@ -109,13 +162,19 @@ export default {
 
       @media screen and (max-width : 768px) {
         border-bottom: 2px solid #fff;
-        
       }
     }
 
   }
 
   }
+}
+
+.a.isActive{
+  position: absolute;
+  left: 200px;
+  top: 5px;
+  opacity: 1;
 }
 
 </style>
