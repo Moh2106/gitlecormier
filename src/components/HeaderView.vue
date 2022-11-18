@@ -107,7 +107,6 @@ export default {
   }
 
   nav{
-    background: red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,7 +171,7 @@ export default {
 
 .a.isActive{
   position: absolute;
-  left: 200px;
+  left: 195px;
   top: 5px;
   opacity: 1;
 }

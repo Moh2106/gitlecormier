@@ -7,14 +7,6 @@
         <div id="carouselExampleControls" class="carousel slide relative accueil__slide" data-bs-ride="carousel">
             <div class="carousel-inner relative w-full overflow-hidden">
 
-                <!----<div class="carousel-item active relative float-left w-full">
-                <img
-                    src="../assets/Jardin/jardin12.jpg"
-                    class="block w-full gite h-1/4 "
-                    alt="Chambre"
-                />
-                </div>-->
-
                 <div class="carousel-item active relative float-left w-full">
                 <img
                     src="../assets/Cormier/cormier3.jpg"
@@ -211,11 +203,20 @@ export default {
             border-radius: 0.5em;
             width: 80%;
             margin: auto;
-            //background: #606c38;
             color: #fff;
             
             h1{
                 font-size: 2em;
+
+                @media screen and (max-width: 550px) {
+                font-size: 1em;
+                }
+            }
+
+            p{ 
+                @media screen and (max-width: 550px) {
+                    font-size: 0.8em;
+                }
             }
         }
 
@@ -264,10 +265,18 @@ export default {
                 max-height: 100%;
                 position: relative;
 
+                @media screen and (max-width: 550px){
+                   
+                }
+
                 img{
                     border-radius: 0.5em;
                     width: 300px;
                     height: 200px;
+
+                    /*@media screen and (max-width: 550px){
+                        width: 150%;
+                    }*/
                 }
 
                 div{ 
