@@ -2,7 +2,7 @@
   <div class="flex justify-between header ">
     <div class="first">
         <h1 class="header__title ">Gite <br> 
-          <span>Le Cormier</span> 
+          <span>Le Cormier </span> 
         </h1>
     </div>
 
@@ -137,6 +137,7 @@ export default {
       border-radius: 0.2em;
       opacity: 0;
       font-size: 1em;
+      font-weight: 600;
     }
 
 

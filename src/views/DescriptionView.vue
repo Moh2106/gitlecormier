@@ -132,7 +132,7 @@
 
     <!--------------------- 1ER ETAGE  ----------------------------->
     <h1 class="title">Au 1er Etage</h1>
-    <div class="flex justify-between w-4/5 m-auto mb-8">
+    <div class="flex justify-between w-4/5 m-auto mb-8 descriptif__section">
       <swiper
         :slidesPerView="1"
         :spaceBetween="30"
@@ -255,7 +255,7 @@
 
     <!---------------- LE JARDIN ------------------------------------------>
     <h1 class="title">Le jardin</h1>
-    <div class="flex justify-between w-4/5 m-auto">
+    <div class="flex justify-between w-4/5 m-auto descriptif__section">
       <swiper
         :slidesPerView="1"
         :spaceBetween="30"
@@ -415,7 +415,6 @@ export default {
     }
 
     .b{
-      //object-fit: cover;
       width: 100%;
       height: 100%;
       object-fit: fill;
@@ -426,7 +425,11 @@ export default {
 
          @media screen and (max-width: 768px) {
             width: 90%;
-            //display: block;
+          }
+
+          @media screen and (max-width: 550px) {
+            width: 95%;
+            font-size: 0.7em;
           }
 
         &__paragraph{ 
@@ -435,6 +438,10 @@ export default {
           border-radius: 0.5em;
           padding: 1em;
           margin-bottom: 1em;
+
+          @media screen and (max-width: 768px) {
+            //font-size: 0.7em;
+          }
         }
          .title{ 
           background: #fff;
@@ -442,11 +449,30 @@ export default {
           margin: auto;
           border-radius: 50%;
           margin-bottom: 0.5em;
+
+          @media screen and (max-width: 550px) {
+            width: 50%;
+            font-weight: 600;
+            //font-size: 0.8em;
+          }
+
          }
 
          &__section{ 
           @media screen and (max-width: 768px) {
             display: block;
+          }
+
+          @media screen and (max-width: 550px) {
+            display: flex;
+            flex-direction: column-reverse;
+            font-weight: 500;
+            
+            div{ 
+              width: 100%;
+              margin-bottom: 0.5em;
+              border-radius: 0.5em;
+            }
           }
           
          }
