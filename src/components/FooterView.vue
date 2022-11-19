@@ -8,12 +8,12 @@
         <h1 class="mb-5 a">Nous contacter sur : </h1>
 
         <div class="flex justify-between contact">
-            <div class="mr-36 scroll-mr-36">
+            <div class="mr-36 scroll-mr-36 contact__paragraph">
                 <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl pr-4"/> 00 33 2 32 42 40 23</p>
                 <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl pr-4"/> 00 33 6 50 04 73 88</p>
             </div>
 
-            <div class="flex justify-around ">
+            <div class="flex justify-around contact__icons">
                 <p class="px-8">
                     <a href="https://www.facebook.com/gitelecormier/" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-facebook" class=" text-2xl hover:bg-blue-700 hover:scale-125 b"/></a>
                 </p>
@@ -47,12 +47,35 @@ export default {
             display: block;
         }
 
+        @media screen and (max-width : 550px) {
+            height: 40vh;
+        }
+
         .contact{ 
 
             @media screen and (max-width : 768px) {
                 width: 90%;
                 margin: auto;
                 justify-content: space-around;
+            }
+
+            @media screen and (max-width : 550px) {
+                width: 100%;
+                display: block;
+
+                &__paragraph{ 
+                    width: 90%;
+                    margin: auto;
+                    margin: 1em;
+                }
+
+                &__icons{ 
+                    display: block;
+
+                    p{
+                        display: inline;
+                    }
+                }
             }
             
         }
@@ -61,6 +84,10 @@ export default {
             @media screen and (max-width : 768px) {
                 margin: 2em 0;
             }
+
+            @media screen and (max-width : 550px) {
+                margin: 0.5em 0;
+        }
             
         }
         .b{

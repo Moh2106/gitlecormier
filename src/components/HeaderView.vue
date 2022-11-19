@@ -65,9 +65,15 @@ export default {
   }
 
   .first{ 
+
     @media screen and (max-width : 768px) {
       background: #fff;
     }
+
+    @media screen and (max-width : 550px) {
+      background: #dda15e;
+    }
+    
   }
 
   &__title{ 
@@ -117,7 +123,7 @@ export default {
       padding: 0 0.5em 0.5em 0.5em;
       font-size: 0.8em;
       background: #dda15e;
-      width: 100%;
+      width: auto;
     }
 
     @media screen and (max-width : 550px) {
@@ -129,6 +135,7 @@ export default {
       transition: .30s ease-in-out;
       border-radius: 0.2em;
       opacity: 0;
+      font-size: 1em;
     }
 
 
