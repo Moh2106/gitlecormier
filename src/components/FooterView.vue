@@ -42,6 +42,7 @@ export default {
         background: #bc6c25;
         height: 30vh;
         color: #fff;
+        font-weight: 600;
 
         @media screen and (max-width : 768px) {
             display: block;

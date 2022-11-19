@@ -62,6 +62,7 @@ export default {
 
   @media screen and (max-width : 550px) {
     display: flex;
+    font-family: 'Poppins', sans-serif;
   }
 
   .first{ 
