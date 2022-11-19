@@ -19,6 +19,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .reservation{ 
+    width: 100%;
 
+    &__iframe{ 
+      @media screen and (max-width: 768px) {
+        width: 70%;
+        margin: auto;
+      }
+
+      @media screen and (max-width: 550px) {
+        width: 90%;
+        margin: auto;
+      }
+    }
+  }
 
 </style>
