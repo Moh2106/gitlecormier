@@ -147,7 +147,7 @@ export default {
     }
     @media screen and (max-width: 550px) {
       width: 100%;
-      font-size: 0.7em;
+      font-size: 0.8em;
 
       &__iframe{
         width: 90%;
