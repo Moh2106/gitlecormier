@@ -42,7 +42,7 @@ export default {
         background: #bc6c25;
         height: 30vh;
         color: #fff;
-        font-weight: 600;
+        //font-weight: 600;
 
         @media screen and (max-width : 768px) {
             display: block;
@@ -50,6 +50,8 @@ export default {
 
         @media screen and (max-width : 550px) {
             height: 40vh;
+            font-size: 0.8em;
+            font-weight: 500;
         }
 
         .contact{ 

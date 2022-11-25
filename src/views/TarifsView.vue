@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-16">
+  <div class="pt-16 tarif">
     <!-- Insertion des saisons, dates et prix à partir de tarifs de script -->
     <div class="flex flex-wrap w-4/5 mx-auto pb-4">
       <div v-for="tarif in tarifs" :key="tarif.id" class="w-1/3 ">
@@ -25,8 +25,8 @@
       <div data-widget-itea="dispo" data-key="vk3_8_ia" data-numgite="818" data-sanscss=1 data-nbmois=6 data-nbmois-ligne=3></div>
     </div>-->
 
-    <div class="w-1/3 m-auto ">
-      <iframe style="overflow:auto; -webkit-overflow-scrolling:touch;border:none" height="500" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=dispo&nbmois=6&nbmoisLigne=3"></iframe>
+    <div class="w-1/3 m-auto tarif__iframe">
+      <iframe style="overflow:auto; -webkit-overflow-scrolling:touch;border:none" height="400" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=dispo&nbmois=6&nbmoisLigne=3"></iframe>
     </div>
  
   </div>
@@ -111,6 +111,16 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .tarif{ 
+    @media screen and (max-width: 550px) {
+      width: 100%;
+      font-size: 0.7em;
 
+      &__iframe{
+        width: 90%;
+      }
+
+    }
+  }
 </style>
