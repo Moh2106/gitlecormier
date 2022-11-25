@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 ">
+    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4">
       <p>Attention le chauffage est en plus, compter environ <span class="text-green-600">10€</span> par   jour en plein hiver.
         Une caution de <span class="text-green-600">300€</span> vous sera demandée lors de votre arrivée puis restituée à votre départ si les écrans plats sont toujours là.
       </p>
@@ -25,6 +25,7 @@
       <div data-widget-itea="dispo" data-key="vk3_8_ia" data-numgite="818" data-sanscss=1 data-nbmois=6 data-nbmois-ligne=3></div>
     </div>-->
 
+    <h1 class="tarif__title bubble-bottom"> Calendrier de disponibilité</h1>
     <div class="w-1/3 m-auto tarif__iframe">
       <iframe style="overflow:auto; -webkit-overflow-scrolling:touch;border:none" height="400" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=dispo&nbmois=6&nbmoisLigne=3"></iframe>
     </div>
@@ -112,7 +113,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  .bubble-bottom {
+  /* Modify size here: */
+      --size: 10em;
+
+      position: relative;
+      width: var(--size);
+      height: calc(var(--size) * 0.35);
+      border-radius: 10px;
+
+      &::after{ 
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: calc(var(--size) * 0.13) solid transparent;
+        border-top-color: rgb(22 163 74);
+        border-bottom: 0;
+        margin-left: calc(var(--size) * 0.13 * -1);
+        margin-bottom: calc(var(--size) * 0.13 * -1);
+      }
+    }
   .tarif{ 
+    &__title{
+      background:rgb(22 163 74);
+      margin: auto;
+      //color: #fff;
+      color: blanchedalmond;
+      font-weight: 600;
+    }
     @media screen and (max-width: 550px) {
       width: 100%;
       font-size: 0.7em;

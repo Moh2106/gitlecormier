@@ -49,6 +49,7 @@ export default {
         }
 
         @media screen and (max-width : 550px) {
+            padding-top: 1.5em;
             height: 40vh;
             font-size: 0.8em;
             font-weight: 500;
