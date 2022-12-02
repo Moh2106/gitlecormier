@@ -114,7 +114,7 @@
         </div>
 
         <div>
-            <h1>CENTAURE PARIS - NORMANDIE</h1>
+            <h1>ABBAYE DE SAINT-WANDRILLE</h1>
             <p>La communauté monastique de l'abbaye Saint-Wandrille perpétue une longue tradition de prière dans le recueillement et le travail, la solitude et la communion.
             </p>
 
@@ -497,13 +497,376 @@
         </div>
     </div>
 
+    <!--- LES ECURIES DU QUESNEY -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/les_ecuries_du_quesney.png" alt="">
+        </div>
+
+        <div>
+            <h1> LES ECURIES DU QUESNEY </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
+                <a href="https://www.lesecuriesduquesney.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- LA NORMANDIE INFO -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/la_normandie_info.png" alt="">
+        </div>
+
+        <div>
+            <h1> LA NORMANDIE INFO </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
+                <a href="https://www.la-normandie.info/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- TERRES VIVANTES EN NORMANDIE -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/terre_vivante.png" alt="">
+        </div>
+
+        <div>
+            <h1> TERRES VIVANTES EN NORMANDIE </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
+                <a href="https://www.terresvivantes-normandie.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- ROUMOIS SEINE -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/roumois_seine.png" alt="">
+        </div>
+
+        <div>
+            <h1> ROUMOIS SEINE </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
+                <a href="https://www.roumoiseine.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- CAUX-SEINE NORMANDIE TOURISME  -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/caux_seine_tourisme.png" alt="">
+        </div>
+
+        <div>
+            <h1> CAUX-SEINE NORMANDIE TOURISME </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
+                <a href="https://www.entreseineetmer.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- GRAINE DE VIKING -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/graine_de_viking.png" alt="">
+        </div>
+
+        <div>
+            <h1> GRAINE DE VIKING </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
+                <a href="https://www.grainedeviking.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- ABBAYE DE BON PORT -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/abbaye_de_bon_port.png" alt="">
+        </div>
+
+        <div>
+            <h1> ABBAYE DE BON PORT </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
+                <a href="https://www.abbayedebonport.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- PARC DE CLERES -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/parc_de_clerc.png" alt="">
+        </div>
+
+        <div>
+            <h1> ESCARGOT DE BROTONNE </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
+                <a href="http://www.parcdecleres.net/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- HONFLEUR TERRE D'ESTUAIRE -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/honfleur.png" alt="">
+        </div>
+
+        <div>
+            <h1> HONFLEUR TERRE D'ESTUAIRE </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
+                <a href="https://www.ot-honfleur.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- CHATEAU DE MONFORT SUR RISLES -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/chateau_de_monfort.jpg" alt="">
+        </div>
+
+        <div>
+            <h1> CHATEAU DE MONFORT SUR RISLES </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- LA HAYE DE ROUTOT -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/la_haye_de_routot.jpg" alt="">
+        </div>
+
+        <div>
+            <h1> LA HAYE DE ROUTOT </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+              
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- LE MOULIN DE HAUVILLE -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/moulin_de_hauville.jpg" alt="">
+        </div>
+
+        <div>
+            <h1> LE MOULIN DE HAUVILLE </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- LES BACS DE SEINE -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/bacs_de_seine.webp" alt="">
+        </div>
+
+        <div>
+            <h1> LES BACS DE SEINE </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- LA FORET DE BROTONNE( RANDONNÉES )-->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/foret_de_brotonne.jpg" alt="">
+        </div>
+
+        <div>
+            <h1> LA FORET DE BROTONNE( RANDONNÉES ) </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- LES BORDS DE SEINE, LA FOULERIE (BOURG-ACHARD) -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/bords_de_seine.jpg" alt="">
+        </div>
+
+        <div>
+            <h1> LES BORDS DE SEINE, LA FOULERIE (BOURG-ACHARD) </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
+    <!--- THEATRE ROMAIN LILLEBONNE -->
+    <div class="alentours__design">
+        <div>
+          <img src="../assets/Alentours/theatre_romain_de_lillebonne.jpg" alt="">
+        </div>
+
+        <div>
+            <h1> THEATRE ROMAIN LILLEBONNE </h1>
+            <p> A ajouter
+            </p>
+
+            <div>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+              </button>
+              
+            </div>
+        </div>
+    </div>
+
     <!--------------Boutton de redirection------------------------------>
-    <div class="text-right ">
+    <div class="alentours__redirection">
       <button>
         <a href="#haut">
           <font-awesome-icon 
             icon="fa-solid fa-arrow-up"
-            class="gallerie__font "
+            class="alentours__redirection--font "
             />
         </a>
       </button>
@@ -541,6 +904,23 @@ export default {
       margin: auto;
       border-radius: 0.5em;
       margin-bottom: 1em;
+    }
+
+    &__redirection{
+      //width: 5%;
+      text-align: right;
+
+        &--font{ 
+        font-size: 1.5em;
+        //border: 2px solid #fff;
+        padding: 0.7em;
+        border-radius: 50%;
+        //color: green;
+        margin-right: 0.5em;
+        //background: #fff;
+        background: rgb(39, 184, 39);
+        color: #fff;
+      }
     }
   }
 

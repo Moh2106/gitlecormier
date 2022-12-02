@@ -32,7 +32,7 @@ export default {
   background: url('../src/assets/Cormier/cormier_background.jpg');
   background-attachment: scroll;
 
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 768px) {
     font-family: 'Poppins', sans-serif;
   }
 }

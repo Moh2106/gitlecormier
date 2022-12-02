@@ -45,6 +45,7 @@ export default {
 
         @media screen and (max-width : 768px) {
             display: block;
+            font-weight: 500;
         }
 
         @media screen and (max-width : 550px) {

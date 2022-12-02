@@ -138,13 +138,30 @@ export default {
       }
     }
   .tarif{ 
+    @media screen and (max-width: 550px) {
+        padding-top: 3em;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding-top: 5em;
+      }
+
     &__title{
       background:rgb(22 163 74);
       margin: auto;
-      //color: #fff;
       color: blanchedalmond;
       font-weight: 600;
     }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+
+      &__iframe{
+        width: 90%;
+      }
+
+    }
+
     @media screen and (max-width: 550px) {
       width: 100%;
       font-size: 0.8em;
@@ -154,5 +171,6 @@ export default {
       }
 
     }
+
   }
 </style>

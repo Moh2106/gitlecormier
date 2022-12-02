@@ -309,28 +309,6 @@
 
 export default {
   setup(){ 
-
-    /*let simple = { 
-      image1 : { 
-        id: 1,
-        img: 'jardin1.jpg'
-      },
-
-      image2 : { 
-        id: 2,
-        img: 'jardin2.jpg'
-      },
-
-      image3 : { 
-        id: 3,
-        img: "jardin3.jpg"
-      },
-
-      image4 : { 
-        id: 4,
-        img: "etage1.jpg"
-      }
-    }*/
    
    // Cette fonction permet d'agrandir l'image en cliquant sur son div parent
 
