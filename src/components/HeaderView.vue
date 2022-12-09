@@ -7,14 +7,14 @@
     </div>
 
     <nav id="afficheMenu" class="a">
-        <router-link to="/" class="hover:bg-orange-600 ">Accueil</router-link>
-        <router-link to="/liens" class="hover:bg-orange-600">Liens</router-link>
-        <router-link to="/descriptifs" class="hover:bg-orange-600">Descriptifs</router-link>
-        <router-link to="/arrive" class="hover:bg-orange-600">Comment arriver</router-link>
-        <router-link to="/alentours" class="hover:bg-orange-600">Aux Alentours</router-link>
-        <router-link to="/livredor" class="hover:bg-orange-600">Livres d'or</router-link>
-        <router-link to="/reservation" class="hover:bg-orange-600">Page de réservation</router-link>
-        <router-link to="/tarifs" class="hover:bg-orange-600">Tarifs</router-link>
+        <router-link to="/" class="hover:bg-orange-600 nav__link" v-on:click="supprimerMenu">Accueil</router-link>
+        <router-link to="/liens" class="hover:bg-orange-600 nav__link" v-on:click="supprimerMenu">Liens</router-link>
+        <router-link to="/descriptifs" class="hover:bg-orange-600 nav__link">Descriptifs</router-link>
+        <router-link to="/arrive" class="hover:bg-orange-600 nav__link">Comment arriver</router-link>
+        <router-link to="/alentours" class="hover:bg-orange-600 nav__link">Aux Alentours</router-link>
+        <router-link to="/livredor" class="hover:bg-orange-600 nav__link">Livres d'or</router-link>
+        <router-link to="/reservation" class="hover:bg-orange-600 nav__link">Page de réservation</router-link>
+        <router-link to="/tarifs" class="hover:bg-orange-600 nav__link">Tarifs</router-link>
     </nav>
 
     <div class="header__menu" >
@@ -31,10 +31,32 @@ export default {
     var afficheMenu = () => {
       var e = document.getElementById("afficheMenu")
       e.classList.toggle('isActive')
+      /*console.log(e.children)
+
+      e.children.addEventListener("click", () => { 
+        e.classList.remove('isActive')
+      })*/
+
+    }
+
+    var supprimerMenu = () => { 
+      var nav = document.querySelectorAll(".nav__link")
+      var e = document.getElementById("afficheMenu")
+      console.log(nav)
+
+      nav.forEach( el => {
+        //element.contains(nav).classList.remove('isActive')
+        el.addEventListener('click', () => { 
+          e.classList.remove('isActive')
+        })
+        
+      });
+      
     }
     
     return{ 
-      afficheMenu
+      afficheMenu,
+      supprimerMenu
     }
   }
 }
@@ -183,6 +205,11 @@ export default {
   left: 195px;
   top: 5px;
   opacity: 1;
+}
+
+
+.log{ 
+  background: red;
 }
 
 </style>
