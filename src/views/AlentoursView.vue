@@ -1,29 +1,6 @@
 <template>
   <div class="alentours" id="haut">
 
-    <!-- EURE TOURISME -->
-    <div class=" alentours__design">
-        <div>
-            <img src="../assets/Alentours/eure_tourisme.png" alt="Eure tourisme">
-        </div>
-
-        <div>
-            <h1>EURE TOURISME</h1>
-
-            <div>
-              <button class="mr-4 p-1 bg-red-500 rounded-lg">
-                <a href="https://www.eure-tourisme.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
-              </button>
-
-              <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
-              </button>
-              
-            </div>
-
-        </div>
-    </div>
-
     <!-- CENTAURE PARIS - NORMANDIE -->
     <div class="alentours__design">
         <div>
@@ -53,7 +30,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/LwZpfuCECgXxUu9N6" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -63,11 +40,11 @@
     <!-- PARC NATUREL RéGIONAL DES BOUCLES DE LA SEINE NORM -->
     <div class="alentours__design">
         <div>
-            <img src="../assets/Alentours/parc_nationale_seine.png" alt="Parc naturel régional des boucles de la seine norm">
+            <img src="../assets/Alentours/le_parc_naturel_regional_des_boucles_de_la_seine_normande.webp" alt="Parc naturel régional des boucles de la seine norm">
         </div>
 
         <div>
-            <h1>PARC NATUREL RéGIONAL DES BOUCLES DE LA SEINE NORM</h1>
+            <h1>PARC NATUREL REGIONAL DES BOUCLES DE LA SEINE NORM</h1>
   
             <div>
               <button class="mr-4 p-1 bg-red-500 rounded-lg">
@@ -75,7 +52,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/webWsnrmwkP6XTK18" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -99,14 +76,14 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/bmxmhuwMcHVxk5E99" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
             </div>
         </div>
     </div>
 
-        <!---------------ABBAYE DE SAINT-WANDRILLE ------------------------------>
+    <!---------------ABBAYE DE SAINT-WANDRILLE ------------------------------>
 
     <div class="alentours__design">
         <div>
@@ -124,32 +101,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
-              </button>
-              
-            </div>
-
-        </div>
-    </div>
-
-    <!-----------------MANOIR DE VILLERS------------------->
-    <div class="alentours__design">
-        <div>
-            <img src="../assets/Alentours/manoir_des_villers.png" alt="Manoir de villers">
-        </div>
-
-        <div>
-            <h1>MANOIR DE VILLERS</h1>
-            <p>Implanté entre cour et jardin le Manoir de Villers était en 1581, une Maison de Maitre construite en pierre de Caumont avec un étage à pans de bois et recouverte de petites tuiles. Il fut transformé et agrandi au cours des siècles, jusqu'à devenir ce grand manoir néo-normand aux toitures inspirées des plus belles maisons de Rouen et aux facades habillées d'un curieux trompe l'oeil (architecte : Lassire).
-            </p>
-
-            <div>
-              <button class="mr-4 p-1 bg-red-500 rounded-lg">
-                <a href="http://www.manoirdevillers.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
-              </button>
-
-              <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/4SmoYSUJGdG9wtu38" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -175,7 +127,32 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/ujbBoW3WHjiTR6ew8" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
+              </button>
+              
+            </div>
+
+        </div>
+    </div>
+
+    <!-----------------MANOIR DE VILLERS------------------->
+    <div class="alentours__design">
+        <div>
+            <img src="../assets/Alentours/manoir_des_villers.png" alt="Manoir de villers">
+        </div>
+
+        <div>
+            <h1>MANOIR DE VILLERS</h1>
+            <p>Implanté entre cour et jardin le Manoir de Villers était en 1581, une Maison de Maitre construite en pierre de Caumont avec un étage à pans de bois et recouverte de petites tuiles. Il fut transformé et agrandi au cours des siècles, jusqu'à devenir ce grand manoir néo-normand aux toitures inspirées des plus belles maisons de Rouen et aux facades habillées d'un curieux trompe l'oeil (architecte : Lassire).
+            </p>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
+                <a href="http://www.manoirdevillers.com/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="https://maps.app.goo.gl/gZfogdowr5M2o8Gt9" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -200,7 +177,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/JrP2JWuUW3PBGfEc7" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -225,7 +202,31 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/yEbQWnzjhCk7BiUy6" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
+              </button>
+              
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- EURE TOURISME -->
+    <div class=" alentours__design">
+        <div>
+            <img src="../assets/Alentours/eure_tourisme.png" alt="Eure tourisme">
+        </div>
+
+        <div>
+            <h1>EURE TOURISME</h1>
+
+            <div>
+              <button class="mr-4 p-1 bg-red-500 rounded-lg">
+                <a href="https://www.eure-tourisme.fr/" target="_blank" rel="noopener noreferrer">Aller sur le site officiel</a>
+              </button>
+
+              <button class="bg-green-500 p-1 rounded-lg">
+                <a href="https://maps.app.goo.gl/ozmDzee8qwuDRZNe9" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -241,7 +242,8 @@
 
         <div>
             <h1>ABBAYE DU BEC</h1>
-            <p> A ajouter
+            <p> 
+                L’abbaye Notre-Dame du Bec est une abbaye catholique bénédictine faisant aujourd'hui partie de la congrégation de Sainte-Marie du Mont-Olivet et située au Bec-Hellouin, près de Brionne, dans le département de l’Eure, en Normandie. Elle a été fondée en 1034 par Herluin, ou Helloin, d'où son nom, chevalier du comte Gilbert de Brionne.
             </p>
 
             <div>
@@ -250,7 +252,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/x7rKJNgeytNzRxy2A" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -260,12 +262,14 @@
     <!-- Chateau de martin ville -->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/chateau_de_martin_ville.png" alt="">
+          <img src="../assets/Alentours/chateau_de_martin_ville.png" alt="Chateau de martin ville">
         </div>
 
         <div>
             <h1>CHATEAU DE MARTAINVILLE</h1>
-            <p> A ajouter
+            <p> 
+              Le château de Martainville est une demeure de la fin du XV siècle qui se dresse sur le territoire de la commune française de Martainville-Épreville, dans le département de la Seine-Maritime, en région Normandie.
+              Le château, qui abrite le musée des Traditions et Arts Normands, est partiellement protégé aux monuments historiques.
             </p>
 
             <div>
@@ -274,7 +278,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/nPv2gKruF47XgQeg7" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
             </div>
@@ -284,12 +288,13 @@
     <!-- PONT NORMANDIE TANCARVILLE -->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/pont_tancerville.jpg" alt="">
+          <img src="../assets/Alentours/pont_tancerville.jpg" alt="Pont Normandie Tancarville">
         </div>
 
         <div>
             <h1>PONT NORMANDIE TANCARVILLE</h1>
-            <p> A ajouter
+            <p>
+              Le pont de Tancarville est un pont suspendu à câble porteur qui franchit la Seine entre Tancarville (Seine-Maritime) et Marais-Vernier (Eure), en France.
             </p>
 
             <div>
@@ -298,22 +303,23 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/m4ncBgnQFbfVXtAY8" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
         </div>
     </div>
 
-    <!-- ABBAYE SAINT GEORGES  -->
+    <!---------- ABBAYE SAINT GEORGES  ---------------->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/abbaye_saint_georges.png" alt="">
+          <img src="../assets/Alentours/abbaye_saint_georges.png" alt="Abbaye de Saint Georges">
         </div>
 
         <div>
             <h1> ABBAYE SAINT GEORGES </h1>
-            <p> A ajouter
+            <p>
+              L’abbaye Saint-Georges est une ancienne abbaye de femmes bénédictine, fondée à Rennes par le duc Alain III de Bretagne entre 1024 et 1034 afin d'y accueillir sa sœur Adèle et les moniales bénédictines . L’abbaye est brûlée avec une partie de la ville par Henri II d'Angleterre à la fin du XII siècle . Elle se trouve en dehors de la cité jusqu'à l’extension des murailles en 1448 .
             </p>
 
             <div>
@@ -322,17 +328,17 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/JUcRUumDfqrSTStH9" target="_blank" rel="noopener noreferrer">Trajectoire google Maps</a>
               </button>
               
             </div>
         </div>
     </div>
 
-    <!-- ROUEN EN TOURISME  -->
+    <!---------- ROUEN TOURISME  -------------------->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/rouentourisme.png" alt="">
+          <img src="../assets/Alentours/rouentourisme.png" alt="Rouen Tourisme">
         </div>
 
         <div>
@@ -346,7 +352,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/PVHxtPcJphTCZ38dA" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -356,12 +362,14 @@
     <!-- CHATEAU DU CHAMP DE BATAILLE -->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/chateau_du_champ_de_bataille.png" alt="">
+          <img src="../assets/Alentours/chateau_du_champ_de_bataille.png" alt="Chateau du Champ de Bataille">
         </div>
 
         <div>
             <h1> CHATEAU DU CHAMP DE BATAILLE </h1>
-            <p> A ajouter
+            <p> 
+              Le château du Champ-de-Bataille est une demeure, édifié au XVII siècle pour le comte Alexandre de Créqui-Bernieulles, qui se dresse sur le territoire de la commune française de Sainte-Opportune-du-Bosc dans le département de l'Eure, en région Normandie.
+              Le château est partiellement protégé aux monuments historiques.
             </p>
 
             <div>
@@ -370,7 +378,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/WC8RX7n1Sz7TnBDo8" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -380,7 +388,7 @@
     <!-- HARCOURT NORMANDIE -->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/harcourt_normandie.png" alt="">
+          <img src="../assets/Alentours/harcourt_normandie.png" alt="Harcourt Normandie">
         </div>
 
         <div>
@@ -394,7 +402,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/a6Rq9i7RbHJgRAyR7" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -404,7 +412,7 @@
     <!-- LERY POSES -->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/lary_poses.png" alt="">
+          <img src="../assets/Alentours/lary_poses.png" alt="Lery Poses">
         </div>
 
         <div>
@@ -418,7 +426,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/AQQ2Q9kHCTUrZUTbA" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -428,12 +436,15 @@
     <!-- PARC DU BOCASSE -->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/parc_du_bocasse.png" alt="">
+          <img src="../assets/Alentours/parc_du_bocasse.png" alt="Parc du Bocasse">
         </div>
 
         <div>
             <h1> PARC DU BOCASSE </h1>
-            <p> A ajouter
+            <p> 
+              Le parc du Bocasse est un parc à thèmes français situé au Bocasse, en Seine-Maritime dans la région Normandie à 28 km au nord de Rouen. Le parc a comme mascottes deux abeilles du nom de Buzzy et Apicouette.
+
+              Il s'agit du plus ancien parc de Seine-Maritime et l'un des plus anciens de France, s'étendant sur 5,8 hectares, ainsi que 6,1 hectares d'un parking de 700 places.
             </p>
 
             <div>
@@ -442,7 +453,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/oNpZwP2t3fKvZYaaA" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -452,7 +463,7 @@
     <!--- FERME LULU MARKET -->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/ferme_lulu_market.png" alt="">
+          <img src="../assets/Alentours/ferme_lulu_market.png" alt="Ferme Lulu Market">
         </div>
 
         <div>
@@ -466,7 +477,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -476,7 +487,7 @@
     <!--- ESCARGOT DE BROTONNE -->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/escargot_de_brotonne.png" alt="">
+          <img src="../assets/Alentours/escargot_de_brotonne.png" alt="Escargot de Brotonne">
         </div>
 
         <div>
@@ -490,7 +501,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/A1EHM1SBUSKkYsdJ6" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -500,7 +511,7 @@
     <!--- LES ECURIES DU QUESNEY -->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/les_ecuries_du_quesney.png" alt="">
+          <img src="../assets/Alentours/les_ecuries_du_quesney.png" alt="Les écuries du Quesney">
         </div>
 
         <div>
@@ -514,17 +525,17 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/cvmCXBxoiYz1i3BP7" target="_blank" rel="noopener noreferrer">Trajectoire google Maps</a>
               </button>
               
             </div>
         </div>
     </div>
 
-    <!--- LA NORMANDIE INFO -->
+    <!--- LA NORMANDIE INFO ************-->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/la_normandie_info.png" alt="">
+          <img src="../assets/Alentours/la_normandie_info.png" alt="Normandie Info">
         </div>
 
         <div>
@@ -545,10 +556,10 @@
         </div>
     </div>
 
-    <!--- TERRES VIVANTES EN NORMANDIE -->
+    <!--- TERRES VIVANTES EN NORMANDIE  ********-->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/terre_vivante.png" alt="">
+          <img src="../assets/Alentours/terre_vivante.png" alt="Terres vivantes en Normandie">
         </div>
 
         <div>
@@ -562,7 +573,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -586,14 +597,14 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/pDuF5RP5aoSuTvsE8" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
         </div>
     </div>
 
-    <!--- CAUX-SEINE NORMANDIE TOURISME  -->
+    <!--- CAUX-SEINE NORMANDIE TOURISME  ***********-->
     <div class="alentours__design">
         <div>
           <img src="../assets/Alentours/caux_seine_tourisme.png" alt="">
@@ -610,7 +621,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -634,7 +645,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/wkuYHNK2AP5XAGyx9" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -644,12 +655,13 @@
     <!--- ABBAYE DE BON PORT -->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/abbaye_de_bon_port.png" alt="">
+          <img src="../assets/Alentours/abbaye_de_bon_port.png" alt="abbaye de bon port">
         </div>
 
         <div>
             <h1> ABBAYE DE BON PORT </h1>
-            <p> A ajouter
+            <p>      
+              L'abbaye Notre-Dame de Bonport est une ancienne abbaye cistercienne, située sur la commune française de Pont-de-l'Arche dans le département de l'Eure, en région Normandie. Elle est construite sur la rive d'un bras mort de la Seine, en aval de l'agglomération de Pont-de-l'Arche.
             </p>
 
             <div>
@@ -658,7 +670,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/nkcfAFYEczPru8Cz5" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -682,7 +694,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/iFgySb1X2C81bCar5" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -706,7 +718,7 @@
               </button>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/gor7k4uPyrQFAxwk7" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -716,18 +728,19 @@
     <!--- CHATEAU DE MONFORT SUR RISLES -->
     <div class="alentours__design">
         <div>
-          <img src="../assets/Alentours/chateau_de_monfort.jpg" alt="">
+          <img src="../assets/Alentours/chateau_de_monfort.jpg" alt="Chateau de Monfort">
         </div>
 
         <div>
             <h1> CHATEAU DE MONFORT SUR RISLES </h1>
-            <p> A ajouter
+            <p> 
+              Montfort-sur-Risle est une commune du Nord-Ouest du département de l'Eure en région Normandie. Située au cœur de la vallée de la Risle, elle appartient à la région naturelle du Lieuvin.
             </p>
 
             <div>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/Js5m7xBCedCAkAcz5" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -748,7 +761,7 @@
             <div>
               
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/9mfEfYJF5F8Dpqtt8" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
               </button>
               
             </div>
@@ -769,14 +782,14 @@
             <div>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/zrvyXonkxsQJhWVHA" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
         </div>
     </div>
 
-    <!--- LES BACS DE SEINE -->
+    <!--- LES BACS DE SEINE *************-->
     <div class="alentours__design">
         <div>
           <img src="../assets/Alentours/bacs_de_seine.webp" alt="">
@@ -790,7 +803,7 @@
             <div>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Trajectoire google Maps</a>
               </button>
               
             </div>
@@ -811,14 +824,14 @@
             <div>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/FJ1Agv3EMfkUrJ4P9" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
         </div>
     </div>
 
-    <!--- LES BORDS DE SEINE, LA FOULERIE (BOURG-ACHARD) -->
+    <!--- LES BORDS DE SEINE, LA FOULERIE (BOURG-ACHARD) *********-->
     <div class="alentours__design">
         <div>
           <img src="../assets/Alentours/bords_de_seine.jpg" alt="">
@@ -832,7 +845,7 @@
             <div>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -853,7 +866,7 @@
             <div>
 
               <button class="bg-green-500 p-1 rounded-lg">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Voir la trajectoire google Maps</a>
+                <a href="https://maps.app.goo.gl/bZuwgsZMaznUhcKp7" target="_blank" rel="noopener noreferrer">Trajectoire Google Maps</a>
               </button>
               
             </div>
@@ -894,6 +907,8 @@ export default {
       grid-template-columns: 1fr 3fr;
       margin-bottom: 1em;
       border-radius: 0.5em;
+
+      
     }
 
     &__elements{ 
