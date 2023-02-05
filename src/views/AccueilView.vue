@@ -196,6 +196,14 @@ export default {
         &__slide{ 
             width: 90%;
             margin: auto;
+
+            /*@media screen and (max-width: 768px) {
+                img{ 
+                    height: 3vh;
+                    object-fit: fill;
+                }
+   
+            }*/
         }
 
         &__description{ 
@@ -360,6 +368,6 @@ export default {
         height: 675px;
     }
 
-    }
+}
     
 </style>

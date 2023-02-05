@@ -885,11 +885,58 @@
       </button>
     </div>
 
+    <div>
+      <div v-for="alentour in alentours" :key="alentour.id" class="alentours__design">
+        <div>
+          <img :src="alentour.img" :alt="alentour.titre">
+        </div>
+
+        <div>
+          <h1 v-text="alentour.titre" class="mb-2"></h1>
+          <p v-text="alentour.description" class="mb-4"></p>
+
+          <div>
+            <button class="bg-red-500">
+              <a :href="alentour.site" target="_blank" rel="noopener noreferrer"> Aller sur le site officiel </a>
+            </button>
+
+            <button class="bg-green-500">
+              <a :href="alentour.maps" target="_blank" rel="noopener noreferrer"> Trajectoire Google Maps </a>
+            </button>
+
+          </div>
+          
+        </div>
+          
+      </div>
+
+    </div>
+
+
   </div>
 </template>
 
 <script>
+import {alentours} from '../database/alentours'
+
 export default {
+
+  setup(){
+    var element = {
+
+      titre1:{
+        title: "Normandie palace",
+        srce : "/assets/Alentours/theatre_romain_de_lillebonne.jpg",
+        src: "/img/abbaye_de_bon_port.fe3fe258.png"
+      }
+    }
+      
+
+    return{
+      element,
+      alentours
+    }
+  }
 
 }
 </script>

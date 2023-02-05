@@ -43,7 +43,7 @@ const routes = [
   {
     path: '/alentours',
     name: 'alentours',
-    component: AlentoursView
+    component: AlentoursView,
   },
 
   {
