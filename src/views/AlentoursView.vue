@@ -29,6 +29,7 @@
 
     </div>
 
+    
     <!--------------Boutton de redirection------------------------------>
     <div class="alentours__redirection">
       <button>
