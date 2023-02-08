@@ -13,17 +13,13 @@
     </div>
 
     <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4">
-      <p>Attention le chauffage est en plus, compter environ <span class="text-green-600">10€</span> par   jour en plein hiver.
-        Une caution de <span class="text-green-600">300€</span> vous sera demandée lors de votre arrivée puis restituée à votre départ si les écrans plats sont toujours là.
+      <p>Attention le chauffage est en plus, compter environ <span class="tarif__price">10€</span> par   jour en plein hiver.
+        Une caution de <span class="tarif__price">300€</span> vous sera demandée lors de votre arrivée puis restituée à votre départ si les écrans plats sont toujours là.
       </p>
 
-      <p>Par semaine, préparation d'un lit 2 personnes : <span class="text-green-600">8€</span> , d'un lit 1 personne : <span class="text-green-600">6€</span>, mise à disposition des serviettes de bain : <span class="text-green-600">6€</span> par personne, forfait ménage : <span class="text-green-600">40€</span>. A préciser à la réservation.
+      <p>Par semaine, préparation d'un lit 2 personnes : <span class="tarif__price">8€</span> , d'un lit 1 personne : <span class="tarif__price">6€</span>, mise à disposition des serviettes de bain : <span class="tarif__price">6€</span> par personne, forfait ménage : <span class="tarif__price">40€</span>. A préciser à la réservation.
       </p>
     </div>
-
-    <!--<div>
-      <div data-widget-itea="dispo" data-key="vk3_8_ia" data-numgite="818" data-sanscss=1 data-nbmois=6 data-nbmois-ligne=3></div>
-    </div>-->
 
     <h1 class="tarif__title bubble-bottom"> Calendrier de disponibilité</h1>
     <div class="w-1/3 m-auto tarif__iframe">
@@ -138,6 +134,11 @@ export default {
       }
     }
   .tarif{ 
+
+    &__price{
+      font-weight: 600;
+    }
+
     @media screen and (max-width: 550px) {
         padding-top: 3em;
       }

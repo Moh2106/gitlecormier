@@ -3,13 +3,13 @@
 
     <!-- Insertion des données de alentours.js via le dossiers database -->
     <div>
-      <div v-for="alentour in alentours" :key="alentour.id" class="alentours__design bg-green-800 bg-opacity-80 text-white">
+      <div v-for="alentour in alentours" :key="alentour.id" class="alentours__design bg-green-700 bg-opacity-80 text-white ">
           <div>
             <img :src="alentour.img" :alt="alentour.titre" class="alentours__design--image">
           </div>
 
           <div>
-              <h1 v-text="alentour.titre" class="mb-2"></h1>
+              <h1 v-text="alentour.titre" class="mb-2 font-bold"></h1>
               <p v-text="alentour.description" class="mb-4"></p>
 
               <div>
@@ -78,6 +78,7 @@ export default {
       &:hover{
         width: 81%;
         transform: scale3d(1.1em);
+        box-shadow: rgba(0, 255, 0, 0.3) 1.95px 1.95px 2.6px;
       }
 
       &--image{

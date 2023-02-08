@@ -31,6 +31,7 @@ export default {
   text-align: center;
   background: url('../src/assets/Cormier/cormier_background.jpg');
   background-attachment: scroll;
+  font-family: 'Poppins', sans-serif;
 
   @media screen and (max-width: 768px) {
     font-family: 'Poppins', sans-serif;

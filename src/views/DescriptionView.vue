@@ -1,7 +1,7 @@
 <template>
   <div class="descriptif pt-20">
 
-    <div class= "descriptif__paragraph bg-green-800 bg-opacity-90">
+    <div class= "descriptif__paragraph bg-green-700 bg-opacity-90">
       <p>
         Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.
       </p>
@@ -372,7 +372,7 @@
     <!----------------------Lien vers gallery photo ----------------------------->
     <div class="descriptif__gallery">
       <button>
-        <router-link to="/gallerie"> Gallerie photo </router-link>
+        <router-link to="/gallerie" class="bg-green-600 text-white font-bold p-2 rounded-lg hover:bg-green-700"> Gallerie photo </router-link>
       </button>
     </div>
  
@@ -438,6 +438,7 @@ export default {
           border-radius: 0.5em;
           padding: 1em;
           margin-bottom: 1em;
+          font-size: 0.9em;
 
           @media screen and (max-width: 768px) {
             //font-size: 0.7em;
@@ -515,8 +516,9 @@ export default {
             margin: 1em;
 
           button{ 
-            background: rgba($color: #f00, $alpha: 1);
-            color: #fff;
+            //background: rgba($color: #fff, $alpha: 1);
+            //color: #000;
+            //font-weight: 600;
             padding: 0.5em;
             border-radius: 0.5em;
             

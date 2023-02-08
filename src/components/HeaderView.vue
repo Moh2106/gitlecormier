@@ -1,20 +1,20 @@
 <template class="relative">
   <div class="flex justify-between header ">
-    <div class="first">
+    <div class="first ">
         <h1 class="header__title ">Gite <br> 
           <span>Le Cormier </span> 
         </h1>
     </div>
 
     <nav id="afficheMenu" class="a">
-        <router-link to="/" class="hover:bg-orange-600 nav__link" v-on:click="supprimerMenu">Accueil</router-link>
-        <router-link to="/liens" class="hover:bg-orange-600 nav__link" v-on:click="supprimerMenu">Liens</router-link>
-        <router-link to="/descriptifs" class="hover:bg-orange-600 nav__link">Descriptifs</router-link>
-        <router-link to="/arrive" class="hover:bg-orange-600 nav__link">Comment arriver</router-link>
-        <router-link to="/alentours" class="hover:bg-orange-600 nav__link">Aux Alentours</router-link>
-        <router-link to="/livredor" class="hover:bg-orange-600 nav__link">Livres d'or</router-link>
-        <router-link to="/reservation" class="hover:bg-orange-600 nav__link">Page de réservation</router-link>
-        <router-link to="/tarifs" class="hover:bg-orange-600 nav__link">Tarifs</router-link>
+        <router-link to="/" v-on:click="supprimerMenu">Accueil</router-link>
+        <router-link to="/liens" v-on:click="supprimerMenu">Liens</router-link>
+        <router-link to="/descriptifs" >Descriptifs</router-link>
+        <router-link to="/arrive" >Comment arriver</router-link>
+        <router-link to="/alentours" >Aux Alentours</router-link>
+        <router-link to="/livredor" >Livres d'or</router-link>
+        <router-link to="/reservation" >Page de réservation</router-link>
+        <router-link to="/tarifs" >Tarifs</router-link>
     </nav>
 
     <div class="header__menu" >
@@ -31,11 +31,7 @@ export default {
     var afficheMenu = () => {
       var e = document.getElementById("afficheMenu")
       e.classList.toggle('isActive')
-      /*console.log(e.children)
-
-      e.children.addEventListener("click", () => { 
-        e.classList.remove('isActive')
-      })*/
+      
 
     }
 
@@ -64,19 +60,28 @@ export default {
 
 <style lang="scss" scoped>
 .header{ 
-  background: #dda15e;
+  //background: rgb(221, 161, 94);
+  //background: rgb(255, 255, 255,0.8);
   color: #fff;
+  //color: rgba(12, 87, 12, 0.678);
+  //backdrop-filter: brightness(90%);
+  backdrop-filter: contrast(40%) brightness(90%) blur(10px);
+  //backdrop-filter: opacity(20%);
+  //backdrop-filter: blur(30px);
+  //filter: blur(1px);
   height: 7.5vh;
-  font-family: 'Oleo Script Swash Caps', cursive;
+  //font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Poppins', sans-serif;
   position: fixed;
+  //position: sticky;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   z-index: 100000;
-  box-shadow: 0px 1px 0px 1px #bc6c25;
+  /*box-shadow: 0px 1px 0px 1px #bc6c25;
 -webkit-box-shadow: 0px 1px 0px 1px #bc6c25;
--moz-box-shadow: 0px 1px 0px 1px #bc6c25;
+-moz-box-shadow: 0px 1px 0px 1px #bc6c25;*/
 
   @media screen and (max-width : 768px) {
     display: block;
@@ -178,8 +183,9 @@ export default {
 
     &:hover{ 
       transition: 0.5s ease-in-out;
-      transform: translateX(0.5em);
-      font-size: 1.1em;
+      transform: scale3d(1em);
+      font-size: 1.05em;
+      background: #086d19;
 
       @media screen and (max-width : 768px) {
         transform: translateX(0.2em);
@@ -189,6 +195,7 @@ export default {
 
     &.router-link-exact-active{ 
       border-bottom: 3px solid #fff;
+      font-weight: 700;
 
       @media screen and (max-width : 768px) {
         border-bottom: 2px solid #fff;
@@ -205,11 +212,6 @@ export default {
   left: 195px;
   top: 5px;
   opacity: 1;
-}
-
-
-.log{ 
-  background: red;
 }
 
 </style>
