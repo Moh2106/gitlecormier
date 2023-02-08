@@ -4,7 +4,7 @@ export const alentours =
         id: 1,
         titre : "CENTAURE PARIS - NORMANDIE",
         description: "N°1 de la formation à la conduite sécurité sur site protégé, Centaure se distingue par ses infrastructures et ses équipements au service des conducteurs. Notre objectif : vous faire vivre le risque routier pour mieux l’éviter.  Stage de prévention Découvrez nos stages de prévention sur site protégé ! Stage de récupération de points. Récupérez 4 points en 2 jours dans un cadre unique dédié à la prévention routière ! Stage Groupama Spécial clients Groupama. Réservez votre stage de prévention ! ",
-        img: "/Alentours/centaure_normandie.png",
+        img: "/pictures/Alentours/centaure_normandie.png",
         site: "http://paris-normandie.centaure.com/",
         maps: "https://maps.app.goo.gl/LwZpfuCECgXxUu9N6"
     },
