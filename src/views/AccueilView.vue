@@ -81,8 +81,8 @@
     <br>
 
     <!--La partie de Bienvenue-->
-    <div class="accueil__description bg-green-800 bg-opacity-90">
-        <h1>Bienvenue à Hauville dans la chaumière du gîte du Cormier.</h1>
+    <div class="accueil__description bg-green-700 bg-opacity-90 ">
+        <h1 class="font-medium">Bienvenue à Hauville dans la chaumière du gîte du Cormier.</h1>
         <p>Cécile et Gérard vous accueillent au cœur de l’arrière pays normand. <br>
         Dans les boucles de la Seine. <br>
         A 7 min des autoroutes A13 et A28. <br>

@@ -168,7 +168,7 @@ export const alentours =
         description: "",
         img: "/pictures/Alentours/ferme_lulu_market.png",
         site: "https://earl-la-chapelle-brestot.jimdofree.com/",
-        maps: "http://",
+        maps: "",
     },
 
     {

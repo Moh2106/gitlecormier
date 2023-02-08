@@ -13,11 +13,11 @@
               <p v-text="alentour.description" class="mb-4"></p>
 
               <div>
-                <button class="bg-red-600 rounded-lg mr-4 p-1">
+                <button class="bg-red-600 rounded-lg mr-4 p-1" v-show="compare(alentour.site)">
                   <a :href="alentour.site" target="_blank" rel="noopener noreferrer"> Aller sur le site officiel </a>
                 </button>
 
-                <button class="bg-green-600 rounded-lg p-1">
+                <button class="bg-green-600 rounded-lg p-1" v-show="compare(alentour.maps)">
                   <a :href="alentour.maps" target="_blank" rel="noopener noreferrer"> Trajectoire Google Maps </a>
                 </button>
 
@@ -47,14 +47,27 @@
 </template>
 
 <script>
+import { ref } from '@vue/reactivity'
 import {alentours} from '../database/alentours'
 
 export default {
 
   setup(){
+    var mapsButton = ref(false)
+
+    /* Cette fonction est là pour comparer les valeurs des champs maps et sites
+      Si la valeur existe il l'affiche, sinon pas d'affiche
+    */
+    function compare(value){
+      var result = value.localeCompare("")
+      var resultat = result == 0 ? false : true
+      return resultat
+    }
     
     return{
-      alentours
+      alentours,
+      compare,
+      mapsButton
     }
   }
 
