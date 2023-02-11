@@ -19,12 +19,21 @@
 
       <p>Par semaine, préparation d'un lit 2 personnes : <span class="tarif__price">8€</span> , d'un lit 1 personne : <span class="tarif__price">6€</span>, mise à disposition des serviettes de bain : <span class="tarif__price">6€</span> par personne, forfait ménage : <span class="tarif__price">40€</span>. A préciser à la réservation.
       </p>
+
+      <p>
+        Cliquez 
+        <button class="font-bold tarif__cliquer bg-green-600 p-1 text-white">
+          <a href="https://www.gites-de-france-eure.com/dispo.php?numero_gite=818&dpt=27&type_gite=G&base=G&instance=gites27&langue=FRANCAIS&opener=1& " target="_blank" rel="noopener noreferrer">ici</a>
+        </button>
+         pour voir les dates disponibles sur toute l'année
+      </p>
     </div>
 
-    <h1 class="tarif__title bubble-bottom"> Calendrier de disponibilité</h1>
+    <h1 class="tarif__title bubble-bottom"> Calendrier de disponibilité du mois</h1>
     <div class="w-1/3 m-auto tarif__iframe">
       <iframe style="overflow:auto; -webkit-overflow-scrolling:touch;border:none" height="400" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=dispo&nbmois=6&nbmoisLigne=3"></iframe>
     </div>
+
  
   </div>
 </template>
@@ -112,11 +121,11 @@ export default {
 
   .bubble-bottom {
   /* Modify size here: */
-      --size: 10em;
+      --size: 12em;
 
       position: relative;
       width: var(--size);
-      height: calc(var(--size) * 0.35);
+      height: calc(var(--size) * 0.30);
       border-radius: 10px;
 
       &::after{ 
@@ -134,6 +143,11 @@ export default {
       }
     }
   .tarif{ 
+
+    &__cliquer{
+      border-radius: 50%;
+
+    }
 
     &__price{
       font-weight: 600;

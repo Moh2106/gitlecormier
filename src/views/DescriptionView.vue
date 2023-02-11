@@ -115,7 +115,7 @@
       <!----------------Texte descriptif -------------------------------->
       <div class="bg-white w-1/3 bg-opacity-90 pt-8">
 
-        <h1 class="text-green-700">Au rez-de-chaussée :</h1>
+        <h1 class="font-semibold">Au rez-de-chaussée :</h1>
             <ul>
                 <li>Salle à manger</li>
                 <li>Salon</li>
@@ -238,7 +238,7 @@
       <!----------------Texte descriptif -------------------------------->
       <div class="bg-white w-1/3 bg-opacity-90 pt-8">
 
-        <h1 class="text-green-700">Au 1 er étage : </h1>
+        <h1 class="font-semibold">Au 1 er étage : </h1>
             <ul>
                 <li>1 chambre palière</li>
                 <li>(1 lit 1 personne)</li>
@@ -353,7 +353,7 @@
       <!----------------Texte descriptif -------------------------------->
       <div class="bg-white w-1/3 bg-opacity-90 pt-8">
 
-        <h1 class="text-green-700">Dans le jardin :</h1>
+        <h1 class="font-semibold">Dans le jardin :</h1>
 
           <ul>
               <li>3000 m2</li>
