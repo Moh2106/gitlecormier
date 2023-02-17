@@ -5,22 +5,24 @@
     </div>
 
     <div>
-        <h1 class="mb-5 a">Nous contacter sur : </h1>
+        <!----<h1 class="mb-5 a">Nous contacter sur : </h1>-->
 
         <div class="flex justify-between contact">
             <div class="mr-36 scroll-mr-36 contact__paragraph">
+                <h1>Contact</h1>
                 <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl pr-4"/> 00 33 2 32 42 40 23</p>
                 <p> <font-awesome-icon icon="fa-solid fa-phone" class=" text-2xl pr-4"/> 00 33 6 50 04 73 88</p>
             </div>
 
-            <div class="flex justify-around contact__icons">
-                <p class="px-8">
-                    <a href="https://www.facebook.com/gitelecormier/" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-facebook" class=" text-2xl hover:bg-blue-700 hover:scale-125 b"/></a>
-                </p>
+            <div>
+                <h1 class="mb-4">Réseaux sociaux</h1>
+                    <div class="flex justify-around contact__icons">
+                        <p class="px-8">
+                            <a href="https://www.facebook.com/gitelecormier/" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-facebook" class=" text-2xl hover:bg-blue-700 hover:scale-125 b"/></a>
+                        </p>
 
-                <p>
-                    <a href="https://maps.app.goo.gl/kHyGBUjkW6jomJoz8" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-solid fa-location-dot" class="text-2xl hover:scale-125 " /></a>
-                </p>
+
+                    </div>
                 
             </div>
         </div>
@@ -39,8 +41,8 @@ export default {
 
 <style lang="scss" scoped>
     .footer{ 
-        background: #bc6c25;
-        height: 30vh;
+        background: #08a045;
+        height: 15vh;
         color: #fff;
 
         @media screen and (max-width : 768px) {

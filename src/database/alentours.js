@@ -4,54 +4,9 @@ export const alentours =
         id: 1,
         titre : "CENTAURE PARIS - NORMANDIE",
         description: "N°1 de la formation à la conduite sécurité sur site protégé, Centaure se distingue par ses infrastructures et ses équipements au service des conducteurs. Notre objectif : vous faire vivre le risque routier pour mieux l’éviter.  Stage de prévention Découvrez nos stages de prévention sur site protégé ! Stage de récupération de points. Récupérez 4 points en 2 jours dans un cadre unique dédié à la prévention routière ! Stage Groupama Spécial clients Groupama. Réservez votre stage de prévention ! ",
-        img: "/pictures/Alentours/centaure_normandie.png",
+        img: "/pictures/Alentours/centaure_normandie_paris.jpg",
         site: "http://paris-normandie.centaure.com/",
         maps: "https://maps.app.goo.gl/LwZpfuCECgXxUu9N6"
-    },
-
-    {
-        id: 2,
-        titre: "PARC NATUREL REGIONAL DES BOUCLES DE LA SEINE NORM",
-        description: "",
-        img: "/pictures/Alentours/le_parc_naturel_regional_des_boucles_de_la_seine_normande.webp",
-        site: "http://www.pnr-seine-normande.com/",
-        maps:"https://maps.app.goo.gl/webWsnrmwkP6XTK18" 
-    },
-
-    {
-        id: 3,
-        titre: "ABBAYE DE JUMIEGES",
-        description: "Ses tours blanches, qui s’élèvent à presque 50 mètres au fond d’une boucle de la Seine, créent toujours la surprise et l’admiration du visiteur. Sa destruction, au XIXe siècle, lui a valu le nom de «plus belle ruine de France» et l’image d’un site à ciel ouvert fortement marqué de romantisme",
-        img: "/pictures/Alentours/abbaye_jumiege.png",
-        site: "http://http://www.abbayedejumieges.fr/",
-        maps: "https://maps.app.goo.gl/bmxmhuwMcHVxk5E99",
-    },
-
-    {
-        id: 4,
-        titre: "ABBAYE DE SAINT-WANDRILLE",
-        description: "La communauté monastique de l'abbaye Saint-Wandrille perpétue une longue tradition de prière dans le recueillement et le travail, la solitude et la communion.",
-        img: "/pictures/Alentours/abbaye_st_wandrille.png",
-        site: "https://st-wandrille.com/",
-        maps: "https://maps.app.goo.gl/4SmoYSUJGdG9wtu38",
-    },
-
-    {
-        id: 5,
-        titre: "BASE DE LOISIRS DE JUMIÈGES",
-        description: "La Base de Loisirs vous propose une multitude d'activités ludiques et sportives grâce à PLANET'AVENTURE, accessible dès 3 ans. Des espaces gratuits sont à votre disposition : un parking, des WC publics, des espaces verts, un espace baignade (surveillé en juillet et août), des aires de jeux (toboggans, balançoires...). Vous pouvez également vous restaurer sur la Base de Loisirs.",
-        img: "/pictures/Alentours/base_de_jumiege.png",
-        site: "https://www.basedejumieges.com/fr",
-        maps: "https://maps.app.goo.gl/ujbBoW3WHjiTR6ew8",
-    },
-
-    {
-        id: 6,
-        titre: "MANOIR DE VILLERS",
-        description: "Implanté entre cour et jardin le Manoir de Villers était en 1581, une Maison de Maitre construite en pierre de Caumont avec un étage à pans de bois et recouverte de petites tuiles. Il fut transformé et agrandi au cours des siècles, jusqu'à devenir ce grand manoir néo-normand aux toitures inspirées des plus belles maisons de Rouen et aux facades habillées d'un curieux trompe l'oeil (architecte : Lassire).",
-        img: "/pictures/Alentours/manoir_des_villers.png",
-        site: "http://www.manoirdevillers.com/",
-        maps: "https://maps.app.goo.gl/gZfogdowr5M2o8Gt9",
     },
 
     {
@@ -64,6 +19,34 @@ export const alentours =
     },
 
     {
+        id: 6,
+        titre: "MANOIR DE VILLERS",
+        description: "Implanté entre cour et jardin le Manoir de Villers était en 1581, une Maison de Maitre construite en pierre de Caumont avec un étage à pans de bois et recouverte de petites tuiles. Il fut transformé et agrandi au cours des siècles, jusqu'à devenir ce grand manoir néo-normand aux toitures inspirées des plus belles maisons de Rouen et aux facades habillées d'un curieux trompe l'oeil (architecte : Lassire).",
+        img: "/pictures/Alentours/manoir_des_villers.png",
+        site: "http://www.manoirdevillers.com/",
+        maps: "https://maps.app.goo.gl/gZfogdowr5M2o8Gt9",
+    },
+
+    {
+        id: 5,
+        titre: "BASE DE LOISIRS DE JUMIÈGES",
+        description: "La Base de Loisirs vous propose une multitude d'activités ludiques et sportives grâce à PLANET'AVENTURE, accessible dès 3 ans. Des espaces gratuits sont à votre disposition : un parking, des WC publics, des espaces verts, un espace baignade (surveillé en juillet et août), des aires de jeux (toboggans, balançoires...). Vous pouvez également vous restaurer sur la Base de Loisirs.",
+        img: "/pictures/Alentours/base_de_jumiege.png",
+        site: "https://www.basedejumieges.com/fr",
+        maps: "https://maps.app.goo.gl/ujbBoW3WHjiTR6ew8",
+    },
+
+
+    {
+        id: 3,
+        titre: "ABBAYE DE JUMIEGES",
+        description: "Ses tours blanches, qui s’élèvent à presque 50 mètres au fond d’une boucle de la Seine, créent toujours la surprise et l’admiration du visiteur. Sa destruction, au XIXe siècle, lui a valu le nom de «plus belle ruine de France» et l’image d’un site à ciel ouvert fortement marqué de romantisme",
+        img: "/pictures/Alentours/abbaye_jumiege.png",
+        site: "http://http://www.abbayedejumieges.fr/",
+        maps: "https://maps.app.goo.gl/bmxmhuwMcHVxk5E99",
+    },
+
+    {
         id: 8,
         titre: "LA FERME DU BEC",
         description: "La Ferme biologique du Bec Hellouin un lieu de production, de recherche et de transmission. Plus de 800 variétés de fruits et légumes croissent dans ses jardins, dans un respect absolu de l’environnement, grâce aux concepts de la permaculture. De nombreuses recherches y sont menées pour explorer des pratiques agricoles naturelles et efficaces, qui contribuent à la régénération de la biosphère.",
@@ -73,12 +56,12 @@ export const alentours =
     },
 
     {
-        id: 9,
-        titre: "EURE TOURISME",
-        description: "",
-        img: "/pictures/Alentours/eure_tourisme.png",
-        site: "https://www.eure-tourisme.fr/",
-        maps: "https://maps.app.goo.gl/ozmDzee8qwuDRZNe9",
+        id: 15,
+        titre: "CHATEAU DU CHAMP DE BATAILLE",
+        description: "Le château du Champ-de-Bataille est une demeure, édifié au XVII siècle pour le comte Alexandre de Créqui-Bernieulles, qui se dresse sur le territoire de la commune française de Sainte-Opportune-du-Bosc dans le département de l'Eure, en région Normandie. Le château est partiellement protégé aux monuments historiques.",
+        img: "/pictures/Alentours/chateau_du_champ_de_bataille.png",
+        site: "https://www.chateauduchampdebataille.com/",
+        maps: "https://maps.app.goo.gl/WC8RX7n1Sz7TnBDo8",
     },
 
     {
@@ -99,22 +82,23 @@ export const alentours =
         maps: "https://maps.app.goo.gl/nPv2gKruF47XgQeg7",
     },
 
+
     {
-        id: 12,
-        titre: "PONT NORMANDIE TANCARVILLE",
-        description: "Le pont de Tancarville est un pont suspendu à câble porteur qui franchit la Seine entre Tancarville (Seine-Maritime) et Marais-Vernier (Eure), en France.",
-        img: "/pictures/Alentours/pont_tancerville.jpg",
-        site: "http://www.pontsnormandietancarville.fr/",
-        maps: "https://maps.app.goo.gl/m4ncBgnQFbfVXtAY8",
+        id: 2,
+        titre: "PARC NATUREL REGIONAL DES BOUCLES DE LA SEINE NORM",
+        description: "",
+        img: "/pictures/Alentours/le_parc_naturel_regional_des_boucles_de_la_seine_normande.webp",
+        site: "http://www.pnr-seine-normande.com/",
+        maps:"https://maps.app.goo.gl/webWsnrmwkP6XTK18" 
     },
 
     {
-        id: 13,
-        titre: "ABBAYE SAINT GEORGES",
-        description: "L’abbaye Saint-Georges est une ancienne abbaye de femmes bénédictine, fondée à Rennes par le duc Alain III de Bretagne entre 1024 et 1034 afin d'y accueillir sa sœur Adèle et les moniales bénédictines . L’abbaye est brûlée avec une partie de la ville par Henri II d'Angleterre à la fin du XII siècle . Elle se trouve en dehors de la cité jusqu'à l’extension des murailles en 1448 .",
-        img: "/pictures/Alentours/abbaye_saint_georges.png",
-        site: "http://www.abbaye-saint-georges.com/",
-        maps: "https://maps.app.goo.gl/JUcRUumDfqrSTStH9",
+        id: 9,
+        titre: "EURE TOURISME",
+        description: "",
+        img: "/pictures/Alentours/eure_tourisme.png",
+        site: "https://www.eure-tourisme.fr/",
+        maps: "https://maps.app.goo.gl/ozmDzee8qwuDRZNe9",
     },
 
     {
@@ -126,14 +110,61 @@ export const alentours =
         maps: "https://maps.app.goo.gl/PVHxtPcJphTCZ38dA",
     },
 
+
     {
-        id: 15,
-        titre: "CHATEAU DU CHAMP DE BATAILLE",
-        description: "Le château du Champ-de-Bataille est une demeure, édifié au XVII siècle pour le comte Alexandre de Créqui-Bernieulles, qui se dresse sur le territoire de la commune française de Sainte-Opportune-du-Bosc dans le département de l'Eure, en région Normandie. Le château est partiellement protégé aux monuments historiques.",
-        img: "/pictures/Alentours/chateau_du_champ_de_bataille.png",
-        site: "https://www.chateauduchampdebataille.com/",
-        maps: "https://maps.app.goo.gl/WC8RX7n1Sz7TnBDo8",
+        id: 13,
+        titre: "ABBAYE SAINT GEORGES",
+        description: "L’abbaye Saint-Georges est une ancienne abbaye de femmes bénédictine, fondée à Rennes par le duc Alain III de Bretagne entre 1024 et 1034 afin d'y accueillir sa sœur Adèle et les moniales bénédictines . L’abbaye est brûlée avec une partie de la ville par Henri II d'Angleterre à la fin du XII siècle . Elle se trouve en dehors de la cité jusqu'à l’extension des murailles en 1448 .",
+        img: "/pictures/Alentours/abbaye_saint_georges.png",
+        site: "http://www.abbaye-saint-georges.com/",
+        maps: "https://maps.app.goo.gl/JUcRUumDfqrSTStH9",
     },
+
+    {
+        id: 18,
+        titre: "PARC DU BOCASSE",
+        description: "Le parc du Bocasse est un parc à thèmes français situé au Bocasse, en Seine-Maritime dans la région Normandie à 28 km au nord de Rouen. Le parc a comme mascottes deux abeilles du nom de Buzzy et Apicouette. Il s'agit du plus ancien parc de Seine-Maritime et l'un des plus anciens de France, s'étendant sur 5,8 hectares, ainsi que 6,1 hectares d'un parking de 700 places.",
+        img: "/pictures/Alentours/parc_du_bocasse.png",
+        site: "https://www.parcdubocasse.fr/",
+        maps: "https://maps.app.goo.gl/oNpZwP2t3fKvZYaaA",
+    },
+
+    {
+        id: 27,
+        titre: "ABBAYE DE BON PORT",
+        description: "L'abbaye Notre-Dame de Bonport est une ancienne abbaye cistercienne, située sur la commune française de Pont-de-l'Arche dans le département de l'Eure, en région Normandie. Elle est construite sur la rive d'un bras mort de la Seine, en aval de l'agglomération de Pont-de-l'Arche.",
+        img: "/pictures/Alentours/abbaye_de_bon_port.png",
+        site: "https://www.abbayedebonport.com/",
+        maps: "https://maps.app.goo.gl/nkcfAFYEczPru8Cz5",
+    },
+
+    {
+        id: 4,
+        titre: "ABBAYE DE SAINT-WANDRILLE",
+        description: "La communauté monastique de l'abbaye Saint-Wandrille perpétue une longue tradition de prière dans le recueillement et le travail, la solitude et la communion.",
+        img: "/pictures/Alentours/abbaye_st_wandrille.png",
+        site: "https://st-wandrille.com/",
+        maps: "https://maps.app.goo.gl/4SmoYSUJGdG9wtu38",
+    },
+
+    {
+        id: 30,
+        titre: "CHATEAU DE MONFORT SUR RISLES",
+        description: "Montfort-sur-Risle est une commune du Nord-Ouest du département de l'Eure en région Normandie. Située au cœur de la vallée de la Risle, elle appartient à la région naturelle du Lieuvin.",
+        img: "/pictures/Alentours/chateau_de_monfort.jpg",
+        site: "",
+        maps: "https://maps.app.goo.gl/Js5m7xBCedCAkAcz5",
+    },
+
+    {
+        id: 12,
+        titre: "PONT NORMANDIE TANCARVILLE",
+        description: "Le pont de Tancarville est un pont suspendu à câble porteur qui franchit la Seine entre Tancarville (Seine-Maritime) et Marais-Vernier (Eure), en France.",
+        img: "/pictures/Alentours/pont_tancerville.jpg",
+        site: "http://www.pontsnormandietancarville.fr/",
+        maps: "https://maps.app.goo.gl/m4ncBgnQFbfVXtAY8",
+    },
+    
 
     {
         id: 16,
@@ -153,14 +184,6 @@ export const alentours =
         maps: "https://maps.app.goo.gl/AQQ2Q9kHCTUrZUTbA",
     },
 
-    {
-        id: 18,
-        titre: "PARC DU BOCASSE",
-        description: "Le parc du Bocasse est un parc à thèmes français situé au Bocasse, en Seine-Maritime dans la région Normandie à 28 km au nord de Rouen. Le parc a comme mascottes deux abeilles du nom de Buzzy et Apicouette. Il s'agit du plus ancien parc de Seine-Maritime et l'un des plus anciens de France, s'étendant sur 5,8 hectares, ainsi que 6,1 hectares d'un parking de 700 places.",
-        img: "/pictures/Alentours/parc_du_bocasse.png",
-        site: "https://www.parcdubocasse.fr/",
-        maps: "https://maps.app.goo.gl/oNpZwP2t3fKvZYaaA",
-    },
 
     {
         id: 19,
@@ -235,15 +258,6 @@ export const alentours =
     },
 
     {
-        id: 27,
-        titre: "ABBAYE DE BON PORT",
-        description: "L'abbaye Notre-Dame de Bonport est une ancienne abbaye cistercienne, située sur la commune française de Pont-de-l'Arche dans le département de l'Eure, en région Normandie. Elle est construite sur la rive d'un bras mort de la Seine, en aval de l'agglomération de Pont-de-l'Arche.",
-        img: "/pictures/Alentours/abbaye_de_bon_port.png",
-        site: "https://www.abbayedebonport.com/",
-        maps: "https://maps.app.goo.gl/nkcfAFYEczPru8Cz5",
-    },
-
-    {
         id: 28,
         titre: "ESCARGOT DE BROTONNE",
         description: "",
@@ -259,15 +273,6 @@ export const alentours =
         img: "/pictures/Alentours/honfleur.png",
         site: "https://www.ot-honfleur.fr/",
         maps: "https://maps.app.goo.gl/gor7k4uPyrQFAxwk7",
-    },
-
-    {
-        id: 30,
-        titre: "CHATEAU DE MONFORT SUR RISLES",
-        description: "Montfort-sur-Risle est une commune du Nord-Ouest du département de l'Eure en région Normandie. Située au cœur de la vallée de la Risle, elle appartient à la région naturelle du Lieuvin.",
-        img: "/pictures/Alentours/chateau_de_monfort.jpg",
-        site: "",
-        maps: "https://maps.app.goo.gl/Js5m7xBCedCAkAcz5",
     },
 
     {

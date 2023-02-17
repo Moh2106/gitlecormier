@@ -29,10 +29,10 @@
       </p>
     </div>
 
-    <h1 class="tarif__title bubble-bottom"> Calendrier de disponibilité du mois</h1>
+    <!----<h1 class="tarif__title bubble-bottom"> Calendrier de disponibilité du mois</h1>
     <div class="w-1/3 m-auto tarif__iframe">
       <iframe style="overflow:auto; -webkit-overflow-scrolling:touch;border:none" height="400" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=dispo&nbmois=6&nbmoisLigne=3"></iframe>
-    </div>
+    </div>-->
 
  
   </div>

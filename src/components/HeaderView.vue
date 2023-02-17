@@ -59,29 +59,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header{ 
-  //background: rgb(221, 161, 94);
-  //background: rgb(255, 255, 255,0.8);
+.header{
   color: #fff;
-  //color: rgba(12, 87, 12, 0.678);
-  //backdrop-filter: brightness(90%);
   backdrop-filter: contrast(40%) brightness(90%) blur(10px);
-  //backdrop-filter: opacity(20%);
-  //backdrop-filter: blur(30px);
-  //filter: blur(1px);
   height: 7.5vh;
-  //font-family: 'Oleo Script Swash Caps', cursive;
   font-family: 'Poppins', sans-serif;
   position: fixed;
-  //position: sticky;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   z-index: 100000;
-  /*box-shadow: 0px 1px 0px 1px #bc6c25;
--webkit-box-shadow: 0px 1px 0px 1px #bc6c25;
--moz-box-shadow: 0px 1px 0px 1px #bc6c25;*/
 
   @media screen and (max-width : 768px) {
     display: block;
@@ -185,7 +173,7 @@ export default {
       transition: 0.5s ease-in-out;
       transform: scale3d(1em);
       font-size: 1.05em;
-      background: #086d19;
+      background: #08a045;;
 
       @media screen and (max-width : 768px) {
         transform: translateX(0.2em);
