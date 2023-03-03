@@ -80,6 +80,45 @@
 
     <br>
 
+    <swiper
+    :spaceBetween="30"
+    :centeredSlides="true"
+    :autoplay="{
+      delay: 10000,
+      disableOnInteraction: false,
+    }"
+    :pagination="{
+      clickable: true,
+    }"
+    :navigation="true"
+    :modules="modules"
+    class="mySwiper slideSwiper"
+  >
+    <swiper-slide>
+        <img src="../assets/Cormier/cormier3.jpg" alt="">
+    </swiper-slide>
+
+    <swiper-slide>
+        <img src="../assets/Cormier/cormier1.jpg" alt="">
+    </swiper-slide>
+
+    <swiper-slide>
+        <img src="../assets/Jardin/jardin13.jpg" alt="">
+    </swiper-slide>
+
+    <swiper-slide>
+        <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" alt="">
+    </swiper-slide>
+        
+    <swiper-slide>
+        <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" alt="">
+    </swiper-slide>
+
+
+    <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
+  </swiper>
+
     <!--La partie de Bienvenue-->
     <div class="accueil__description bg-green-700 bg-opacity-90 ">
         <h1 class="font-medium">Bienvenue à Hauville dans la chaumière du gîte du Cormier.</h1>
@@ -151,7 +190,30 @@
 
 <script>
 
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+//import './style.css';
+
+//import "./main.css";
+import "../../src/main.css"
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper';
+
 export default {
+    
+
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
 
     setup(){ 
 
@@ -182,6 +244,8 @@ export default {
         return{ 
             fermer,
             Cliquer,
+            modules: [Autoplay, Pagination, Navigation],
+            
         }
 
     }
@@ -204,6 +268,18 @@ export default {
                 }
    
             }*/
+        }
+
+        .slideSwiper{
+            width: 90%;
+            margin: auto;
+            height: 40em;
+
+            img{
+                background-size: cover;
+                margin: auto;
+                //width: 100%;
+            }
         }
 
         &__description{ 

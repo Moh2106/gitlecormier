@@ -29,6 +29,14 @@
 
     </div>-->
 
+
+    <!--Nouveau intégration-->
+    <div class="alentours__carte">
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12r6EtORX4TvW-tF_tddqwHYuHehKG0E&ehbc=2E312F" width="100%" height="600"></iframe>
+    </div>
+
+    <!----------------------------------------------->
+
     <div class="monEnsemble">
       <div v-for="alentour in alentours" :key="alentour.id" class="monEnsemble__element">
         <div class="alentours__card">
@@ -98,7 +106,7 @@ export default {
       var resultat = result == 0 ? false : true
       return resultat
     }
-    
+
     return{
       alentours,
       compare,
@@ -125,6 +133,11 @@ export default {
         width: 30%;
       }
       
+    }
+
+    &__carte{
+      width: 90%;
+      margin: auto;
     }
 
     &__card{

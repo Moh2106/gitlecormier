@@ -2,11 +2,23 @@
   <div class="pt-16 tarif">
     <!-- Insertion des saisons, dates et prix à partir de tarifs de script -->
     <div class="flex flex-wrap w-4/5 mx-auto pb-4">
-      <div v-for="tarif in tarifs" :key="tarif.id" class="w-1/3 ">
+      <div v-for="tarif in tarifs1" :key="tarif.id" class="w-1/3 ">
         <div class="bg-slate-100 m-4 h-3/4 rounded-lg ">
           <h1 v-text="tarif.saison" class="bg-green-700 text-yellow-50 "></h1>
           <p v-text="tarif.date"></p>
           <p v-text="tarif.prix" class=" bg-green-600 text-white"></p>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="flex flex-wrap w-4/5 mx-auto pb-4">
+      <div v-for="tarif in tarifs" :key="tarif.id" class="w-1/3  ">
+        <div class="bg-white m-4  rounded-lg ">
+          <img :src="tarif.photo" alt="">
+          <h1 v-text="tarif.saison" class=" "></h1>
+          <p v-text="tarif.date"></p>
+          <p v-text="tarif.prix" class=" "></p>
         </div>
         
       </div>
@@ -39,10 +51,11 @@
 </template>
 
 <script>
+import {tarifs} from '../database/tarifs'
 export default {
 
   setup(){ 
-    const tarifs = { 
+    const tarifs1 = { 
     tarif1 : { 
       id: 1,
       saison: 'TRES HAUTE SAISON ETE',
@@ -109,6 +122,7 @@ export default {
   }
 
   return{
+    tarifs1,
     tarifs,
   }
 
