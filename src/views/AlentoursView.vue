@@ -2,8 +2,8 @@
   <div class="alentours" id="haut">
 
     <!---- Peite paragraphe ---->
-    <p class="bg-white text-left alentours__paragraph ">
-      Vous souhaitez également découvrir quelques endroits de la région, sur cette carte vous trouvevez absolument tout ce qu'il y a à visiter dans un rayon de 50 km : fermes, restaurants, sites touristiques, paysages, randonnées, etc ...
+    <p class="bg-white bg-opacity-90 text-left alentours__paragraph ">
+      Profitez de votre séjour  pour découvrir quelques endroits de la région, sur cette carte vous trouvevez absolument tout ce qu'il y a à visiter dans un rayon de 50 km : fermes, restaurants, sites touristiques, paysages, randonnées, etc ...
     </p>
 
     <!--Nouveau intégration-->
