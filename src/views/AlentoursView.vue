@@ -14,7 +14,7 @@
 
     <!---------- Intégration des données à partir de alentours.js----------------------------->
 
-    <div class="monEnsemble">
+    <!----<div class="monEnsemble">
       <div v-for="alentour in alentours" :key="alentour.id" class="monEnsemble__element">
         <div class="alentours__card">
           <div class="alentours__card--image">
@@ -39,7 +39,7 @@
         </div>
       
       </div>
-    </div>
+    </div> -->
 
     
 
