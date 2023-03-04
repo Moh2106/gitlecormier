@@ -1,41 +1,17 @@
 <template>
   <div class="alentours" id="haut">
 
-    <!-- Insertion des données de alentours.js via le dossiers database -->
-    <!----<div>
-      <div v-for="alentour in alentours" :key="alentour.id" class="alentours__design bg-green-700 bg-opacity-80 text-white ">
-          <div>
-            <img :src="alentour.img" :alt="alentour.titre" class="alentours__design--image">
-          </div>
-
-          <div>
-              <h1 v-text="alentour.titre" class="mb-2 font-bold"></h1>
-              <p v-text="alentour.description" class="mb-4"></p>
-
-              <div>
-                <button class="bg-red-600 rounded-lg mr-4 p-1" v-show="compare(alentour.site)">
-                  <a :href="alentour.site" target="_blank" rel="noopener noreferrer"> Aller sur le site officiel </a>
-                </button>
-
-                <button class="bg-green-600 rounded-lg p-1" v-show="compare(alentour.maps)">
-                  <a :href="alentour.maps" target="_blank" rel="noopener noreferrer"> Trajectoire Google Maps </a>
-                </button>
-
-              </div>
-            
-          </div>
-          
-      </div>
-
-    </div>-->
-
+    <!---- Peite paragraphe ---->
+    <p class="bg-white text-left alentours__paragraph ">
+      Vous souhaitez également découvrir quelques endroits de la région, sur cette carte vous trouvevez absolument tout ce qu'il y a à visiter dans un rayon de 50 km : fermes, restaurants, sites touristiques, paysages, randonnées, etc ...
+    </p>
 
     <!--Nouveau intégration-->
     <div class="alentours__carte">
       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12r6EtORX4TvW-tF_tddqwHYuHehKG0E&ehbc=2E312F" width="100%" height="600"></iframe>
     </div>
 
-    <!----------------------------------------------->
+    <!---------- Intégration des données à partir de alentours.js----------------------------->
 
     <div class="monEnsemble">
       <div v-for="alentour in alentours" :key="alentour.id" class="monEnsemble__element">
@@ -138,6 +114,14 @@ export default {
     &__carte{
       width: 90%;
       margin: auto;
+    }
+
+    &__paragraph{
+      width: 90%;
+      margin: auto;
+      padding: 1em;
+      border-radius: 0.5em;
+      margin-bottom: 1em;
     }
 
     &__card{
