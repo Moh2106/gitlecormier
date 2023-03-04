@@ -1,7 +1,7 @@
 <template>
   <div class="descriptif pt-20">
 
-    <div class= "descriptif__paragraph bg-green-700 bg-opacity-90">
+    <div class= "descriptif__paragraph bg-green-700  text-left">
       <p>
         Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.
       </p>
@@ -113,10 +113,10 @@
       </swiper>
 
       <!----------------Texte descriptif -------------------------------->
-      <div class="bg-white w-1/3 bg-opacity-90 pt-8">
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left">
 
-        <h1 class="font-semibold">Au rez-de-chaussée :</h1>
-            <ul>
+        <h1 class="font-semibold ">Au rez-de-chaussée :</h1>
+            <ul class="">
                 <li>Salle à manger</li>
                 <li>Salon</li>
                 <li>Cuisine</li>
@@ -236,7 +236,7 @@
       </swiper>
 
       <!----------------Texte descriptif -------------------------------->
-      <div class="bg-white w-1/3 bg-opacity-90 pt-8">
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left">
 
         <h1 class="font-semibold">Au 1 er étage : </h1>
             <ul>
@@ -351,7 +351,7 @@
       </swiper>
 
       <!----------------Texte descriptif -------------------------------->
-      <div class="bg-white w-1/3 bg-opacity-90 pt-8">
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left">
 
         <h1 class="font-semibold">Dans le jardin :</h1>
 
