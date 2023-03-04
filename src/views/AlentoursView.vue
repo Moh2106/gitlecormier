@@ -9,6 +9,7 @@
     <!--Nouveau intégration-->
     <div class="alentours__carte">
       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12r6EtORX4TvW-tF_tddqwHYuHehKG0E&ehbc=2E312F" width="100%" height="600"></iframe>
+
     </div>
 
     <!---------- Intégration des données à partir de alentours.js----------------------------->

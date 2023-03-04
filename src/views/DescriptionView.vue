@@ -1,7 +1,7 @@
 <template>
   <div class="descriptif pt-20">
 
-    <div class= "descriptif__paragraph bg-green-700  text-left">
+    <div class= "descriptif__paragraph   text-left">
       <p>
         Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.
       </p>
@@ -434,6 +434,7 @@ export default {
 
         &__paragraph{ 
           //background: #386641;
+          background: #08a045;
           color: #fff;
           border-radius: 0.5em;
           padding: 1em;
