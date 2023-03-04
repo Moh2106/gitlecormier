@@ -10,11 +10,11 @@ import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons'
 import {faFacebook} from '@fortawesome/free-brands-svg-icons'
-import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
 import {faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faUserSecret, faPhone, faFacebook, faMagnifyingGlassPlus, faLocationDot, faArrowUp, faBars)
+library.add(faUserSecret, faPhone, faFacebook, faMagnifyingGlassPlus, faArrowUp, faBars, faLocationDot)
 
 
 createApp(App)
