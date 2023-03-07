@@ -4,7 +4,7 @@ export const tarifs =
         id: 1,
         photo: '/pictures/Tarifs/haute_saison_ete.jpg',
         saison : 'TRES HAUTE SAISON ETE',
-        date: 'Du 18 juillet au 15 août',
+        date: 'juillet -  août',
         prix: '440 €',
     },
 
@@ -12,7 +12,7 @@ export const tarifs =
         id: 2,
         photo: '/pictures/Tarifs/basse_saison_ete.jpg',
         saison : 'HAUTE SAISON ETE',
-        date: '4 juillet au 18 juillet et 15 août au 22 août',
+        date: "Début juillet Fin août et fin d'année",
         prix: '420 €',
 
     },
@@ -21,7 +21,7 @@ export const tarifs =
         id: 3,
         photo: '/pictures/Tarifs/haute_saison_ete.jpg',
         saison : 'MOYENNE SAISON',
-        date: '2 mai au 4 juillet et 22 août au 26 septembre',
+        date: 'Autres vacances scolaire et mai, juin, septembre',
         prix: '270 €',
     },
 
@@ -29,7 +29,7 @@ export const tarifs =
         id: 4,
         photo: '/pictures/Tarifs/vacance_noel.jpg',
         saison : 'VACANCES NOEL',
-        date: '21 décembre au 4 janvier',
+        date: 'décembre - janvier',
         prix: '100 €',
     },
 
@@ -37,7 +37,7 @@ export const tarifs =
         id: 5,
         photo: '/pictures/Tarifs/haute_saison_ete.jpg',
         saison : 'VACANCES FEVRIER',
-        date: '8 février au 7 mars',
+        date: 'février - mars',
         prix: '100 €',
     },
 
@@ -45,7 +45,7 @@ export const tarifs =
         id: 6,
         photo: '/pictures/Tarifs/hiver.jpg',
         saison : 'HIVER',
-        date: '4 janvier au 8 février et 7 mars au 4 avril 2020',
+        date: 'janvier - février et mars - avril',
         prix: '100 €',
     },
 
@@ -53,7 +53,7 @@ export const tarifs =
         id: 7,
         photo: '/pictures/Tarifs/haute_saison_ete.jpg',
         saison : 'VACANCES TOUSSAINT',
-        date: '17 octobre au 31 octobre',
+        date: "A partir de la moitié du mois d'octobre jusqu'à la fin du mois d'octobre",
         prix: '100 €',
     },
 
@@ -61,7 +61,7 @@ export const tarifs =
         id: 8,
         photo: '/pictures/Tarifs/printemps.jpg',
         saison : 'VACANCES PRINTEMPS',
-        date: 'Du 4 avril au 2 mai',
+        date: 'avril - mai',
         prix: '100 €',
     },
 
@@ -69,7 +69,7 @@ export const tarifs =
         id: 9,
         photo: '/pictures/Tarifs/haute_saison_ete.jpg',
         saison : 'BASSE SAISON',
-        date: 'autres périodes',
+        date: 'autres dates',
         prix: '200 €',
     },
 

@@ -60,7 +60,8 @@ export default {
       border-radius: 0.5em;
 
       span{
-        color: red;
+        font-weight : bold;
+        //color: red;
       }
     }
     

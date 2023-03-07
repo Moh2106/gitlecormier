@@ -1,31 +1,27 @@
 <template>
   <div class="pt-16 tarif">
-    <!-- Insertion des saisons, dates et prix à partir de tarifs de script -->
-    <div class="flex flex-wrap w-4/5 mx-auto pb-4">
-      <div v-for="tarif in tarifs1" :key="tarif.id" class="w-1/3 ">
-        <div class="bg-slate-100 m-4 h-3/4 rounded-lg ">
-          <h1 v-text="tarif.saison" class="bg-green-700 text-yellow-50 "></h1>
-          <p v-text="tarif.date"></p>
-          <p v-text="tarif.prix" class=" bg-green-600 text-white"></p>
-        </div>
-        
-      </div>
-    </div>
-
-    <div class="flex flex-wrap w-4/5 mx-auto pb-4">
-      <div v-for="tarif in tarifs" :key="tarif.id" class="w-1/3  ">
+    <!-- Insertion des saisons, dates et prix à partir de tarifs de database -->
+    <div class="flex flex-wrap w-4/5 mx-auto pb-4 ">
+      <div v-for="tarif in tarifs" :key="tarif.id" class="w-1/3 tarif__card">
         <div class="bg-white m-4  rounded-lg ">
-          <img :src="tarif.photo" alt="">
+          
+          <img :src="tarif.photo" :alt="tarif.saison">
+          <div class="tarif__card--image">
+            <h1 v-text="tarif.prix" class="prix"></h1>
+          </div>
+          
           <h1 v-text="tarif.saison" class=" "></h1>
           <p v-text="tarif.date"></p>
-          <p v-text="tarif.prix" class=" "></p>
+          <p v-text="tarif.prix" class="text-2xl font-semibold"></p>
         </div>
         
       </div>
     </div>
 
-    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4">
-      <p>Attention le chauffage est en plus, compter environ <span class="tarif__price">10€</span> par   jour en plein hiver.
+    <!-- Description des auppléments pour le prix -->
+    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4 text-left p-4">
+      <p>
+        Attention le chauffage est en plus, compter environ <span class="tarif__price">10€</span>    par jour en plein hiver.
         Une caution de <span class="tarif__price">300€</span> vous sera demandée lors de votre arrivée puis restituée à votre départ si les écrans plats sont toujours là.
       </p>
 
@@ -41,11 +37,6 @@
       </p>
     </div>
 
-    <!----<h1 class="tarif__title bubble-bottom"> Calendrier de disponibilité du mois</h1>
-    <div class="w-1/3 m-auto tarif__iframe">
-      <iframe style="overflow:auto; -webkit-overflow-scrolling:touch;border:none" height="400" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=dispo&nbmois=6&nbmoisLigne=3"></iframe>
-    </div>-->
-
  
   </div>
 </template>
@@ -55,74 +46,8 @@ import {tarifs} from '../database/tarifs'
 export default {
 
   setup(){ 
-    const tarifs1 = { 
-    tarif1 : { 
-      id: 1,
-      saison: 'TRES HAUTE SAISON ETE',
-      date: 'Du 18 juillet au 15 août',
-      prix: '440 €',
-    },
-
-    tarif2 : { 
-      id: 2,
-      saison: 'HAUTE SAISON ETE',
-      date: '4 juillet au 18 juillet et 15 août au 22 août',
-      prix: '420 €',
-    },
-
-    tarif3 : { 
-      id: 3,
-      saison: 'MOYENNE SAISON',
-      date: '2 mai au 4 juillet et 22 août au 26 septembre',
-      prix: '270 €',
-    },
-
-    tarif4 : { 
-      id: 4,
-      saison: 'VACANCES NOEL',
-      date: '21 décembre au 4 janvier',
-      prix: '100 €',
-    },
-
-    tarif5 : { 
-      id: 5,
-      saison: 'VACANCES FEVRIER',
-      date: '8 février au 7 mars',
-      prix: '100 €',
-    },
-
-    tarif6 : { 
-      id: 6,
-      saison: 'HIVER',
-      date: '4 janvier au 8 février et 7 mars au 4 avril 2020',
-      prix: '100 €',
-    },
-
-    tarif7 : { 
-      id: 7,
-      saison: 'VACANCES TOUSSAINT',
-      date: '17 octobre au 31 octobre',
-      prix: '100 €',
-    },
-
-    tarif8 : { 
-      id: 8,
-      saison: 'VACANCES PRINTEMPS',
-      date: 'Du 4 avril au 2 mai',
-      prix: '100 €',
-    },
-
-    tarif9 : { 
-      id: 8,
-      saison: 'BASSE SAISON',
-      date: 'autres périodes',
-      prix: '200 €',
-    },
-
-  }
 
   return{
-    tarifs1,
     tarifs,
   }
 
@@ -133,30 +58,38 @@ export default {
 
 <style lang="scss" scoped>
 
-  .bubble-bottom {
-  /* Modify size here: */
-      --size: 12em;
-
-      position: relative;
-      width: var(--size);
-      height: calc(var(--size) * 0.30);
-      border-radius: 10px;
-
-      &::after{ 
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border: calc(var(--size) * 0.13) solid transparent;
-        border-top-color: rgb(22 163 74);
-        border-bottom: 0;
-        margin-left: calc(var(--size) * 0.13 * -1);
-        margin-bottom: calc(var(--size) * 0.13 * -1);
-      }
-    }
   .tarif{ 
+
+    &__card{
+      position: relative;
+
+      &:hover{
+        cursor: pointer;
+
+        .prix{
+          display: block;
+          animation: tada; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 2s; /* don't forget to set a duration! */
+        }
+      }
+
+      &--image{
+        position: absolute;
+        top: 0em;
+        transform: translate(10em, 8em);
+
+        .prix{
+          position: relative;
+          background: #08a045;
+          color: #fff;
+          padding: 1em;
+          border-radius: 0.5em;
+          display: none;
+        }
+      }
+
+      
+    }
 
     &__cliquer{
       border-radius: 50%;

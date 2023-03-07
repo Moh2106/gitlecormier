@@ -1,9 +1,9 @@
 <template>
-  <div class="accueil">
+  <div class="accueil pt-12">
 
     <!--La partie du slide-->
 
-    <div>
+    <!----<div>
         <div id="carouselExampleControls" class="carousel slide relative accueil__slide" data-bs-ride="carousel">
             <div class="carousel-inner relative w-full overflow-hidden">
 
@@ -76,48 +76,48 @@
                 <span class="visually-hidden">Next</span>
             </button> 
         </div>
-    </div>
+    </div>-->
 
     <br>
 
-    <swiper
-    :spaceBetween="30"
-    :centeredSlides="true"
-    :autoplay="{
-      delay: 10000,
-      disableOnInteraction: false,
-    }"
-    :pagination="{
-      clickable: true,
-    }"
-    :navigation="true"
-    :modules="modules"
-    class="mySwiper slideSwiper"
-  >
-    <swiper-slide>
-        <img src="../assets/Cormier/cormier3.jpg" alt="">
-    </swiper-slide>
+    <div class="monSwipe">
+        <swiper
+            :spaceBetween="30"
+            :centeredSlides="true"
+            :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+            }"
+            :pagination="{
+            clickable: true,
+            }"
+            :navigation="true"
+            :modules="modules"
+            class="mySwiper slideSwiper mb-4"
+        >
+            <swiper-slide>
+                <img src="../assets/Cormier/cormier3.jpg" alt="">
+            </swiper-slide>
 
-    <swiper-slide>
-        <img src="../assets/Cormier/cormier1.jpg" alt="">
-    </swiper-slide>
+            <swiper-slide>
+                <img src="../assets/Cormier/cormier1.jpg" alt="">
+            </swiper-slide>
 
-    <swiper-slide>
-        <img src="../assets/Jardin/jardin13.jpg" alt="">
-    </swiper-slide>
+            <swiper-slide>
+                <img src="../assets/Jardin/jardin13.jpg" alt="">
+            </swiper-slide>
 
-    <swiper-slide>
-        <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" alt="">
-    </swiper-slide>
-        
-    <swiper-slide>
-        <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" alt="">
-    </swiper-slide>
+            <swiper-slide>
+                <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" alt="">
+            </swiper-slide>
+                
+            <swiper-slide>
+                <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" alt="">
+            </swiper-slide>
 
+        </swiper>
+    </div>
 
-    <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
-  </swiper>
 
     <!--La partie de Bienvenue-->
     <div class="accueil__description bg-green-700 bg-opacity-90 ">
@@ -270,17 +270,28 @@ export default {
             }*/
         }
 
-        .slideSwiper{
+        .monSwipe{
             width: 90%;
             margin: auto;
-            height: 40em;
+            height: 70vh;
+            margin-bottom: 1.5em;
 
-            img{
-                background-size: cover;
-                margin: auto;
-                //width: 100%;
+            .slideSwiper{
+                width: 100%;
+                height: 100%;
+
+                img{
+                    background-size: cover;
+                    margin: auto;
+                    object-fit: cover;
+                    height: 100%;
+                    //object-fit: fill;
+                    //width: 100%;
+                }
             }
         }
+
+        
 
         &__description{ 
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
