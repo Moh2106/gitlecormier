@@ -6,16 +6,22 @@
       Profitez de votre séjour  pour découvrir quelques endroits de la région, sur cette carte vous trouvevez absolument tout ce qu'il y a à visiter dans un rayon de 50 km : fermes, restaurants, sites touristiques, paysages, randonnées, etc ...
     </p>
 
-    <!--Nouveau intégration-->
+    <!-- Intégration de la carte -->
     <div class="alentours__carte">
       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12r6EtORX4TvW-tF_tddqwHYuHehKG0E&ehbc=2E312F" width="100%" height="600"></iframe>
 
     </div>
 
+    <div class="alentours__search">
+      <input type="search" name="" id="" v-model="site" placeholder="Rechercher un lieu">
+      <!----<p class="bg-white">{{ newAlentoursArrays.length }}</p>-->
+      <div v-if="result && newAlentoursArrays.length"></div>
+    </div>
+
     <!---------- Intégration des données à partir de alentours.js----------------------------->
 
-    <!----<div class="monEnsemble">
-      <div v-for="alentour in alentours" :key="alentour.id" class="monEnsemble__element">
+    <div class="monEnsemble">
+      <div v-for="alentour in newAlentoursArrays" :key="alentour.id" class="monEnsemble__element">
         <div class="alentours__card">
           <div class="alentours__card--image">
             <div class="myImage">
@@ -31,25 +37,20 @@
           </div>
 
           <div class="alentours__card--description">
-            <h1 v-text="alentour.titre" class="font-bold "></h1>
-            <p v-text="alentour.description"></p>
+            <h1 v-text="alentour.titre" class="font-bold "></h1> 
+            <!--<p v-text="alentour.description"></p>-->
             <button class="bg-red-600">Site officiel</button>
           </div>
 
         </div>
       
       </div>
-    </div> -->
-
-    
+    </div>
 
     <div >
       
-
-      
     </div>
 
-    
     <!--------------Boutton de redirection------------------------------>
     <div class="alentours__redirection">
       <button>
@@ -69,11 +70,34 @@
 <script>
 import { ref } from '@vue/reactivity'
 import {alentours} from '../database/alentours'
+import { watch } from 'vue'
 
 export default {
+  
 
   setup(){
     var mapsButton = ref(false)
+    var site = ref("");
+    var result = ref(true);
+
+    var newAlentoursArrays = ref([]);
+    newAlentoursArrays.value = alentours;
+
+    /*
+      Dans cette partie je recupère le mot saisi dans le input concernant la recherche d'un lieu
+      Ensuite on effectue une recherche sur le tableau alentours récupéré depuis notre base de donnée alentours.js
+      On stocke ensuite les résultats dans un tableau newAlentoursArrays
+    */
+    watch(site, (nouveau) =>{
+      console.log(site.value + nouveau);
+      let alentourArray = alentours.filter(element => element.titre.includes(nouveau.toUpperCase()))
+      newAlentoursArrays.value = alentourArray;
+     
+    })
+
+    result.value = site.value.localeCompare("") ? false : true
+    
+
 
     /* Cette fonction est là pour comparer les valeurs des champs maps et sites
       Si la valeur existe il l'affiche, sinon pas d'affiche
@@ -85,9 +109,11 @@ export default {
     }
 
     return{
-      alentours,
       compare,
-      mapsButton
+      mapsButton,
+      site,
+      newAlentoursArrays,
+      result
     }
   }
 
@@ -95,41 +121,64 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  //import "animate.css";
 
     .alentours{ 
     margin-top: 3em;
     padding-top: 2em;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2em;
+
+    &__search{
+      text-align: left;
+
+      input{
+        width: 30%;
+        border: none;
+        padding: 0.8em;
+        border-radius: 0.5em;
+
+        &:focus{
+          border: 2px solid #08a045;
+          outline-color: #08a045;
+        }
+
+      }
+    }
 
     .monEnsemble{
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      //width: 95%;
+      //margin: auto;
+      //transform: translateX(2em);
 
       &__element{
-        width: 30%;
+        width: 33%;
       }
       
     }
 
     &__carte{
-      width: 90%;
-      margin: auto;
+      //width: 90%;
+      //margin: auto;
+      margin-bottom: 1em
     }
 
     &__paragraph{
-      width: 90%;
-      margin: auto;
+      //width: 90%;
+      //margin: auto;
       padding: 1em;
       border-radius: 0.5em;
-      margin-bottom: 1em;
+      margin: 2.5em 0 1em 0;
     }
 
     &__card{
       background: #fff;
       border-radius: 0.5em;
       margin: 1em;
-
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      
 
       &:hover{
         transition: 0.5s;
@@ -146,7 +195,6 @@ export default {
           
         }
 
-        //width: 50%;
       }
 
       &--image{ 
@@ -163,7 +211,6 @@ export default {
         }
 
         .mapButton{
-          //background: rgba(170, 221, 204, 0.5);
           width: 100%;
           height: 100%;
           position: absolute;
@@ -216,8 +263,9 @@ export default {
         padding: 0.7em;
         border-radius: 50%;
         margin-right: 0.5em;
-        background: rgb(39, 184, 39);
+        background: #08a045;
         color: #fff;
+        transform: translateX(2.5em);
       }
     }
   }

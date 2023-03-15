@@ -259,9 +259,9 @@ export const alentours =
 
     {
         id: 28,
-        titre: "ESCARGOT DE BROTONNE",
+        titre: "PARC DE CLERES",
         description: "",
-        img: "/pictures/Alentours/escargot_de_brotonne.png",
+        img: "/pictures/Alentours/parc_de_Clères.jpg",
         site: "http://www.parcdecleres.net/",
         maps: "https://maps.app.goo.gl/iFgySb1X2C81bCar5",
     },

@@ -19,7 +19,7 @@ export const tarifs =
 
     {
         id: 3,
-        photo: '/pictures/Tarifs/haute_saison_ete.jpg',
+        photo: '/pictures/Tarifs/moyenne_saison.jpg',
         saison : 'MOYENNE SAISON',
         date: 'Autres vacances scolaire et mai, juin, septembre',
         prix: '270 €',
@@ -35,7 +35,7 @@ export const tarifs =
 
     {
         id: 5,
-        photo: '/pictures/Tarifs/haute_saison_ete.jpg',
+        photo: '/pictures/Tarifs/vacance_fevrier.jpg',
         saison : 'VACANCES FEVRIER',
         date: 'février - mars',
         prix: '100 €',
@@ -51,7 +51,7 @@ export const tarifs =
 
     {
         id: 7,
-        photo: '/pictures/Tarifs/haute_saison_ete.jpg',
+        photo: '/pictures/Tarifs/toussaint.jpg',
         saison : 'VACANCES TOUSSAINT',
         date: "A partir de la moitié du mois d'octobre jusqu'à la fin du mois d'octobre",
         prix: '100 €',
@@ -67,7 +67,7 @@ export const tarifs =
 
     {
         id: 9,
-        photo: '/pictures/Tarifs/haute_saison_ete.jpg',
+        photo: '/pictures/Tarifs/basse_saison.jpg',
         saison : 'BASSE SAISON',
         date: 'autres dates',
         prix: '200 €',

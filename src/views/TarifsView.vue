@@ -1,16 +1,16 @@
 <template>
-  <div class="pt-16 tarif">
+  <div class="pt-16 pb-16 tarif">
     <!-- Insertion des saisons, dates et prix à partir de tarifs de database -->
     <div class="flex flex-wrap w-4/5 mx-auto pb-4 ">
       <div v-for="tarif in tarifs" :key="tarif.id" class="w-1/3 tarif__card">
-        <div class="bg-white m-4  rounded-lg ">
+        <div class="bg-white m-4  rounded-lg tarif__card--solo">
           
           <img :src="tarif.photo" :alt="tarif.saison">
           <div class="tarif__card--image">
             <h1 v-text="tarif.prix" class="prix"></h1>
           </div>
           
-          <h1 v-text="tarif.saison" class=" "></h1>
+          <h1 v-text="tarif.saison" class="font-semibold"></h1>
           <p v-text="tarif.date"></p>
           <p v-text="tarif.prix" class="text-2xl font-semibold"></p>
         </div>
@@ -19,7 +19,7 @@
     </div>
 
     <!-- Description des auppléments pour le prix -->
-    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4 text-left p-4">
+    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4 text-left p-4 paragraphe">
       <p>
         Attention le chauffage est en plus, compter environ <span class="tarif__price">10€</span>    par jour en plein hiver.
         Une caution de <span class="tarif__price">300€</span> vous sera demandée lors de votre arrivée puis restituée à votre départ si les écrans plats sont toujours là.
@@ -28,12 +28,8 @@
       <p>Par semaine, préparation d'un lit 2 personnes : <span class="tarif__price">8€</span> , d'un lit 1 personne : <span class="tarif__price">6€</span>, mise à disposition des serviettes de bain : <span class="tarif__price">6€</span> par personne, forfait ménage : <span class="tarif__price">40€</span>. A préciser à la réservation.
       </p>
 
-      <p>
-        Cliquez 
-        <button class="font-bold tarif__cliquer bg-green-600 p-1 text-white">
-          <a href="https://www.gites-de-france-eure.com/dispo.php?numero_gite=818&dpt=27&type_gite=G&base=G&instance=gites27&langue=FRANCAIS&opener=1& " target="_blank" rel="noopener noreferrer">ici</a>
-        </button>
-         pour voir les dates disponibles sur toute l'année
+      <p class="font-bold text-lg ">
+        Vos animaux de compagnie sont les bienvenues sans surcoût.
       </p>
     </div>
 
@@ -62,6 +58,12 @@ export default {
 
     &__card{
       position: relative;
+
+      &--solo, .paragraphe{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+      }
+      
 
       &:hover{
         cursor: pointer;
@@ -98,6 +100,7 @@ export default {
 
     &__price{
       font-weight: 600;
+      font-size: 1.3em;
     }
 
     @media screen and (max-width: 550px) {

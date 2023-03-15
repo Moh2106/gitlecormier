@@ -1,5 +1,5 @@
 <template>
-  <div class="accueil pt-12">
+  <div class="accueil pt-12 pb-12">
 
     <!--La partie du slide-->
 

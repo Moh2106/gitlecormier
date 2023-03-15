@@ -2,15 +2,14 @@
   <div>
     <header-view/>
     <router-view/>
-    <footer-view/>
   </div>
 </template>
 
 <script>
-import FooterView from './components/FooterView.vue'
 import HeaderView from './components/HeaderView.vue'
+
 export default {
-  components: { FooterView, HeaderView },
+  components: {  HeaderView },
     setup() {
     },
 }
