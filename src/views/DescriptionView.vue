@@ -1,5 +1,5 @@
 <template>
-  <div class="descriptif pt-20">
+  <div class="descriptif pt-20 pb-8">
 
     <div class= "descriptif__paragraph   text-left">
       <p>

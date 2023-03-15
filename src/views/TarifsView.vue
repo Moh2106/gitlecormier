@@ -10,8 +10,8 @@
             <h1 v-text="tarif.prix" class="prix"></h1>
           </div>
           
-          <h1 v-text="tarif.saison" class="font-semibold"></h1>
-          <p v-text="tarif.date"></p>
+          <h1 v-text="tarif.saison" class="font-semibold text-lg"></h1>
+          <p v-text="tarif.date" class="text-lg "></p>
           <p v-text="tarif.prix" class="text-2xl font-semibold"></p>
         </div>
         
@@ -19,7 +19,7 @@
     </div>
 
     <!-- Description des auppléments pour le prix -->
-    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4 text-left p-4 paragraphe">
+    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4 text-left p-4 text-lg shadow-sm paragraphe">
       <p>
         Attention le chauffage est en plus, compter environ <span class="tarif__price">10€</span>    par jour en plein hiver.
         Une caution de <span class="tarif__price">300€</span> vous sera demandée lors de votre arrivée puis restituée à votre départ si les écrans plats sont toujours là.
