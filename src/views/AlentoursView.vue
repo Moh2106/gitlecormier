@@ -7,7 +7,7 @@
     </p>
 
     <!-- Intégration de la carte -->
-    <div class="alentours__carte">
+    <div class="alentours__carte" v-motion-pop>
       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12r6EtORX4TvW-tF_tddqwHYuHehKG0E&ehbc=2E312F" width="100%" height="600"></iframe>
 
     </div>
@@ -22,7 +22,12 @@
 
     <div class="monEnsemble">
       <div v-for="alentour in newAlentoursArrays" :key="alentour.id" class="monEnsemble__element">
-        <div class="alentours__card">
+        <div class="alentours__card"
+          v-motion-pop
+          v-motion-slide-visible-bottom
+          v-motion-fade-visible
+          
+        >
           <div class="alentours__card--image">
             <div class="myImage">
               <img :src="alentour.img" :alt="alentour.titre">
@@ -178,6 +183,7 @@ export default {
       border-radius: 0.5em;
       margin: 1em;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      transition: 0.25s linear;
       
 
       &:hover{

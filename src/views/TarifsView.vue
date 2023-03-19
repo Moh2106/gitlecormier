@@ -1,9 +1,15 @@
 <template>
-  <div class="pt-16 pb-16 tarif">
+  <div class="pt-16 pb-16 tarif"  >
     <!-- Insertion des saisons, dates et prix à partir de tarifs de database -->
-    <div class="flex flex-wrap w-4/5 mx-auto pb-4 ">
+    <div class="flex flex-wrap w-4/5 mx-auto pb-4 " >
       <div v-for="tarif in tarifs" :key="tarif.id" class="w-1/3 tarif__card">
-        <div class="bg-white m-4  rounded-lg tarif__card--solo">
+        <div class="bg-white m-4  rounded-lg tarif__card--solo" 
+        v-motion-pop
+        v-motion-slide-visible-bottom
+        
+        v-motion-fade-visible
+         
+        >
           
           <img :src="tarif.photo" :alt="tarif.saison">
           <div class="tarif__card--image">
@@ -19,7 +25,7 @@
     </div>
 
     <!-- Description des auppléments pour le prix -->
-    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4 text-left p-4 text-lg shadow-sm paragraphe">
+    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4 text-left p-4 text-lg shadow-sm paragraphe" >
       <p>
         Attention le chauffage est en plus, compter environ <span class="tarif__price">10€</span>    par jour en plein hiver.
         Une caution de <span class="tarif__price">300€</span> vous sera demandée lors de votre arrivée puis restituée à votre départ si les écrans plats sont toujours là.
@@ -61,6 +67,7 @@ export default {
 
       &--solo, .paragraphe{
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        transition: 0.25s linear;
 
       }
       
