@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div class="visite" v-motion-pop>
     <div class="pt-20 paragraph">
       <p class="bg-white bg-opacity-90">
         Sur cette carte, le chemin avec <span>des repéres en roses</span>  est <span> un chemin de terres absolument pas carrosable</span>, donc déconseiller de l'utiliser.
@@ -52,6 +52,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  .visite{
+    transition: 0.25s ease-in;
+  }
   .paragraph{
     width: 90%;
     margin: auto;

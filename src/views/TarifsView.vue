@@ -1,12 +1,11 @@
 <template>
   <div class="pt-16 pb-16 tarif"  >
-    <!-- Insertion des saisons, dates et prix à partir de tarifs de database -->
+    <!-- Insertion des saisons, dates et prix à partir de tarifs de database v-motion-slide-visible-bottom -->
     <div class="flex flex-wrap w-4/5 mx-auto pb-4 " >
       <div v-for="tarif in tarifs" :key="tarif.id" class="w-1/3 tarif__card">
         <div class="bg-white m-4  rounded-lg tarif__card--solo" 
         v-motion-pop
         v-motion-slide-visible-bottom
-        
         v-motion-fade-visible
          
         >
@@ -35,7 +34,7 @@
       </p>
 
       <p class="font-bold text-lg ">
-        Vos animaux de compagnie sont les bienvenues sans surcoût.
+        Vous souhaitez également passer votre séjour avec vos animaux de compagnie &#128512; , ils sont les bienvenus et surtout sans surcoût &#128525;.
       </p>
     </div>
 

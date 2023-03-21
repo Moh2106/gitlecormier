@@ -1,5 +1,5 @@
 <template>
-  <div class="alentours" id="haut">
+  <div class="alentours" id="haut" v-motion-pop >
 
     <!---- Peite paragraphe ---->
     <p class="bg-white bg-opacity-90 text-left alentours__paragraph ">
@@ -7,7 +7,7 @@
     </p>
 
     <!-- Intégration de la carte -->
-    <div class="alentours__carte" v-motion-pop>
+    <div class="alentours__carte" >
       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12r6EtORX4TvW-tF_tddqwHYuHehKG0E&ehbc=2E312F" width="100%" height="600"></iframe>
 
     </div>
@@ -133,6 +133,7 @@ export default {
     width: 90%;
     margin: auto;
     padding-bottom: 2em;
+    transition: 0.25s ease-in;
 
     &__search{
       text-align: left;
