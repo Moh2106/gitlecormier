@@ -372,7 +372,7 @@
     <!----------------------Lien vers gallery photo ----------------------------->
     <div class="descriptif__gallery">
       <button>
-        <router-link to="/gallerie" class="bg-green-600 text-white font-bold p-2 rounded-lg hover:bg-green-700"> Gallerie photo </router-link>
+        <router-link to="/descriptifs/gallerie" class="bg-green-600 text-white font-bold p-2 rounded-lg hover:bg-green-700"> Gallerie photo </router-link>
       </button>
     </div>
  

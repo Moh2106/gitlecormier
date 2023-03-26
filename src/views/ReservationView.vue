@@ -1,23 +1,10 @@
 <template>
-  <div class="pt-16 reservation">
-    <div class="w-1/2 m-auto reservation__iframe">
-      <iframe 
-        style="overflow:auto; -webkit-overflow-scrolling:touch;border:none;" 
-        width="100%"
-        height="1200"
-        src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=resa&nbmois=12&avecPrix=1&nbmoisLigne=3">
-      </iframe>
+  <div class="pt-16 reservation pb-4">
+    <div class="m-auto reservation__widget">
 
-
-
+      <div data-key="vk3_8_ia" data-numgite="818" data-widget-itea="resa" data-nbmois="12" data-nbmois-ligne="3" data-clicsurcalendrier="1" width="90vh"></div>
 
     </div>
-
-    <!--<div data-widget-itea="resa" data-key="vk3_8_ia" data-numgite="818" data-nbmois="3" data-nbmois-ligne="3" data-avecPrix="1"></div>-->
-
-    <!--<div data-widget-itea="prix" data-key="vk3_8_ia" data-numgite="818"></div>
-
-    <div data-widget-itea="descriptif_hotes" data-key="vk3_8_ia" data-numgite="818"></div>-->
 
     
   </div>
@@ -32,8 +19,17 @@ export default {
 <style lang="scss" scoped>
   .reservation{ 
     width: 100%;
+    //background: orange;
 
-    &__iframe{ 
+    &__css{
+      background: #af2;
+      display: flex;
+    }
+
+    &__widget{ 
+      width: 90%;
+      color: #ccc;
+
       @media screen and (max-width: 768px) {
         width: 70%;
         margin: auto;

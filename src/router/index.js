@@ -29,13 +29,13 @@ const routes = [
   },
 
   {
-    path: '/gallerie',
+    path: '/descriptifs/gallerie',
     name: 'gallerie',
     component: GalleryView
   },
 
   {
-    path: '/arrive',
+    path: '/comment-arriver',
     name: 'arriver',
     component: VisiterView
   },
@@ -63,6 +63,12 @@ const routes = [
     name: 'tarifs',
     component: TarifsView
   },
+
+  /*{
+    path: '/*',
+    name: 'tarifs',
+    redirect: '/tarifs',
+  },*/
 
 ]
 

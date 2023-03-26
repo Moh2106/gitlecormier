@@ -10,7 +10,7 @@
         <router-link to="/" v-on:click="supprimerMenu">Accueil</router-link>
         <router-link to="/liens" v-on:click="supprimerMenu">Liens</router-link>
         <router-link to="/descriptifs" >Descriptifs</router-link>
-        <router-link to="/arrive" >Comment arriver</router-link>
+        <router-link to="/comment-arriver" >Comment arriver</router-link>
         <router-link to="/alentours" >Aux Alentours</router-link>
         <router-link to="/livredor" >Livres d'or</router-link>
         <router-link to="/reservation" >Page de réservation</router-link>
