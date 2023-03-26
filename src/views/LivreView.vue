@@ -60,14 +60,7 @@ export default {
 
 }
 
-*[data-widget-itea][data-v-47caae07] {
-    margin: 0 0 15px;
-    padding: 10px;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    color: #333333;
-   
-}
+
 
   /*.divContentWidget{
     background: red;
