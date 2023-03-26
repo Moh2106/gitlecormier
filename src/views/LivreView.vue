@@ -1,14 +1,20 @@
 <template>
   <div class="pt-16 pb-4 livre">
 
-    <div data-widget-itea="avis" data-key="vk3_8_ia" data-numgite="818" data-affichequenoteglobale=1 data-sanscss="1" class="iframe"></div>
+    <!------- Insertion du widget pour la note globale ------------------------>
 
-    <!------------------------------->
+    <div class="iframe">
+      Note globale : <iframe style="overflow:auto; -webkit-overflow-scrolling:touch ;border:none" height="70" width="50%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis&affichequenoteglobale=1&sanscss=1" class=""></iframe>
+    </div>
 
-    <iframe style="overflow:auto; -webkit-overflow-scrolling:touch ;border:none" height="100%" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis&affichequenoteglobale=1&sanscss=1" class="iframe"></iframe>
+    <div data-key="vk3_8_ia" data-numgite="818" data-widget-itea="avis" ></div>
 
     <!-- Insertion du widget avis -->
-    <iframe style="overflow:auto; -webkit-overflow-scrolling:touch ;border:none" height="100%" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"></iframe>
+    <div class="avis">
+      <iframe style="overflow:auto; -webkit-overflow-scrolling:touch ;border:none" height="100%" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"></iframe>
+    </div>
+    
+
   </div>
 </template>
 
@@ -19,7 +25,11 @@ export default {
 </script>
 
 <style scoped>
-  .livre{
+  /*.livre{
+   
+  }*/
+
+  .avis{
     height: 100vh;
   }
 
@@ -29,6 +39,8 @@ export default {
     display: flex;
     flex-direction: row;
     font-size: 2em;
+    width: 90%;
+    margin-bottom: 0.5em;
   }
 
   /*.iframe.divContentWidget.div_recapAvisLibelle{
@@ -41,7 +53,8 @@ export default {
     font-size: 14px;
     font-family: Arial, sans-serif;
     color: #333333;
-    background: rgb(249, 79, 18);
+    background: #08a045;
+    color: #fff;
     display: flex;
     flex-direction: row;
 
