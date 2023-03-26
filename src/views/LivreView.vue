@@ -45,9 +45,6 @@ export default {
     display: flex;
     flex-direction: row;
 
-    img{
-      font-size: 18px;
-    }
 }
 
 *[data-widget-itea][data-v-47caae07] {
