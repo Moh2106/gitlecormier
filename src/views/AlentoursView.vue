@@ -1,32 +1,39 @@
 <template>
   <div class="alentours" id="haut" v-motion-pop >
 
-    <!---- Petite paragraphe ---->
+    <!---- Petite paragraphe pour une bref description ---->
     <p class="bg-white bg-opacity-90 text-left alentours__paragraph ">
       Profitez de votre séjour  pour découvrir quelques endroits de la région, sur cette carte vous trouvevez absolument tout ce qu'il y a à visiter dans un rayon de 50 km : fermes, restaurants, sites touristiques, paysages, randonnées, etc ...
     </p>
 
-    <!-- Intégration de la carte -->
-    <div class="alentours__carte" >
+    <!-- Intégration de la carte avec l'api de google map -->
+    <div class="alentours__carte">
       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12r6EtORX4TvW-tF_tddqwHYuHehKG0E&ehbc=2E312F" width="100%" height="600"></iframe>
-
     </div>
 
+    <!--
+      Ici on saisira un texte qui sera le nom du lieu dans le input pour faire la recherche d'un lieu
+    -->
     <div class="alentours__search">
       <input type="search" name="" id="" v-model="site" placeholder="Rechercher un lieu">
-      <!----<p class="bg-white">{{ newAlentoursArrays.length }}</p>-->
-      <div v-if="result && newAlentoursArrays.length"></div>
     </div>
 
-    <!---------- Intégration des données à partir de alentours.js----------------------------->
+    <!-- 
+      Insertion des données comme les photos, le nom des sites aux alentours, le site web
+      des entreprises et le l'itinéraire vers gite le cormier via alentours.js
+
+      v-motion-pop
+          v-motion-slide-visible-bottom
+          v-motion-fade-visible 
+    -->
 
     <div class="monEnsemble">
       <div v-for="alentour in newAlentoursArrays" :key="alentour.id" class="monEnsemble__element">
         <div class="alentours__card"
-          v-motion-pop
-          v-motion-slide-visible-bottom
-          v-motion-fade-visible
           
+          data-aos="fade-right"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
         >
           <div class="alentours__card--image">
             <div class="myImage">
@@ -42,8 +49,7 @@
           </div>
 
           <div class="alentours__card--description">
-            <h1 v-text="alentour.titre" class="font-bold "></h1> 
-            <!--<p v-text="alentour.description"></p>-->
+            <h1 v-text="alentour.titre" class="font-bold "></h1>
             <button class="bg-red-600">Site officiel</button>
           </div>
 
@@ -56,7 +62,7 @@
       
     </div>
 
-    <!--------------Boutton de redirection------------------------------>
+    <!-------------- Boutton de redirection------------------------------>
     <div class="alentours__redirection">
       <button>
         <a href="#haut">
@@ -89,7 +95,7 @@ export default {
     newAlentoursArrays.value = alentours;
 
     /*
-      Dans cette partie je recupère le mot saisi dans le input concernant la recherche d'un lieu
+      Dans cette partie on recupère le mot saisi dans le input concernant la recherche d'un lieu
       Ensuite on effectue une recherche sur le tableau alentours récupéré depuis notre base de donnée alentours.js
       On stocke ensuite les résultats dans un tableau newAlentoursArrays
     */
@@ -99,12 +105,10 @@ export default {
       newAlentoursArrays.value = alentourArray;
      
     })
-
-    result.value = site.value.localeCompare("") ? false : true
     
 
-
-    /* Cette fonction est là pour comparer les valeurs des champs maps et sites
+    /*
+      Cette fonction est là pour comparer les valeurs des champs maps et sites
       Si la valeur existe il l'affiche, sinon pas d'affiche
     */
     function compare(value){
@@ -184,7 +188,7 @@ export default {
       border-radius: 0.5em;
       margin: 1em;
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      transition: 0.25s linear;
+      //transition: 20s ease-in-out;
       
 
       &:hover{

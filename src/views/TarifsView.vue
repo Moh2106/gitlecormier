@@ -7,6 +7,10 @@
         v-motion-pop
         v-motion-slide-visible-bottom
         v-motion-fade-visible
+
+        
+
+        data-aos="fade-right"
          
         >
           
@@ -24,7 +28,7 @@
     </div>
 
     <!-- Description des auppléments pour le prix -->
-    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4 text-left p-4 text-lg shadow-sm paragraphe" >
+    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4 text-left p-4 text-lg shadow-sm paragraphe" data-aos="fade-right">
       <p>
         Attention le chauffage est en plus, compter environ <span class="tarif__price">10€</span>    par jour en plein hiver.
         Une caution de <span class="tarif__price">300€</span> vous sera demandée lors de votre arrivée puis restituée à votre départ si les écrans plats sont toujours là.
