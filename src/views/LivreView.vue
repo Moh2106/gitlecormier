@@ -3,13 +3,14 @@
 
     <!------- Insertion du widget pour la note globale ------------------------>
 
-    <div class="iframe">
-      Note globale : <iframe style="overflow:auto; -webkit-overflow-scrolling:touch ;border:none" height="70" width="40%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis&affichequenoteglobale=1&sanscss=1" class=""></iframe>
+    <div class="iframe mr-4">
+      <span class="p-2 ">Note globale sur le site de gite de France :</span>  
+      <iframe style="overflow:auto; -webkit-overflow-scrolling:touch ;border:none" height="70" width="40%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis&affichequenoteglobale=1&sanscss=1" class="animate__tada"></iframe>
     </div>
 
     <!-- Insertion du widget avis -->
     <div class="avis">
-      <iframe style="overflow:auto; -webkit-overflow-scrolling:touch ;border:none" height="1200" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"></iframe>
+      <iframe style="overflow:auto; -webkit-overflow-scrolling:touch ;border:none" height="1250" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"></iframe>
     </div>
     
 
@@ -23,9 +24,10 @@ export default {
 </script>
 
 <style scoped>
-  /*.livre{
-   
-  }*/
+  .livre{
+   width: 90%;
+   margin: auto;
+  }
 
   /*.avis{
     height: 100vh;
@@ -33,12 +35,13 @@ export default {
 
   .iframe{
     background: #08a045;
-    color: aliceblue;
+    color: #fff;
     display: flex;
     flex-direction: row;
-    font-size: 2rem;
-    width: 90%;
+    width: 100%;
     margin-bottom: 0.5em;
+    font-size: 1.5em;
+    border-radius: 0.5em;
   }
 
 

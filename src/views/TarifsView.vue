@@ -28,7 +28,13 @@
     </div>
 
     <!-- Description des auppléments pour le prix -->
-    <div class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4 text-left p-4 text-lg shadow-sm paragraphe" data-aos="fade-right">
+    <div 
+        class="bg-white w-4/5 m-auto rounded-lg bg-opacity-90 mb-4 text-left p-4 text-lg shadow-sm paragraphe" 
+        data-aos="fade-right"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        
+        >
       <p>
         Attention le chauffage est en plus, compter environ <span class="tarif__price">10€</span>    par jour en plein hiver.
         Une caution de <span class="tarif__price">300€</span> vous sera demandée lors de votre arrivée puis restituée à votre départ si les écrans plats sont toujours là.
@@ -39,6 +45,10 @@
 
       <p class="font-bold text-lg ">
         Vous souhaitez également passer votre séjour avec vos animaux de compagnie &#128512; , ils sont les bienvenus et surtout sans surcoût &#128525;.
+      </p>
+
+      <p>
+        Alors, vous attendez quoi &#128513;, Cliquez <button class="tarif__button_reservation"><router-link to="/reservation">ici</router-link></button>  pour voir les dates disponibles et réserver
       </p>
     </div>
 
@@ -101,6 +111,17 @@ export default {
       }
 
       
+    }
+
+    &__button_reservation{
+      background: #08a045;
+      padding: 0.1em 0.3em;
+      color: #fff;
+      border-radius: 0.3em;
+
+      &:hover{
+        background: #08863b;
+      }
     }
 
     &__cliquer{

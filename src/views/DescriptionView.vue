@@ -1,14 +1,14 @@
 <template>
   <div class="descriptif pt-20 pb-8" >
 
-    <div class= "descriptif__paragraph   text-left">
+    <div class= "descriptif__paragraph text-left" data-aos="zoom-out-down">
       <p>
         Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.
       </p>
     </div>
 
     <!------------------ Rez de chaussee --------------------------->
-    <h1 class="title">Rez-de-chaussée</h1>
+    <h1 class="title" data-aos="flip-right">Rez-de-chaussée</h1>
     <div class="flex justify-between w-4/5 m-auto mb-8 descriptif__section">
       <swiper
         :slidesPerView="1"
@@ -20,6 +20,9 @@
         :navigation="true"
         :modules="modules"
         class="mySwiper w-2/3 m-auto a"
+        data-aos="fade-right"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
       >
 
       <swiper-slide>
@@ -113,7 +116,11 @@
       </swiper>
 
       <!----------------Texte descriptif -------------------------------->
-      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left">
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left"
+          data-aos="fade-left"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+      >
 
         <h1 class="font-semibold ">Au rez-de-chaussée :</h1>
             <ul class="">
@@ -131,7 +138,7 @@
     </div>
 
     <!--------------------- 1ER ETAGE  ----------------------------->
-    <h1 class="title">Au 1er Etage</h1>
+    <h1 class="title" data-aos="flip-right">Au 1er Etage</h1>
     <div class="flex justify-between w-4/5 m-auto mb-8 descriptif__section">
       <swiper
         :slidesPerView="1"
@@ -143,6 +150,9 @@
         :navigation="true"
         :modules="modules"
         class="mySwiper w-2/3 m-auto a"
+        data-aos="fade-right"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
       >
 
       <swiper-slide>
@@ -236,7 +246,11 @@
       </swiper>
 
       <!----------------Texte descriptif -------------------------------->
-      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left">
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left"
+          data-aos="fade-left"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+      >
 
         <h1 class="font-semibold">Au 1 er étage : </h1>
             <ul>
@@ -254,8 +268,10 @@
     </div>
 
     <!---------------- LE JARDIN ------------------------------------------>
-    <h1 class="title">Le jardin</h1>
-    <div class="flex justify-between w-4/5 m-auto descriptif__section">
+    <h1 class="title" data-aos="flip-right">Le jardin</h1>
+    <div class="flex justify-between w-4/5 m-auto descriptif__section"
+          
+    >
       <swiper
         :slidesPerView="1"
         :spaceBetween="30"
@@ -266,6 +282,9 @@
         :navigation="true"
         :modules="modules"
         class="mySwiper w-2/3 m-auto a"
+        data-aos="fade-right"
+        data-aos-duration="700"
+        data-aos-easing="ease-in-out"
       >
 
       <swiper-slide>
@@ -351,7 +370,11 @@
       </swiper>
 
       <!----------------Texte descriptif -------------------------------->
-      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left">
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left"
+          data-aos="fade-left"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+      >
 
         <h1 class="font-semibold">Dans le jardin :</h1>
 
@@ -419,6 +442,31 @@ export default {
       height: 100%;
       object-fit: fill;
     }
+
+    .bubble-bottom {
+      /* Modify size here: */
+      --size: 10em;
+
+      position: relative;
+      width: var(--size);
+      height: calc(var(--size) * 0.2);
+      background: #fff;
+      border-radius: 10px;
+    }
+
+    .bubble-bottom:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border: calc(var(--size) * 0.13) solid transparent;
+      border-top-color: #fff;
+      border-bottom: 0;
+      margin-left: calc(var(--size) * 0.13 * -1);
+      margin-bottom: calc(var(--size) * 0.13 * -1);
+    }
     .descriptif{ 
          width: 80%;
          margin: auto;
@@ -451,6 +499,7 @@ export default {
           margin: auto;
           border-radius: 50%;
           margin-bottom: 0.5em;
+          padding: 0.5em;
 
           @media screen and (max-width: 550px) {
             width: 50%;

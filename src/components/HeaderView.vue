@@ -13,8 +13,8 @@
         <router-link to="/comment-arriver" >Comment arriver</router-link>
         <router-link to="/alentours" >Aux Alentours</router-link>
         <router-link to="/livredor" >Livres d'or</router-link>
-        <router-link to="/reservation" >Page de réservation</router-link>
         <router-link to="/tarifs" >Tarifs</router-link>
+        <router-link to="/reservation" >Page de réservation</router-link>
     </nav>
 
     <div class="header__menu" >
