@@ -3,85 +3,9 @@
 
     <!--La partie du slide-->
 
-    <!----<div>
-        <div id="carouselExampleControls" class="carousel slide relative accueil__slide" data-bs-ride="carousel">
-            <div class="carousel-inner relative w-full overflow-hidden">
-
-                <div class="carousel-item active relative float-left w-full">
-                <img
-                    src="../assets/Cormier/cormier3.jpg"
-                    class="block w-full gite h-1/4 "
-                    alt="Chambre"
-                />
-                </div>
-
-                <div class="carousel-item relative float-left w-full">
-                <img
-                    src="../assets/Cormier/cormier1.jpg"
-                    class="block w-full gite h-1/4 "
-                    alt="La maison"
-                />
-                </div>
-
-                <div class="carousel-item relative float-left w-full">
-                <img
-                    src="../assets/Jardin/jardin13.jpg"
-                    class="block w-full gite h-1/4 "
-                    alt="Le jardin"
-                />
-                </div>
-
-                <div class="carousel-item relative float-left w-full">
-                <img
-                    src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-                    class="block w-full"
-                    alt="Wild Landscape"
-                />
-                </div>
-
-                <div class="carousel-item relative float-left w-full">
-                <img
-                    src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-                    class="block w-full"
-                    alt="Camera"
-                />
-                </div>
-
-                <div class="carousel-item relative float-left w-full">
-                <img
-                    src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-                    class="block w-full"
-                    alt="Exotic Fruits"
-                />
-                </div>
-            </div>
-
-            <button
-            class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev"
-        >
-            <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-            </button>
-
-            <button
-                class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                type="button"
-                data-bs-target="#carouselExampleControls"
-                data-bs-slide="next"
-            >
-                <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button> 
-        </div>
-    </div>-->
-
     <br>
 
-    <div class="monSwipe">
-        <swiper
+    <swiper
             :spaceBetween="30"
             :centeredSlides="true"
             :autoplay="{
@@ -93,31 +17,33 @@
             }"
             :navigation="true"
             :modules="modules"
-            class="mySwiper slideSwiper mb-4"
+            class="monSwipe mb-4 container"
         >
-            <swiper-slide>
-                <img src="../assets/Cormier/cormier3.jpg" alt="">
+            <swiper-slide class="monSwipe__capture">
+                <img src="./../../public/pictures/Acceuil/RMV_5563.jpg" alt="">
             </swiper-slide>
 
-            <swiper-slide>
-                <img src="../assets/Cormier/cormier1.jpg" alt="">
+            <swiper-slide class="monSwipe__capture">
+                <img src="./../../public/pictures/Acceuil/RMV_5650.jpg" alt="">
             </swiper-slide>
 
-            <swiper-slide>
-                <img src="../assets/Jardin/jardin13.jpg" alt="">
+            <swiper-slide class="monSwipe__capture">
+                <img src="./../../public/pictures/Acceuil/RMV_5548.jpg" alt="">
             </swiper-slide>
 
-            <swiper-slide>
-                <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" alt="">
+            <swiper-slide class="monSwipe__capture">
+                <img src="./../../public/pictures/Acceuil/RMV_5554.jpg" alt="">
             </swiper-slide>
-                
-            <swiper-slide>
-                <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" alt="">
+
+            <swiper-slide class="monSwipe__capture">
+                <img src="./../../public/pictures/Acceuil/RMV_5555.jpg" alt="">
+            </swiper-slide>
+
+            <swiper-slide class="monSwipe__capture">
+                <img src="./../../public/pictures/Acceuil/RMV_5475.jpg" alt="">
             </swiper-slide>
 
         </swiper>
-    </div>
-
 
     <!--La partie de Bienvenue-->
     <div class="accueil__description bg-green-700 bg-opacity-90 ">
@@ -132,7 +58,8 @@
 
     <!--La partie vidéo -->
     <div class="accueil__video">
-        <video src="../assets/Vidéo/cormier_video.mp4" autoplay type="video/mp4" controls></video>
+        <video src="../assets/Vidéo/video_presentation_cormier.mp4" type="video/mp4" controls>
+        </video>
     </div>
 
     <br>
@@ -184,7 +111,7 @@
         <span @click="fermer">&times;</span>
         <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp" alt="">
     </div>
-    
+
   </div>
 </template>
 
@@ -207,6 +134,14 @@ import "../../src/main.css"
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper';
 
+// Initialization for ES Users
+/*import {
+  Carousel,
+  initTE,
+} from "tw-elements";*/
+
+//initTE({ Carousel });
+
 export default {
     
 
@@ -216,6 +151,7 @@ export default {
     },
 
     setup(){ 
+        //initTE({ Carousel });
 
         // Cette fonction permet d'agrandir l'image en cliquant sur son div parent
 
@@ -272,23 +208,22 @@ export default {
 
         .monSwipe{
             width: 90%;
-            margin: auto;
-            height: 70vh;
+            //margin: auto;
+            height: 80vh;
             margin-bottom: 1.5em;
+            //border: 4px solid red;
 
-            .slideSwiper{
-                width: 100%;
-                height: 100%;
-
+            &__capture{
                 img{
-                    background-size: cover;
+                    width: 100%;
                     margin: auto;
-                    object-fit: cover;
+                    max-width: 1380px;
                     height: 100%;
-                    //object-fit: fill;
-                    //width: 100%;
+                    max-height: 700px;
+                    object-fit: cover;
                 }
             }
+           
         }
 
         
@@ -316,13 +251,16 @@ export default {
         }
 
         &__video{ 
-            width: 100%;
+            width: 80%;
+            height: 35rem;
             margin: auto;
             margin-bottom: 2em;
+            //border: 8px solid red;
 
             video{ 
-                width: auto;
-                margin: auto;
+                width: 100%;
+                height: 100%;
+                //margin: auto;
             }
         }
 
@@ -451,9 +389,9 @@ export default {
             }
         }
 
-        .gite{ 
+        /*.gite{ 
         height: 675px;
-    }
+    }*/
 
 }
     

@@ -10,7 +10,7 @@
 
     <!-- Insertion du widget avis -->
     <div class="avis">
-      <iframe style="overflow:auto; -webkit-overflow-scrolling:touch ;border:none" height="1250" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"></iframe>
+      <iframe style="overflow:auto; -webkit-overflow-scrolling:touch ;border:none; border-radius: 0.5em;" height="1300" width="100%" src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"></iframe>
     </div>
     
 

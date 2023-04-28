@@ -8,11 +8,17 @@
 <script>
 import HeaderView from './components/HeaderView.vue'
 import AOS from 'aos';
+import { onMounted } from "vue";
+import { Datepicker, Input, initTE } from "tw-elements";
 
 export default {
   components: {  HeaderView },
     setup() {
       AOS.init();
+
+      onMounted(() => {
+        initTE({ Datepicker, Input });
+      });
     },
 }
 </script>
