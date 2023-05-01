@@ -390,6 +390,112 @@
       </div>
 
     </div>
+
+    <!------------ La partie test ----------------------------------------------->
+
+    <!------------- REZ DE CHAUSSE    -------------------------------------------->
+
+    <h1 class="title mt-4 mb-4" data-aos="flip-right">Rez-de-chaussée</h1>
+      <div class="flex justify-between m-auto descriptif__section">
+      <swiper
+        :slidesPerView="2"
+        :spaceBetween="20"
+        :loop="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="modules"
+        class="mySwiper w-4/5 m-auto"
+
+        data-aos="fade-right"
+        data-aos-duration="700"
+        data-aos-easing="ease-in-out"
+      >
+
+      <swiper-slide v-for="rdc in rezDeChausseDatabase" :key="rdc.id">
+        <img 
+          :src="rdc.img" 
+          alt=""
+          class="b"
+        >
+      </swiper-slide>
+
+      </swiper>
+
+      <!----------------Texte descriptif -------------------------------->
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left rounded-lg"
+          data-aos="fade-left"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+      >
+
+        <h1 class="font-semibold ">Au rez-de-chaussée :</h1>
+            <ul class="">
+                <li>Salle à manger</li>
+                <li>Salon</li>
+                <li>Cuisine</li>
+                <li>Buanderie</li>
+                <li>1 chambre (1 lit 2 personnes)</li>
+                <li>Salle d'eau</li>
+                <li>WC</li>
+            </ul>
+        
+      </div>
+
+      </div>
+
+
+    <!-------------------------- LE JARDIN ------------------------------------->
+      <h1 class="title" data-aos="flip-right">Le jardin</h1>
+      <div class="flex justify-between m-auto descriptif__section">
+      <swiper
+        :slidesPerView="2"
+        :spaceBetween="20"
+        :loop="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="modules"
+        class="mySwiper w-4/5 m-auto"
+
+        data-aos="fade-right"
+        data-aos-duration="700"
+        data-aos-easing="ease-in-out"
+      >
+
+      <swiper-slide v-for="jardin in jardin_database" :key="jardin.id">
+        <img 
+          :src="jardin.img" 
+          alt=""
+          class="b"
+        >
+      </swiper-slide>
+
+      </swiper>
+
+      <!----------------Texte descriptif -------------------------------->
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left rounded-lg "
+          data-aos="fade-left"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+      >
+
+        <h1 class="font-semibold">Dans le jardin :</h1>
+
+          <ul>
+              <li>3000 m2</li>
+              <li>SPA (Jaccuzzi)</li>
+              <li>Garage</li>
+              <li>Bassin (avec poissons rouges)</li>
+              <li>Jeux</li>
+              <li>Barbecue</li>
+          </ul>
+        
+      </div>
+
+      </div>
     
 
     <!----------------------Lien vers gallery photo ----------------------------->
@@ -405,6 +511,11 @@
 <script>
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
+
+// import jardin dataset
+import {jardin_database} from '../database/jardin'
+// import rez de chausse dataset
+import {rezDeChausseDatabase} from '../database/rezdechausse'
 
   // Import Swiper styles
 import "swiper/css";
@@ -425,6 +536,8 @@ export default {
   setup() {
     return {
       modules: [Pagination, Navigation],
+      jardin_database,
+      rezDeChausseDatabase,
     };
   },
 
@@ -433,14 +546,14 @@ export default {
 
 <style lang="scss" scoped>
 
-    .a{ 
-      height: 50vh;
+    .mySwiper{ 
+      height: 55vh;
     }
 
     .b{
       width: 100%;
       height: 100%;
-      object-fit: fill;
+      object-fit: cover;
     }
 
     .bubble-bottom {
@@ -467,6 +580,7 @@ export default {
       margin-left: calc(var(--size) * 0.13 * -1);
       margin-bottom: calc(var(--size) * 0.13 * -1);
     }
+
     .descriptif{ 
          width: 80%;
          margin: auto;
@@ -510,6 +624,8 @@ export default {
          }
 
          &__section{ 
+         // width: 90%; 
+
           @media screen and (max-width: 768px) {
             display: block;
           }
@@ -541,7 +657,7 @@ export default {
             background: #fff;
 
 
-            .taille{
+            /*.taille{
                 width: 70%;
                 height: 50%;
                 text-align: center;
@@ -552,7 +668,7 @@ export default {
                   object-fit: fill;
                   object-position: center;
                 }
-            }
+            }*/
         }
 
         &--text{ 

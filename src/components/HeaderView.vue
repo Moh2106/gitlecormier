@@ -173,7 +173,8 @@ export default {
       transition: 0.5s ease-in-out;
       transform: scale3d(1em);
       font-size: 1.05em;
-      background: #08a045;;
+      background: #08a045;
+      border-radius: 0.5em;
 
       @media screen and (max-width : 768px) {
         transform: translateX(0.2em);
@@ -184,9 +185,12 @@ export default {
     &.router-link-exact-active{ 
       border-bottom: 3px solid #fff;
       font-weight: 700;
+      background: #08a045;
+      border-radius: 0.5em;
 
       @media screen and (max-width : 768px) {
         border-bottom: 2px solid #fff;
+
       }
     }
 

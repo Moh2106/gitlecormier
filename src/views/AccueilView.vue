@@ -9,7 +9,7 @@
             :spaceBetween="30"
             :centeredSlides="true"
             :autoplay="{
-            delay: 3000,
+            delay: 3500,
             disableOnInteraction: false,
             }"
             :pagination="{
@@ -134,13 +134,6 @@ import "../../src/main.css"
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper';
 
-// Initialization for ES Users
-/*import {
-  Carousel,
-  initTE,
-} from "tw-elements";*/
-
-//initTE({ Carousel });
 
 export default {
     
@@ -150,8 +143,7 @@ export default {
       SwiperSlide,
     },
 
-    setup(){ 
-        //initTE({ Carousel });
+    setup(){
 
         // Cette fonction permet d'agrandir l'image en cliquant sur son div parent
 
@@ -209,9 +201,9 @@ export default {
         .monSwipe{
             width: 90%;
             //margin: auto;
-            height: 80vh;
+            height: 65vh;
             margin-bottom: 1.5em;
-            //border: 4px solid red;
+            //border: 4px solid green;
 
             &__capture{
                 img{
@@ -255,6 +247,7 @@ export default {
             height: 35rem;
             margin: auto;
             margin-bottom: 2em;
+            object-fit: cover;
             //border: 8px solid red;
 
             video{ 

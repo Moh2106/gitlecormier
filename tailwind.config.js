@@ -7,8 +7,6 @@ module.exports = {
   },
   
   plugins: [
-    //require('tw-elements/dist/plugin','flowbite/plugin') , "./node_modules/flowbite/**/*.js"
-    //
     require('tw-elements/dist/plugin.cjs')
   ],
 
