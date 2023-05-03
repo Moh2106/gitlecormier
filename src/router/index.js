@@ -9,6 +9,9 @@ import TarifsView from '../views/TarifsView'
 import LivreView from '../views/LivreView'
 import ReservationView from '../views/ReservationView'
 
+import VueScrollTo from 'vue-scrollto'
+
+
 const routes = [
   {
     path: '/',
@@ -75,6 +78,14 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+
+router.beforeEach((to, from, next) => {
+  if (to.path !== from.path) {
+    VueScrollTo.scrollTo(10, { duration : 500})
+  }
+  next()
 })
 
 export default router

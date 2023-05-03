@@ -27,22 +27,21 @@ export default {
   box-sizing: border-box;
 }
 #app {
-  font-family: 'Oleo Script Swash Caps', cursive;
-  background: #eef;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background: url('../src/assets/Cormier/cormier_background.jpg');
   background-attachment: scroll;
   font-family: 'Poppins', sans-serif;
+  
 
   @media screen and (max-width: 768px) {
     font-family: 'Poppins', sans-serif;
   }
 }
 
-html{ 
+/*html{ 
   scroll-behavior: smooth;
-}
+}*/
 
 </style>

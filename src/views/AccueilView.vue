@@ -58,7 +58,15 @@
 
     <!--La partie vidéo -->
     <div class="accueil__video">
-        <video src="../assets/Vidéo/video_presentation_cormier.mp4" type="video/mp4" controls>
+        <video 
+            src="../assets/Vidéo/video_presentation_cormier.mp4" 
+            type="video/mp4" 
+            controls
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out"
+        
+        >
         </video>
     </div>
 
@@ -243,8 +251,8 @@ export default {
         }
 
         &__video{ 
-            width: 80%;
-            height: 35rem;
+            width: 60%;
+            height: auto;
             margin: auto;
             margin-bottom: 2em;
             object-fit: cover;

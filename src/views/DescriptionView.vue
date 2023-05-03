@@ -1,397 +1,11 @@
 <template>
-  <div class="descriptif pt-20 pb-8" >
+  <div class="descriptif pt-20 pb-4" >
 
     <div class= "descriptif__paragraph text-left" data-aos="zoom-out-down">
       <p>
         Comme une carte postale normande, cette chaumière pleine de charme semble posée dans son écrin de verdure, dans un adorable petit coin de campagne bien tranquille. De la maison d'autrefois elle a les codes mais l'équipement, le confort et la décoration sont tout à fait d'actualité. Vous adorerez le caractère des pans de bois et de la charpente apparente, du chaume et son faîtage parcouru d'iris : vraiment beaucoup de charme pour cette maison qui vous offre en plus un grand jardin paysager de 3000 m² avec beaucoup d'espace pour se dégourdir les jambes ou se reposer dans son petit coin favori, pourquoi pas auprès du bassin aux nymphéas. Egalement une belle terrasse avec un spa pour votre bien-être. Ici tout est pensé pour vos vacances avec côté jeux trampoline, ping-pong, portique, à l'intérieur, plein de livres, BD et jeux pour petits et grands. La Seine, toute proche, vous promet de belles balades avec des vues à couper le souffle.
       </p>
     </div>
-
-    <!------------------ Rez de chaussee --------------------------->
-    <h1 class="title" data-aos="flip-right">Rez-de-chaussée</h1>
-    <div class="flex justify-between w-4/5 m-auto mb-8 descriptif__section">
-      <swiper
-        :slidesPerView="1"
-        :spaceBetween="30"
-        :loop="true"
-        :pagination="{
-          clickable: true,
-        }"
-        :navigation="true"
-        :modules="modules"
-        class="mySwiper w-2/3 m-auto a"
-        data-aos="fade-right"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-      >
-
-      <swiper-slide>
-      <img 
-        src="../assets/RezDeChaussee/rdc1.jpg" 
-        alt=""
-        class="b"
-        >
-      </swiper-slide>
-
-      <swiper-slide>
-        <img 
-          src="../assets/RezDeChaussee/rdc2.jpg" 
-          alt=""
-          class="b "
-        >
-      </swiper-slide>
-        
-      <swiper-slide>
-        <img 
-          src="../assets/RezDeChaussee/rdc3.jpg" 
-          alt=""
-          class="b "
-        >
-      </swiper-slide>
-      
-      <swiper-slide>
-        <img 
-          src="../assets/RezDeChaussee/rdc4.jpg" 
-          alt=""
-          class="b "
-        >
-        </swiper-slide>
-        
-        <swiper-slide>
-          <img 
-          src="../assets/RezDeChaussee/rdc5.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-        
-        <swiper-slide>
-          <img 
-          src="../assets/RezDeChaussee/rdc6.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/RezDeChaussee/rdc7.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/RezDeChaussee/rdc8.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/RezDeChaussee/rdc9.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/RezDeChaussee/rdc10.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/RezDeChaussee/rdc11.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-      </swiper>
-
-      <!----------------Texte descriptif -------------------------------->
-      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left"
-          data-aos="fade-left"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-      >
-
-        <h1 class="font-semibold ">Au rez-de-chaussée :</h1>
-            <ul class="">
-                <li>Salle à manger</li>
-                <li>Salon</li>
-                <li>Cuisine</li>
-                <li>Buanderie</li>
-                <li>1 chambre (1 lit 2 personnes)</li>
-                <li>Salle d'eau</li>
-                <li>WC</li>
-            </ul>
-        
-      </div>
-
-    </div>
-
-    <!--------------------- 1ER ETAGE  ----------------------------->
-    <h1 class="title" data-aos="flip-right">Au 1er Etage</h1>
-    <div class="flex justify-between w-4/5 m-auto mb-8 descriptif__section">
-      <swiper
-        :slidesPerView="1"
-        :spaceBetween="30"
-        :loop="true"
-        :pagination="{
-          clickable: true,
-        }"
-        :navigation="true"
-        :modules="modules"
-        class="mySwiper w-2/3 m-auto a"
-        data-aos="fade-right"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-      >
-
-      <swiper-slide>
-      <img 
-        src="../assets/Etage/etage1.jpg" 
-        alt=""
-        class="b"
-        >
-      </swiper-slide>
-
-      <swiper-slide>
-        <img 
-          src="../assets/Etage/etage2.jpg" 
-          alt=""
-          class="b "
-        >
-      </swiper-slide>
-        
-      <swiper-slide>
-        <img 
-          src="../assets/Etage/etage3.jpg" 
-          alt=""
-          class="b "
-        >
-      </swiper-slide>
-      
-      <swiper-slide>
-        <img 
-          src="../assets/Etage/etage4.jpg" 
-          alt=""
-          class="b "
-        >
-        </swiper-slide>
-        
-        <swiper-slide>
-          <img 
-          src="../assets/Etage/etage5.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-        
-        <swiper-slide>
-          <img 
-          src="../assets/Etage/etage6.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/Etage/etage7.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/Etage/etage8.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/Etage/etage9.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/Etage/etage10.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/Etage/etage11.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-      </swiper>
-
-      <!----------------Texte descriptif -------------------------------->
-      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left"
-          data-aos="fade-left"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-      >
-
-        <h1 class="font-semibold">Au 1 er étage : </h1>
-            <ul>
-                <li>1 chambre palière</li>
-                <li>(1 lit 1 personne)</li>
-                <li>Bureau</li>
-                <li>Placard</li>
-                <li>1 chambre (2 litS 1 personnes)</li>
-                <li>Salle d'eau</li>
-                <li>WC</li>
-            </ul>
-        
-      </div>
-
-    </div>
-
-    <!---------------- LE JARDIN ------------------------------------------>
-    <h1 class="title" data-aos="flip-right">Le jardin</h1>
-    <div class="flex justify-between w-4/5 m-auto descriptif__section"
-          
-    >
-      <swiper
-        :slidesPerView="1"
-        :spaceBetween="30"
-        :loop="true"
-        :pagination="{
-          clickable: true,
-        }"
-        :navigation="true"
-        :modules="modules"
-        class="mySwiper w-2/3 m-auto a"
-        data-aos="fade-right"
-        data-aos-duration="700"
-        data-aos-easing="ease-in-out"
-      >
-
-      <swiper-slide>
-      <img 
-        src="../assets/Jardin/jardin1.jpg" 
-        alt=""
-        class="b"
-        >
-      </swiper-slide>
-
-      <swiper-slide>
-        <img 
-          src="../assets/Jardin/jardin2.jpg" 
-          alt=""
-          class="b "
-        >
-      </swiper-slide>
-        
-      <swiper-slide>
-        <img 
-          src="../assets/Jardin/jardin3.jpg" 
-          alt=""
-          class="b "
-        >
-      </swiper-slide>
-      
-      <swiper-slide>
-        <img 
-          src="../assets/Jardin/jardin4.jpg" 
-          alt=""
-          class="b "
-        >
-        </swiper-slide>
-        
-        <swiper-slide>
-          <img 
-          src="../assets/Jardin/jardin5.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-        
-        <swiper-slide>
-          <img 
-          src="../assets/Jardin/jardin6.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/Jardin/jardin7.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/Jardin/jardin8.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/Jardin/jardin9.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-        <swiper-slide>
-          <img 
-          src="../assets/Jardin/jardin10.jpg" 
-          alt=""
-          class="b "
-          >
-        </swiper-slide>
-
-      </swiper>
-
-      <!----------------Texte descriptif -------------------------------->
-      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left"
-          data-aos="fade-left"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-      >
-
-        <h1 class="font-semibold">Dans le jardin :</h1>
-
-          <ul>
-              <li>3000 m2</li>
-              <li>SPA (Jaccuzzi)</li>
-              <li>Garage</li>
-              <li>Bassin (avec poissons rouges)</li>
-              <li>Jeux</li>
-              <li>Barbecue</li>
-          </ul>
-        
-      </div>
-
-    </div>
-
-    <!------------ La partie test ----------------------------------------------->
 
     <!------------- REZ DE CHAUSSE    -------------------------------------------->
 
@@ -426,25 +40,77 @@
       <!----------------Texte descriptif -------------------------------->
       <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left rounded-lg"
           data-aos="fade-left"
-          data-aos-duration="500"
+          data-aos-duration="700"
           data-aos-easing="ease-in-out"
       >
 
         <h1 class="font-semibold ">Au rez-de-chaussée :</h1>
-            <ul class="">
-                <li>Salle à manger</li>
-                <li>Salon</li>
-                <li>Cuisine</li>
-                <li>Buanderie</li>
-                <li>1 chambre (1 lit 2 personnes)</li>
-                <li>Salle d'eau</li>
-                <li>WC</li>
-            </ul>
+
+            <ul class="w-4/5">
+              <li v-for="description in rdcDescription" :key="description.id"
+              data-aos="fade-left"
+              data-aos-duration="500"
+              data-aos-easing="ease-in"
+              >
+                {{description.details}}
+              </li>
+          </ul>
         
       </div>
 
       </div>
 
+    <!-------------------------- 1ER ETAGE ------------------------------------>
+    <h1 class="title" data-aos="flip-right">Au 1er Etage</h1>
+      <div class="flex justify-between m-auto descriptif__section">
+      <swiper
+        :slidesPerView="2"
+        :spaceBetween="20"
+        :loop="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="modules"
+        class="mySwiper w-4/5 m-auto"
+
+        data-aos="fade-right"
+        data-aos-duration="700"
+        data-aos-easing="ease-in-out"
+      >
+
+      <swiper-slide v-for="etage in etages" :key="etage.id">
+        <img 
+          :src="etage.img" 
+          alt=""
+          class="b"
+        >
+      </swiper-slide>
+
+      </swiper>
+
+      <!----------------Texte descriptif -------------------------------->
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left rounded-lg"
+          data-aos="fade-left"
+          data-aos-duration="700"
+          data-aos-easing="ease-in-out"
+      >
+
+        <h1 class="font-semibold">Au 1 er étage : </h1>
+
+          <ul class="w-4/5">
+            <li v-for="description in etageDescription" :key="description.id"
+            data-aos="fade-left"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            >
+              {{description.details}}
+            </li>
+          </ul>
+        
+      </div>
+
+      </div>
 
     <!-------------------------- LE JARDIN ------------------------------------->
       <h1 class="title" data-aos="flip-right">Le jardin</h1>
@@ -476,21 +142,22 @@
       </swiper>
 
       <!----------------Texte descriptif -------------------------------->
-      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left rounded-lg "
+      <div class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left rounded-lg description"
           data-aos="fade-left"
-          data-aos-duration="500"
+          data-aos-duration="700"
           data-aos-easing="ease-in-out"
       >
 
         <h1 class="font-semibold">Dans le jardin :</h1>
 
-          <ul>
-              <li>3000 m2</li>
-              <li>SPA (Jaccuzzi)</li>
-              <li>Garage</li>
-              <li>Bassin (avec poissons rouges)</li>
-              <li>Jeux</li>
-              <li>Barbecue</li>
+          <ul class="w-4/5">
+              <li v-for="description in jardinDescription" :key="description.id"
+              data-aos="fade-left"
+              data-aos-duration="500"
+              data-aos-easing="ease-in"
+              >
+                {{description.details}}
+              </li>
           </ul>
         
       </div>
@@ -516,6 +183,8 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import {jardin_database} from '../database/jardin'
 // import rez de chausse dataset
 import {rezDeChausseDatabase} from '../database/rezdechausse'
+// import etage dataset
+import { etages } from '../database/etage'
 
   // Import Swiper styles
 import "swiper/css";
@@ -534,10 +203,123 @@ export default {
   },
 
   setup() {
+    const jardinDescription = 
+    [
+      {
+        id : 1,
+        details : "3000 m²",
+      },
+
+      {
+        id : 2,
+        details : "SPA (Jaccuzzi)",
+      },
+
+      {
+        id : 3,
+        details : "Garage",
+      },
+
+      {
+        id : 4,
+        details : "Bassin (avec poissons rouges)",
+      },
+
+      {
+        id : 4,
+        details : "Jeux",
+      },
+
+      {
+        id : 6,
+        details : "Barbecue",
+      }
+    ]
+
+    const etageDescription =
+    [
+      {
+        id : 1,
+        details : "1 chambre palière",
+      },
+
+      {
+        id : 2,
+        details : "(1 lit 1 personne)",
+      },
+
+      {
+        id : 3,
+        details : "Bureau",
+      },
+
+      {
+        id : 4,
+        details : "Placard",
+      },
+
+      {
+        id : 4,
+        details : "1 chambre (2 litS 1 personnes)",
+      },
+
+      {
+        id : 6,
+        details : "Salle d'eau",
+      },
+
+      {
+        id : 7,
+        details : "WC",
+      }
+    ]
+
+    const rdcDescription =
+    [
+      {
+        id : 1,
+        details : "Salle à manger",
+      },
+
+      {
+        id : 2,
+        details : "Salon",
+      },
+
+      {
+        id : 3,
+        details : "Cuisine",
+      },
+
+      {
+        id : 4,
+        details : "Buanderie",
+      },
+
+      {
+        id : 4,
+        details : "1 chambre (1 lit 2 personnes)",
+      },
+
+      {
+        id : 6,
+        details : "Salle d'eau",
+      },
+
+      {
+        id : 7,
+        details : "WC",
+      }
+    ]
+
     return {
       modules: [Pagination, Navigation],
       jardin_database,
       rezDeChausseDatabase,
+      etages,
+      jardinDescription,
+      etageDescription,
+      rdcDescription
     };
   },
 
@@ -613,7 +395,10 @@ export default {
           margin: auto;
           border-radius: 50%;
           margin-bottom: 0.5em;
+          margin-top: 1em;
           padding: 0.5em;
+          //box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
           @media screen and (max-width: 550px) {
             width: 50%;
@@ -621,6 +406,14 @@ export default {
             //font-size: 0.8em;
           }
 
+         }
+
+         .description{
+          :hover{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            transform: scale3d(0.8em);
+            transition: 0.5s ease-in-out;
+          }
          }
 
          &__section{ 

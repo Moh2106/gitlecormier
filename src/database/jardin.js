@@ -26,6 +26,11 @@ export const jardin_database =
     },
 
     {
+        id : 30,
+        img : '/pictures/Jardin/photo_jardin30.jpg'
+    },
+
+    {
         id : 6,
         img : '/pictures/Jardin/photo_jardin6.jpg'
     },
