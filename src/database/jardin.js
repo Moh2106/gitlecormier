@@ -26,11 +26,6 @@ export const jardin_database =
     },
 
     {
-        id : 30,
-        img : '/pictures/Jardin/photo_jardin30.jpg'
-    },
-
-    {
         id : 6,
         img : '/pictures/Jardin/photo_jardin6.jpg'
     },
@@ -46,8 +41,8 @@ export const jardin_database =
     },
 
     {
-        id : 9,
-        img : '/pictures/Jardin/photo_jardin9.jpg'
+        id : 11,
+        img : '/pictures/Jardin/photo_jardin11.jpg'
     },
 
     {
@@ -55,15 +50,6 @@ export const jardin_database =
         img : '/pictures/Jardin/photo_jardin10.jpg'
     },
 
-    {
-        id : 11,
-        img : '/pictures/Jardin/photo_jardin11.jpg'
-    },
-
-    {
-        id : 12,
-        img : '/pictures/Jardin/photo_jardin12.jpg'
-    },
 
     {
         id : 13,
@@ -141,12 +127,78 @@ export const jardin_database =
     },
 
     {
+        id : 33,
+        img : '/pictures/Jardin/photo_jardin33.jpeg'
+    },
+
+    {
         id : 28,
         img : '/pictures/Jardin/photo_jardin28.jpg'
+    },
+
+    {
+        id : 12,
+        img : '/pictures/Jardin/photo_jardin12.jpg'
+    },
+
+    {
+        id : 9,
+        img : '/pictures/Jardin/photo_jardin9.jpg'
+    },
+
+    {
+        id : 30,
+        img : '/pictures/Jardin/photo_jardin30.jpg'
+    },
+
+    {
+        id : 31,
+        img : '/pictures/Jardin/photo_jardin31.jpg'
+    },
+
+    {
+        id : 32,
+        img : '/pictures/Jardin/photo_jardin32.jpg'
+    },
+
+    {
+        id : 34,
+        img : '/pictures/Jardin/photo_jardin34.jpg'
+    },
+
+    {
+        id : 35,
+        img : '/pictures/Jardin/photo_jardin35.jpg'
+    },
+
+    {
+        id : 36,
+        img : '/pictures/Jardin/photo_jardin36.jpg'
+    },
+
+    {
+        id : 37,
+        img : '/pictures/Jardin/photo_jardin37.jpg'
+    },
+
+    {
+        id : 38,
+        img : '/pictures/Jardin/photo_jardin38.jpg'
+    },
+
+    {
+        id : 39,
+        img : '/pictures/Jardin/photo_jardin39.jpg'
+    },
+
+    {
+        id : 40,
+        img : '/pictures/Jardin/photo_jardin40.jpg'
     },
 
     {
         id : 29,
         img : '/pictures/Jardin/photo_jardin29.jpg'
     },
+
 ]

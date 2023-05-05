@@ -14,8 +14,9 @@ import {faFacebook} from '@fortawesome/free-brands-svg-icons'
 import {faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faUserSecret, faPhone, faFacebook, faMagnifyingGlassPlus, faArrowUp, faBars, faLocationDot)
+library.add(faUserSecret, faPhone, faFacebook, faMagnifyingGlassPlus, faArrowUp, faBars, faLocationDot, faArrowLeft)
 
 
 createApp(App)

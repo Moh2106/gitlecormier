@@ -40,8 +40,8 @@ export default {
   }
 }
 
-/*html{ 
+html{ 
   scroll-behavior: smooth;
-}*/
+}
 
 </style>

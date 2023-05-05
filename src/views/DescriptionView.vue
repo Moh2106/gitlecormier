@@ -260,7 +260,7 @@ export default {
 
       {
         id : 4,
-        details : "1 chambre (2 litS 1 personnes)",
+        details : "1 chambre (2 lits 1 personnes)",
       },
 
       {

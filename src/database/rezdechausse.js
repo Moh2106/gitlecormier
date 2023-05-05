@@ -21,6 +21,12 @@ export const rezDeChausseDatabase =
     },
 
     {
+        id : 8,
+        img : '/pictures/RezDeChausse/rdc_cuisine8.jpg',
+    },
+
+
+    {
         id : 5,
         img : '/pictures/RezDeChausse/rdc_cuisine5.jpg',
     },
@@ -33,11 +39,6 @@ export const rezDeChausseDatabase =
     {
         id : 7,
         img : '/pictures/RezDeChausse/rdc_cuisine7.jpg',
-    },
-
-    {
-        id : 8,
-        img : '/pictures/RezDeChausse/rdc_cuisine8.jpg',
     },
 
     {
@@ -61,26 +62,6 @@ export const rezDeChausseDatabase =
     },
 
     {
-        id : 13,
-        img : '/pictures/RezDeChausse/rdc_frigo.jpg',
-    },
-
-    {
-        id : 14,
-        img : '/pictures/RezDeChausse/rdc_machine_a_laver.jpg',
-    },
-
-    {
-        id : 15,
-        img : '/pictures/RezDeChausse/rdc_chaumiere1.jpg',
-    },
-
-    {
-        id : 16,
-        img : '/pictures/RezDeChausse/rdc_chaumiere2.jpg',
-    },
-
-    {
         id : 17,
         img : '/pictures/RezDeChausse/rdc_chaumiere3.jpg',
     },
@@ -96,13 +77,29 @@ export const rezDeChausseDatabase =
     },
 
     {
+        id : 15,
+        img : '/pictures/RezDeChausse/rdc_chaumiere1.jpg',
+    },
+
+    {
+        id : 16,
+        img : '/pictures/RezDeChausse/rdc_chaumiere2.jpg',
+    },
+
+
+    {
         id : 20,
         img : '/pictures/RezDeChausse/rdc_chaumiere6.jpg',
     },
 
     {
-        id : 21,
-        img : '/pictures/RezDeChausse/rdc_salon1.jpg',
+        id : 13,
+        img : '/pictures/RezDeChausse/rdc_frigo.jpg',
+    },
+
+    {
+        id : 14,
+        img : '/pictures/RezDeChausse/rdc_machine_a_laver.jpg',
     },
 
     {
@@ -121,23 +118,23 @@ export const rezDeChausseDatabase =
     },
 
     {
-        id : 25,
-        img : '/pictures/RezDeChausse/rdc_salon5.jpg',
-    },
-
-    {
-        id : 26,
-        img : '/pictures/RezDeChausse/rdc_tele.jpg',
-    },
-
-    {
-        id : 27,
-        img : '/pictures/RezDeChausse/rdc_biblio1.jpg',
-    },
-
-    {
         id : 28,
         img : '/pictures/RezDeChausse/rdc_biblio2.jpg',
+    },
+
+    {
+        id : 39,
+        img : '/pictures/RezDeChausse/rdc_douche3.jpg',
+    },
+
+    {
+        id : 40,
+        img : '/pictures/RezDeChausse/rdc_douche4.jpg',
+    },
+
+    {
+        id : 41,
+        img : '/pictures/RezDeChausse/rdc_douche5.jpg',
     },
 
     {
@@ -156,13 +153,13 @@ export const rezDeChausseDatabase =
     },
 
     {
-        id : 32,
-        img : '/pictures/RezDeChausse/rdc_chambre4.jpg',
+        id : 35,
+        img : '/pictures/RezDeChausse/rdc_chambre7.jpg',
     },
 
     {
-        id : 33,
-        img : '/pictures/RezDeChausse/rdc_chambre5.jpg',
+        id : 32,
+        img : '/pictures/RezDeChausse/rdc_chambre4.jpg',
     },
 
     {
@@ -170,15 +167,46 @@ export const rezDeChausseDatabase =
         img : '/pictures/RezDeChausse/rdc_chambre6.jpg',
     },
 
+    /*{
+        id : 42,
+        img : '',
+    },
+
     {
-        id : 35,
-        img : '/pictures/RezDeChausse/rdc_chambre7.jpg',
+        id : 43,
+        img : '',
+    },*/
+
+    {
+        id : 27,
+        img : '/pictures/RezDeChausse/rdc_biblio1.jpg',
     },
 
     {
         id : 36,
         img : '/pictures/RezDeChausse/rdc_chambre8.jpg',
     },
+
+    {
+        id : 25,
+        img : '/pictures/RezDeChausse/rdc_salon5.jpg',
+    },
+
+    {
+        id : 21,
+        img : '/pictures/RezDeChausse/rdc_salon1.jpg',
+    },
+
+    {
+        id : 26,
+        img : '/pictures/RezDeChausse/rdc_tele.jpg',
+    },
+
+    {
+        id : 33,
+        img : '/pictures/RezDeChausse/rdc_chambre5.jpg',
+    },
+
 
     {
         id : 37,
@@ -190,19 +218,6 @@ export const rezDeChausseDatabase =
         img : '/pictures/RezDeChausse/rdc_douche2.jpg',
     },
 
-    {
-        id : 39,
-        img : '/pictures/RezDeChausse/rdc_douche3.jpg',
-    },
-
-    {
-        id : 40,
-        img : '/pictures/RezDeChausse/rdc_douche4.jpg',
-    },
-
-    {
-        id : 41,
-        img : '/pictures/RezDeChausse/rdc_douche5.jpg',
-    },
+    
 
 ]

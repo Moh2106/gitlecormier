@@ -1,294 +1,48 @@
 <template>
   <div class="pt-14 gallerie" id="haut">
 
+    <!----------------------  BOUTON DE RETOUR EN ARRIERE -------------------->
+    <div class="gallerie__return">
+      <button class="bg-white rounded-lg"> 
+        <router-link to="/descriptifs">
+          <font-awesome-icon :icon="['fass', 'arrow-left']" /> Retour</router-link>
+      </button>
+    </div>
+
     <!------------------- REZ DE CHAUSSE -------------------------------------->
-    <section class="overflow-hidden">
-      <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
-        <h1 class="title bubble-bottom">Rez de chaussee</h1>
+    <div class="gallerie__frame">
+      <h1 class="title bubble-bottom">Rez de chaussee</h1>
 
-        <!----<div class="w-full flex flex-wrap gap-2"> 
-          <div v-for="rdc in rezDeChausseDatabase" :key="rdc.id" class="w-1/3 hauteur">
-            <img :src="rdc.img" alt="">
+        <div class="gallerie__frame--photos"> 
+          <div v-for="rdc in rezDeChausseDatabase" :key="rdc.id">
+            <img :src="rdc.img" alt="" @click="Cliquer" class="items">
           </div>
-        </div>-->
-
-    <!-------------------------------------------------------------------------->
-        <div class="flex flex-wrap -m-1 md:-m-2">
-
-          <div class="flex flex-wrap w-1/4 hauteur " >
-            <div class="w-full h-full items cursor-pointer p-1 md:p-2 " @click="Cliquer">
-              <img alt="gallery" class="block object-fill object-center w-full h-full rounded-lg hover:scale-105 overflow-hidden"
-                src="../assets/RezDeChaussee/rdc1.jpg  ">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block cursor-pointer object-cover object-center w-full h-full rounded-lg"
-                src="../assets/RezDeChaussee/rdc2.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/RezDeChaussee/rdc3.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/RezDeChaussee/rdc4.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/RezDeChaussee/rdc5.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/RezDeChaussee/rdc6.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/RezDeChaussee/rdc7.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/RezDeChaussee/rdc8.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/RezDeChaussee/rdc9.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/RezDeChaussee/rdc10.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/RezDeChaussee/rdc11.jpg">
-            </div>
-          </div>
-
         </div>
-
-      </div>
-    </section>  
+    </div>
 
     <!------------------- 1 ER ETAGE ------------------------------------------>
 
-    <section class="overflow-hidden">
-      <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
-        <h1 class="title bubble-bottom"> 1er Etage </h1>
-        <div class="flex flex-wrap -m-1 md:-m-2">
+    <div class="gallerie__frame">
+      <h1 class="title bubble-bottom"> 1er Etage </h1>
 
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-fill object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage1.jpg">
-            </div>
+        <div class="gallerie__frame--photos"> 
+          <div v-for="etage in etages" :key="etage.id">
+            <img :src="etage.img" alt="" @click="Cliquer" class="items">
           </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage2.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage3.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage4.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage5.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage6.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage7.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage8.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage9.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage10.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage11.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Etage/etage12.jpg">
-            </div>
-          </div>
-
         </div>
-
-      </div>
-    </section> 
+    </div>
 
     <!--------------------LE JARDIN----------------------------------------->
 
-    <section class="overflow-hidden">
-      
-      <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
-        <h1 class="title bubble-bottom">Le jardin</h1>
-        <div class="flex flex-wrap -m-1 md:-m-2">
+    <div class="gallerie__frame">
+      <h1 class="title bubble-bottom">Le jardin</h1>
 
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-fill object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin1.jpg">
-            </div>
+        <div class="gallerie__frame--photos"> 
+          <div v-for="etage in jardin_database" :key="etage.id">
+            <img :src="etage.img" alt="" @click="Cliquer" class="items">
           </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin2.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin3.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin4.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin5.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin6.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin7.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin8.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin9.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin10.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin11.jpg">
-            </div>
-          </div>
-
-          <div class="flex flex-wrap w-1/4 hauteur">
-            <div class="w-full h-full p-1 md:p-2 cursor-pointer items" @click="Cliquer">
-              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-                src="../assets/Jardin/jardin12.jpg">
-            </div>
-          </div>
-
         </div>
-
-      </div>
-    </section> 
+    </div>
 
     <!--------------------------------------------------------------->
 
@@ -314,6 +68,8 @@
 
 <script>
 import {rezDeChausseDatabase} from '../database/rezdechausse'
+import {etages} from '../database/etage'
+import {jardin_database} from '../database/jardin'
 
 export default {
   setup(){ 
@@ -343,7 +99,9 @@ export default {
         return{
           Cliquer,
           fermer,
-          rezDeChausseDatabase
+          rezDeChausseDatabase,
+          etages,
+          jardin_database
         }
   
   }
@@ -352,7 +110,65 @@ export default {
 
 <style lang="scss" scoped>
   .gallerie{ 
+    width: 100%;
     background: rgba($color: #fff, $alpha: 0.3);
+
+    &__return{
+      width: 90%;
+      margin: auto;
+      text-align: left;
+      margin-top: 1em;
+
+      button{
+        background: rgb(22,163,74);
+        color: #fff;
+        padding: 0.2rem  0.5rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    &__frame{
+      width: 90%;
+      margin: auto;
+
+      &--photos{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        //border: 4px solid red;
+
+        div{
+        width: 18.5%;
+        height: auto;
+        margin: 0.5em;
+
+        img{
+          object-fit: cover;
+          border-radius: 0.5em;
+          cursor: pointer;
+        }
+      }
+      }
+    }
+
+    &__photos{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      border: 4px solid red;
+
+      div{
+        width: 18.5%;
+        height: auto;
+        margin: 0.5em;
+
+        img{
+          object-fit: cover;
+          border-radius: 0.5em;
+          cursor: pointer;
+        }
+      }
+    }
     
     .hauteur{ 
       height: 30%;
@@ -428,13 +244,11 @@ export default {
 
     &__font{ 
       font-size: 1.5em;
-      border: 2px solid green;
       padding: 0.7em;
       border-radius: 50%;
-      color: green;
+      color: #fff;
       margin-right: 0.5em;
-      background: #fff;
-      //font-weight: bold;
+      background: rgb(22,163,74);
     }
 
   }
