@@ -1,17 +1,10 @@
 <template>
   <div class="pt-16 pb-16 tarif"  >
     <!-- Insertion des saisons, dates et prix à partir de tarifs de database v-motion-slide-visible-bottom -->
-    <div class="flex flex-wrap w-4/5 mx-auto pb-4 " >
-      <div v-for="tarif in tarifs" :key="tarif.id" class="w-1/3 tarif__card">
-        <div class="bg-white m-4  rounded-lg tarif__card--solo" 
-        v-motion-pop
-        v-motion-slide-visible-bottom
-        v-motion-fade-visible
-
-        
-
-        data-aos="fade-right"
-         
+    <div class="w-4/5 mx-auto pb-4 cards" >
+      <div v-for="tarif in tarifs" :key="tarif.id" class="tarif__card">
+        <div class="bg-white m-4  rounded-lg tarif__card--solo"
+              data-aos="zoom-in"
         >
           
           <img :src="tarif.photo" :alt="tarif.saison">
@@ -74,6 +67,11 @@ export default {
 <style lang="scss" scoped>
 
   .tarif{ 
+
+    .cards{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     &__card{
       position: relative;

@@ -408,13 +408,13 @@ export default {
 
          }
 
-         .description{
-          :hover{
+         /*.description{
+          /*:hover{
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-            transform: scale3d(0.8em);
+            /*transform: scale3d(0.8em);
             transition: 0.5s ease-in-out;
           }
-         }
+         }*/
 
          &__section{ 
          // width: 90%; 

@@ -124,6 +124,10 @@ export default {
         color: #fff;
         padding: 0.2rem  0.5rem;
         font-size: 1.1rem;
+
+        &:hover{
+          background: rgb(25, 183, 83);
+        }
       }
     }
 
@@ -133,14 +137,17 @@ export default {
 
       &--photos{
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
+        //display: flex;
+        //flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 0.5rem;
         //border: 4px solid red;
 
         div{
-        width: 18.5%;
+        /*width: 18.5%;
         height: auto;
-        margin: 0.5em;
+        margin: 0.5em;*/
 
         img{
           object-fit: cover;
@@ -151,7 +158,7 @@ export default {
       }
     }
 
-    &__photos{
+    /*&__photos{
       width: 100%;
       display: flex;
       flex-wrap: wrap;
@@ -168,20 +175,21 @@ export default {
           cursor: pointer;
         }
       }
-    }
+    }*/
     
-    .hauteur{ 
+    /*.hauteur{ 
       height: 30%;
-    }
+    }*/
 
     .title{ 
       //width: 35%;
       margin: auto;
       padding: 0.3em;
       border-radius: 50%;
-      background: #386641;
+      background: rgb(22,163,74);
       color: #fff;
       margin-bottom: 1em;
+      font-weight: 600;
     }
 
      .bubble-bottom {
@@ -201,7 +209,7 @@ export default {
         width: 0;
         height: 0;
         border: calc(var(--size) * 0.13) solid transparent;
-        border-top-color: #386641;
+        border-top-color: rgb(22,163,74);
         border-bottom: 0;
         margin-left: calc(var(--size) * 0.13 * -1);
         margin-bottom: calc(var(--size) * 0.13 * -1);

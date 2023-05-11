@@ -24,6 +24,14 @@
             </swiper-slide>
 
             <swiper-slide class="monSwipe__capture">
+                <img src="./../../public/pictures/Acceuil/photo_jardin13.jpg" alt="">
+            </swiper-slide>
+
+            <swiper-slide class="monSwipe__capture">
+                <img src="./../../public/pictures/Acceuil/photo_jardin4.jpg" alt="">
+            </swiper-slide>
+
+            <swiper-slide class="monSwipe__capture">
                 <img src="./../../public/pictures/Acceuil/RMV_5650.jpg" alt="">
             </swiper-slide>
 
@@ -33,10 +41,6 @@
 
             <swiper-slide class="monSwipe__capture">
                 <img src="./../../public/pictures/Acceuil/RMV_5554.jpg" alt="">
-            </swiper-slide>
-
-            <swiper-slide class="monSwipe__capture">
-                <img src="./../../public/pictures/Acceuil/RMV_5555.jpg" alt="">
             </swiper-slide>
 
             <swiper-slide class="monSwipe__capture">
@@ -73,7 +77,41 @@
     <br>
 
     <!---------------Gallerie ---------------------------------------------->
-    <div class="accueil__gallery mb-6">
+    <div class="accueil__gallery mb-6"
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out"
+    >
+
+        <div class="accueil__gallery--items" @click="Cliquer">
+            <img src="../../public/pictures/Jardin/photo_jardin19.jpg" alt="">
+            <div>
+                <h1>
+                    <font-awesome-icon icon="fa-solid fa-magnifying-glass-plus" class="plus"/>
+                </h1>
+            </div>
+        </div>
+
+        <div class="accueil__gallery--items" @click="Cliquer">
+            <!----<img src="../assets/Cormier/cormier_jaccuzzi.jpg" alt="">-->
+            <img src="../../public/pictures/Jardin/photo_jardin8.jpg" alt="">
+            <div>
+                <h1>
+                    <font-awesome-icon icon="fa-solid fa-magnifying-glass-plus" class="plus"/>
+                </h1>
+            </div>
+        </div>
+
+        <div class="accueil__gallery--items" @click="Cliquer">
+            <!----<img src="../assets/Cormier/cormier_chemine.jpg" alt="">-->
+            <img src="../../public/pictures/RezDeChausse/rdc_chaumiere3.jpg" alt="">
+            <div>
+                <h1>
+                    <font-awesome-icon icon="fa-solid fa-magnifying-glass-plus" class="plus"/>
+                </h1>
+            </div>
+            
+        </div>
 
         <div class="accueil__gallery--items" @click="Cliquer">
             <img src="../assets/Cormier/cormier_ping_pong.jpg" alt="Terrain de Ping Pong">
@@ -84,33 +122,6 @@
             </div>
         </div>
 
-        <div class="accueil__gallery--items" @click="Cliquer">
-            <img src="../assets/Cormier/cormier_deco2.jpg" alt="" >
-            <div>
-                <h1>
-                    <font-awesome-icon icon="fa-solid fa-magnifying-glass-plus" class="plus"/>
-                </h1>
-            </div>
-        </div>
-
-        <div class="accueil__gallery--items" @click="Cliquer">
-            <img src="../assets/Cormier/cormier_jaccuzzi.jpg" alt="">
-            <div>
-                <h1>
-                    <font-awesome-icon icon="fa-solid fa-magnifying-glass-plus" class="plus"/>
-                </h1>
-            </div>
-        </div>
-
-        <div class="accueil__gallery--items" @click="Cliquer">
-            <img src="../assets/Cormier/cormier_chemine.jpg" alt="">
-            <div>
-                <h1>
-                    <font-awesome-icon icon="fa-solid fa-magnifying-glass-plus" class="plus"/>
-                </h1>
-            </div>
-            
-        </div>
     </div>
 
 
@@ -286,12 +297,14 @@ export default {
         }
 
         &__gallery{ 
-            width: 90%;
+            width: 85%;
             margin: auto;
             max-height: 95%;
             overflow: hidden;
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            //display: flex;
+            //justify-content: center;
             align-items: center;
 
             &--items{ 
@@ -317,7 +330,7 @@ export default {
                     position: absolute;
                     cursor: pointer;
                     top: 6px;
-                    width: 95%;
+                    width: 93%;
                     height: 94%;
                     opacity: 0;
                     transition: all 0.5s ease-in-out;
@@ -385,7 +398,7 @@ export default {
                 object-fit: cover;
                 width: 700px;
                 height: 400px;
-                object-fit: fill;
+                object-fit: cover;
                 
             }
         }
