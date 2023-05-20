@@ -39,16 +39,33 @@
 
         <div class="gallerie__frame--photos"> 
           <div v-for="etage in jardin_database" :key="etage.id">
-            <img :src="etage.img" alt="" @click="Cliquer" class="items">
+            <img :src="etage.img" alt="" @click="Cliquer" class="items" >
           </div>
         </div>
     </div>
 
-    <!--------------------------------------------------------------->
+    <!-------------POUR L'AFFICHAGE DES IMAGES ------------------------------->
 
     <div class="gallerie__popup">
-        <span @click="fermer">&times;</span>
-        <img src="../assets/RezDeChaussee/rdc1.jpg" alt="">
+        <span @click="fermer" class="fermer">&times;</span>
+        <div class="flex items-center justify-between">
+          <span class="bg-[rgb(22,163,74)] text-2xl border-green-600 mt-[25%] p-2 ">
+            <button v-on:click="prev">
+              <font-awesome-icon :icon="['fass', 'arrow-left']" class="text-white"/> </button>
+          </span>
+
+          <!-- Dans cette partie les images cliqués s'afficheront -->
+          <img src="" alt="">
+
+          <span class="bg-[rgb(22,163,74)] text-2xl mt-[25%] p-2">
+            <button v-on:click="next" id="previous">
+
+              <font-awesome-icon :icon="['fass', 'arrow-right']" class="text-white" />
+
+            </button>
+          </span>
+        </div>
+        
     </div>
 
     <!--------------Boutton de redirection------------------------------>
@@ -73,19 +90,23 @@ import {jardin_database} from '../database/jardin'
 
 export default {
   setup(){ 
-   
+
+    //var currentIndex = 0;
+    //var images = document.querySelectorAll('.items')
+    
+    
    // Cette fonction permet d'agrandir l'image en cliquant sur son div parent
 
         const Cliquer = () => { 
           const items = document.querySelectorAll('.items')
-          console.log("OK");
-          
 
           items.forEach(image => { 
-              image.onclick = (e) => { 
-                  const source = e.currentTarget.querySelector('img').src;
+              image.onclick = () => { 
+                
+                // recupérer la source de l'image
+                  const imageSource = image.src;
                   document.querySelector('.gallerie__popup').style.display = 'block'
-                  document.querySelector('.gallerie__popup img').src = source
+                  document.querySelector('.gallerie__popup img').src = imageSource
                 }
           })
         }
@@ -96,9 +117,87 @@ export default {
             }
         }
 
+        var ind = 0 ;
+
+        const prev = () => {
+          //afficherCodePrecedent()
+          var images = document.querySelectorAll('.items')
+
+          /*var tableau = Object.entries(images).map(function(entry) {
+            return entry;
+          });*/
+
+          ind--;
+          if(ind < 0){
+            ind = images.length-1;
+          }
+
+
+          images.forEach((image) => {
+            
+
+            const imageSource = image.src;
+            document.querySelector('.gallerie__popup').style.display = 'none'
+            document.querySelector('.gallerie__popup img').src = imageSource
+
+            //image.style.display = 'none';
+          });
+
+          const imageSuivant = images[ind].src;
+          document.querySelector('.gallerie__popup').style.display = 'block'
+            document.querySelector('.gallerie__popup img').src = imageSuivant
+
+          //images[ind].style.display = 'block';
+          //console.log(images.length);
+        } 
+
+        // Next
+
+        const next = () => {
+          var images = document.querySelectorAll('.items')
+
+          /*var tableau = Object.entries(images).map(function(entry) {
+            return entry;
+          });
+
+          console.log(tableau)
+
+          images.forEach((image) => {
+            ind = tableau.indexOf(image['img.items'])
+            console.log(ind)
+          })*/
+
+          ind++;
+
+          if(ind >= images.length){
+            ind = 0;
+          }
+
+          images.forEach((image) => {
+            //ind = tableau.indexOf(image)
+            //ind++;
+            //console.log(ind);
+            const imageSource = image.src;
+            document.querySelector('.gallerie__popup').style.display = 'none'
+            document.querySelector('.gallerie__popup img').src = imageSource
+
+            
+            //image.style.display = 'none';
+          });
+
+          const imageSuivant = images[ind].src;
+          document.querySelector('.gallerie__popup').style.display = 'block'
+            document.querySelector('.gallerie__popup img').src = imageSuivant
+
+          //images[ind].style.display = 'block';
+          console.log(images.length);
+        }
+
         return{
           Cliquer,
           fermer,
+          next,
+          prev,
           rezDeChausseDatabase,
           etages,
           jardin_database
@@ -137,49 +236,21 @@ export default {
 
       &--photos{
         width: 100%;
-        //display: flex;
-        //flex-wrap: wrap;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 0.5rem;
-        //border: 4px solid red;
 
         div{
-        /*width: 18.5%;
-        height: auto;
-        margin: 0.5em;*/
 
-        img{
-          object-fit: cover;
-          border-radius: 0.5em;
-          cursor: pointer;
+          img{
+            object-fit: cover;
+            border-radius: 0.5em;
+            cursor: pointer;
+          }
         }
-      }
       }
     }
 
-    /*&__photos{
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      border: 4px solid red;
-
-      div{
-        width: 18.5%;
-        height: auto;
-        margin: 0.5em;
-
-        img{
-          object-fit: cover;
-          border-radius: 0.5em;
-          cursor: pointer;
-        }
-      }
-    }*/
-    
-    /*.hauteur{ 
-      height: 30%;
-    }*/
 
     .title{ 
       //width: 35%;
@@ -227,11 +298,11 @@ export default {
       transition: .5s ease-in-out;
       backdrop-filter: blur(15px);
 
-        span{ 
+        .fermer{ 
           position: absolute;
           top: 0;
           right: 10px;
-          font-size: 100px;
+          font-size: 4rem;
           font-weight: bolder;
           color: #fff;
           cursor: pointer;
@@ -243,9 +314,8 @@ export default {
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            width: 700px;
-            height: 400px;
-            object-fit: fill;
+            width: 800px;
+            object-fit: cover;
             
         }
     }

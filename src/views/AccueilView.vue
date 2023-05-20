@@ -24,6 +24,14 @@
             </swiper-slide>
 
             <swiper-slide class="monSwipe__capture">
+                <img src="./../../public/pictures/Jardin/photo_jardin24.jpg" alt="">
+            </swiper-slide>
+
+            <!----<swiper-slide class="monSwipe__capture">
+                <img src="./../../public/pictures/Jardin/photo_jardin28.jpg" alt="">
+            </swiper-slide>-->
+
+            <swiper-slide class="monSwipe__capture">
                 <img src="./../../public/pictures/Acceuil/photo_jardin13.jpg" alt="">
             </swiper-slide>
 
@@ -43,9 +51,9 @@
                 <img src="./../../public/pictures/Acceuil/RMV_5554.jpg" alt="">
             </swiper-slide>
 
-            <swiper-slide class="monSwipe__capture">
+            <!----<swiper-slide class="monSwipe__capture">
                 <img src="./../../public/pictures/Acceuil/RMV_5475.jpg" alt="">
-            </swiper-slide>
+            </swiper-slide>-->
 
         </swiper>
 

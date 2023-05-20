@@ -1,13 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./src/**/*.{html,js,vue}", "./node_modules/tw-elements/dist/js/**/*.js"],
+  content: ["./src/**/*.{html,js,vue}"],
   theme: {
     extend: {},
   },
   
   plugins: [
-    require('tw-elements/dist/plugin.cjs')
+    //require('tw-elements/dist/plugin.cjs')
   ],
 
   screens: {

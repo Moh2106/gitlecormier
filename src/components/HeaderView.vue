@@ -175,6 +175,7 @@ export default {
       font-size: 1.05em;
       background: #08a045;
       border-radius: 0.5em;
+      margin: 0 0.5rem;
 
       @media screen and (max-width : 768px) {
         transform: translateX(0.2em);

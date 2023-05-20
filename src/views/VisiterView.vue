@@ -82,15 +82,15 @@ export default {
       margin: auto;
 
       &__description{ 
-        width: 100%;
+        //width: 100%;
         margin-bottom: 1em;
         margin-top: 2em;
       }
 
-      &__carte{ 
-        width: 100%;
-        height: 100%;
-      }
+      /*&__carte{ 
+        //width: 100%;
+        //height: 100%;
+      }*/
     }
 
     @media screen and (max-width: 550px) {
