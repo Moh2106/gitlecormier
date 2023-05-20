@@ -21,10 +21,6 @@
     <!-- 
       Insertion des données comme les photos, le nom des sites aux alentours, le site web
       des entreprises et le l'itinéraire vers gite le cormier via alentours.js
-
-      v-motion-pop
-          v-motion-slide-visible-bottom
-          v-motion-fade-visible 
     -->
 
     <div class="monEnsemble">
@@ -157,14 +153,17 @@ export default {
     }
 
     .monEnsemble{
-      display: flex;
-      flex-wrap: wrap;
+      //display: flex;
+      //flex-wrap: wrap;
       //width: 95%;
       //margin: auto;
       //transform: translateX(2em);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      //grid-gap: 0.5rem;
 
-      &__element{
-        width: 33%;
+      @media screen and (max-width: 550px){
+        grid-template-columns: repeat(1, 1fr);
       }
       
     }
