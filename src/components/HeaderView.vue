@@ -1,9 +1,21 @@
 <template class="relative">
   <div class="flex justify-between header ">
     <div class="first ">
-        <h1 class="header__title ">Gite <br> 
-          <span>Le Cormier </span> 
+      
+      <div class="flex">
+        <font-awesome-icon icon="house-chimney-crack" style="color: #1abc71;" class="text-5xl"/>
+        <h1 class="header__title ">
+        
+          <!--Gite <br> 
+          <span>Le Cormier </span> -->
+
+          𝕲𝖎𝖙𝖊 𝖑𝖊 𝖈𝖔𝖗𝖒𝖎𝖊𝖗
         </h1>
+      </div>
+      
+      <!--<font-awesome-icon :icon="['fab', 'fort-awesome-alt']" />
+      <font-awesome-icon :icon="['fab', 'fort-awesome']" /> -->
+        
     </div>
 
     <nav id="afficheMenu" class="a">
@@ -93,27 +105,34 @@ export default {
   }
 
   &__title{ 
-    border: 3px solid #fff;
-    border-radius: 25%;
-    background: #fff;
-    color: #bc6c25;
-    margin-left: 1em;
+    //border: 3px solid #fff;
+    //border-radius: 25%;
+    //background: #fff;
+    color: #fff;
+    //margin-left: 1em;
     padding: 0 1em;
+    display: flex;
+    justify-items: center;
+    margin-top: 0.5em;
+    font-weight: 800;
+    font-size: 1.2em;
+    //transform : translateX(-1em);
 
     @media screen and (max-width : 768px) {
       width: 25%;
       margin: auto;
-      border: 3px solid #bc6c25;
+      color: #08a045;
+      //border: 3px solid #bc6c25;
     }
 
     @media screen and (max-width : 550px) {
       width: 100%;
     }
 
-    span{ 
+    /*span{ 
       margin-left: 1em;
       color: red;
-    }
+    }*/
   }
 
   &__menu{ 
@@ -138,7 +157,7 @@ export default {
     @media screen and (max-width : 768px) {
       padding: 0 0.5em 0.5em 0.5em;
       font-size: 0.8em;
-      background: #dda15e;
+      //background: #dda15e;
       width: auto;
     }
 

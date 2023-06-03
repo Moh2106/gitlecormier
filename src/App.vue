@@ -31,7 +31,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background: url('../src/assets/Cormier/cormier_background.jpg');
+  //background: url('../public/pictures/Jardin/photo_jardin20.jpg');
   background-attachment: scroll;
+  //background-attachment: fixed;
   font-family: 'Poppins', sans-serif;
   
 
