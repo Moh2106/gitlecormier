@@ -99,7 +99,7 @@ export default {
     }
 
     @media screen and (max-width : 550px) {
-      background: #dda15e;
+      //background: #fff;
     }
     
   }

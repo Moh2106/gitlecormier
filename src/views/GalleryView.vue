@@ -97,6 +97,8 @@ export default {
     
    // Cette fonction permet d'agrandir l'image en cliquant sur son div parent
 
+        //let items = document.querySelectorAll('.items')
+        
         const Cliquer = () => { 
           const items = document.querySelectorAll('.items')
 
