@@ -108,7 +108,7 @@
 
                         <div class="accueil__gallery--text">
                               Le coucher du soleil où après diner pour
-                              contempler voie lactée, les petites bulles du
+                              contempler la voie lactée, les petites bulles du
                               Jaccuzzi à 38 dégrés vont feront tout oublier
                         </div>
                   </div>
@@ -157,7 +157,9 @@
                         </div>
 
                         <div class="accueil__gallery--text">
-                              Pour le tournoi du grand Chelem qui perd gagne.
+                              Pour le tournoi du grand Chelem. <br />
+                              Qui perd gagne ...
+                              <br />
                               Gagne le droit de débarasser la table.
                         </div>
                   </div>
@@ -169,20 +171,14 @@
                   <div
                         class="accueil__popup--main flex justify-around w-4/5 m-auto pt-12"
                   >
-                        <div
-                              class="w-4/5 transition-all"
-                        >
+                        <div class="w-4/5 transition-all">
                               <img
                                     src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp"
                                     alt=""
                               />
                         </div>
 
-                        <div
-                              class="accueil__popup--paragraph"
-                        >
-                              Paragraphe
-                        </div>
+                        <div class="accueil__popup--paragraph">Paragraphe</div>
                   </div>
             </div>
       </div>
@@ -422,6 +418,7 @@ export default {
                               border-radius: 0.5em;
                               background: rgba(0, 0, 0, 0.5);
                               font-family: "Great Vibes", cursive;
+                              font-size: 2rem;
 
                               .plus {
                                     font-size: 2em;

@@ -22,7 +22,7 @@
             </h1>
             <div class="flex justify-between m-auto descriptif__section">
                   <swiper
-                        :slidesPerView="2"
+                        :slidesPerView="1"
                         :spaceBetween="20"
                         :loop="true"
                         :pagination="{
@@ -64,67 +64,69 @@
                               </li>
                         </ul>
 
-                        <div>
-                          <img src="../assets/RezDeChaussee/gite_le_cormier_rdc_plan.jpg" alt="">
-                          <div>
-                            <router-link to="/descriptifs/gallerie#haut" class="descriptionNav__chambre bg-green-500 rounded-lg text-white"  >Chambre</router-link>
-                            <router-link to="/" class="descriptionNav__cuisine bg-green-500 rounded-lg text-white p-{1px}">Cuisine</router-link>
-                            <router-link to="/" class="descriptionNav__douche bg-green-500 rounded-lg text-white">Douche</router-link>
-                            <router-link to="/" class="descriptionNav__salon bg-green-500 rounded-lg text-white">Salon</router-link>
-                            <router-link to="/" class="descriptionNav__salle bg-green-500 rounded-lg text-white">Salle à manger</router-link>
-                          </div>
-                        </div>
-                  </div>
-            </div>
-
-            <!----------A Supprimer après -------------------------------->
-
-            <h1 class="title mt-4 mb-4" data-aos="flip-right">
-                  Rez-de-chaussée
-            </h1>
-            <div class="flex justify-between m-auto descriptif__section">
-                  <swiper
-                        :slidesPerView="2"
-                        :spaceBetween="20"
-                        :loop="true"
-                        :pagination="{
-                              clickable: true,
-                        }"
-                        :navigation="true"
-                        :modules="modules"
-                        class="mySwiper w-4/5 m-auto"
-                        data-aos="fade-right"
-                        data-aos-duration="700"
-                        data-aos-easing="ease-in-out"
-                  >
-                        <swiper-slide
-                              v-for="rdc in rezDeChausseDatabase"
-                              :key="rdc.id"
+                        <div
+                              class="plan"
+                              data-aos="fade-left"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in"
                         >
-                              <img :src="rdc.img" alt="" class="b" />
-                        </swiper-slide>
-                  </swiper>
+                              <img
+                                    src="../assets/RezDeChaussee/gite_le_cormier_rdc_plan.jpg"
+                                    alt=""
+                              />
 
-                  <!----------------Texte descriptif -------------------------------->
-                  <div
-                        class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left rounded-lg"
-                        data-aos="fade-left"
-                        data-aos-duration="700"
-                        data-aos-easing="ease-in-out"
-                  >
-                        <h1 class="font-semibold">Au rez-de-chaussée :</h1>
+                              <div>
+                                    <button v-on:click="afficheChambreRdc">
+                                          <img
+                                                src="../assets/RezDeChaussee/rdc_chambre_plan.jpg"
+                                                alt=""
+                                                class="plan__rdc-chambre"
+                                          />
+                                    </button>
 
-                        <ul class="w-4/5">
-                              <li
-                                    v-for="description in rdcDescription"
-                                    :key="description.id"
-                                    data-aos="fade-left"
-                                    data-aos-duration="500"
-                                    data-aos-easing="ease-in"
-                              >
-                                    {{ description.details }}
-                              </li>
-                        </ul>
+                                    <button v-on:click="afficheSdbRdc">
+                                          <img
+                                                src="../assets/RezDeChaussee/rdc_sdb_plan.jpg"
+                                                alt=""
+                                                class="plan__rdc-sdb"
+                                          />
+                                    </button>
+
+                                    <button v-on:click="afficheCuisineRdc">
+                                          <img
+                                                src="../assets/RezDeChaussee/rdc_cuisine_plan.jpg"
+                                                alt=""
+                                                class="plan__rdc-cuisine"
+                                          />
+                                    </button>
+
+                                    <button v-on:click="afficheSalonRdc">
+                                          <img
+                                                src="../assets/RezDeChaussee/rdc_salon_plan.jpg"
+                                                alt=""
+                                                class="plan__rdc-salon"
+                                          />
+                                    </button>
+
+                                    <button v-on:click="afficheSalleAMangerRdc">
+                                          <img
+                                                src="../assets/RezDeChaussee/rdc_sejour_plan.jpg"
+                                                alt=""
+                                                class="plan__rdc-sejour"
+                                          />
+                                    </button>
+                              </div>
+
+                              <div></div>
+                        </div>
+
+                        <div
+                              data-aos="fade-left"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in"
+                        >
+                              Passer la souris sur le plan pour plus de détails
+                        </div>
                   </div>
             </div>
 
@@ -132,7 +134,7 @@
             <h1 class="title" data-aos="flip-right">Au 1er Etage</h1>
             <div class="flex justify-between m-auto descriptif__section">
                   <swiper
-                        :slidesPerView="2"
+                        :slidesPerView="1"
                         :spaceBetween="20"
                         :loop="true"
                         :pagination="{
@@ -146,7 +148,11 @@
                         data-aos-easing="ease-in-out"
                   >
                         <swiper-slide v-for="etage in etages" :key="etage.id">
-                              <img :src="etage.img" alt="" class="b" />
+                              <img
+                                    :src="etage.img"
+                                    :alt="etage.alt"
+                                    class="b"
+                              />
                         </swiper-slide>
                   </swiper>
 
@@ -169,6 +175,33 @@
                               >
                                     {{ description.details }}
                               </li>
+
+                              <div class="plan"
+                              data-aos="fade-left"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in">
+                                    <img
+                                          src="../assets/Etage/gite_le_cormier_1er_etage.jpg"
+                                          alt="Plan du 1er étage"
+                                    />
+                                    <div>
+                                          <button v-on:click="afficheChambre1">
+                                                <img
+                                                      src="../assets/Etage/etage1_chambre1.jpg"
+                                                      alt=""
+                                                      class="plan__chambre1"
+                                                />
+                                          </button>
+
+                                          <button v-on:click="afficheChambre2">
+                                                <img
+                                                      src="../assets/Etage/etage1_chambre2.jpg"
+                                                      alt=""
+                                                      class="plan__chambre2"
+                                                />
+                                          </button>
+                                    </div>
+                              </div>
                         </ul>
                   </div>
             </div>
@@ -177,7 +210,7 @@
             <h1 class="title" data-aos="flip-right">Le jardin</h1>
             <div class="flex justify-between m-auto descriptif__section">
                   <swiper
-                        :slidesPerView="2"
+                        :slidesPerView="1"
                         :spaceBetween="20"
                         :loop="true"
                         :pagination="{
@@ -218,11 +251,24 @@
                                     {{ description.details }}
                               </li>
                         </ul>
+
+                        <div class="plan w-4/5" data-aos="fade-left"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in">
+                              <img
+                                    src="../assets/Jardin/jardin528.jpg"
+                                    alt=""
+                              />
+
+                              <div>
+                                    <router-link to="">Jardin</router-link>
+                              </div>
+                        </div>
                   </div>
             </div>
 
             <!----------------------Lien vers gallery photo ----------------------------->
-            <div class="descriptif__gallery">
+            <!--<div class="descriptif__gallery">
                   <button>
                         <router-link
                               to="/descriptifs/gallerie"
@@ -231,7 +277,7 @@
                               Gallerie photo
                         </router-link>
                   </button>
-            </div>
+            </div>-->
       </div>
 </template>
 
@@ -242,10 +288,10 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 // import jardin dataset
 import { jardin_database } from "../database/jardin";
 // import rez de chausse dataset
-import { rezDeChausses } from "../database/descriptif";
+import { rezDeChausses, etages } from "../database/descriptif";
 import { rezDeChausseDatabase } from "../database/rezdechausse";
 // import etage dataset
-import { etages } from "../database/etage";
+//import { etages } from "../database/etage";
 
 // Import Swiper styles
 import "swiper/css";
@@ -264,6 +310,35 @@ export default {
       },
 
       setup() {
+            const afficheChambreRdc = () => {
+                  window.location.href =
+                        "/descriptifs/gallerie#chambre-rez-de-chaussee";
+            };
+
+            const afficheCuisineRdc = () => {
+                  window.location.href = "/descriptifs/gallerie#cuisine";
+            };
+
+            const afficheSdbRdc = () => {
+                  window.location.href = "/descriptifs/gallerie#salle-de-bain";
+            };
+
+            const afficheSalonRdc = () => {
+                  window.location.href = "/descriptifs/gallerie#salon";
+            };
+
+            const afficheSalleAMangerRdc = () => {
+                  window.location.href = "/descriptifs/gallerie#salle-a-manger";
+            };
+
+            const afficheChambre1 = () => {
+                  window.location.href = "/descriptifs/gallerie#chambre1";
+            };
+
+            const afficheChambre2 = () => {
+                  window.location.href = "/descriptifs/gallerie#chambre2";
+            };
+
             const jardinDescription = [
                   {
                         id: 1,
@@ -321,16 +396,6 @@ export default {
                         id: 4,
                         details: "1 chambre (2 lits 1 personnes)",
                   },
-
-                  {
-                        id: 6,
-                        details: "Salle d'eau",
-                  },
-
-                  {
-                        id: 7,
-                        details: "WC",
-                  },
             ];
 
             const rdcDescription = [
@@ -379,6 +444,13 @@ export default {
                   jardinDescription,
                   etageDescription,
                   rdcDescription,
+                  afficheChambreRdc,
+                  afficheCuisineRdc,
+                  afficheSalonRdc,
+                  afficheSdbRdc,
+                  afficheSalleAMangerRdc,
+                  afficheChambre1,
+                  afficheChambre2,
             };
       },
 };
@@ -387,12 +459,13 @@ export default {
 <style lang="scss" scoped>
 .mySwiper {
       height: 55vh;
+      width: 100%;
 }
 
 .b {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
 }
 
 .bubble-bottom {
@@ -473,39 +546,108 @@ export default {
           }
          }*/
 
-         .descriptionNav{
-          font-size: 0.8em;
+      .plan {
+            position: relative;
 
-          &__chambre{
-            position: absolute;
-            top: 70%;
-          }
+            &__rdc-chambre {
+                  position: absolute;
+                  width: 21.5%;
+                  top: 22%;
+                  left: 2%;
+                  opacity: 0;
 
-          &__cuisine{
-            position: absolute;
-            top: 77%;
-            left: 30%;
-          }
+                  &:hover {
+                        transition: 0.5s ease-in;
+                        opacity: 1;
+                  }
+            }
 
-          &__douche{
-            position: absolute;
-            top: 64%;
-            left: 30%;
-          }
+            &__rdc-sdb {
+                  position: absolute;
+                  width: 16%;
+                  top: 22%;
+                  left: 20%;
+                  opacity: 0;
 
-          &__salon{
-            position: absolute;
-            top: 70%;
-            right: 30%;
-          }
+                  &:hover {
+                        transition: 0.5s ease-in;
+                        opacity: 1;
+                  }
+            }
 
-          &__salle{
-            position: absolute;
-            top: 79%;
-            right: 5%;
-          }
+            &__rdc-cuisine {
+                  position: absolute;
+                  width: 8%;
+                  top: 22%;
+                  left: 36%;
+                  opacity: 0;
 
-         }
+                  &:hover {
+                        transition: 0.5s ease-in;
+                        opacity: 1;
+                  }
+            }
+
+            &__rdc-salon {
+                  position: absolute;
+                  width: 25%;
+                  top: 22%;
+                  right: 32%;
+                  opacity: 0;
+
+                  &:hover {
+                        transition: 0.5s ease-in;
+                        opacity: 1;
+                  }
+            }
+
+            &__rdc-sejour {
+                  position: absolute;
+                  width: 21%;
+                  top: 22%;
+                  right: 11%;
+                  opacity: 0;
+
+                  &:hover {
+                        transition: 0.5s ease-in;
+                        opacity: 1;
+                  }
+            }
+
+            &__chambre1 {
+                  position: absolute;
+                  width: 45%;
+                  top: 20%;
+                  opacity: 0;
+
+                  &:hover {
+                        transition: 0.5s ease-in;
+                        opacity: 1;
+                  }
+            }
+
+            &__chambre2 {
+                  position: absolute;
+                  width: 55%;
+                  top: 20%;
+                  right: 11%;
+                  opacity: 0;
+
+                  &:hover {
+                        transition: 0.5s ease-in;
+                        opacity: 1;
+                  }
+            }
+
+            //*button{
+
+            /*&__chambre1 {
+                        position: absolute;
+                        width: 20%;
+                        top: 1%;
+                  }
+            }*/
+      }
 
       &__section {
             // width: 90%;
@@ -558,7 +700,7 @@ export default {
             }
       }
 
-      &__gallery {
+      /*&__gallery {
             text-align: right;
             margin: 1em;
 
@@ -569,6 +711,6 @@ export default {
                   padding: 0.5em;
                   border-radius: 0.5em;
             }
-      }
+      }*/
 }
 </style>
