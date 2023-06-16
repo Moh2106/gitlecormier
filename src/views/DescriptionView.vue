@@ -195,13 +195,24 @@
                                           
                                           <button>
 
-                                                <a href="/descriptifs/gallerie#chambre2">
+                                                
+
+
+                                                <a href="/gallerie#chambre2">
                                                       <img
                                                       src="../assets/Etage/etage1_chambre2.jpg"
                                                       alt=""
                                                       class="plan__chambre2"
                                                 />
                                                 </a>
+
+                                                <!----<router-link to="/gallerie#chambre2">
+                                                      <img
+                                                      src="../assets/Etage/etage1_chambre2.jpg"
+                                                      alt=""
+                                                      class="plan__chambre2"
+                                                />
+                                                </router-link>-->
                                                 
                                           </button>
                                     </div>
@@ -306,6 +317,7 @@ import "../../src/main.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
+import { loadRouteLocation } from "vue-router";
 
 export default {
       components: {
@@ -340,7 +352,9 @@ export default {
             };
 
             const afficheChambre2 = () => {
-                  window.location.href = "/descriptifs/gallerie#chambre2";
+                  //loadRouteLocation
+                  loadRouteLocation("/descriptifs/gallerie#chambre2")
+                  //window.location.href = "/descriptifs/gallerie#chambre2";
             };
 
             const jardinDescription = [

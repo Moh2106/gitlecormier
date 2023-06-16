@@ -32,7 +32,7 @@ const routes = [
   },
 
   {
-    path: '/descriptifs/gallerie',
+    path: '/gallerie',
     name: 'gallerie',
     component: GalleryView
   },
