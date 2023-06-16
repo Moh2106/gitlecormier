@@ -192,13 +192,17 @@
                                                       class="plan__chambre1"
                                                 />
                                           </button>
+                                          
+                                          <button>
 
-                                          <button v-on:click="afficheChambre2">
-                                                <img
+                                                <a href="/descriptifs/gallerie#chambre2">
+                                                      <img
                                                       src="../assets/Etage/etage1_chambre2.jpg"
                                                       alt=""
                                                       class="plan__chambre2"
                                                 />
+                                                </a>
+                                                
                                           </button>
                                     </div>
                               </div>
