@@ -52,7 +52,7 @@
                   >
                         <h1 class="font-semibold">Au rez-de-chaussée :</h1>
 
-                        <ul class="w-4/5">
+                        <ul class="w-4/5 mb-2">
                               <li
                                     v-for="description in rdcDescription"
                                     :key="description.id"
@@ -165,7 +165,7 @@
                   >
                         <h1 class="font-semibold">Au 1 er étage :</h1>
 
-                        <ul class="w-4/5">
+                        <ul class="w-4/5 mb-2">
                               <li
                                     v-for="description in etageDescription"
                                     :key="description.id"
@@ -255,7 +255,7 @@
                   >
                         <h1 class="font-semibold">Dans le jardin :</h1>
 
-                        <ul class="w-4/5">
+                        <ul class="w-4/5 mb-2">
                               <li
                                     v-for="description in jardinDescription"
                                     :key="description.id"
@@ -348,7 +348,8 @@ export default {
             };
 
             const afficheChambre1 = () => {
-                  window.location.href = "/descriptifs/gallerie#chambre1";
+                  //window.location.href = "/descriptifs/gallerie#chambre1";
+                  window.location.assign('/descriptifs/gallerie#chambre1')
             };
 
             const afficheChambre2 = () => {
@@ -392,26 +393,16 @@ export default {
             const etageDescription = [
                   {
                         id: 1,
-                        details: "1 chambre palière",
+                        details: "1 chambre palière (1 lit 1 personne)",
                   },
 
                   {
                         id: 2,
-                        details: "(1 lit 1 personne)",
-                  },
-
-                  {
-                        id: 3,
-                        details: "Bureau",
-                  },
-
-                  {
-                        id: 4,
                         details: "Placard",
                   },
 
                   {
-                        id: 4,
+                        id: 3,
                         details: "1 chambre (2 lits 1 personnes)",
                   },
             ];

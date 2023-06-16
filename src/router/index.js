@@ -13,67 +13,66 @@ import VueScrollTo from 'vue-scrollto'
 
 
 const routes = [
-  {
-    path: '/',
-    name: 'accueil',
-    component: AccueilView
-  },
+      {
+            path: "/",
+            name: "accueil",
+            component: AccueilView,
+      },
 
-  {
-    path: '/liens',
-    name: 'lien',
-    component: LienView
-  },
+      {
+            path: "/liens",
+            name: "lien",
+            component: LienView,
+      },
 
-  {
-    path: '/descriptifs',
-    name: 'descriptifs',
-    component: DescriptionView
-  },
+      {
+            path: "/descriptifs",
+            name: "descriptifs",
+            component: DescriptionView,
+      },
 
-  {
-    path: '/gallerie',
-    name: 'gallerie',
-    component: GalleryView
-  },
+      {
+            path: "/descriptifs/gallerie",
+            name: "gallerie",
+            component: GalleryView,
+      },
 
-  {
-    path: '/comment-arriver',
-    name: 'arriver',
-    component: VisiterView
-  },
+      {
+            path: "/comment-arriver",
+            name: "arriver",
+            component: VisiterView,
+      },
 
-  {
-    path: '/alentours',
-    name: 'alentours',
-    component: AlentoursView,
-  },
+      {
+            path: "/alentours",
+            name: "alentours",
+            component: AlentoursView,
+      },
 
-  {
-    path: '/livredor',
-    name: 'livre',
-    component: LivreView
-  },
+      {
+            path: "/livredor",
+            name: "livre",
+            component: LivreView,
+      },
 
-  {
-    path: '/reservation',
-    name: 'reservation',
-    component: ReservationView
-  },
+      {
+            path: "/reservation",
+            name: "reservation",
+            component: ReservationView,
+      },
 
-  {
-    path: '/tarifs',
-    name: 'tarifs',
-    component: TarifsView
-  },
+      {
+            path: "/tarifs",
+            name: "tarifs",
+            component: TarifsView,
+      },
 
-  /*{
+      /*{
     path: '/*',
     name: 'tarifs',
     redirect: '/tarifs',
   },*/
-
-]
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

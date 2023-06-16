@@ -26,7 +26,7 @@
         <router-link to="/alentours" >Aux Alentours</router-link>
         <router-link to="/livredor" >Livres d'or</router-link>
         <router-link to="/tarifs" >Tarifs</router-link>
-        <router-link to="/reservation" >Page de réservation</router-link>
+        <router-link to="/reservation" >Disponibilité </router-link>
     </nav>
 
     <div class="header__menu" >
@@ -73,7 +73,7 @@ export default {
 <style lang="scss" scoped>
 .header{
   color: #fff;
-  backdrop-filter: contrast(40%) brightness(90%) blur(10px);
+  backdrop-filter: contrast(45%) brightness(95%) blur(250px);
   height: 7.5vh;
   font-family: 'Poppins', sans-serif;
   position: fixed;
