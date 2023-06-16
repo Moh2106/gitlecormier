@@ -198,7 +198,7 @@
                                                 
 
 
-                                                <a href="/gallerie#chambre2">
+                                                <a href="./GalleryView.vue#chambre2">
                                                       <img
                                                       src="../assets/Etage/etage1_chambre2.jpg"
                                                       alt=""
@@ -206,7 +206,7 @@
                                                 />
                                                 </a>
 
-                                                <!----<router-link to="/gallerie#chambre2">
+                                                <!----<router-link :to="/gallerie#chambre2" v-bind:to="{path : '/gallerie#chambre2' dir}">
                                                       <img
                                                       src="../assets/Etage/etage1_chambre2.jpg"
                                                       alt=""
