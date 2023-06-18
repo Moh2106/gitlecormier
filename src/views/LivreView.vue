@@ -2,15 +2,33 @@
       <div class="pt-16 pb-4 livre">
             <!------- Insertion du widget pour la note globale ------------------------>
 
-            <div class="iframe mr-4">
-                  <p>
-                        Voici les commentaires qui ont été émis par nos hôtes.
-                        Vous les retrouverez sur le site de gite de France
+            <div class=" mr-4 flex w-full h-[7em]">
+
+              <div class="w-1/3 mr-2">
+                <iframe
+                        style="
+                              overflow: auto;
+                              -webkit-overflow-scrolling: touch;
+                              border: none;
+                              border-radius: 0.5em;
+                        "
+                        height="100%"
+                        width="100%"
+                        src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis&affichequenoteglobale=1"
+                        
+                  ></iframe>
+              </div>
+
+                  <p class="iframe w-2/3 flex items-center justify-center h-[4em]">
+                      Un grand merci à nos hôtes pour leurs commentaires laissés sur le site de gite de France !
+                        <!--Voici les commentaires qui ont été émis par nos hôtes.
+                        Vous les retrouverez sur le site de gite de France-->
                   </p>
             </div>
 
             <!-- Insertion du widget avis -->
             <div class="avis">
+
                   <iframe
                         style="
                               overflow: auto;

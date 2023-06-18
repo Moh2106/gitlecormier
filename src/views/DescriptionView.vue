@@ -108,12 +108,15 @@
                                           />
                                     </button>
 
-                                    <button v-on:click="afficheSalleAMangerRdc">
-                                          <img
+                                    <button>
+                                          <a href="/descriptifs/gallerie#salle-a-manger">
+                                                <img
                                                 src="../assets/RezDeChaussee/rdc_sejour_plan.jpg"
                                                 alt=""
                                                 class="plan__rdc-sejour"
                                           />
+                                          </a>
+                                          
                                     </button>
                               </div>
 
@@ -195,16 +198,24 @@
                                           
                                           <button>
 
-                                                
-
-
-                                                <a href="./GalleryView.vue#chambre2">
+                                                <!----<a href="./GalleryView.vue#chambre2">
                                                       <img
                                                       src="../assets/Etage/etage1_chambre2.jpg"
                                                       alt=""
                                                       class="plan__chambre2"
                                                 />
-                                                </a>
+                                                </a>-->
+
+                                                <router-link to="descriptifs/gallerie#chambre2">
+                                                       <img
+                                                      src="../assets/Etage/etage1_chambre2.jpg"
+                                                      alt=""
+                                                      class="plan__chambre2"
+                                                />
+                                                </router-link>
+
+                                                <router-link :to="{ path: '/descriptifs/gallerie', hash: '#chambre2'}">Lien vers l'élément</router-link>
+
 
                                                 <!----<router-link :to="/gallerie#chambre2" v-bind:to="{path : '/gallerie#chambre2' dir}">
                                                       <img

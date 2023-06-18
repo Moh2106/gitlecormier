@@ -82,9 +82,12 @@
                               </h2>
                         </div>
 
-                        <div class="accueil__gallery--text">
-                              Pour se dépenser, pour s'amuser, pour sauter, pour
-                              crier, pour jouer ...
+                        <div class="accueil__gallery--text text-left">
+                              Pour se dépenser, <br>
+                              Pour s'amuser, <br>
+                              Pour sauter, <br>
+                              Pour crier, <br>
+                              Pour jouer ...
                         </div>
                   </div>
 
@@ -107,9 +110,11 @@
                         </div>
 
                         <div class="accueil__gallery--text">
-                              Le coucher du soleil où après diner pour
-                              contempler la voie lactée, les petites bulles du
-                              Jaccuzzi à 38 dégrés vont feront tout oublier
+                              Au coucher du soleil, <br>
+                               Où après diner pour
+                              contempler la voie lactée, <br>
+                               Les petites bulles du
+                              Jaccuzzi à 38 dégrés vous feront tout oublier
                         </div>
                   </div>
 
@@ -119,7 +124,7 @@
                               alt=""
                         />
                         <div>
-                              <h2>
+                              <h2 class="title">
                                     Pour profiter de l'hiver
 
                                     <font-awesome-icon
@@ -129,11 +134,13 @@
                               </h2>
                         </div>
 
-                        <div class="accueil__gallery--text">
-                              La cheminée au foyer ouvert, le coeur de la
+                        <div class="accueil__gallery--text text-left">
+                              La cheminée au foyer ouvert, <br>
+                               Le coeur de la
                               chaumière au 18ème siècle. <br />
 
-                              Le feu s'invite à l'apéritif, les ombres et les
+                              Le feu s'invite à l'apéritif, <br>
+                              Les ombres et les
                               crépitements captent l'attention des petits et des
                               grands.
                         </div>
@@ -147,7 +154,7 @@
 
                         <div>
                               <h2>
-                                    Pour toute la famille
+                                    Pour s'amuser en famille
 
                                     <font-awesome-icon
                                           icon="fa-solid fa-magnifying-glass-plus"
@@ -157,7 +164,7 @@
                         </div>
 
                         <div class="accueil__gallery--text">
-                              Pour le tournoi du grand Chelem. <br />
+                              Pour le tournoi du grand Chelem, <br />
                               Qui perd gagne ...
                               <br />
                               Gagne le droit de débarasser la table.
@@ -404,6 +411,7 @@ export default {
                               h2 {
                                     transform: translateY(00%);
                                     transition: 0.5s;
+                                    text-align: left;
                               }
                         }
                         //
@@ -419,14 +427,20 @@ export default {
                               background: rgba(0, 0, 0, 0.5);
                               font-family: "Great Vibes", cursive;
                               font-size: 2rem;
+                              text-align: left;
 
                               .plus {
-                                    font-size: 2em;
+                                    font-size: 1.5em;
                                     display: block;
                                     margin: 0 1em;
 
                                     &:hover {
-                                          font-size: 2.5em;
+                                          font-size: 1.7em;
+                                          margin: 0 0.5em;
+
+                                          .title{
+                                                text-align: left;
+                                          }
                                     }
                               }
                         }
@@ -488,11 +502,10 @@ export default {
                   border-radius: 0.5rem;
                   font-family: "Great Vibes", cursive;
                   font-size: 2rem;
+                  text-align: left;
+                  padding-left: 1rem;
             }
       }
 
-      /*.gite{ 
-        height: 675px;
-    }*/
 }
 </style>

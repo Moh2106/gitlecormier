@@ -30,7 +30,11 @@
 
     <!-------------------- -- GOOGLE MAPS ------------------------>
     <div>
-        <h2 class="mb-4">Google maps</h2>
+        <h2 class="mb-4"> 
+            <span class="font-bold">
+                <span class="text-blue-500">G</span> <span class="text-red-600">o</span> <span class=" text-yellow-500">o</span> <span class="text-blue-500">g</span> <span class=" text-green-500">l</span> <span class="text-red-600">e</span>
+            </span> Maps</h2>
+
         <p class="px-8" title="Google Maps">
             <a href="https://goo.gl/maps/MNEXCNRCm6RrVQRD7">
                 <font-awesome-icon icon="fa-solid fa-location-dot" 
