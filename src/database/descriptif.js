@@ -1,14 +1,14 @@
 export const rezDeChausses = [
       {
-            id: 1,
-            img: "/pictures/descriptif/sallemanger/rdc_salon2.jpg",
-            alt: "Salle à manger",
-      },
-
-      {
             id: 2,
             img: "/pictures/descriptif/salon/rdc_chaumiere5.jpg",
             alt: "Salon",
+      },
+      
+      {
+            id: 1,
+            img: "/pictures/descriptif/sallemanger/rdc_salon2.jpg",
+            alt: "Salle à manger",
       },
 
       {

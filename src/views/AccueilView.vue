@@ -57,7 +57,7 @@
 
             <br />
 
-            <!---------------Gallerie ---------------------------------------------->
+            <!---------------Gallerie des 4 photos ---------------------------------------->
             <div
                   class="accueil__gallery mb-6"
                   data-aos="fade-right"
@@ -92,7 +92,6 @@
                   </div>
 
                   <div class="accueil__gallery--items" @click="Cliquer">
-                        <!----<img src="../assets/Cormier/cormier_jaccuzzi.jpg" alt="">-->
                         <img
                               src="../../public/pictures/Jardin/photo_jardin8.jpg"
                               alt=""
@@ -271,25 +270,11 @@ export default {
 
 <style lang="scss" scoped>
 .accueil {
-      /*&__slide {
-            width: 90%;
-            margin: auto;
-
-            /*@media screen and (max-width: 768px) {
-                img{ 
-                    height: 3vh;
-                    object-fit: fill;
-                }
-   
-            }
-      }*/
 
       .monSwipe {
             width: 70%;
-            //margin: auto;
             height: 65vh;
             margin-bottom: 1.5em;
-            //border: 4px solid green;
 
             &__capture {
                   img {
@@ -298,9 +283,7 @@ export default {
                         max-width: 1380px;
                         min-width: 800px;
                         height: 100%;
-                        //max-height: 700px;
                         object-fit: contain;
-                        //object-fit: fill;
                   }
             }
       }
@@ -333,16 +316,14 @@ export default {
             margin: auto;
             margin-bottom: 2em;
             object-fit: cover;
-            //border: 8px solid red;
 
             video {
                   width: 100%;
                   height: 100%;
-                  //margin: auto;
             }
       }
 
-      &__details {
+      /*&__details {
             margin-top: 1em;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             border-radius: 0.5em;
@@ -360,16 +341,13 @@ export default {
                   background: #0f4c5c;
                   color: #fff;
             }
-      }
+      }*/
 
       &__gallery {
             width: 85%;
             margin: auto;
             max-height: 95%;
             overflow: hidden;
-            //display: grid;
-            //grid-template-columns: repeat(4, 1fr);
-            //grid-gap: 1em;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -479,15 +457,6 @@ export default {
             }
 
             img {
-                  //position: absolute;
-                  //top: 50%;
-                  //left: 50%;
-                  //transform: translate(-50%, -50%);
-                  //margin-top: 10rem;
-                  // object-fit: cover;
-                  // width: 80%;
-                  // margin: auto;
-                  // height: 80vh;
                   object-fit: cover;
                   display: flex;
                   justify-content: center;

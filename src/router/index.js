@@ -7,7 +7,7 @@ import DescriptionView from '../views/DescriptionView'
 import GalleryView from '../views/GalleryView'
 import TarifsView from '../views/TarifsView'
 import LivreView from '../views/LivreView'
-import ReservationView from '../views/ReservationView'
+import DisponibiliteView from "../views/DisponibiliteView";
 
 import VueScrollTo from 'vue-scrollto'
 
@@ -56,9 +56,9 @@ const routes = [
       },
 
       {
-            path: "/reservation",
+            path: "/disponibilite",
             name: "reservation",
-            component: ReservationView,
+            component: DisponibiliteView,
       },
 
       {

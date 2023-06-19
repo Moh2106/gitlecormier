@@ -22,20 +22,20 @@ export const chambresRdc = [
 export const cuisines = [
       {
             id: 1,
-            img: "/pictures/descriptif/cuisine/rdc_cuisine1.jpg",
+            img: "/pictures/MyCuisine/rdc_cuisine1.jpg",
             alt: "Cuisine 1 rez de chausse",
       },
 
       {
-            id: 2,
-            img: "/pictures/descriptif/cuisine/rdc_cuisine3.jpg",
-            alt: "Cuisine 2 rez de chausse",
+            id: 3,
+            img: "/pictures/MyCuisine/rdc_cuisine6.jpg",
+            alt: "Cuisine 3 rez de chausse",
       },
 
       {
-            id: 3,
-            img: "/pictures/descriptif/cuisine/rdc_cuisine6.jpg",
-            alt: "Cuisine 3 rez de chausse",
+            id: 2,
+            img: "/pictures/MyCuisine/rdc_cuisine3.jpg",
+            alt: "Cuisine 2 rez de chausse",
       },
 ];
 

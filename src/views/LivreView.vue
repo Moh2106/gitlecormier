@@ -54,10 +54,6 @@ export default {};
       margin: auto;
 }
 
-/*.avis{
-    height: 100vh;
-  }*/
-
 .iframe {
       background: #08a045;
       color: #fff;
@@ -70,14 +66,4 @@ export default {};
       padding: 0.5rem;
 }
 
-/**[data-widget-itea] {
-    margin: 0 0 15px;
-    padding: 10px;
-    font-size: 14px;
-    color: #333333;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-
-}*/
 </style>

@@ -56,6 +56,7 @@
                               <li
                                     v-for="description in rdcDescription"
                                     :key="description.id"
+                                    v-bind:id="description.class"
                                     data-aos="fade-left"
                                     data-aos-duration="500"
                                     data-aos-easing="ease-in"
@@ -76,51 +77,116 @@
                               />
 
                               <div>
-                                    <button v-on:click="afficheChambreRdc">
-                                          <img
-                                                src="../assets/RezDeChaussee/rdc_chambre_plan.jpg"
-                                                alt=""
-                                                class="plan__rdc-chambre"
-                                          />
-                                    </button>
-
-                                    <button v-on:click="afficheSdbRdc">
-                                          <img
-                                                src="../assets/RezDeChaussee/rdc_sdb_plan.jpg"
-                                                alt=""
-                                                class="plan__rdc-sdb"
-                                          />
-                                    </button>
-
-                                    <button v-on:click="afficheCuisineRdc">
-                                          <img
-                                                src="../assets/RezDeChaussee/rdc_cuisine_plan.jpg"
-                                                alt=""
-                                                class="plan__rdc-cuisine"
-                                          />
-                                    </button>
-
-                                    <button v-on:click="afficheSalonRdc">
-                                          <img
-                                                src="../assets/RezDeChaussee/rdc_salon_plan.jpg"
-                                                alt=""
-                                                class="plan__rdc-salon"
-                                          />
-                                    </button>
-
-                                    <button>
-                                          <a href="/descriptifs/gallerie#salle-a-manger">
+                                    <button
+                                          v-on:mouseenter="
+                                                afficheChambreRdcItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeChambreRdcItemsStyle
+                                          "
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#chambre-rez-de-chaussee"
+                                          >
                                                 <img
-                                                src="../assets/RezDeChaussee/rdc_sejour_plan.jpg"
-                                                alt=""
-                                                class="plan__rdc-sejour"
-                                          />
+                                                      src="../assets/RezDeChaussee/rdc_chambre_plan.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-chambre"
+                                                />
                                           </a>
-                                          
+                                    </button>
+
+                                    <button
+                                          v-on:mouseenter="
+                                                afficheSdbRdcItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeSdbRdcItemsStyle
+                                          "
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#salle-de-bain"
+                                          >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_sdb_plan.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-sdb"
+                                                />
+                                          </a>
+                                    </button>
+
+                                    <button
+                                          v-on:mouseenter="afficheCuisineItems"
+                                          v-on:mouseleave="
+                                                supprimeCuisineItemsStyle
+                                          "
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#cuisine"
+                                          >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_cuisine_plan.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-cuisine"
+                                                />
+                                          </a>
+                                    </button>
+
+                                    <button
+                                          v-on:mouseenter="afficheSalonItems"
+                                          v-on:mouseleave="
+                                                supprimeSalonItemsStyle
+                                          "
+                                    >
+                                          <a href="/descriptifs/gallerie#salon">
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_salon_plan.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-salon"
+                                                />
+                                          </a>
+                                    </button>
+
+                                    <button
+                                          v-on:mouseenter="
+                                                afficheSalleAMangerItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeSalleAMangerItemsStyle
+                                          "
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#salle-a-manger"
+                                          >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_sejour_plan.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-sejour"
+                                                />
+                                          </a>
+                                    </button>
+
+                                    <button
+                                          v-on:mouseenter="
+                                                afficheBuanderieItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeBuanderieItemsStyle
+                                          "
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#salle-a-manger"
+                                          >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_buanderie_plan.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-buanderie"
+                                                />
+                                          </a>
                                     </button>
                               </div>
 
-                              <div></div>
+                              <!--<div></div>-->
                         </div>
 
                         <div
@@ -179,52 +245,39 @@
                                     {{ description.details }}
                               </li>
 
-                              <div class="plan"
-                              data-aos="fade-left"
-                              data-aos-duration="500"
-                              data-aos-easing="ease-in">
+                              <div
+                                    class="plan"
+                                    data-aos="fade-left"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in"
+                              >
                                     <img
                                           src="../assets/Etage/gite_le_cormier_1er_etage.jpg"
                                           alt="Plan du 1er étage"
                                     />
                                     <div>
                                           <button v-on:click="afficheChambre1">
-                                                <img
-                                                      src="../assets/Etage/etage1_chambre1.jpg"
-                                                      alt=""
-                                                      class="plan__chambre1"
-                                                />
+                                                <a
+                                                      href="/descriptifs/gallerie#chambre1"
+                                                >
+                                                      <img
+                                                            src="../assets/Etage/etage1_chambre1.jpg"
+                                                            alt=""
+                                                            class="plan__chambre1"
+                                                      />
+                                                </a>
                                           </button>
-                                          
+
                                           <button>
-
-                                                <!----<a href="./GalleryView.vue#chambre2">
+                                                <a
+                                                      href="/descriptifs/gallerie#chambre2"
+                                                >
                                                       <img
-                                                      src="../assets/Etage/etage1_chambre2.jpg"
-                                                      alt=""
-                                                      class="plan__chambre2"
-                                                />
-                                                </a>-->
-
-                                                <router-link to="descriptifs/gallerie#chambre2">
-                                                       <img
-                                                      src="../assets/Etage/etage1_chambre2.jpg"
-                                                      alt=""
-                                                      class="plan__chambre2"
-                                                />
-                                                </router-link>
-
-                                                <router-link :to="{ path: '/descriptifs/gallerie', hash: '#chambre2'}">Lien vers l'élément</router-link>
-
-
-                                                <!----<router-link :to="/gallerie#chambre2" v-bind:to="{path : '/gallerie#chambre2' dir}">
-                                                      <img
-                                                      src="../assets/Etage/etage1_chambre2.jpg"
-                                                      alt=""
-                                                      class="plan__chambre2"
-                                                />
-                                                </router-link>-->
-                                                
+                                                            src="../assets/Etage/etage1_chambre2.jpg"
+                                                            alt=""
+                                                            class="plan__chambre2"
+                                                      />
+                                                </a>
                                           </button>
                                     </div>
                               </div>
@@ -278,9 +331,12 @@
                               </li>
                         </ul>
 
-                        <div class="plan w-4/5" data-aos="fade-left"
+                        <div
+                              class="plan w-4/5"
+                              data-aos="fade-left"
                               data-aos-duration="500"
-                              data-aos-easing="ease-in">
+                              data-aos-easing="ease-in"
+                        >
                               <img
                                     src="../assets/Jardin/jardin528.jpg"
                                     alt=""
@@ -328,7 +384,6 @@ import "../../src/main.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
-import { loadRouteLocation } from "vue-router";
 
 export default {
       components: {
@@ -337,36 +392,88 @@ export default {
       },
 
       setup() {
-            const afficheChambreRdc = () => {
-                  window.location.href =
-                        "/descriptifs/gallerie#chambre-rez-de-chaussee";
+            const afficheCuisineItems = () => {
+                  const cuisine = document.getElementById("rdc_cuisine");
+
+                  cuisine.classList.add("applyActive");
             };
 
-            const afficheCuisineRdc = () => {
-                  window.location.href = "/descriptifs/gallerie#cuisine";
+            const supprimeCuisineItemsStyle = () => {
+                  const cuisine = document.getElementById("rdc_cuisine");
+
+                  cuisine.classList.remove("applyActive");
             };
 
-            const afficheSdbRdc = () => {
-                  window.location.href = "/descriptifs/gallerie#salle-de-bain";
+            const afficheSalonItems = () => {
+                  const salon = document.getElementById("rdc_salon");
+
+                  salon.classList.add("applyActive");
             };
 
-            const afficheSalonRdc = () => {
-                  window.location.href = "/descriptifs/gallerie#salon";
+            const supprimeSalonItemsStyle = () => {
+                  const salon = document.getElementById("rdc_salon");
+
+                  salon.classList.remove("applyActive");
             };
 
-            const afficheSalleAMangerRdc = () => {
-                  window.location.href = "/descriptifs/gallerie#salle-a-manger";
+            const afficheSalleAMangerItems = () => {
+                  const sam = document.getElementById("rdc_sam");
+
+                  sam.classList.add("applyActive");
             };
 
-            const afficheChambre1 = () => {
-                  //window.location.href = "/descriptifs/gallerie#chambre1";
-                  window.location.assign('/descriptifs/gallerie#chambre1')
+            const supprimeSalleAMangerItemsStyle = () => {
+                  const sam = document.getElementById("rdc_sam");
+
+                  sam.classList.remove("applyActive");
             };
 
-            const afficheChambre2 = () => {
-                  //loadRouteLocation
-                  loadRouteLocation("/descriptifs/gallerie#chambre2")
-                  //window.location.href = "/descriptifs/gallerie#chambre2";
+            const afficheBuanderieItems = () => {
+                  const buanderie = document.getElementById("rdc_buanderie");
+
+                  buanderie.classList.add("applyActive");
+            };
+
+            const supprimeBuanderieItemsStyle = () => {
+                  const buanderie = document.getElementById("rdc_buanderie");
+
+                  buanderie.classList.remove("applyActive");
+            };
+            // La chambre du rez de chausse
+            const afficheChambreRdcItems = () => {
+                  const chambre = document.getElementById("rdc_chambre");
+
+                  chambre.classList.add("applyActive");
+            };
+
+            const supprimeChambreRdcItemsStyle = () => {
+                  const chambre = document.getElementById("rdc_chambre");
+
+                  chambre.classList.remove("applyActive");
+            };
+
+
+            //
+
+            // La salle de bain du rez de chausse
+            const afficheSdbRdcItems = () => {
+                  const salleDeau = document.getElementById("rdc_salledeau");
+
+                  const wc = document.getElementById("rdc_wc");
+
+                  salleDeau.classList.add("applyActive");
+
+                  wc.classList.add("applyActive");
+            };
+
+            const supprimeSdbRdcItemsStyle = () => {
+                  const salleDeau = document.getElementById("rdc_salledeau");
+
+                  const wc = document.getElementById("rdc_wc");
+
+                  salleDeau.classList.remove("applyActive");
+
+                  wc.classList.remove("applyActive");
             };
 
             const jardinDescription = [
@@ -399,6 +506,11 @@ export default {
                         id: 6,
                         details: "Barbecue",
                   },
+
+                  {
+                        id: 7,
+                        details: "Ping Pong",
+                  },
             ];
 
             const etageDescription = [
@@ -422,36 +534,43 @@ export default {
                   {
                         id: 1,
                         details: "Salle à manger",
+                        class: "rdc_sam",
                   },
 
                   {
                         id: 2,
                         details: "Salon",
+                        class: "rdc_salon",
                   },
 
                   {
                         id: 3,
                         details: "Cuisine",
+                        class: "rdc_cuisine",
                   },
 
                   {
                         id: 4,
                         details: "Buanderie",
+                        class: "rdc_buanderie",
                   },
 
                   {
                         id: 4,
                         details: "1 chambre (1 lit 2 personnes)",
+                        class: "rdc_chambre",
                   },
 
                   {
                         id: 6,
                         details: "Salle d'eau",
+                        class: "rdc_salledeau",
                   },
 
                   {
                         id: 7,
                         details: "WC",
+                        class: "rdc_wc",
                   },
             ];
 
@@ -464,13 +583,23 @@ export default {
                   jardinDescription,
                   etageDescription,
                   rdcDescription,
-                  afficheChambreRdc,
-                  afficheCuisineRdc,
-                  afficheSalonRdc,
-                  afficheSdbRdc,
-                  afficheSalleAMangerRdc,
-                  afficheChambre1,
-                  afficheChambre2,
+
+                  //isHovered,
+                  //elementStyle,
+                  //applyStyle,
+                  //removeStyle,
+                  afficheSdbRdcItems,
+                  supprimeSdbRdcItemsStyle,
+                  afficheChambreRdcItems,
+                  supprimeChambreRdcItemsStyle,
+                  afficheBuanderieItems,
+                  supprimeBuanderieItemsStyle,
+                  afficheCuisineItems,
+                  supprimeCuisineItemsStyle,
+                  afficheSalonItems,
+                  supprimeSalonItemsStyle,
+                  afficheSalleAMangerItems,
+                  supprimeSalleAMangerItemsStyle,
             };
       },
 };
@@ -486,6 +615,16 @@ export default {
       width: 100%;
       height: 100%;
       object-fit: contain;
+}
+
+.applyActive {
+      //transform: translateX(2em);
+      transition: 2s ease-in-out;
+      margin-left: 2em;
+      background: #08a045;
+      border-radius: 0.5em;
+      color: #fff;
+      padding: 0 0.5em;
 }
 
 .bubble-bottom {
@@ -584,9 +723,9 @@ export default {
 
             &__rdc-sdb {
                   position: absolute;
-                  width: 16%;
+                  width: 17%;
                   top: 22%;
-                  left: 20%;
+                  left: 18%;
                   opacity: 0;
 
                   &:hover {
@@ -597,9 +736,9 @@ export default {
 
             &__rdc-cuisine {
                   position: absolute;
-                  width: 8%;
+                  width: 21%;
                   top: 22%;
-                  left: 36%;
+                  left: 23%;
                   opacity: 0;
 
                   &:hover {
@@ -624,13 +763,26 @@ export default {
             &__rdc-sejour {
                   position: absolute;
                   width: 21%;
-                  top: 22%;
-                  right: 11%;
+                  top: 21%;
+                  right: 12%;
                   opacity: 0;
 
                   &:hover {
                         transition: 0.5s ease-in;
-                        opacity: 1;
+                        opacity: 0.7;
+                  }
+            }
+
+            &__rdc-buanderie {
+                  position: absolute;
+                  width: 21%;
+                  top: 11%;
+                  right: 37%;
+                  opacity: 0;
+
+                  &:hover {
+                        transition: 0.5s ease-in;
+                        opacity: 0.7;
                   }
             }
 

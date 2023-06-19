@@ -26,7 +26,7 @@
         <router-link to="/alentours" >Aux Alentours</router-link>
         <router-link to="/livredor" >Livres d'or</router-link>
         <router-link to="/tarifs" >Tarifs</router-link>
-        <router-link to="/reservation" >Disponibilité </router-link>
+        <router-link to="/disponibilite" >Disponibilité </router-link>
     </nav>
 
     <div class="header__menu" >
