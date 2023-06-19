@@ -193,6 +193,7 @@
                               data-aos="fade-left"
                               data-aos-duration="500"
                               data-aos-easing="ease-in"
+                              class="blinking"
                         >
                               Passer la souris sur le plan pour plus de détails
                         </div>
@@ -241,12 +242,13 @@
                                     data-aos="fade-left"
                                     data-aos-duration="500"
                                     data-aos-easing="ease-in-out"
+                                    :id="description.class"
                               >
                                     {{ description.details }}
                               </li>
 
                               <div
-                                    class="plan"
+                                    class="plan mt-2"
                                     data-aos="fade-left"
                                     data-aos-duration="500"
                                     data-aos-easing="ease-in"
@@ -256,7 +258,14 @@
                                           alt="Plan du 1er étage"
                                     />
                                     <div>
-                                          <button v-on:click="afficheChambre1">
+                                          <button
+                                          v-on:mouseenter="
+                                                afficheChambre2EtageItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeChambre2EtageItemsStyle
+                                          "
+                                          >
                                                 <a
                                                       href="/descriptifs/gallerie#chambre1"
                                                 >
@@ -264,11 +273,19 @@
                                                             src="../assets/Etage/etage1_chambre1.jpg"
                                                             alt=""
                                                             class="plan__chambre1"
+                  
                                                       />
                                                 </a>
                                           </button>
 
-                                          <button>
+                                          <button
+                                          v-on:mouseenter="
+                                                afficheChambre1EtageItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeChambre1EtageItemsStyle
+                                          "
+                                          >
                                                 <a
                                                       href="/descriptifs/gallerie#chambre2"
                                                 >
@@ -453,8 +470,6 @@ export default {
             };
 
 
-            //
-
             // La salle de bain du rez de chausse
             const afficheSdbRdcItems = () => {
                   const salleDeau = document.getElementById("rdc_salledeau");
@@ -474,6 +489,33 @@ export default {
                   salleDeau.classList.remove("applyActive");
 
                   wc.classList.remove("applyActive");
+            };
+
+            // La chambre 1 du 1er étage
+            const afficheChambre1EtageItems = () => {
+                  const chambre1 = document.getElementById("etage_chambre1");
+
+                  chambre1.classList.add("applyActive");
+            };
+
+            const supprimeChambre1EtageItemsStyle = () => {
+                  const chambre1 = document.getElementById("etage_chambre1");
+
+                  chambre1.classList.remove("applyActive");
+
+            };
+
+            // La chambre 2 du 1er étage
+            const afficheChambre2EtageItems = () => {
+                  const chambre2 = document.getElementById("etage_chambre2");
+
+                  chambre2.classList.add("applyActive");
+            };
+
+            const supprimeChambre2EtageItemsStyle = () => {
+                  const chambre2 = document.getElementById("etage_chambre2");
+
+                  chambre2.classList.remove("applyActive");
             };
 
             const jardinDescription = [
@@ -517,31 +559,35 @@ export default {
                   {
                         id: 1,
                         details: "1 chambre palière (1 lit 1 personne)",
+                        class: "etage_chambre1"
                   },
 
                   {
                         id: 2,
                         details: "Placard",
+                        class: "etage_placard"
                   },
 
                   {
                         id: 3,
                         details: "1 chambre (2 lits 1 personnes)",
+                        class: "etage_chambre2"
                   },
             ];
 
             const rdcDescription = [
+                  {
+                        id: 2,
+                        details: "Salon",
+                        class: "rdc_salon",
+                  },
+
                   {
                         id: 1,
                         details: "Salle à manger",
                         class: "rdc_sam",
                   },
 
-                  {
-                        id: 2,
-                        details: "Salon",
-                        class: "rdc_salon",
-                  },
 
                   {
                         id: 3,
@@ -600,6 +646,10 @@ export default {
                   supprimeSalonItemsStyle,
                   afficheSalleAMangerItems,
                   supprimeSalleAMangerItemsStyle,
+                  afficheChambre1EtageItems,
+                  supprimeChambre1EtageItemsStyle,
+                  afficheChambre2EtageItems,
+                  supprimeChambre2EtageItemsStyle
             };
       },
 };
@@ -615,6 +665,16 @@ export default {
       width: 100%;
       height: 100%;
       object-fit: contain;
+}
+
+.blinking {
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .applyActive {
@@ -800,8 +860,8 @@ export default {
 
             &__chambre2 {
                   position: absolute;
-                  width: 55%;
-                  top: 20%;
+                  width: 50%;
+                  top: 22%;
                   right: 11%;
                   opacity: 0;
 

@@ -443,12 +443,15 @@ export default {
 .gallerie {
       width: 100%;
       background: rgba($color: #fff, $alpha: 0.3);
+      position: relative;
 
       &__return {
-            width: 90%;
+            /*width: 90%;
             margin: auto;
             text-align: left;
-            margin-top: 1em;
+            margin-top: 1em;*/
+            position: fixed;
+            transform: translateY(20em);
 
             button {
                   background: rgb(22, 163, 74);
@@ -465,6 +468,8 @@ export default {
       &__frame {
             width: 90%;
             margin: auto;
+            //margin-left: 4em;
+            transform: translateX(2em);
 
             &--images {
                   display: grid;
