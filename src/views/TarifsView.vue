@@ -217,7 +217,7 @@ export default {
             margin: 1em;
             background: #08a045;
             height: 9em;
-            border-radius: 2em;
+            border-radius: 1em;
 
             h3 {
                   background: #08a045;
