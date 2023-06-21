@@ -245,7 +245,7 @@
                   >
                         <h1 class="font-semibold">Au 1 er étage :</h1>
 
-                        <ul class="w-4/5 mb-2">
+                        <ul class="w-5/6 mb-2">
                               <li
                                     v-for="description in etageDescription"
                                     :key="description.id"
