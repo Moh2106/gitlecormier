@@ -21,7 +21,7 @@ export const accueils = [
 
       {
             id: 5,
-            img: "/pictures/RezDeChausse/rdc_chaumiere3.jpg",
+            img: "/pictures/acceuil/rdc_chaumiere3.jpg",
       },
 
       {

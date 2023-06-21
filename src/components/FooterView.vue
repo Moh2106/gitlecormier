@@ -21,7 +21,7 @@
         <h2 class="mb-4">Réseaux sociaux</h2>
         <div class="flex justify-around contact__icons">
             <p class="px-8" title="facebook ">
-                <a href="https://www.facebook.com/gitelecormier/" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-facebook" class="text-2xl bg-blue-700   hover:scale-125 b"/></a>
+                <a href="https://www.facebook.com/gitelecormier/" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'square-facebook']"  class="text-2xl bg-blue-700   hover:scale-125 b"/></a>
             </p>
 
         </div>
@@ -47,13 +47,17 @@
     <div class="liens">
         <h2 class="mb-2">Liens</h2>
         <div>
-            <p>
+            <a href="https://www.gites-de-france-eure.com/location-vacances-Gite-Hauville-27G818.html" target="_blank">
+                <img src="../assets/Liens/logo_gite_eure_de_france.jpg" alt="logo gite eure de france" class="liens__logo">
+            </a>
+            
+            <!----<p>
                 <a href="https://www.gites-de-france.com/fr/normandie/eure/gite-du-cormier-27g818" target="_blank" rel="noopener noreferrer">Gite le cormier sur le site de Gite de France</a>
             </p>
 
             <p>
                 <a href="https://www.gites-de-france-eure.com/location-vacances-Gite-Hauville-27G818.html" target="_blank" rel="noopener noreferrer">Gite le cormier sur le site de Gite de France Eure</a>
-            </p>
+            </p>-->
         </div>
         
     </div>
@@ -87,16 +91,21 @@ export default {
         }
 
         .liens{
-            div{
+
+            &__logo{
+                width: 50%;
+                margin: auto;
+            }
+            /*div{
                 font-size: 0.9em;
 
                 a{
                     text-decoration: underline;
                 }
-            }
+            }*/
         }
 
-        .a{ 
+        /*.a{ 
             @media screen and (max-width : 768px) {
                 margin: 2em 0;
             }
@@ -105,7 +114,7 @@ export default {
                 margin: 0.5em 0;
         }
             
-        }
+        }*/
         .b{
             &:hover{ 
                     border-radius: 0.5em;

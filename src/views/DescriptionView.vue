@@ -5,13 +5,14 @@
                   data-aos="zoom-out-down"
             >
                   <p>
-                        La chaumière normand du 18è siècle, le charme de
-                        l'ancien et le confort actuel. 3000 m² de jardin
-                        paysager privatif. Une grande terrasse plein Sud, le
-                        jaccuzzi à température, de nombreux jeux pour enfants,
-                        tous les équipements pour cuisiner. Les méandres de la
-                        Seine vous attendent à 10 minutes à vélo, la forêt de
-                        Brotonne 7000ha commence juste au bout de la rue.
+                        La chaumière normande du 18 <sup>ème </sup> siècle, le
+                        charme de l'ancien avec le confort actuel. 3000 m² de
+                        jardin paysager privatif. Une grande terrasse plein Sud,
+                        le jaccuzzi à température, de nombreux jeux pour
+                        enfants, tous les équipements pour cuisiner. Les
+                        méandres de la Seine vous attendent à 10 minutes à vélo,
+                        et la forêt de Brotonne (7000ha) commence juste au bout
+                        de la rue.
                   </p>
             </div>
 
@@ -45,7 +46,7 @@
 
                   <!----------------Texte descriptif -------------------------------->
                   <div
-                        class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left rounded-lg"
+                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg"
                         data-aos="fade-left"
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
@@ -66,13 +67,13 @@
                         </ul>
 
                         <div
-                              class="plan"
+                              class="plan mr-8"
                               data-aos="fade-left"
                               data-aos-duration="500"
                               data-aos-easing="ease-in"
                         >
                               <img
-                                    src="../assets/RezDeChaussee/gite_le_cormier_rdc_plan.jpg"
+                                    src="../assets/RezDeChaussee/gite_le_cormier_rdc_plan.png"
                                     alt=""
                               />
 
@@ -84,25 +85,31 @@
                                           v-on:mouseleave="
                                                 supprimeChambreRdcItemsStyle
                                           "
+                                          class="chambre_plan_button"
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#chambre-rez-de-chaussee"
                                           >
                                                 <img
-                                                      src="../assets/RezDeChaussee/rdc_chambre_plan.jpg"
+                                                      src="../assets/RezDeChaussee/rdc_chambre_plan_1.jpg"
                                                       alt=""
-                                                      class="plan__rdc-chambre"
+                                                      class="plan__rdc-chambre_1"
+                                                />
+
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_chambre_plan_2.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-chambre_2"
                                                 />
                                           </a>
                                     </button>
 
                                     <button
-                                          v-on:mouseenter="
-                                                afficheSdbRdcItems
-                                          "
+                                          v-on:mouseenter="afficheSdbRdcItems"
                                           v-on:mouseleave="
                                                 supprimeSdbRdcItemsStyle
                                           "
+                                          class="plan__rdc-sdb"
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#salle-de-bain"
@@ -110,7 +117,6 @@
                                                 <img
                                                       src="../assets/RezDeChaussee/rdc_sdb_plan.jpg"
                                                       alt=""
-                                                      class="plan__rdc-sdb"
                                                 />
                                           </a>
                                     </button>
@@ -120,14 +126,21 @@
                                           v-on:mouseleave="
                                                 supprimeCuisineItemsStyle
                                           "
+                                          class="cuisine_plan_button"
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#cuisine"
                                           >
                                                 <img
-                                                      src="../assets/RezDeChaussee/rdc_cuisine_plan.jpg"
+                                                      src="../assets/RezDeChaussee/rdc_cuisine_plan_1.jpg"
                                                       alt=""
-                                                      class="plan__rdc-cuisine"
+                                                      class="plan__rdc-cuisine_1"
+                                                />
+
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_cuisine_plan_2.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-cuisine_2"
                                                 />
                                           </a>
                                     </button>
@@ -137,12 +150,12 @@
                                           v-on:mouseleave="
                                                 supprimeSalonItemsStyle
                                           "
+                                          class="plan__rdc-salon"
                                     >
                                           <a href="/descriptifs/gallerie#salon">
                                                 <img
                                                       src="../assets/RezDeChaussee/rdc_salon_plan.jpg"
                                                       alt=""
-                                                      class="plan__rdc-salon"
                                                 />
                                           </a>
                                     </button>
@@ -154,6 +167,7 @@
                                           v-on:mouseleave="
                                                 supprimeSalleAMangerItemsStyle
                                           "
+                                          class="plan__rdc-sejour"
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#salle-a-manger"
@@ -161,7 +175,6 @@
                                                 <img
                                                       src="../assets/RezDeChaussee/rdc_sejour_plan.jpg"
                                                       alt=""
-                                                      class="plan__rdc-sejour"
                                                 />
                                           </a>
                                     </button>
@@ -173,6 +186,7 @@
                                           v-on:mouseleave="
                                                 supprimeBuanderieItemsStyle
                                           "
+                                          class="plan__rdc-buanderie"
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#salle-a-manger"
@@ -180,7 +194,6 @@
                                                 <img
                                                       src="../assets/RezDeChaussee/rdc_buanderie_plan.jpg"
                                                       alt=""
-                                                      class="plan__rdc-buanderie"
                                                 />
                                           </a>
                                     </button>
@@ -190,12 +203,9 @@
                         </div>
 
                         <div
-                              data-aos="fade-left"
-                              data-aos-duration="500"
-                              data-aos-easing="ease-in"
                               class="blinking"
                         >
-                              Passer la souris sur le plan pour plus de détails
+                              Passer la souris sur le plan pour visiter
                         </div>
                   </div>
             </div>
@@ -228,7 +238,7 @@
 
                   <!----------------Texte descriptif -------------------------------->
                   <div
-                        class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left rounded-lg"
+                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg"
                         data-aos="fade-left"
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
@@ -247,8 +257,11 @@
                                     {{ description.details }}
                               </li>
 
+                              </ul>
+
+                              <!-- Le plan du 1er étage -->
                               <div
-                                    class="plan mt-2"
+                                    class="plan mt-2 mr-8"
                                     data-aos="fade-left"
                                     data-aos-duration="500"
                                     data-aos-easing="ease-in"
@@ -259,46 +272,65 @@
                                     />
                                     <div>
                                           <button
-                                          v-on:mouseenter="
-                                                afficheChambre2EtageItems
-                                          "
-                                          v-on:mouseleave="
-                                                supprimeChambre2EtageItemsStyle
-                                          "
+                                                v-on:mouseenter="
+                                                      afficheChambre2EtageItems
+                                                "
+                                                v-on:mouseleave="
+                                                      supprimeChambre2EtageItemsStyle
+                                                "
+                                                class="etage1_chambre1"
                                           >
                                                 <a
                                                       href="/descriptifs/gallerie#chambre1"
                                                 >
                                                       <img
-                                                            src="../assets/Etage/etage1_chambre1.jpg"
+                                                            src="../assets/Etage/etage1_chambre1_1.jpg"
                                                             alt=""
-                                                            class="plan__chambre1"
-                  
+                                                            class="plan__chambre1_1"
+                                                      />
+
+                                                      <img
+                                                            src="../assets/Etage/etage1_chambre1_2.jpg"
+                                                            alt=""
+                                                            class="plan__chambre1_2"
                                                       />
                                                 </a>
                                           </button>
 
                                           <button
-                                          v-on:mouseenter="
-                                                afficheChambre1EtageItems
-                                          "
-                                          v-on:mouseleave="
-                                                supprimeChambre1EtageItemsStyle
-                                          "
+                                                v-on:mouseenter="
+                                                      afficheChambre1EtageItems
+                                                "
+                                                v-on:mouseleave="
+                                                      supprimeChambre1EtageItemsStyle
+                                                "
+                                                class="etage1_chambre2"
                                           >
                                                 <a
                                                       href="/descriptifs/gallerie#chambre2"
                                                 >
                                                       <img
-                                                            src="../assets/Etage/etage1_chambre2.jpg"
+                                                            src="../assets/Etage/etage1_chambre2_1.jpg"
                                                             alt=""
-                                                            class="plan__chambre2"
+                                                            class="plan__chambre2_1"
+                                                      />
+
+                                                      <img
+                                                            src="../assets/Etage/etage1_chambre2_2.jpg"
+                                                            alt=""
+                                                            class="plan__chambre2_2"
                                                       />
                                                 </a>
                                           </button>
                                     </div>
                               </div>
-                        </ul>
+
+                              <div
+                              class="blinking"
+                        >
+                              Passer la souris sur le plan pour visiter
+                        </div>
+                        
                   </div>
             </div>
 
@@ -320,7 +352,7 @@
                         data-aos-easing="ease-in-out"
                   >
                         <swiper-slide
-                              v-for="jardin in jardin_database"
+                              v-for="jardin in jardins"
                               :key="jardin.id"
                         >
                               <img :src="jardin.img" alt="" class="b" />
@@ -329,7 +361,7 @@
 
                   <!----------------Texte descriptif -------------------------------->
                   <div
-                        class="bg-white w-1/3 bg-opacity-90 pt-8 pl-8 text-left rounded-lg description"
+                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg description"
                         data-aos="fade-left"
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
@@ -354,29 +386,23 @@
                               data-aos-duration="500"
                               data-aos-easing="ease-in"
                         >
-                              <img
-                                    src="../assets/Jardin/jardin528.jpg"
-                                    alt=""
-                              />
+                              <button>
+                                    <a href="/descriptifs/gallerie#jardin">
+                                          <img
+                                                src="../assets/Jardin/plan_du_jardin.jpg"
+                                                alt=""
+                                          />
+                                    </a>
+                              </button>
+                        </div>
 
-                              <div>
-                                    <router-link to="">Jardin</router-link>
-                              </div>
+                        <div
+                              class="blinking"
+                        >
+                              Passer la souris sur le plan pour visiter
                         </div>
                   </div>
             </div>
-
-            <!----------------------Lien vers gallery photo ----------------------------->
-            <!--<div class="descriptif__gallery">
-                  <button>
-                        <router-link
-                              to="/descriptifs/gallerie"
-                              class="bg-green-600 text-white font-bold p-2 rounded-lg hover:bg-green-700"
-                        >
-                              Gallerie photo
-                        </router-link>
-                  </button>
-            </div>-->
       </div>
 </template>
 
@@ -384,13 +410,8 @@
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 
-// import jardin dataset
-import { jardin_database } from "../database/jardin";
-// import rez de chausse dataset
-import { rezDeChausses, etages } from "../database/descriptif";
-import { rezDeChausseDatabase } from "../database/rezdechausse";
-// import etage dataset
-//import { etages } from "../database/etage";
+// import rez de chausse, etages, jardins database
+import { rezDeChausses, etages, jardins } from "../database/descriptif";
 
 // Import Swiper styles
 import "swiper/css";
@@ -469,26 +490,17 @@ export default {
                   chambre.classList.remove("applyActive");
             };
 
-
             // La salle de bain du rez de chausse
             const afficheSdbRdcItems = () => {
                   const salleDeau = document.getElementById("rdc_salledeau");
 
-                  const wc = document.getElementById("rdc_wc");
-
                   salleDeau.classList.add("applyActive");
-
-                  wc.classList.add("applyActive");
             };
 
             const supprimeSdbRdcItemsStyle = () => {
                   const salleDeau = document.getElementById("rdc_salledeau");
 
-                  const wc = document.getElementById("rdc_wc");
-
                   salleDeau.classList.remove("applyActive");
-
-                  wc.classList.remove("applyActive");
             };
 
             // La chambre 1 du 1er étage
@@ -502,7 +514,6 @@ export default {
                   const chambre1 = document.getElementById("etage_chambre1");
 
                   chambre1.classList.remove("applyActive");
-
             };
 
             // La chambre 2 du 1er étage
@@ -526,32 +537,32 @@ export default {
 
                   {
                         id: 2,
-                        details: "SPA (Jaccuzzi)",
+                        details: "Le jaccuzzi",
                   },
 
                   {
                         id: 3,
-                        details: "Garage",
+                        details: "Le garage",
                   },
 
                   {
                         id: 4,
-                        details: "Bassin (avec poissons rouges)",
+                        details: "Le bassin des poissons rouges",
                   },
 
                   {
                         id: 4,
-                        details: "Jeux",
+                        details: "Les jeux",
                   },
 
                   {
                         id: 6,
-                        details: "Barbecue",
+                        details: "Le barbecue",
                   },
 
                   {
                         id: 7,
-                        details: "Ping Pong",
+                        details: "La table de Ping Pong",
                   },
             ];
 
@@ -559,19 +570,19 @@ export default {
                   {
                         id: 1,
                         details: "1 chambre palière (1 lit 1 personne)",
-                        class: "etage_chambre1"
+                        class: "etage_chambre1",
                   },
 
                   {
                         id: 2,
                         details: "Placard",
-                        class: "etage_placard"
+                        class: "etage_placard",
                   },
 
                   {
                         id: 3,
                         details: "1 chambre (2 lits 1 personnes)",
-                        class: "etage_chambre2"
+                        class: "etage_chambre2",
                   },
             ];
 
@@ -587,7 +598,6 @@ export default {
                         details: "Salle à manger",
                         class: "rdc_sam",
                   },
-
 
                   {
                         id: 3,
@@ -623,17 +633,12 @@ export default {
             return {
                   modules: [Pagination, Navigation],
                   rezDeChausses,
-                  jardin_database,
-                  rezDeChausseDatabase,
                   etages,
+                  jardins,
                   jardinDescription,
                   etageDescription,
                   rdcDescription,
 
-                  //isHovered,
-                  //elementStyle,
-                  //applyStyle,
-                  //removeStyle,
                   afficheSdbRdcItems,
                   supprimeSdbRdcItemsStyle,
                   afficheChambreRdcItems,
@@ -649,7 +654,7 @@ export default {
                   afficheChambre1EtageItems,
                   supprimeChambre1EtageItemsStyle,
                   afficheChambre2EtageItems,
-                  supprimeChambre2EtageItemsStyle
+                  supprimeChambre2EtageItemsStyle,
             };
       },
 };
@@ -668,19 +673,25 @@ export default {
 }
 
 .blinking {
-  animation: blink 2s infinite;
+      animation: blink 2s infinite;
 }
 
 @keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+      0% {
+            opacity: 1;
+      }
+      50% {
+            opacity: 0;
+      }
+      100% {
+            opacity: 1;
+      }
 }
 
 .applyActive {
       //transform: translateX(2em);
       transition: 2s ease-in-out;
-      margin-left: 2em;
+      margin-left: -0.5em;
       background: #08a045;
       border-radius: 0.5em;
       color: #fff;
@@ -726,7 +737,6 @@ export default {
       }
 
       &__paragraph {
-            //background: #386641;
             background: #08a045;
             color: #fff;
             border-radius: 0.5em;
@@ -768,121 +778,158 @@ export default {
       .plan {
             position: relative;
 
-            &__rdc-chambre {
+            &__rdc-chambre_1 {
                   position: absolute;
-                  width: 21.5%;
-                  top: 22%;
-                  left: 2%;
+                  width: 18%;
+                  top: 21%;
+                  left: 1%;
+            }
+
+            &__rdc-chambre_2 {
+                  position: absolute;
+                  width: 23%;
+                  bottom: 18%;
+                  left: 1%;
+            }
+
+            .chambre_plan_button {
                   opacity: 0;
 
                   &:hover {
                         transition: 0.5s ease-in;
-                        opacity: 1;
+                        opacity: 0.4;
                   }
             }
 
             &__rdc-sdb {
                   position: absolute;
-                  width: 17%;
-                  top: 22%;
-                  left: 18%;
+                  width: 20%;
+                  top: 21%;
+                  left: 19%;
                   opacity: 0;
 
                   &:hover {
                         transition: 0.5s ease-in;
-                        opacity: 1;
+                        opacity: 0.4;
                   }
             }
 
-            &__rdc-cuisine {
-                  position: absolute;
-                  width: 21%;
-                  top: 22%;
-                  left: 23%;
+            .cuisine_plan_button {
                   opacity: 0;
 
                   &:hover {
                         transition: 0.5s ease-in;
-                        opacity: 1;
+                        opacity: 0.4;
                   }
+            }
+
+            &__rdc-cuisine_1 {
+                  position: absolute;
+                  width: 10%;
+                  top: 21%;
+                  left: 38%;
+            }
+
+            &__rdc-cuisine_2 {
+                  position: absolute;
+                  width: 23%;
+                  bottom: 17%;
+                  left: 25%;
             }
 
             &__rdc-salon {
                   position: absolute;
-                  width: 25%;
-                  top: 22%;
-                  right: 32%;
+                  width: 26%;
+                  top: 21%;
+                  right: 26%;
                   opacity: 0;
 
                   &:hover {
                         transition: 0.5s ease-in;
-                        opacity: 1;
+                        opacity: 0.4;
                   }
             }
 
             &__rdc-sejour {
                   position: absolute;
-                  width: 21%;
+                  width: 25%;
                   top: 21%;
-                  right: 12%;
+                  right: 0.8%;
                   opacity: 0;
 
                   &:hover {
                         transition: 0.5s ease-in;
-                        opacity: 0.7;
+                        opacity: 0.4;
                   }
             }
 
             &__rdc-buanderie {
                   position: absolute;
-                  width: 21%;
-                  top: 11%;
-                  right: 37%;
+                  width: 23%;
+                  top: 1.5%;
+                  right: 29.5%;
                   opacity: 0;
 
                   &:hover {
                         transition: 0.5s ease-in;
-                        opacity: 0.7;
+                        opacity: 0.4;
                   }
             }
 
-            &__chambre1 {
+            // Les chambres de l'étage 1
+
+            // chambre 1
+            &__chambre1_1 {
                   position: absolute;
-                  width: 45%;
+                  width: 41%;
                   top: 20%;
-                  opacity: 0;
-
-                  &:hover {
-                        transition: 0.5s ease-in;
-                        opacity: 1;
-                  }
+                  left: 1.5%;
             }
 
-            &__chambre2 {
+            &__chambre1_2 {
                   position: absolute;
-                  width: 50%;
-                  top: 22%;
-                  right: 11%;
+                  width: 17.5%;
+                  bottom: 34%;
+                  left: 38%;
+                  //top: 20%;
+            }
+
+            .etage1_chambre1 {
                   opacity: 0;
 
                   &:hover {
                         transition: 0.5s ease-in;
-                        opacity: 1;
+                        opacity: 0.4;
                   }
             }
 
-            //*button{
+            // chambre 2
+            &__chambre2_1 {
+                  position: absolute;
+                  width: 43%;
+                  top: 21%;
+                  right: 3%;
+            }
 
-            /*&__chambre1 {
-                        position: absolute;
-                        width: 20%;
-                        top: 1%;
+            &__chambre2_2 {
+                  position: absolute;
+                  width: 20%;
+                  top: 21%;
+                  left: 42%;
+            }
+
+            .etage1_chambre2 {
+                  opacity: 0;
+
+                  &:hover {
+                        transition: 0.5s ease-in;
+                        opacity: 0.4;
                   }
-            }*/
+            }
       }
 
       &__section {
-            // width: 90%;
+             width: 90%;
 
             @media screen and (max-width: 768px) {
                   display: block;

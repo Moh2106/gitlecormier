@@ -4,7 +4,7 @@ export const rezDeChausses = [
             img: "/pictures/descriptif/salon/rdc_chaumiere5.jpg",
             alt: "Salon",
       },
-      
+
       {
             id: 1,
             img: "/pictures/descriptif/sallemanger/rdc_salon2.jpg",
@@ -15,6 +15,12 @@ export const rezDeChausses = [
             id: 3,
             img: "/pictures/descriptif/cuisine/rdc_cuisine3.jpg",
             alt: "Cuisine",
+      },
+
+      {
+            id: 6,
+            img: "/pictures/descriptif/buanderie/rdc_machine_a_laver.jpg",
+            alt: "Buanderie",
       },
 
       {
@@ -52,57 +58,56 @@ export const etages = [
 
 export const jardins = [
       {
-            id: 1,
-            img: "/pictures/descriptif/jardin/image106.jpg",
-            alt: "Salle à manger",
-      },
-
-      {
-            id: 2,
-            img: "/pictures/descriptif/jardin/image119.jpg",
-            alt: "Salle à manger",
-      },
-
-      {
-            id: 3,
-            img: "/pictures/descriptif/jardin/image124.jpg",
-            alt: "Salle à manger",
+            id: 9,
+            img: "/pictures/descriptif/jardin/jardin_terrasse.jpg",
+            alt: "jardin_terrasse.jpg",
       },
 
       {
             id: 4,
-            img: "/pictures/descriptif/jardin/image129.jpg",
-            alt: "Salle à manger",
+            img: "/pictures/descriptif/jardin/fleur_jardin.jpg",
+            alt: "Fleur dans le jardin",
+      },
+
+      {
+            id: 2,
+            img: "/pictures/descriptif/jardin/chaise_jardin_2.jpg",
+            alt: "Chaise jardin",
+      },
+
+      {
+            id: 3,
+            img: "/pictures/descriptif/jardin/chaise_jardin.jpg",
+            alt: "Chaise jardin",
+      },
+
+      {
+            id: 1,
+            img: "/pictures/descriptif/jardin/barbecue.jpg",
+            alt: "Barbecue",
       },
 
       {
             id: 5,
-            img: "/pictures/descriptif/jardin/RMV_5554.jpg",
-            alt: "Salle à manger",
+            img: "/pictures/descriptif/jardin/jaccuzzi.jpg",
+            alt: "Jaccuzzi",
       },
 
       {
             id: 6,
-            img: "/pictures/descriptif/jardin/RMV_5555.jpg",
-            alt: "Salle à manger",
+            img: "/pictures/descriptif/jardin/jeux_enfants.jpg",
+            alt: "Jeux pour enfants",
       },
 
       {
             id: 7,
-            img: "/pictures/descriptif/jardin/RMV_5557.jpg",
-            alt: "Salle à manger",
+            img: "/pictures/descriptif/jardin/table_festin_jardin.jpg",
+            alt: "Table festin jardin.jpg",
       },
 
       {
             id: 8,
-            img: "/pictures/descriptif/jardin/RMV_5561.jpg",
-            alt: "Salle à manger",
+            img: "/pictures/descriptif/jardin/table_ping_pong.jpg",
+            alt: "Table de ping_pong",
       },
-
-      {
-            id: 9,
-            img: "/pictures/descriptif/jardin/RMV_5649.jpg",
-            alt: "Salle à manger",
-      },
-
 ];

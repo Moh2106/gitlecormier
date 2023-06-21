@@ -17,18 +17,6 @@
                   ></iframe>
             </div>
 
-            <!--
-      Ici on saisira un texte qui sera le nom du lieu dans le input pour faire la recherche d'un lieu
-    -->
-            <div class="alentours__search">
-                  <input
-                        type="search"
-                        name=""
-                        id=""
-                        v-model="site"
-                        placeholder="Rechercher un lieu"
-                  />
-            </div>
 
             <!-- 
       Insertion des données comme les photos, le nom des sites aux alentours, le site web
@@ -37,7 +25,7 @@
 
             <div class="monEnsemble">
                   <div
-                        v-for="alentour in newAlentoursArrays"
+                        v-for="alentour in alentours"
                         :key="alentour.id"
                         class="monEnsemble__element"
                   >
@@ -73,7 +61,8 @@
                                           class="font-bold"
                                     ></h1>
                                     <button class="bg-red-600">
-                                          Site officiel
+                                          <a :href="alentour.site" target="_blank" rel="noopener noreferrer">Site officiel</a>
+                                          
                                     </button>
                               </div>
                         </div>
@@ -99,45 +88,28 @@
 <script>
 import { ref } from "@vue/reactivity";
 import { alentours } from "../database/alentours";
-import { watch } from "vue";
 
 export default {
       setup() {
             var mapsButton = ref(false);
-            var site = ref("");
             var result = ref(true);
-
-            var newAlentoursArrays = ref([]);
-            newAlentoursArrays.value = alentours;
 
             /*
       Dans cette partie on recupère le mot saisi dans le input concernant la recherche d'un lieu
       Ensuite on effectue une recherche sur le tableau alentours récupéré depuis notre base de donnée alentours.js
       On stocke ensuite les résultats dans un tableau newAlentoursArrays
     */
-            watch(site, (nouveau) => {
+           /* watch(site, (nouveau) => {
                   console.log(site.value + nouveau);
                   let alentourArray = alentours.filter((element) =>
                         element.titre.includes(nouveau.toUpperCase())
                   );
                   newAlentoursArrays.value = alentourArray;
-            });
-
-            /*
-      Cette fonction est là pour comparer les valeurs des champs maps et sites
-      Si la valeur existe il l'affiche, sinon pas d'affiche
-    */
-            function compare(value) {
-                  var result = value.localeCompare("");
-                  var resultat = result == 0 ? false : true;
-                  return resultat;
-            }
+            });*/
 
             return {
-                  compare,
                   mapsButton,
-                  site,
-                  newAlentoursArrays,
+                  alentours,
                   result,
             };
       },

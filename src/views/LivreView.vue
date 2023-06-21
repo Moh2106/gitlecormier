@@ -17,9 +17,10 @@
                         src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis&affichequenoteglobale=1"
                         
                   ></iframe>
+
               </div>
 
-                  <p class="iframe w-2/3 flex items-center justify-center h-[4em]">
+                  <p class="iframe w-2/3 flex items-center justify-center h-[3.65em] mt-2">
                       Un grand merci à nos hôtes pour leurs commentaires laissés sur le site de gite de France !
                         <!--Voici les commentaires qui ont été émis par nos hôtes.
                         Vous les retrouverez sur le site de gite de France-->

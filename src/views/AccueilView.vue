@@ -66,7 +66,7 @@
             >
                   <div class="accueil__gallery--items" @click="Cliquer">
                         <img
-                              src="../../public/pictures/Jardin/photo_jardin19.jpg"
+                              src="../../public/pictures/descriptif/jardin/jeux_enfants.jpg"
                               alt=""
                         />
                         <div>
@@ -93,7 +93,7 @@
 
                   <div class="accueil__gallery--items" @click="Cliquer">
                         <img
-                              src="../../public/pictures/Jardin/photo_jardin8.jpg"
+                              src="../../public/pictures/descriptif/jardin/jaccuzzi.jpg"
                               alt=""
                         />
                         <div>
@@ -119,7 +119,7 @@
 
                   <div class="accueil__gallery--items" @click="Cliquer">
                         <img
-                              src="../../public/pictures/RezDeChausse/rdc_chaumiere3.jpg"
+                              src="../assets/RezDeChaussee/rdc_chaumiere3.jpg"
                               alt=""
                         />
                         <div>

@@ -13,9 +13,12 @@
             </div>
 
             <!------------------- CHAMBRE DU REZ DE CHAUSSE -------------------------------------->
-            <div class="gallerie__frame" >
-                  <h1 class="title bubble-bottom" id="chambre-rez-de-chaussee">
-                        Chambre du Rez de chaussee
+            <div class="gallerie__frame">
+                  <h1
+                        class="title bubble-bottom w-[100%]"
+                        id="chambre-rez-de-chaussee"
+                  >
+                        Chambre Rez de chaussée
                   </h1>
 
                   <div class="gallerie__frame--images mb-4">
@@ -24,7 +27,7 @@
                                     :src="rdc.img"
                                     :alt="rdc.alt"
                                     @click="Cliquer"
-                                    class="items"
+                                    class="items original"
                               />
                         </div>
 
@@ -42,7 +45,7 @@
                                     :src="cuisine.img"
                                     :alt="cuisine.alt"
                                     @click="Cliquer"
-                                    class="items"
+                                    class="items original"
                               />
                         </div>
 
@@ -63,7 +66,7 @@
             </div>
 
             <!------------------- SALON DU REZ DE CHAUSSE -------------------------------------->
-            <div class="gallerie__frame" >
+            <div class="gallerie__frame">
                   <h1 class="title bubble-bottom" id="salon">Le salon</h1>
 
                   <div class="gallerie__frame--images mb-4">
@@ -72,7 +75,7 @@
                                     :src="salon.img"
                                     :alt="salon.alt"
                                     @click="Cliquer"
-                                    class="items"
+                                    class="items original "
                               />
                         </div>
 
@@ -93,8 +96,10 @@
             </div>
 
             <!------------------- SALLE A MANGER -------------------------------------->
-            <div class="gallerie__frame" >
-                  <h1 class="title bubble-bottom" id="salle-a-manger">La salle à manger</h1>
+            <div class="gallerie__frame">
+                  <h1 class="title bubble-bottom" id="salle-a-manger">
+                        La salle à manger
+                  </h1>
 
                   <div class="gallerie__frame--images mb-4">
                         <div v-for="salle in sallesAManger" :key="salle.id">
@@ -102,7 +107,7 @@
                                     :src="salle.img"
                                     :alt="salle.alt"
                                     @click="Cliquer"
-                                    class="items"
+                                    class="items original"
                               />
                         </div>
 
@@ -123,8 +128,10 @@
             </div>
 
             <!------------------- SALLE DE BAIN -------------------------------------->
-            <div class="gallerie__frame" >
-                  <h1 class="title bubble-bottom" id="salle-de-bain">La salle de bain</h1>
+            <div class="gallerie__frame">
+                  <h1 class="title bubble-bottom" id="salle-de-bain">
+                        La salle de bain
+                  </h1>
 
                   <div class="gallerie__frame--images mb-4">
                         <div v-for="salle in sallesDeBain" :key="salle.id">
@@ -132,7 +139,7 @@
                                     :src="salle.img"
                                     :alt="salle.alt"
                                     @click="Cliquer"
-                                    class="items"
+                                    class="items original"
                               />
                         </div>
 
@@ -154,16 +161,21 @@
 
             <!------------------- 1 ER ETAGE -- CHAMBRE 1 -------------------------------->
 
-            <div class="gallerie__frame" >
-                  <h1 class="title bubble-bottom" id="chambre1">Chambre 1 Etage</h1>
+            <div class="gallerie__frame">
+                  <h1 class="title bubble-bottom" id="chambre1">
+                        Etage 1 Chambre 1
+                  </h1>
 
                   <div class="gallerie__frame--images mb-4">
-                        <div v-for="chambre1 in chambre1Etages" :key="chambre1.id">
+                        <div
+                              v-for="chambre1 in chambre1Etages"
+                              :key="chambre1.id"
+                        >
                               <img
                                     :src="chambre1.img"
                                     :alt="chambre1.alt"
                                     @click="Cliquer"
-                                    class="items"
+                                    class="items original"
                               />
                         </div>
 
@@ -186,15 +198,20 @@
             <!--------------------1 ER ETAGE -- CHAMBRE 2----------------------------------------->
 
             <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom" id="chambre2">Chambre 2 Etage</h1>
+                  <h1 class="title bubble-bottom" id="chambre2">
+                         Etage 1 Chambre 2
+                  </h1>
 
                   <div class="gallerie__frame--images mb-4">
-                        <div v-for="chambre2 in chambre2Etages" :key="chambre2.id">
+                        <div
+                              v-for="chambre2 in chambre2Etages"
+                              :key="chambre2.id"
+                        >
                               <img
                                     :src="chambre2.img"
                                     :alt="chambre2.alt"
                                     @click="Cliquer"
-                                    class="items"
+                                    class="items original"
                               />
                         </div>
 
@@ -214,11 +231,10 @@
                   </div>
             </div>
 
-
             <!-------------------- JARDIN ----------------------------------------->
 
             <div class="gallerie__frame" id="jardin">
-                  <h1 class="title bubble-bottom"> Le jardin </h1>
+                  <h1 class="title bubble-bottom">Le jardin</h1>
 
                   <div class="gallerie__frame--images mb-4">
                         <div v-for="jardin in jardins" :key="jardin.id">
@@ -226,7 +242,7 @@
                                     :src="jardin.img"
                                     :alt="jardin.alt"
                                     @click="Cliquer"
-                                    class="items"
+                                    class="items original"
                               />
                         </div>
 
@@ -276,9 +292,6 @@
                   </div>
             </div>
 
-
-            
-
             <!--------------Boutton de redirection------------------------------>
             <div class="text-right">
                   <button>
@@ -294,10 +307,25 @@
 </template>
 
 <script>
-import { rezDeChausseDatabase } from "../database/rezdechausse";
+//import { rezDeChausseDatabase } from "../database/rezdechausse";
 import { etages } from "../database/etage";
 import { jardin_database } from "../database/jardin";
-import { chambresRdc, cuisines, cuisinesDetails, salons, salonsDetails, sallesDeBain, chambre1Etages, chambre1EtagesDetails, sallesAManger, sallesAMangerDetails, chambre2Etages, chambre2EtagesDetails, jardins, jardinsDetails } from "../database/gallerie";
+import {
+      chambresRdc,
+      cuisines,
+      cuisinesDetails,
+      salons,
+      salonsDetails,
+      sallesDeBain,
+      chambre1Etages,
+      chambre1EtagesDetails,
+      sallesAManger,
+      sallesAMangerDetails,
+      chambre2Etages,
+      chambre2EtagesDetails,
+      jardins,
+      jardinsDetails,
+} from "../database/gallerie";
 //import { sallesAManger } from "../database/gallerie";
 
 export default {
@@ -430,8 +458,7 @@ export default {
                   jardins,
                   jardinsDetails,
 
-
-                  rezDeChausseDatabase,
+                  //rezDeChausseDatabase,
                   etages,
                   jardin_database,
             };
@@ -474,13 +501,19 @@ export default {
             &--images {
                   display: grid;
                   grid-template-columns: repeat(2, 1fr);
+                  grid-auto-flow: dense;
                   grid-gap: 0.5rem;
+
+                  .original {
+                        width: auto;
+                        height: 63vh;
+                  }
 
                   div {
                         img {
-                              object-fit: cover;
                               border-radius: 0.5em;
                               cursor: pointer;
+                              object-fit: contain;
                         }
                   }
 

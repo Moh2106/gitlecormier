@@ -1,15 +1,13 @@
 <template class="relative">
-  <div class="flex justify-between header ">
+  <div class="header">
     <div class="first ">
       
       <div class="flex">
-        <font-awesome-icon icon="house-chimney-crack" style="color: #1abc71;" class="text-5xl"/>
+        <img src="../assets//Liens/logo_gite_france.png" alt="" class="w-[10%]">
+        <!----<font-awesome-icon icon="house-chimney-crack" style="color: #1abc71;" class="text-5xl"/>-->
         <h1 class="header__title ">
-        
-          <!--Gite <br> 
-          <span>Le Cormier </span> -->
 
-          𝕲𝖎𝖙𝖊 𝖑𝖊 𝖈𝖔𝖗𝖒𝖎𝖊𝖗
+          𝕲î𝖙𝖊 𝖑𝖊 𝖈𝖔𝖗𝖒𝖎𝖊𝖗
         </h1>
       </div>
       
@@ -20,7 +18,6 @@
 
     <nav id="afficheMenu" class="a">
         <router-link to="/" v-on:click="supprimerMenu">Accueil</router-link>
-        <!--<router-link to="/liens" v-on:click="supprimerMenu">Liens</router-link>-->
         <router-link to="/descriptifs" >Descriptifs</router-link>
         <router-link to="/comment-arriver" >Comment arriver</router-link>
         <router-link to="/alentours" >Aux Alentours</router-link>
@@ -72,8 +69,10 @@ export default {
 
 <style lang="scss" scoped>
 .header{
+  display: flex;
+  justify-content: flex-start;
   color: #fff;
-  backdrop-filter: contrast(45%) brightness(95%) blur(250px);
+  backdrop-filter: brightness(95%)  blur(3px);
   height: 7.5vh;
   font-family: 'Poppins', sans-serif;
   position: fixed;
@@ -82,6 +81,8 @@ export default {
   right: 0;
   left: 0;
   z-index: 100000;
+  width: 100%;
+
 
   @media screen and (max-width : 768px) {
     display: block;
@@ -147,12 +148,26 @@ export default {
     }
   }
 
+  .flex{
+    //background: #ca0;
+    width: 100%;
+
+    img{
+      object-fit: contain;
+    }
+  }
+
   nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-2em);
+    //transform: translateX(-2em);
     position: relative;
+    //background: red;
+    //padding: 0 5em;
+    width: 160%;
+
+    
 
     @media screen and (max-width : 768px) {
       padding: 0 0.5em 0.5em 0.5em;
@@ -207,6 +222,7 @@ export default {
       font-weight: 700;
       background: #08a045;
       border-radius: 0.5em;
+      color: #fff;
 
       @media screen and (max-width : 768px) {
         border-bottom: 2px solid #fff;
