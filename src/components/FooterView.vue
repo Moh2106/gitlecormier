@@ -1,5 +1,5 @@
 <template>
-  <div class="footer flex justify-around">
+  <div class="footer flex justify-between">
     <!-------------------- -- ADRESSE ------------------------>
     <div>
         <address>
@@ -19,7 +19,7 @@
     <!-------------------- -- RESEAUX SOCIAUX ------------------------>
     <div>
         <h2 class="mb-4">Réseaux sociaux</h2>
-        <div class="flex justify-around contact__icons">
+        <div class="contact__icons">
             <p class="px-8" title="facebook ">
                 <a href="https://www.facebook.com/gitelecormier/" target="_blank" rel="noopener noreferrer"><font-awesome-icon :icon="['fab', 'square-facebook']"  class="text-2xl bg-blue-700   hover:scale-125 b"/></a>
             </p>
@@ -46,18 +46,10 @@
     <!-------------------- -- LIENS ------------------------>
     <div class="liens">
         <h2 class="mb-2">Liens</h2>
-        <div>
+        <div class="liens__logo">
             <a href="https://www.gites-de-france-eure.com/location-vacances-Gite-Hauville-27G818.html" target="_blank">
-                <img src="../assets/Liens/logo_gite_eure_de_france.jpg" alt="logo gite eure de france" class="liens__logo">
+                <img src="../assets/Liens/logo_gite_eure_de_france.jpg" alt="logo gite eure de france" class="hover:scale-105">
             </a>
-            
-            <!----<p>
-                <a href="https://www.gites-de-france.com/fr/normandie/eure/gite-du-cormier-27g818" target="_blank" rel="noopener noreferrer">Gite le cormier sur le site de Gite de France</a>
-            </p>
-
-            <p>
-                <a href="https://www.gites-de-france-eure.com/location-vacances-Gite-Hauville-27G818.html" target="_blank" rel="noopener noreferrer">Gite le cormier sur le site de Gite de France Eure</a>
-            </p>-->
         </div>
         
     </div>
@@ -77,6 +69,8 @@ export default {
         background: #08a045;
         height: 15vh;
         color: #fff;
+        padding: 0 2em;
+        //border: 3px solid #fff;
 
         @media screen and (max-width : 768px) {
             display: block;
@@ -91,18 +85,15 @@ export default {
         }
 
         .liens{
-
+            width: 18%;
+            //border: 3px solid rgb(0, 26, 255);
+            
             &__logo{
-                width: 50%;
-                margin: auto;
+                width: 100%;
+                //margin: auto;
+                margin-bottom: 0.5em;
             }
-            /*div{
-                font-size: 0.9em;
-
-                a{
-                    text-decoration: underline;
-                }
-            }*/
+            
         }
 
         /*.a{ 

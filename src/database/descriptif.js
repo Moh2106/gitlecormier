@@ -18,12 +18,6 @@ export const rezDeChausses = [
       },
 
       {
-            id: 6,
-            img: "/pictures/descriptif/buanderie/rdc_machine_a_laver.jpg",
-            alt: "Buanderie",
-      },
-
-      {
             id: 4,
             img: "/pictures/descriptif/chambrerdc/rdc_chambre7.jpg",
             alt: "Chambre",
@@ -58,16 +52,28 @@ export const etages = [
 
 export const jardins = [
       {
+            id: 10,
+            img: "/pictures/descriptif/jardin/jardin_vue_ensemble.jpg",
+            alt: "Jardin vue d'ensemble",
+      },
+
+      {
+            id: 11,
+            img: "/pictures/descriptif/jardin/jardin_vue_ensemble_2.jpg",
+            alt: "Jardin vue d'ensemble",
+      },
+
+      {
             id: 9,
             img: "/pictures/descriptif/jardin/jardin_terrasse.jpg",
             alt: "jardin_terrasse.jpg",
       },
 
-      {
+      /*{
             id: 4,
             img: "/pictures/descriptif/jardin/fleur_jardin.jpg",
             alt: "Fleur dans le jardin",
-      },
+      },*/
 
       {
             id: 2,
@@ -79,12 +85,6 @@ export const jardins = [
             id: 3,
             img: "/pictures/descriptif/jardin/chaise_jardin.jpg",
             alt: "Chaise jardin",
-      },
-
-      {
-            id: 1,
-            img: "/pictures/descriptif/jardin/barbecue.jpg",
-            alt: "Barbecue",
       },
 
       {
@@ -103,11 +103,5 @@ export const jardins = [
             id: 7,
             img: "/pictures/descriptif/jardin/table_festin_jardin.jpg",
             alt: "Table festin jardin.jpg",
-      },
-
-      {
-            id: 8,
-            img: "/pictures/descriptif/jardin/table_ping_pong.jpg",
-            alt: "Table de ping_pong",
       },
 ];

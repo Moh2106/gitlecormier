@@ -9,7 +9,8 @@
                         charme de l'ancien avec le confort actuel. 3000 m² de
                         jardin paysager privatif. Une grande terrasse plein Sud,
                         le jaccuzzi à température, de nombreux jeux pour
-                        enfants, tous les équipements pour cuisiner. Les
+                        enfants, tous les équipements pour cuisiner, la fibre internet très haut débit 120 Mo/s. <br>
+                        Les
                         méandres de la Seine vous attendent à 10 minutes à vélo,
                         et la forêt de Brotonne (7000ha) commence juste au bout
                         de la rue.
@@ -189,7 +190,7 @@
                                           class="plan__rdc-buanderie"
                                     >
                                           <a
-                                                href="/descriptifs/gallerie#salle-a-manger"
+                                                href="/descriptifs/gallerie#buanderie"
                                           >
                                                 <img
                                                       src="../assets/RezDeChaussee/rdc_buanderie_plan.jpg"
@@ -267,7 +268,7 @@
                                     data-aos-easing="ease-in"
                               >
                                     <img
-                                          src="../assets/Etage/gite_le_cormier_1er_etage.jpg"
+                                          src="../assets/Etage/plan_etage.jpg"
                                           alt="Plan du 1er étage"
                                     />
                                     <div>
@@ -381,7 +382,7 @@
                         </ul>
 
                         <div
-                              class="plan w-4/5"
+                              class="plan w-[90%]"
                               data-aos="fade-left"
                               data-aos-duration="500"
                               data-aos-easing="ease-in"
@@ -778,6 +779,7 @@ export default {
       .plan {
             position: relative;
 
+            // Rez de chaussee
             &__rdc-chambre_1 {
                   position: absolute;
                   width: 18%;
@@ -881,16 +883,16 @@ export default {
             // chambre 1
             &__chambre1_1 {
                   position: absolute;
-                  width: 41%;
-                  top: 20%;
+                  width: 42%;
+                  top: 22%;
                   left: 1.5%;
             }
 
             &__chambre1_2 {
                   position: absolute;
-                  width: 17.5%;
-                  bottom: 34%;
-                  left: 38%;
+                  width: 19%;
+                  bottom: 19.9%;
+                  left: 36.5%;
                   //top: 20%;
             }
 
@@ -906,16 +908,16 @@ export default {
             // chambre 2
             &__chambre2_1 {
                   position: absolute;
-                  width: 43%;
-                  top: 21%;
-                  right: 3%;
+                  width: 43.5%;
+                  top: 23.5%;
+                  right: 1.5%;
             }
 
             &__chambre2_2 {
                   position: absolute;
                   width: 20%;
-                  top: 21%;
-                  left: 42%;
+                  top: 23.5%;
+                  left: 42.5%;
             }
 
             .etage1_chambre2 {

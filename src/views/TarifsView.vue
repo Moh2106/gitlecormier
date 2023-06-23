@@ -1,185 +1,285 @@
 <template>
       <div class="pt-16 pb-16 tarif">
-            <!-- Insertion des saisons, dates et prix à partir de tarifs de database -->
+            <div class="flex">
+                  <!---------- Armoire de déroulement   ------>
+                  <div class="tarif__part_one">
+                        <div id="tarif_vacance_plus" class="tarif_vacance_plus">
+                              <font-awesome-icon
+                                    icon="circle-plus"
+                                    class="plus"
+                                    v-on:mouseenter="afficheTarifVacance"
+                              />
+                        </div>
 
-            <!--------- Tarifs vacances-->
-            <div>
-                  <h2 class="tarif__title" data-aos="flip-right">
-                        Tarifs vacances (Pour une semaine)
-                  </h2>
-
-                  <div class="pb-4 cards">
                         <div
-                              v-for="tarif in tarifs_vacances"
-                              :key="tarif.id"
-                              class="tarif__card"
+                              id="tarif_basse_saison_plus"
+                              class="tarif_basse_saison_plus"
                         >
-                              <div
-                                    class="bg-white m-4 rounded-lg tarif__card--solo"
-                                    data-aos="zoom-in"
-                              >
-                                    <img
-                                          :src="tarif.photo"
-                                          :alt="tarif.saison"
-                                    />
-                                    <div class="tarif__card--image">
+                              <font-awesome-icon
+                                    icon="circle-plus"
+                                    class="plus"
+                                    v-on:mouseenter="afficheTarifBasseSaison"
+                              />
+                        </div>
+
+                        <div id="tarif_arrive_plus" class="tarif_arrive_plus">
+                              <font-awesome-icon
+                                    icon="circle-plus"
+                                    class="plus"
+                                    v-on:mouseenter="afficheAVotreArrive"
+                              />
+                        </div>
+
+                        <div id="tarif_confort_plus" class="tarif_confort_plus">
+                              <font-awesome-icon
+                                    icon="circle-plus"
+                                    class="plus"
+                                    v-on:mouseenter="affichePourVotreConfort"
+                              />
+                        </div>
+
+                        <div id="tarif_reservation_plus">
+                              <font-awesome-icon
+                                    icon="circle-plus"
+                                    class="plus"
+                                    v-on:mouseenter="afficheReservation"
+                              />
+                        </div>
+                  </div>
+
+                  <div>
+                        <!-- Insertion des saisons, dates et prix à partir de tarifs de database -->
+
+                        <!--------- Tarifs vacances-->
+
+                        <div class="bg-white titre" id="tarif_vacance_titre">
+                              <h2>Tarifs vacances (Pour une semaine)</h2>
+                        </div>
+
+                        <div class="tarif__vacances" id="tarif__vacances">
+                              <div class="pb-4 cards">
+                                    <div
+                                          v-for="tarif in tarifs_vacances"
+                                          :key="tarif.id"
+                                          class="tarif__card"
+                                    >
+                                          <div
+                                                class="bg-white rounded-lg"
+                                                data-aos="zoom-in"
+                                          >
+                                                <div
+                                                      class="overflow-hidden bg-cover h-[30vh]"
+                                                >
+                                                      <img
+                                                            :src="tarif.photo"
+                                                            :alt="tarif.saison"
+                                                            class="transition duration-300 ease-in-out hover:scale-125"
+                                                      />
+                                                </div>
+
+                                                <!----<div class="tarif__card--image">
                                           <h1
                                                 v-text="tarif.prix"
                                                 class="prix"
                                           ></h1>
-                                    </div>
+                                    </div>-->
 
-                                    <h1
-                                          v-text="tarif.saison"
-                                          class="font-semibold text-lg"
-                                    ></h1>
-                                    <p v-text="tarif.date" class="text-lg"></p>
-                                    <p
-                                          v-text="tarif.prix"
-                                          class="text-2xl font-semibold"
-                                    ></p>
+                                                <h1
+                                                      v-text="tarif.saison"
+                                                      class="font-semibold text-lg"
+                                                ></h1>
+                                                <p
+                                                      v-text="tarif.date"
+                                                      class="text-lg"
+                                                ></p>
+                                                <p
+                                                      v-text="tarif.prix"
+                                                      class="text-2xl font-semibold"
+                                                ></p>
+                                          </div>
+                                    </div>
                               </div>
                         </div>
-                  </div>
-            </div>
 
-            <!--------- Tarifs basses saison -->
-            <div>
-                  <h2 class="tarif__title" data-aos="flip-right">
-                        Tarifs basse saison
-                  </h2>
-
-                  <div class="tarif__basse">
-                        <div class="pb-4 w-1/3">
+                        <!--------- Tarifs basses saison -->
+                        <div class="mb-8">
                               <div
-                                    v-for="tarif in tarifs_basse_saison"
-                                    :key="tarif.id"
+                                    class="bg-white titre"
+                                    id="tarif_basse_saison_titre"
+                              >
+                                    <h2 class="titre">Tarifs basse saison</h2>
+                              </div>
+
+                              <div
+                                    class="pb-4 tarif__basse"
+                                    id="tarif_basse_saison"
                               >
                                     <div
-                                          class="bg-white m-4 rounded-lg tarif__card--solo"
-                                          data-aos="zoom-in"
+                                          v-for="tarif in tarifs_basse_saison"
+                                          :key="tarif.id"
                                     >
-                                          <img
-                                                :src="tarif.photo"
-                                                :alt="tarif.saison"
-                                          />
-                                          <div class="tarif__card--image">
-                                                <h1
-                                                      v-text="tarif.prix"
-                                                      class="prix"
-                                                ></h1>
-                                          </div>
+                                          <div
+                                                class="bg-white rounded-lg tarif__card--solo"
+                                                data-aos="zoom-in"
+                                          >
+                                                <div
+                                                      class="overflow-hidden bg-cover h-[30vh]"
+                                                >
+                                                      <img
+                                                            :src="tarif.photo"
+                                                            :alt="tarif.periode"
+                                                            class="transition duration-300 ease-in-out hover:scale-125"
+                                                      />
+                                                </div>
 
-                                          <h1
-                                                v-text="tarif.saison"
-                                                class="font-semibold text-lg"
-                                          ></h1>
-                                          <p
-                                                v-text="tarif.date"
-                                                class="text-lg"
-                                          ></p>
-                                          <!----<p
-                                                v-text="tarif.prix"
-                                                class="text-2xl font-semibold"
-                                          ></p>-->
+                                                <h1
+                                                      v-text="tarif.periode"
+                                                      class="font-semibold text-lg"
+                                                ></h1>
+
+                                                <p
+                                                      v-text="tarif.prix"
+                                                      class="text-2xl font-semibold"
+                                                ></p>
+                                          </div>
                                     </div>
                               </div>
                         </div>
 
-                        <div class="flex justify-between w-2/3">
-                              <div class="basse_saison">
-                                    <h3>La semaine</h3>
-                                    <p>330 €</p>
+                        <!--------- A votre arrivée  --------->
+
+                        <div>
+                              <div class="bg-white titre" id="tarif_arrive_titre">
+                                    <h2>A votre arrivée</h2>
                               </div>
 
-                              <div class="basse_saison">
-                                    <h3>Le week-end (2 nuits)</h3>
-                                    <p>180 €</p>
-                              </div>
+                              <div class="elementCard" id="tarif__arrive">
+                                    <p>
+                                          Une caution de
+                                          <span class="tarif__price">300€</span>
+                                          vous sera demandée lors de votre
+                                          arrivée puis, restituée à votre départ
+                                          si les écrans plats sont toujours là
+                                          &#128512;.
+                                    </p>
 
-                              <div class="basse_saison">
-                                    <h3>Le mid-week (5 nuits)</h3>
-                                    <p>210 €</p>
+                                    <p>
+                                          Attention le chauffage est en plus, et
+                                          suivant votre consommation. Comptez
+                                          environ
+                                          <span class="tarif__price">10€</span>
+                                          par jour en plein hiver.
+                                    </p>
                               </div>
                         </div>
-                  </div>
-            </div>
 
-            <!--------- A votre arrivée  --------->
-            <div class="tarif__confort">
-                  <div class="tarif__confort--elements" data-aos="fade-right"
-                        data-aos-duration="700"
-                        data-aos-easing="ease-in-out">
-                        <h2>A votre arrivée</h2>
-                        <p>
-                              Une caution de
-                              <span class="tarif__price">300€</span> vous sera
-                              demandée lors de votre arrivée puis, restituée à
-                              votre départ si les écrans plats sont toujours là
-                              &#128512;.
-                        </p>
+                        <!------ Pour votre confort ------->
+                        <div>
+                              <div class="bg-white titre" id="tarif_confort_titre">
+                                    <h2>Pour votre confort</h2>
+                              </div>
 
-                        <p>
-                              Attention le chauffage est en plus, compter
-                              environ
-                              <span class="tarif__price">10€</span> par jour en
-                              plein hiver.
-                        </p>
-                  </div>
-
-                  <div
-                        class="tarif__confort--elements"
-                        data-aos="fade-left"
-                        data-aos-duration="700"
-                        data-aos-easing="ease-in-out"
-                  >
-                        <h2>Pour votre confort</h2>
-                        <p>Par semaine :</p>
-                        <ul>
-                              <li>
-                                    Préparation d'un lit 2 personnes :
-                                    <span class="tarif__price">8€</span>
-                              </li>
-                              <li>
-                                    Préparation d'un lit 1 personne :
-                                    <span class="tarif__price">6€</span>,
-                              </li>
-                              <li>
-                                    Mise à disposition des serviettes de bain :
-                                    <span class="tarif__price">6€</span> par
-                                    personne
-                              </li>
-                              <li>
-                                    forfait ménage :
-                                    <span class="tarif__price">40€</span>.
-                              </li>
-                              <li>A préciser à la réservation.</li>
-                        </ul>
-
-                        <p>
-                              Vos animaux de compagnie sont les bienvenus, et
-                              <span class="font-semibold"
-                                    >chez nous c'est surtout sans surcoût</span
+                              <div
+                                    class="tarif__confort elementCard"
+                                    id="confort"
                               >
-                        </p>
+                                    <h2>Pour votre confort</h2>
+                                    <p>Par semaine :</p>
+                                    <ul>
+                                          <li>
+                                                Préparation d'un lit 2 personnes
+                                                :
+                                                <span class="tarif__price"
+                                                      >8€</span
+                                                >
+                                          </li>
+                                          <li>
+                                                Préparation d'un lit 1 personne
+                                                :
+                                                <span class="tarif__price"
+                                                      >6€</span
+                                                >,
+                                          </li>
+                                          <li>
+                                                Mise à disposition des
+                                                serviettes de bain :
+                                                <span class="tarif__price"
+                                                      >6€</span
+                                                >
+                                                par personne
+                                          </li>
+                                          <li>
+                                                forfait ménage :
+                                                <span class="tarif__price"
+                                                      >40€</span
+                                                >.
+                                          </li>
+                                          <li>
+                                                A préciser à la réservation (un
+                                                simple coup de fil à Cécile
+                                                suffira).
+                                          </li>
+                                    </ul>
 
-                        <p class="reservation">
-                              Alors n'attendez plus, les réservations
-                              s'effectuent sur le site de gîte de France.
+                                    <br />
 
-                              <span class="">
-                                    Cliquez
-                                    <a
-                                          href="https://www.gites-de-france-eure.com/location-vacances-Gite-Hauville-27G818.html"
-                                    >
-                                          <img
-                                                src="../assets/Liens/logo_gite_eure_de_france.jpg"
-                                                alt=""
-                                          />
-                                    </a>
-                                    pour réserver.
-                              </span>
-                        </p>
+                                    <p>
+                                          Vos animaux de compagnie sont les
+                                          bienvenus, et
+                                          <span class="font-semibold"
+                                                >chez nous c'est sans
+                                                surcoût</span
+                                          >
+                                    </p>
+
+                                    <br />
+
+                                    <p>
+                                          Pour vos journées en télétravail, le
+                                          gîte est équipé de la fibre internet
+                                          très haut débit 120 Mo/s.
+                                    </p>
+                              </div>
+                        </div>
+
+                        <!------- Réservations ------>
+
+                        <div>
+                              <div
+                                    class="bg-white titre"
+                                    id="tarif_reservation_titre"
+                              >
+                                    <h2>Réservation</h2>
+                              </div>
+                              >
+
+                              <div
+                                    class="tarif__reservation elementCard"
+                                    id="reservation"
+                              >
+                                    <p class="">
+                                          Alors n'attendez plus, les
+                                          réservations s'effectuent sur le site
+                                          de gîte de France.
+
+                                          <br />
+
+                                          <span class="">
+                                                Cliquez
+                                                <a
+                                                      href="https://www.gites-de-france-eure.com/location-vacances-Gite-Hauville-27G818.html"
+                                                >
+                                                      <img
+                                                            src="../assets/Liens/logo_gite_eure_de_france.jpg"
+                                                            alt=""
+                                                            class="blinking"
+                                                      />
+                                                </a>
+                                                pour réserver.
+                                          </span>
+                                    </p>
+                              </div>
+                        </div>
                   </div>
             </div>
       </div>
@@ -189,27 +289,279 @@
 import { tarifs_vacances, tarifs_basse_saison } from "../database/tarifs";
 export default {
       setup() {
+            // Tarifs vacances
+            const afficheTarifVacance = () => {
+                  const tarifVacance =
+                        document.getElementById("tarif__vacances");
+
+                  const changePlus =
+                        document.getElementById("tarif_vacance_plus");
+
+                  const titreTarifVacance = document.getElementById(
+                        "tarif_vacance_titre"
+                  );
+
+                  //tarifVacance.classList.add("applyActive");
+
+                  tarifVacance.style.opacity = 1;
+                  tarifVacance.style.transition = "1s ease-in";
+                  tarifVacance.style.left = 0;
+
+                  // Changer le plus en text
+                  changePlus.innerHTML =
+                        "<h3 id='newElement'>Tarifs vacances <br> (Pour une semaine)</h3>";
+
+                  const newElement = document.getElementById("newElement");
+                  newElement.style.backgroundColor = "#fff";
+                  newElement.style.borderRadius = "0.5em";
+                  newElement.style.padding = "0.5em";
+
+                  changePlus.classList.add("applyActive");
+
+                  titreTarifVacance.style.display = "none";
+            };
+
+            const afficheTarifBasseSaison = () => {
+                  const tarifBasseSaison =
+                        document.getElementById("tarif_basse_saison");
+
+                  const changePlus = document.getElementById(
+                        "tarif_basse_saison_plus"
+                  );
+
+                  const titreTarifBasseSaison = document.getElementById(
+                        "tarif_basse_saison_titre"
+                  );
+
+                  //tarifVacance.classList.add("applyActive");
+
+                  tarifBasseSaison.style.opacity = 1;
+                  tarifBasseSaison.style.transition = "1s ease-in";
+                  tarifBasseSaison.style.left = 0;
+
+                  // Changer le plus en text
+                  changePlus.innerHTML =
+                        "<h3 id='newElement_1'>Tarifs basse saison</h3>";
+
+                  const newElement = document.getElementById("newElement_1");
+                  newElement.style.backgroundColor = "#fff";
+                  newElement.style.borderRadius = "0.5em";
+                  newElement.style.padding = "0.5em";
+
+                  //changePlus.style.marginTop = "2.5em";
+
+                  changePlus.classList.add("applyActive");
+
+                  titreTarifBasseSaison.style.display = "none";
+            };
+
+            const afficheAVotreArrive = () => {
+                  const titreArrive =
+                        document.getElementById("tarif_arrive_titre");
+
+                  const tarifArrive = document.getElementById("tarif__arrive");
+
+                  const changePlus =
+                        document.getElementById("tarif_arrive_plus");
+
+                  changePlus.innerHTML =
+                        "<h3 id='newElement_2'>A votre arrivée</h3>";
+
+                  const newElement = document.getElementById("newElement_2");
+                  newElement.style.backgroundColor = "#fff";
+                  newElement.style.borderRadius = "0.5em";
+                  newElement.style.padding = "0.5em";
+
+                  changePlus.classList.add("applyActive");
+
+                  tarifArrive.style.left = 0;
+                  tarifArrive.style.transition = "1s ease-in";
+
+                  titreArrive.style.display = "none";
+            };
+
+            // Pour votre confort
+            const affichePourVotreConfort = () => {
+                  const confort = document.getElementById("confort");
+
+                  const changePlus =
+                        document.getElementById("tarif_confort_plus");
+
+                  const titreConfort = document.getElementById(
+                        "tarif_confort_titre"
+                  );
+
+                  confort.style.opacity = 1;
+                  confort.style.transition = "1s ease-in";
+                  confort.style.left = 0;
+
+                  // Changer le plus en text
+                  changePlus.innerHTML =
+                        "<h3 id='newElement_3'>Pour votre confort</h3>";
+
+                  const newElement = document.getElementById("newElement_3");
+                  newElement.style.backgroundColor = "#fff";
+                  newElement.style.borderRadius = "0.5em";
+                  newElement.style.padding = "0.5em";
+
+                  //changePlus.style.marginTop = "1em";
+
+                  changePlus.classList.add("applyActive");
+
+                  titreConfort.style.display = "none";
+            };
+
+            const afficheReservation = () => {
+                  const reservation = document.getElementById("reservation");
+
+                  const changePlus = document.getElementById(
+                        "tarif_reservation_plus"
+                  );
+
+                  const titreReservation = document.getElementById(
+                        "tarif_reservation_titre"
+                  );
+
+                  reservation.style.opacity = 1;
+                  reservation.style.transition = "1s ease-in";
+                  reservation.style.left = 0;
+
+                  // Changer le plus en text
+                  changePlus.innerHTML =
+                        "<h3 id='newElement_4'>Réservation</h3>";
+
+                  const newElement = document.getElementById("newElement_4");
+                  newElement.style.backgroundColor = "#fff";
+                  newElement.style.borderRadius = "0.5em";
+                  newElement.style.padding = "0.5em";
+
+                  changePlus.style.marginTop = "4em";
+
+                  changePlus.classList.add("applyActive");
+
+                  titreReservation.style.display = "none";
+            };
+
             return {
                   tarifs_vacances,
                   tarifs_basse_saison,
+
+                  afficheTarifVacance,
+                  afficheTarifBasseSaison,
+                  afficheAVotreArrive,
+                  affichePourVotreConfort,
+                  afficheReservation,
             };
       },
 };
 </script>
 
 <style lang="scss" scoped>
+.applyActive {
+      //opacity: block;
+      //background: #fff;
+      border-radius: 0.5em;
+      opacity: 0.7;
+      //margin-bottom: 1em;
+}
+
+.blinking {
+      animation: blink 2s infinite;
+}
+
+@keyframes blink {
+      0% {
+            opacity: 1;
+      }
+      50% {
+            opacity: 0;
+      }
+      100% {
+            opacity: 1;
+      }
+}
+
 .tarif {
       width: 95%;
       margin: auto;
       .cards {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 0.5em;
       }
 
+      &__vacances {
+            opacity: 0;
+            position: relative;
+            left: -150%;
+      }
+
+      &__part_one {
+            background: url("../assets/Tarifs/tarif_part_one_bg.jpg");
+            width: 25%;
+            height: auto;
+            margin-right: 1em;
+            //padding-top: 10em;
+
+            .tarif_vacance_plus {
+                  height: 25%;
+            }
+
+            .tarif_basse_saison_plus {
+                  height: 24%;
+                  //transform: translateY(1em);
+            }
+
+            .tarif_arrive_plus {
+                  height: 11%;
+                  //background: red;
+
+                  /*h3{
+                        transform: translateY(-1em);
+                  }*/
+            }
+
+            .tarif_confort_plus {
+                  height: 25%;
+            }
+
+            /*div {
+                  height: 24%;
+            }*/
+            .plus {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  color: #fff;
+                  font-size: 2.5em;
+                  margin-left: 2em;
+                  cursor: pointer;
+
+                  &:hover {
+                        font-size: 3em;
+                  }
+            }
+      }
+
       &__basse {
-            display: flex;
-            justify-content: space-around;
+            //display: flex;
+            //justify-content: space-around;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0.5em;
+
+            opacity: 0;
+            position: relative;
+            left: -150%;
+      }
+
+      .titre {
+            border-radius: 0.5em;
+
+            h2 {
+                  padding: 0.5em;
+            }
       }
 
       .basse_saison {
@@ -234,49 +586,42 @@ export default {
             }
       }
 
+      .elementCard {
+            margin: 0.5em 0em;
+            background: #fff;
+            border-radius: 0.5em;
+            padding: 1em;
+            text-align: left;
+            position: relative;
+            left: -150%;
+            margin-bottom: 2em;
+      }
+
       &__confort {
-            display: flex;
-            justify-content: space-around;
-            width: 95%;
+            p {
+                  text-align: left;
 
-            &--elements {
-                  width: 50%;
-                  margin: 0.5em 1em;
-                  background: #fff;
-                  border-radius: 0.5em;
-                  padding: 1em;
-
-                  h2 {
-                        background: #08a045;
-                        color: #fff;
-                        width: 50%;
-                        margin: auto;
-                        border-radius: 0.3em;
-                        padding: 0.1em;
-                        font-weight: 600;
+                  img {
+                        width: 30%;
+                        display: inline;
                   }
+            }
 
-                  /*.reservation{
-                        width: 100%;
-                        background: #08863b;
-                  }*/
+            ul {
+                  text-align: left;
 
-                  p {
-                        text-align: left;
-
-                        img {
-                              width: 30%;
-                              display: inline;
-                        }
+                  li {
+                        margin-left: 2em;
                   }
+            }
+      }
 
-                  ul {
-                        text-align: left;
+      &__reservation {
+            background: #fff;
 
-                        li {
-                              margin-left: 2em;
-                        }
-                  }
+            img {
+                  display: inline;
+                  width: 20%;
             }
       }
 
@@ -293,6 +638,12 @@ export default {
       &__card {
             position: relative;
 
+            /*&--solo{
+                  img{
+                        width: 110%;
+                  }
+            }*/
+
             &--solo,
             .paragraphe {
                   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -306,19 +657,17 @@ export default {
             &:hover {
                   cursor: pointer;
 
-                  .prix {
+                  /*.prix {
                         display: block;
-                        animation: tada; /* referring directly to the animation's @keyframe declaration */
-                        animation-duration: 2s; /* don't forget to set a duration! */
-                  }
+                  }*/
             }
 
-            &--image {
+            /*&--image {
                   position: absolute;
                   top: 0em;
                   transform: translate(10em, 8em);
 
-                  .prix {
+                  /*.prix {
                         position: relative;
                         background: #08a045;
                         color: #fff;
@@ -326,7 +675,7 @@ export default {
                         border-radius: 0.5em;
                         display: none;
                   }
-            }
+            }*/
       }
 
       &__button_reservation {

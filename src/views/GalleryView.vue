@@ -18,7 +18,7 @@
                         class="title bubble-bottom w-[100%]"
                         id="chambre-rez-de-chaussee"
                   >
-                        Chambre Rez de chaussée
+                        La chambre de rez de chaussée
                   </h1>
 
                   <div class="gallerie__frame--images mb-4">
@@ -27,7 +27,8 @@
                                     :src="rdc.img"
                                     :alt="rdc.alt"
                                     @click="Cliquer"
-                                    class="items original"
+                                    class="items"
+                                    :class="rdc.class"
                               />
                         </div>
 
@@ -37,7 +38,9 @@
 
             <!------------------- CUISINE DU REZ DE CHAUSSE -------------------------------------->
             <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom" id="cuisine">La cuisine</h1>
+                  <h1 class="title bubble-bottom w-[100%]" id="cuisine">
+                        La cuisine
+                  </h1>
 
                   <div class="gallerie__frame--images mb-4">
                         <div v-for="cuisine in cuisines" :key="cuisine.id">
@@ -45,7 +48,8 @@
                                     :src="cuisine.img"
                                     :alt="cuisine.alt"
                                     @click="Cliquer"
-                                    class="items original"
+                                    class="items"
+                                    :class="cuisine.class"
                               />
                         </div>
 
@@ -67,7 +71,9 @@
 
             <!------------------- SALON DU REZ DE CHAUSSE -------------------------------------->
             <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom" id="salon">Le salon</h1>
+                  <h1 class="title bubble-bottom w-[100%]" id="salon">
+                        Le salon
+                  </h1>
 
                   <div class="gallerie__frame--images mb-4">
                         <div v-for="salon in salons" :key="salon.id">
@@ -75,7 +81,8 @@
                                     :src="salon.img"
                                     :alt="salon.alt"
                                     @click="Cliquer"
-                                    class="items original "
+                                    class="items"
+                                    :class="salon.class"
                               />
                         </div>
 
@@ -107,7 +114,7 @@
                                     :src="salle.img"
                                     :alt="salle.alt"
                                     @click="Cliquer"
-                                    class="items original"
+                                    class="items"
                               />
                         </div>
 
@@ -139,23 +146,32 @@
                                     :src="salle.img"
                                     :alt="salle.alt"
                                     @click="Cliquer"
-                                    class="items original"
+                                    class="items"
+                                    :class="salle.class"
                               />
                         </div>
+                  </div>
+            </div>
 
-                        <!----<div class="details">
-                              <div
-                                    v-for="salon in salonsDetails"
-                                    :key="salon.id"
-                              >
-                                    <img
-                                          :src="salon.img"
-                                          :alt="salon.alt"
-                                          @click="Cliquer"
-                                          class="items"
-                                    />
-                              </div>
-                        </div> -->
+            <!------------------- BUANDERIE -------------------------------------->
+            <div class="gallerie__frame">
+                  <h1 class="title bubble-bottom" id="buanderie">
+                        La buanderie
+                  </h1>
+
+                  <div class="gallerie__frame--images mb-4">
+                        <div
+                              v-for="buanderie in buanderies"
+                              :key="buanderie.id"
+                        >
+                              <img
+                                    :src="buanderie.img"
+                                    :alt="buanderie.alt"
+                                    @click="Cliquer"
+                                    class="items"
+                                    :class="buanderie.class"
+                              />
+                        </div>
                   </div>
             </div>
 
@@ -163,7 +179,7 @@
 
             <div class="gallerie__frame">
                   <h1 class="title bubble-bottom" id="chambre1">
-                        Etage 1 Chambre 1
+                        La chambre palière à l'étage
                   </h1>
 
                   <div class="gallerie__frame--images mb-4">
@@ -175,7 +191,8 @@
                                     :src="chambre1.img"
                                     :alt="chambre1.alt"
                                     @click="Cliquer"
-                                    class="items original"
+                                    class="items"
+                                    :class="chambre1.class"
                               />
                         </div>
 
@@ -195,11 +212,11 @@
                   </div>
             </div>
 
-            <!--------------------1 ER ETAGE -- CHAMBRE 2----------------------------------------->
+            <!--------------------1 ER ETAGE -- CHAMBRE 2 LITS ----------------------------------------->
 
             <div class="gallerie__frame">
                   <h1 class="title bubble-bottom" id="chambre2">
-                         Etage 1 Chambre 2
+                        La chambre 2 lits à l'étage
                   </h1>
 
                   <div class="gallerie__frame--images mb-4">
@@ -211,7 +228,8 @@
                                     :src="chambre2.img"
                                     :alt="chambre2.alt"
                                     @click="Cliquer"
-                                    class="items original"
+                                    class="items"
+                                    :class="chambre2.class"
                               />
                         </div>
 
@@ -242,7 +260,8 @@
                                     :src="jardin.img"
                                     :alt="jardin.alt"
                                     @click="Cliquer"
-                                    class="items original"
+                                    class="items"
+                                    :class="jardin.class"
                               />
                         </div>
 
@@ -303,13 +322,33 @@
                         </a>
                   </button>
             </div>
+
+            <!----<div class="my">
+                  <img
+                        src="../../public/pictures/descriptif/cuisine/rdc_cuisine3.jpg"
+                        alt=""
+                        class="my__long"
+                  />
+
+                  <img
+                        src="../../public/pictures/descriptif/cuisine/rdc_cuisine6.jpg"
+                        alt=""
+                        class="my__court"
+                  />
+
+                  <img
+                        src="../../public/pictures/descriptif/cuisine/rdc_cuisine3.jpg"
+                        alt=""
+                        class="my__long"
+                  />
+            </div>-->
       </div>
 </template>
 
 <script>
 //import { rezDeChausseDatabase } from "../database/rezdechausse";
 import { etages } from "../database/etage";
-import { jardin_database } from "../database/jardin";
+//import { jardin_database } from "../database/jardin";
 import {
       chambresRdc,
       cuisines,
@@ -317,6 +356,7 @@ import {
       salons,
       salonsDetails,
       sallesDeBain,
+      buanderies,
       chambre1Etages,
       chambre1EtagesDetails,
       sallesAManger,
@@ -448,6 +488,7 @@ export default {
                   cuisinesDetails,
                   salons,
                   sallesDeBain,
+                  buanderies,
                   salonsDetails,
                   sallesAManger,
                   sallesAMangerDetails,
@@ -460,23 +501,54 @@ export default {
 
                   //rezDeChausseDatabase,
                   etages,
-                  jardin_database,
+                  //jardin_database,
             };
       },
 };
 </script>
 
 <style lang="scss" scoped>
+/*.my {
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      //grid-template-rows: repeat(12, 1fr);
+      grid-gap: 2em;
+      width: 80%;
+      margin: auto;
+      transform: translateX(2em);
+      border: 2px solid red;
+
+      &__long {
+            grid-column: span 6;
+            grid-row: auto;
+            margin-right: 0 8em;
+
+            //padding: 0 8em;
+            //padding-left: 2em;
+            //border: 2px solid red;
+      }
+
+      &__court {
+            //transform: translateY(-20em);
+            grid-column: span 9;
+            padding-right: 4em;
+      }
+}*/
+
+/*.photo_long_format {
+      width: calc(1.4981 * 100vh);
+      max-height: calc(0.6675 * 100vh);
+      //max-height: 66%;
+      border: 4px solid red;
+}*/
+
 .gallerie {
       width: 100%;
       background: rgba($color: #fff, $alpha: 0.3);
       position: relative;
+      overflow: hidden;
 
       &__return {
-            /*width: 90%;
-            margin: auto;
-            text-align: left;
-            margin-top: 1em;*/
             position: fixed;
             transform: translateY(20em);
 
@@ -492,6 +564,10 @@ export default {
             }
       }
 
+      /*.photo_court_format {
+            border: 4px solid green;
+      }*/
+
       &__frame {
             width: 90%;
             margin: auto;
@@ -500,27 +576,52 @@ export default {
 
             &--images {
                   display: grid;
-                  grid-template-columns: repeat(2, 1fr);
-                  grid-auto-flow: dense;
-                  grid-gap: 0.5rem;
+                  grid-template-columns: repeat(25, 1fr);
+                  grid-gap: 2em;
+                  width: 100%;
+                  margin: auto;
+                  transform: translateX(2em);
+                  margin-bottom: 1em;
+                  //border: 2px solid red;
 
-                  .original {
-                        width: auto;
-                        height: 63vh;
+                  div {
+                        grid-column: span 12;
+
+                        .photo_long_format {
+                              //grid-column: span 12;
+                              grid-row: auto;
+                              padding: 0 6.4em;
+
+                              
+                        }
+
+                        .photo_court_format{
+                              img{
+                                    object-fit: contain;
+                              }
+                        }
                   }
 
                   div {
                         img {
-                              border-radius: 0.5em;
+                              //border-radius: 0.5em;
                               cursor: pointer;
                               object-fit: contain;
+                              //background: gray;
                         }
                   }
 
                   .details {
-                        display: grid;
-                        grid-template-columns: repeat(3, 1fr);
-                        grid-gap: 0.5rem;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        div {
+                              //border: 2px solid red;
+                              width: 30%;
+                              margin-right: 1em;
+                              margin-bottom: 0.5em;
+                              border-radius: 0.1em;
+                        }
                   }
             }
 
@@ -549,15 +650,18 @@ export default {
             color: #fff;
             margin-bottom: 1em;
             font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
       }
 
       .bubble-bottom {
             /* Modify size here: */
-            --size: 12em;
+            --size: 13em;
 
             position: relative;
             width: var(--size);
-            height: calc(var(--size) * 0.25);
+            height: calc(var(--size) * 0.3);
             border-radius: 10px;
 
             &::after {
@@ -571,7 +675,7 @@ export default {
                   border-top-color: rgb(22, 163, 74);
                   border-bottom: 0;
                   margin-left: calc(var(--size) * 0.13 * -1);
-                  margin-bottom: calc(var(--size) * 0.13 * -1);
+                  margin-bottom: calc(var(--size) * 0.1 * -1);
             }
       }
 
@@ -602,8 +706,10 @@ export default {
                   top: 50%;
                   left: 50%;
                   transform: translate(-50%, -50%);
-                  width: 800px;
-                  object-fit: cover;
+                  max-width: 1300px;
+                  width: 80%;
+                  height: 80vh;
+                  object-fit: contain;
             }
       }
 

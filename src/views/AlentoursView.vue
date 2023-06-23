@@ -44,7 +44,7 @@
                                     </div>
 
                                     <div class="mapButton">
-                                          <button class="bg-green-600">
+                                          <button class="bg-green-600" v-if="alentour.maps != ''">
                                                 <a
                                                       :href="alentour.maps"
                                                       target="_blank"
@@ -60,7 +60,7 @@
                                           v-text="alentour.titre"
                                           class="font-bold"
                                     ></h1>
-                                    <button class="bg-red-600">
+                                    <button class="bg-red-600" v-if="alentour.site != ''">
                                           <a :href="alentour.site" target="_blank" rel="noopener noreferrer">Site officiel</a>
                                           
                                     </button>

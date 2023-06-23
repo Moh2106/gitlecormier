@@ -12,7 +12,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons'
 import {faFontAwesomeAlt, faFontAwesome, faSquareFacebook} from '@fortawesome/free-brands-svg-icons'
 import {faArrowUp } from '@fortawesome/free-solid-svg-icons'
-import { faArrowLeft, faArrowRight, faLocationDot, faBars, faHouseChimneyCrack } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faArrowRight, faLocationDot, faBars, faHouseChimneyCrack, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
       faUserSecret,
@@ -26,7 +26,8 @@ library.add(
       faArrowRight,
       faFontAwesomeAlt,
       faFontAwesome,
-      faHouseChimneyCrack
+      faHouseChimneyCrack,
+      faCirclePlus
 );
 
 

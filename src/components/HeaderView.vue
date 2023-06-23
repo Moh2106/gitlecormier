@@ -3,16 +3,12 @@
     <div class="first ">
       
       <div class="flex">
-        <img src="../assets//Liens/logo_gite_france.png" alt="" class="w-[10%]">
-        <!----<font-awesome-icon icon="house-chimney-crack" style="color: #1abc71;" class="text-5xl"/>-->
+        <img src="../assets/Liens/logo_gite_france.png" alt="" class="w-[10%] mt-[0.3rem]">
         <h1 class="header__title ">
 
           𝕲î𝖙𝖊 𝖑𝖊 𝖈𝖔𝖗𝖒𝖎𝖊𝖗
         </h1>
       </div>
-      
-      <!--<font-awesome-icon :icon="['fab', 'fort-awesome-alt']" />
-      <font-awesome-icon :icon="['fab', 'fort-awesome']" /> -->
         
     </div>
 
@@ -116,7 +112,7 @@ export default {
     justify-items: center;
     margin-top: 0.5em;
     font-weight: 800;
-    font-size: 1.2em;
+    font-size: 1.4em;
     //transform : translateX(-1em);
 
     @media screen and (max-width : 768px) {
@@ -165,7 +161,7 @@ export default {
     position: relative;
     //background: red;
     //padding: 0 5em;
-    width: 160%;
+    width: 170%;
 
     
 
