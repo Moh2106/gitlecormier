@@ -72,6 +72,13 @@ export const cuisinesDetails = [
             alt: "Cuisine 4 rez de chausse",
             class: "",
       },
+
+      {
+            id: 5,
+            img: "/pictures/buanderie/rdc_machine_a_laver.jpg",
+            alt: "Machine à laver",
+            class: "photo_long_format",
+      },
 ];
 
 export const salons = [
@@ -183,15 +190,6 @@ export const sallesDeBainDetails = [
       },
 ];
 
-export const buanderies = [
-      {
-            id: 1,
-            img: "/pictures/buanderie/rdc_machine_a_laver.jpg",
-            alt: "Machine à laver",
-            class: "photo_long_format",
-      },
-];
-
 export const chambre2Etages = [
       {
             id: 1,
@@ -271,7 +269,18 @@ export const chambre1EtagesDetails = [
 ];
 
 export const jardins = [
-      // 1
+      {
+            id: 1,
+            img: "/pictures/jardin/image009.jpg",
+            alt: "Le jardin du gite le cormier",
+      },
+
+      {
+            id: 3,
+            img: "/pictures/jardin/image114.jpg",
+            alt: "Le jardin du gite le cormier",
+      },
+
       {
             id: 11,
             img: "/pictures/jardin/RMV_5551.jpg",
@@ -280,14 +289,20 @@ export const jardins = [
       },
 
       {
-            id: 12,
-            img: "/pictures/jardin/RMV_5554.jpg",
+            id: 13,
+            img: "/pictures/jardin/RMV_5555.jpg",
             alt: "Le jardin du gite le cormier",
       },
 
       {
-            id: 13,
-            img: "/pictures/jardin/RMV_5555.jpg",
+            id: 4,
+            img: "/pictures/jardin/image119.jpg",
+            alt: "Le jardin du gite le cormier",
+      },
+
+      {
+            id: 2,
+            img: "/pictures/jardin/image106.jpg",
             alt: "Le jardin du gite le cormier",
       },
 
@@ -304,14 +319,14 @@ export const jardins = [
       },
 
       {
-            id: 16,
-            img: "/pictures/jardin/RMV_5558.jpg",
+            id: 5,
+            img: "/pictures/jardin/image124.jpg",
             alt: "Le jardin du gite le cormier",
       },
 
       {
-            id: 17,
-            img: "/pictures/jardin/RMV_5560.jpg",
+            id: 6,
+            img: "/pictures/jardin/image129.jpg",
             alt: "Le jardin du gite le cormier",
       },
 
@@ -326,16 +341,10 @@ export const jardins = [
             img: "/pictures/jardin/RMV_5563.jpg",
             alt: "Le jardin du gite le cormier",
       },
-      // 10 ---
+
       {
             id: 21,
             img: "/pictures/jardin/RMV_5633.jpg",
-            alt: "Le jardin du gite le cormier",
-      },
-
-      {
-            id: 22,
-            img: "/pictures/jardin/RMV_5639.jpg",
             alt: "Le jardin du gite le cormier",
       },
 
@@ -345,7 +354,17 @@ export const jardins = [
             alt: "Le jardin du gite le cormier",
       },
 
-      // oo
+      {
+            id: 7,
+            img: "/pictures/jardin/IMG20230603175357.jpg",
+            alt: "Le jardin du gite le cormier",
+      },
+
+      {
+            id: 8,
+            img: "/pictures/jardin/IMG20230603175559.jpg",
+            alt: "Le jardin du gite le cormier",
+      },
 
       {
             id: 24,
@@ -361,18 +380,6 @@ export const jardins = [
       },
 
       {
-            id: 1,
-            img: "/pictures/jardin/image009.jpg",
-            alt: "Le jardin du gite le cormier",
-      },
-
-      {
-            id: 3,
-            img: "/pictures/jardin/image114.jpg",
-            alt: "Le jardin du gite le cormier",
-      },
-
-      {
             id: 10,
             img: "/pictures/jardin/IMG20230603180059.jpg",
             alt: "Le jardin du gite le cormier",
@@ -384,44 +391,6 @@ export const jardins = [
             img: "/pictures/jardin/RMV_5653.jpg",
             alt: "Le jardin du gite le cormier",
             class: "photo_long_format",
-      },
-
-      {
-            id: 4,
-            img: "/pictures/jardin/image119.jpg",
-            alt: "Le jardin du gite le cormier",
-      },
-
-      //
-
-      {
-            id: 2,
-            img: "/pictures/jardin/image106.jpg",
-            alt: "Le jardin du gite le cormier",
-      },
-
-      {
-            id: 5,
-            img: "/pictures/jardin/image124.jpg",
-            alt: "Le jardin du gite le cormier",
-      },
-
-      {
-            id: 6,
-            img: "/pictures/jardin/image129.jpg",
-            alt: "Le jardin du gite le cormier",
-      },
-
-      {
-            id: 7,
-            img: "/pictures/jardin/IMG20230603175357.jpg",
-            alt: "Le jardin du gite le cormier",
-      },
-
-      {
-            id: 8,
-            img: "/pictures/jardin/IMG20230603175559.jpg",
-            alt: "Le jardin du gite le cormier",
       },
 
       {
@@ -484,5 +453,18 @@ export const jardinsDetails = [
             id: 5,
             img: "/pictures/details/jardin/IMG-20230611-WA0007.jpeg",
             alt: "Détails de la Chambre 1 du 1er étage du gite le cormier",
+      },
+
+      {
+            id: 10,
+            img: "/pictures/jardin/RMV_5560.jpg",
+            alt: "Le jardin du gite le cormier",
+      },
+
+      {
+            id: 11,
+            img: "/pictures/jardin/RMV_5554.jpg",
+            alt: "Le jardin du gite le cormier",
+            class: "",
       },
 ];

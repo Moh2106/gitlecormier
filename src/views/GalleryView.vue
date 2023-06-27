@@ -18,7 +18,7 @@
                         class="title bubble-bottom w-[100%]"
                         id="chambre-rez-de-chaussee"
                   >
-                        La chambre de rez de chaussée
+                        La chambre au rez de chaussée
                   </h1>
 
                   <div class="gallerie__frame--images mb-4">
@@ -148,28 +148,6 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="salle.class"
-                              />
-                        </div>
-                  </div>
-            </div>
-
-            <!------------------- BUANDERIE -------------------------------------->
-            <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom" id="buanderie">
-                        La buanderie
-                  </h1>
-
-                  <div class="gallerie__frame--images mb-4">
-                        <div
-                              v-for="buanderie in buanderies"
-                              :key="buanderie.id"
-                        >
-                              <img
-                                    :src="buanderie.img"
-                                    :alt="buanderie.alt"
-                                    @click="Cliquer"
-                                    class="items"
-                                    :class="buanderie.class"
                               />
                         </div>
                   </div>
@@ -322,33 +300,10 @@
                         </a>
                   </button>
             </div>
-
-            <!----<div class="my">
-                  <img
-                        src="../../public/pictures/descriptif/cuisine/rdc_cuisine3.jpg"
-                        alt=""
-                        class="my__long"
-                  />
-
-                  <img
-                        src="../../public/pictures/descriptif/cuisine/rdc_cuisine6.jpg"
-                        alt=""
-                        class="my__court"
-                  />
-
-                  <img
-                        src="../../public/pictures/descriptif/cuisine/rdc_cuisine3.jpg"
-                        alt=""
-                        class="my__long"
-                  />
-            </div>-->
       </div>
 </template>
 
 <script>
-//import { rezDeChausseDatabase } from "../database/rezdechausse";
-import { etages } from "../database/etage";
-//import { jardin_database } from "../database/jardin";
 import {
       chambresRdc,
       cuisines,
@@ -356,7 +311,6 @@ import {
       salons,
       salonsDetails,
       sallesDeBain,
-      buanderies,
       chambre1Etages,
       chambre1EtagesDetails,
       sallesAManger,
@@ -366,16 +320,27 @@ import {
       jardins,
       jardinsDetails,
 } from "../database/gallerie";
-//import { sallesAManger } from "../database/gallerie";
 
 export default {
       setup() {
+            /**
+             * Cette fonction permet d'afficher le zoom des photos
+             */
+
+            var ind = 0;
+            //var images = document.querySelectorAll(".items");
+
             const Cliquer = () => {
                   const items = document.querySelectorAll(".items");
+                  /*const arr = Object.entries(items)
+                  console.log(arr);
+                  console.log(typeof items);*/
 
                   items.forEach((image) => {
                         image.onclick = () => {
                               // recupérer la source de l'image
+                              //console.log(items.indexOf(image));
+
                               const imageSource = image.src;
                               document.querySelector(
                                     ".gallerie__popup"
@@ -387,6 +352,35 @@ export default {
                   });
             };
 
+            /**
+             * Show images
+             */
+            var currentIndex = 0;
+            var photos = Array.from(document.getElementsByClassName("items"));
+
+            const showImage = (index) => {
+                  console.log(photos[index]);
+                  photos.forEach((image) => {
+                        image.style.display = "none";
+                  });
+
+                  photos[index].style.display = "block";
+            };
+
+            const precedent = () => {
+                  currentIndex =
+                        (currentIndex - 1 + photos.length) % photos.length;
+                  showImage(currentIndex);
+            };
+
+            const suivant = () => {
+                  currentIndex = (currentIndex + 1) % photos.length;
+                  showImage(currentIndex);
+            };
+
+            /**
+             * Cette fonction permet de fermer une photo en zoom
+             */
             const fermer = () => {
                   document.querySelector(".gallerie__popup span").onclick =
                         () => {
@@ -395,8 +389,6 @@ export default {
                               ).style.display = "none";
                         };
             };
-
-            var ind = 0;
 
             const prev = () => {
                   //afficherCodePrecedent()
@@ -483,12 +475,13 @@ export default {
                   fermer,
                   next,
                   prev,
+                  precedent,
+                  suivant,
                   chambresRdc,
                   cuisines,
                   cuisinesDetails,
                   salons,
                   sallesDeBain,
-                  buanderies,
                   salonsDetails,
                   sallesAManger,
                   sallesAMangerDetails,
@@ -498,10 +491,6 @@ export default {
                   chambre2EtagesDetails,
                   jardins,
                   jardinsDetails,
-
-                  //rezDeChausseDatabase,
-                  etages,
-                  //jardin_database,
             };
       },
 };
@@ -591,12 +580,10 @@ export default {
                               //grid-column: span 12;
                               grid-row: auto;
                               padding: 0 6.4em;
-
-                              
                         }
 
-                        .photo_court_format{
-                              img{
+                        .photo_court_format {
+                              img {
                                     object-fit: contain;
                               }
                         }
@@ -708,7 +695,7 @@ export default {
                   transform: translate(-50%, -50%);
                   max-width: 1300px;
                   width: 80%;
-                  height: 80vh;
+                  height: 90vh;
                   object-fit: contain;
             }
       }

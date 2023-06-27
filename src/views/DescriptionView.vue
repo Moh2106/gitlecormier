@@ -79,6 +79,7 @@
                               />
 
                               <div>
+                                    <!-- Chambre au rez de chaussee -->
                                     <button
                                           v-on:mouseenter="
                                                 afficheChambreRdcItems
@@ -105,6 +106,7 @@
                                           </a>
                                     </button>
 
+                                    <!--- La salle de bain --->
                                     <button
                                           v-on:mouseenter="afficheSdbRdcItems"
                                           v-on:mouseleave="
@@ -122,6 +124,7 @@
                                           </a>
                                     </button>
 
+                                    <!--- La cuisine --->
                                     <button
                                           v-on:mouseenter="afficheCuisineItems"
                                           v-on:mouseleave="
@@ -146,6 +149,7 @@
                                           </a>
                                     </button>
 
+                                    <!--- Le salon --->
                                     <button
                                           v-on:mouseenter="afficheSalonItems"
                                           v-on:mouseleave="
@@ -161,6 +165,7 @@
                                           </a>
                                     </button>
 
+                                    <!--- La salle à manger --->
                                     <button
                                           v-on:mouseenter="
                                                 afficheSalleAMangerItems
@@ -180,6 +185,7 @@
                                           </a>
                                     </button>
 
+                                    <!--- La buanderie --->
                                     <button
                                           v-on:mouseenter="
                                                 afficheBuanderieItems
@@ -190,7 +196,7 @@
                                           class="plan__rdc-buanderie"
                                     >
                                           <a
-                                                href="/descriptifs/gallerie#buanderie"
+                                                href="/descriptifs/gallerie#cuisine"
                                           >
                                                 <img
                                                       src="../assets/RezDeChaussee/rdc_buanderie_plan.jpg"

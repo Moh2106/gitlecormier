@@ -3,7 +3,7 @@
     <div class="first ">
       
       <div class="flex">
-        <img src="../assets/Liens/logo_gite_france.png" alt="" class="w-[10%] mt-[0.3rem]">
+        <img src="../assets/Liens/logo_gite_france.png" alt="" class="w-[10%] mt-[0.3rem] ml-[0.3rem]">
         <h1 class="header__title ">
 
           𝕲î𝖙𝖊 𝖑𝖊 𝖈𝖔𝖗𝖒𝖎𝖊𝖗

@@ -7,12 +7,19 @@ import 'tw-elements'
 import { MotionPlugin } from '@vueuse/motion'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlassPlus } from '@fortawesome/free-solid-svg-icons'
 import {faFontAwesomeAlt, faFontAwesome, faSquareFacebook} from '@fortawesome/free-brands-svg-icons'
 import {faArrowUp } from '@fortawesome/free-solid-svg-icons'
-import { faArrowLeft, faArrowRight, faLocationDot, faBars, faHouseChimneyCrack, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
+import {
+      faUserSecret,faArrowLeft,
+      faArrowRight,
+      faLocationDot,
+      faBars,
+      faHouseChimneyCrack,
+      faCirclePlus,
+      faHandPointRight
+} from "@fortawesome/free-solid-svg-icons";
 
 library.add(
       faUserSecret,
@@ -27,7 +34,8 @@ library.add(
       faFontAwesomeAlt,
       faFontAwesome,
       faHouseChimneyCrack,
-      faCirclePlus
+      faCirclePlus,
+      faHandPointRight
 );
 
 
