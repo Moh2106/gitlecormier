@@ -386,8 +386,9 @@ export default {
                   }, 500);
             };
 
-            var compteur = 0;
+            var compteur;
             const handleSouris = () => {
+                  compteur = 0;
                   if (compteur < 1) {
                         interval(), tarifVacance();
                         ++compteur;
