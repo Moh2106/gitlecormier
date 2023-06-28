@@ -1,5 +1,5 @@
 <template>
-      <div class="pt-16 pb-16 tarif" id="tarif">
+      <div class="pt-16 pb-16 tarif" id="tarif" >
             <div class="flex">
                   <!---------- Armoire de déroulement   ------>
                   <div class="tarif__part_one">
@@ -360,6 +360,8 @@ export default {
             onMounted(() => {
                   bird = document.getElementById("myBird");
                   ecureuil = document.getElementById("ecureuil");
+                  position.value = 0
+                  positionBasse.value = 0
             });
 
             /**
