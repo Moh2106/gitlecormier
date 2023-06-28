@@ -1,5 +1,5 @@
 <template>
-      <div class="pt-16 pb-16 tarif" id="tarif" >
+      <div class="pt-16 pb-16 tarif" id="tarif">
             <div class="flex">
                   <!---------- Armoire de déroulement   ------>
                   <div class="tarif__part_one">
@@ -61,7 +61,7 @@
                                     />
                               </div>
 
-                              <div class="tarif__vacance--bird" id="myBird">
+                              <div class="tarif__vacance--bird" id="myBird" :class="{animation : anime}">
                                     <img
                                           src="../assets/Tarifs/bird.png"
                                           alt=""
@@ -354,14 +354,21 @@ export default {
             var count = 0;
             var bird;
             var ecureuil;
+            var anime = ref(false);
             //var compte = 0;
             const intervalId = ref(null);
 
             onMounted(() => {
                   bird = document.getElementById("myBird");
                   ecureuil = document.getElementById("ecureuil");
-                  position.value = 0
-                  positionBasse.value = 0
+                  position.value = 0;
+                  positionBasse.value = 0;
+
+                  // Pour récupérer la position de l'élement
+                  const elementPosition = bird.getBoundingClientRect();
+
+                  // Pour récupérer la position en x du bird lors de l'animation
+                  position.value = elementPosition.x;
             });
 
             /**
@@ -386,10 +393,11 @@ export default {
                   }, 500);
             };
 
-            var compteur;
+            var compteur = 0;
             const handleSouris = () => {
-                  compteur = 0;
+                  //compteur = 0;
                   if (compteur < 1) {
+                        anime.value = true;
                         interval(), tarifVacance();
                         ++compteur;
                   }
@@ -524,6 +532,8 @@ export default {
                   position,
                   positionBasse,
 
+                  anime,
+
                   afficheAVotreArrive,
                   affichePourVotreConfort,
                   afficheReservation,
@@ -583,6 +593,9 @@ export default {
       }
 }
 
+.animation {
+      animation: moving 2s linear;
+}
 .tarif {
       width: 95%;
       margin: auto;
@@ -618,7 +631,6 @@ export default {
                   //width: 15%;
                   position: absolute;
                   height: 25vh;
-                  animation: moving 2s linear;
                   left: -5%;
                   z-index: 100;
                   display: none;
