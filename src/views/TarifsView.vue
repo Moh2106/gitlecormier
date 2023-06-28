@@ -61,7 +61,7 @@
                                     />
                               </div>
 
-                              <div class="tarif__vacance--bird" id="myBird" :class="{animation : anime}">
+                              <div class="tarif__vacance--bird" id="myBird" :class="{animation : animeTarifVacance}">
                                     <img
                                           src="../assets/Tarifs/bird.png"
                                           alt=""
@@ -122,6 +122,7 @@
                               <div
                                     class="tarif__basse-saison--ecureuil"
                                     id="ecureuil"
+                                    :class="{animation : animeBasseSaison}"
                               >
                                     <img
                                           src="../assets/Tarifs/ecureuil2.png"
@@ -354,7 +355,8 @@ export default {
             var count = 0;
             var bird;
             var ecureuil;
-            var anime = ref(false);
+            var animeTarifVacance = ref(false);
+            var animeBasseSaison = ref(false);
             //var compte = 0;
             const intervalId = ref(null);
 
@@ -397,7 +399,7 @@ export default {
             const handleSouris = () => {
                   //compteur = 0;
                   if (compteur < 1) {
-                        anime.value = true;
+                        animeTarifVacance.value = true;
                         interval(), tarifVacance();
                         ++compteur;
                   }
@@ -468,6 +470,7 @@ export default {
             var compte = 0;
             const handleBasseSaison = () => {
                   if (compte < 1) {
+                        animeBasseSaison.value = true
                         intervalBasseSaison(), tarifBasse();
                         ++compte;
                   }
@@ -532,7 +535,8 @@ export default {
                   position,
                   positionBasse,
 
-                  anime,
+                  animeTarifVacance,
+                  animeBasseSaison,
 
                   afficheAVotreArrive,
                   affichePourVotreConfort,
@@ -686,7 +690,6 @@ export default {
                   width: 25%;
                   position: absolute;
                   height: 25vh;
-                  animation: moving 2s linear;
                   left: -5%;
                   z-index: 100;
                   display: none;
