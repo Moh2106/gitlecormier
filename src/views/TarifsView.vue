@@ -1,54 +1,50 @@
 <template>
-      <div class="pt-16 pb-16 tarif">
+      <div class="pt-16 pb-16 tarif" id="tarif">
             <div class="flex">
                   <!---------- Armoire de déroulement   ------>
                   <div class="tarif__part_one">
-                        <div id="tarif_vacance_plus" class="tarif_vacance_plus">
-                              <font-awesome-icon
-                                    icon="circle-plus"
-                                    class="plus"
-                                    v-on:mouseenter="afficheTarifVacance"
-                              />
+                        <!--  Tarifs vacances -->
+                        <div
+                              class="bg-white opacity-90 rounded-lg h-[45vh] mb-4"
+                        >
+                              <h2>
+                                    Tarifs vacances <br />
+                                    (Pour une semaine)
+                              </h2>
                         </div>
+
+                        <!--  Tarifs basse saison -->
+                        <div
+                              class="bg-white opacity-90 rounded-lg h-[40vh] mb-4"
+                        >
+                              <h2>Tarifs basse saison</h2>
+                        </div>
+
+                        <!--  A votre arrivée -->
+                        <div
+                              class="bg-white opacity-90 rounded-lg h-[16vh] mb-4"
+                        >
+                              <h2>A votre arrivée</h2>
+                        </div>
+
+                        <!--  Pour votre confort -->
+                        <div
+                              class="bg-white opacity-90 rounded-lg h-[40vh] mb-4"
+                        >
+                              <h2>Pour votre confort</h2>
+                        </div>
+
+                        <!-- Réservation -->
 
                         <div
-                              id="tarif_basse_saison_plus"
-                              class="tarif_basse_saison_plus"
+                              class="bg-white opacity-90 rounded-lg h-[20vh] mb-4"
                         >
-                              <font-awesome-icon
-                                    icon="circle-plus"
-                                    class="plus"
-                                    v-on:mouseenter="afficheTarifBasseSaison"
-                              />
-                        </div>
-
-                        <div id="tarif_arrive_plus" class="tarif_arrive_plus">
-                              <font-awesome-icon
-                                    icon="circle-plus"
-                                    class="plus"
-                                    v-on:mouseenter="afficheAVotreArrive"
-                              />
-                        </div>
-
-                        <div id="tarif_confort_plus" class="tarif_confort_plus">
-                              <font-awesome-icon
-                                    icon="circle-plus"
-                                    class="plus"
-                                    v-on:mouseenter="affichePourVotreConfort"
-                              />
-                        </div>
-
-                        <div id="tarif_reservation_plus">
-                              <font-awesome-icon
-                                    icon="circle-plus"
-                                    class="plus"
-                                    v-on:mouseenter="afficheReservation"
-                              />
+                              <h2>Réservation</h2>
                         </div>
                   </div>
 
-                  <div>
-                        <h2 class="bg-white">{{ position }}</h2>
+                  <div class="tarif__second_part">
+                        <!--<h2 class="bg-white">{{ position }}</h2>-->
 
                         <!-- Insertion des saisons, dates et prix à partir de tarifs de database -->
 
@@ -82,17 +78,17 @@
                                           class="elements"
                                     >
                                           <div
-                                                class="bg-white rounded-lg"
-                                                data-aos="zoom-in"
+                                                class="bg-white rounded-lg h-[45vh] mb-4"
+                                                data-aos="flip-up"
                                                 v-if="tarif.position < position"
                                           >
                                                 <div
-                                                      class="overflow-hidden bg-cover h-[30vh]"
+                                                      class="overflow-hidden bg-cover h-[30vh] ease-in-out hover:cursor-pointer"
                                                 >
                                                       <img
                                                             :src="tarif.photo"
                                                             :alt="tarif.saison"
-                                                            class="transition duration-300 ease-in-out hover:scale-125"
+                                                            class="transition duration-300 ease-in-out hover:cursor-pointer hover:scale-150 image"
                                                       />
                                                 </div>
 
@@ -100,10 +96,7 @@
                                                       v-text="tarif.saison"
                                                       class="font-semibold text-lg"
                                                 ></h1>
-                                                <p
-                                                      v-text="tarif.date"
-                                                      class="text-lg"
-                                                ></p>
+                                                <p v-html="tarif.date"></p>
                                                 <p
                                                       v-text="tarif.prix"
                                                       class="text-2xl font-semibold"
@@ -113,86 +106,61 @@
                               </div>
                         </div>
 
-                        <!--------- Tarifs vacances-->
-
-                        <div class="bg-white titre" id="tarif_vacance_titre">
-                              <h2>Tarifs vacances (Pour une semaine)</h2>
-                        </div>
-
-                        <div class="tarif__vacances" id="tarif__vacances">
-                              <div class="pb-4 cards">
-                                    <div
-                                          v-for="tarif in tarifs_vacances"
-                                          :key="tarif.id"
-                                          class="tarif__card"
-                                    >
-                                          <div
-                                                class="bg-white rounded-lg"
-                                                data-aos="zoom-in"
-                                          >
-                                                <div
-                                                      class="overflow-hidden bg-cover h-[30vh]"
-                                                >
-                                                      <img
-                                                            :src="tarif.photo"
-                                                            :alt="tarif.saison"
-                                                            class="transition duration-300 ease-in-out hover:scale-125"
-                                                      />
-                                                </div>
-
-                                                <h1
-                                                      v-text="tarif.saison"
-                                                      class="font-semibold text-lg"
-                                                ></h1>
-                                                <p
-                                                      v-text="tarif.date"
-                                                      class="text-lg"
-                                                ></p>
-                                                <p
-                                                      v-text="tarif.prix"
-                                                      class="text-2xl font-semibold"
-                                                ></p>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-
-                        <!--------- Tarifs basses saison -->
-                        <div class="mb-8">
+                        <!-- Tarifs basse saison -->
+                        <div class="tarif__basse-saison">
                               <div
-                                    class="bg-white titre"
-                                    id="tarif_basse_saison_titre"
+                                    class="tarif__basse-saison--awesome"
+                                    id="tarif__basse-saison--awesome"
+                                    v-on:mouseenter="handleBasseSaison"
                               >
-                                    <h2 class="titre">Tarifs basse saison</h2>
+                                    <font-awesome-icon
+                                          icon="fa-solid fa-hand-point-right"
+                                          class="font"
+                                    />
                               </div>
 
                               <div
-                                    class="pb-4 tarif__basse"
-                                    id="tarif_basse_saison"
+                                    class="tarif__basse-saison--ecureuil"
+                                    id="ecureuil"
+                              >
+                                    <img
+                                          src="../assets/Tarifs/ecureuil2.png"
+                                          alt="ecureuil"
+                                    />
+                              </div>
+
+                              <div
+                                    class="tarif__basse-saison--card"
+                                    id="tarif__basse-saison--card"
                               >
                                     <div
                                           v-for="tarif in tarifs_basse_saison"
                                           :key="tarif.id"
+                                          class="elements"
                                     >
                                           <div
-                                                class="bg-white rounded-lg tarif__card--solo"
-                                                data-aos="zoom-in"
+                                                class="bg-white rounded-lg h-[40vh] mb-4"
+                                                data-aos="zoom-in-down"
+                                                v-if="
+                                                      tarif.position <
+                                                      positionBasse
+                                                "
                                           >
                                                 <div
                                                       class="overflow-hidden bg-cover h-[30vh]"
                                                 >
                                                       <img
                                                             :src="tarif.photo"
-                                                            :alt="tarif.periode"
+                                                            :alt="tarif.saison"
                                                             class="transition duration-300 ease-in-out hover:scale-125"
                                                       />
                                                 </div>
 
                                                 <h1
-                                                      v-text="tarif.periode"
+                                                      v-text="tarif.saison"
                                                       class="font-semibold text-lg"
                                                 ></h1>
-
+                                                <p v-html="tarif.periode"></p>
                                                 <p
                                                       v-text="tarif.prix"
                                                       class="text-2xl font-semibold"
@@ -202,17 +170,33 @@
                               </div>
                         </div>
 
-                        <!--------- A votre arrivée  --------->
-
-                        <div>
+                        <div
+                              class="tarif__arrive"
+                              id="tarif__arrive"
+                              v-on:mouseenter="afficheAVotreArrive"
+                        >
                               <div
-                                    class="bg-white titre"
-                                    id="tarif_arrive_titre"
+                                    class="tarif__arrive--awesome"
+                                    id="tarif__arrive--awesome"
                               >
-                                    <h2>A votre arrivée</h2>
+                                    <h2>
+                                          <font-awesome-icon
+                                                icon="fa-solid fa-question"
+                                                class="icon"
+                                          /><font-awesome-icon
+                                                icon="fa-solid fa-question"
+                                                class="icon"
+                                          /><font-awesome-icon
+                                                icon="fa-solid fa-question"
+                                                class="icon"
+                                          />
+                                    </h2>
                               </div>
 
-                              <div class="elementCard" id="tarif__arrive">
+                              <div
+                                    class="tarif__arrive--text"
+                                    id="tarif__arrive--text"
+                              >
                                     <p>
                                           Une caution de
                                           <span class="tarif__price">300€</span>
@@ -232,20 +216,27 @@
                               </div>
                         </div>
 
-                        <!------ Pour votre confort ------->
-                        <div>
+                        <!-----  Pour votre confort ------>
+                        <div
+                              class="tarif__confort"
+                              v-on:mouseenter="affichePourVotreConfort"
+                        >
                               <div
-                                    class="bg-white titre"
-                                    id="tarif_confort_titre"
+                                    class="tarif__confort--awesome"
+                                    id="tarif__confort--awesome"
                               >
-                                    <h2>Pour votre confort</h2>
+                                    <h2>
+                                          <font-awesome-icon
+                                                icon="fa-regular fa-face-smile"
+                                                class="iconConfort"
+                                          />
+                                    </h2>
                               </div>
 
                               <div
-                                    class="tarif__confort elementCard"
-                                    id="confort"
+                                    class="tarif__confort--text"
+                                    id="tarif__confort--text"
                               >
-                                    <h2>Pour votre confort</h2>
                                     <p>Par semaine :</p>
                                     <ul>
                                           <li>
@@ -306,18 +297,24 @@
 
                         <!------- Réservations ------>
 
-                        <div>
+                        <div
+                              class="tarif__reservation"
+                              v-on:mouseenter="afficheReservation"
+                        >
                               <div
-                                    class="bg-white titre"
-                                    id="tarif_reservation_titre"
+                                    class="tarif__reservation--awesome"
+                                    id="tarif__reservation--awesome"
                               >
-                                    <h2>Réservation</h2>
+                                    <h2>
+                                          <font-awesome-icon
+                                                icon="fa-regular fa-calendar"
+                                          />
+                                    </h2>
                               </div>
-                              >
 
                               <div
-                                    class="tarif__reservation elementCard"
-                                    id="reservation"
+                                    class="tarif__reservation--text"
+                                    id="tarif__reservation--text"
                               >
                                     <p class="">
                                           Alors n'attendez plus, les
@@ -334,7 +331,7 @@
                                                       <img
                                                             src="../assets/Liens/logo_gite_eure_de_france.jpg"
                                                             alt=""
-                                                            class="blinking"
+                                                            class=""
                                                       />
                                                 </a>
                                                 pour réserver.
@@ -353,35 +350,39 @@ import { tarifs_vacances, tarifs_basse_saison } from "../database/tarifs";
 export default {
       setup() {
             var position = ref(0);
+            var positionBasse = ref(0);
             var count = 0;
             var bird;
+            var ecureuil;
+            //var compte = 0;
             const intervalId = ref(null);
 
             onMounted(() => {
                   bird = document.getElementById("myBird");
+                  ecureuil = document.getElementById("ecureuil");
             });
 
+            /**
+             * Cette fonction permet de recupérer la
+             * position de l'élément bird (oiseau)
+             */
             const interval = () => {
                   intervalId.value = setInterval(() => {
                         // Pour récupérer la position de l'élement
                         const elementPosition = bird.getBoundingClientRect();
 
+                        // Pour récupérer la position en x du bird lors de l'animation
                         position.value = elementPosition.x;
 
-                        //console.log(elementPosition.left);
-
                         count++;
-                        //console.log(count);
 
-                        if (count === 4) {
+                        // Cette partie permet d'arreter la fonction setIntervall
+                        if (count === 3) {
                               clearInterval(intervalId.value);
                               intervalId.value = null;
-                              console.log("je suis la");
                         }
                   }, 500);
             };
-
-            //const bird = document.getElementById("myBird");
 
             var compteur = 0;
             const handleSouris = () => {
@@ -389,16 +390,13 @@ export default {
                         interval(), tarifVacance();
                         ++compteur;
                   }
-
             };
 
-            /*watch(position, (newVal) => {
-                  const elementPosition = bird.getBoundingClientRect();
-                  position.value = elementPosition.x;
-                  //console.log("watch");
-                  console.log(`watch + ${newVal}`);
-            });*/
-
+            /**
+             * Cette fonction permet d'effectuer les
+             * changements dans le DOM dès que je passe
+             * la souris sur iconTouch (tarif__vacance--awesome)
+             */
             const tarifVacance = () => {
                   const iconTouch = document.getElementById(
                         "tarif__vacance--awesome"
@@ -410,186 +408,126 @@ export default {
                         "tarif__vacance--card"
                   );
 
-                  myBird.style.display = "block";
-                  tarifCard.style.visibility = "visible";
                   iconTouch.style.opacity = 0;
+                  myBird.style.display = "block";
+                  //tarifCard.style.visibility = "visible";
+
+                  tarifCard.style.opacity = 1;
             };
 
-            // hidden bird
-            /*const hideBird = () => {
-                  const myBird = document.getElementById("myBird");
+            /// basse saison
+            var countBasseSaison = 0;
+            const intervalBasseSaison = () => {
+                  intervalId.value = setInterval(() => {
+                        // Pour récupérer la position de l'élement
+                        const elementPosition =
+                              ecureuil.getBoundingClientRect();
 
-                  myBird.style.display = "none";
+                        // Pour récupérer la position en x du bird lors de l'animation
+                        positionBasse.value = elementPosition.x;
 
-                  console.log("here");
-            };*/
+                        countBasseSaison++;
 
-            // Tarifs vacances
-            const afficheTarifVacance = () => {
-                  const tarifVacance =
-                        document.getElementById("tarif__vacances");
-
-                  const changePlus =
-                        document.getElementById("tarif_vacance_plus");
-
-                  const titreTarifVacance = document.getElementById(
-                        "tarif_vacance_titre"
-                  );
-
-                  //tarifVacance.classList.add("applyActive");
-
-                  tarifVacance.style.opacity = 1;
-                  tarifVacance.style.transition = "1s ease-in";
-                  tarifVacance.style.left = 0;
-
-                  // Changer le plus en text
-                  changePlus.innerHTML =
-                        "<h3 id='newElement'>Tarifs vacances <br> (Pour une semaine)</h3>";
-
-                  const newElement = document.getElementById("newElement");
-                  newElement.style.backgroundColor = "#fff";
-                  newElement.style.borderRadius = "0.5em";
-                  newElement.style.padding = "0.5em";
-
-                  changePlus.classList.add("applyActive");
-
-                  titreTarifVacance.style.display = "none";
+                        // Cette partie permet d'arreter la fonction setIntervall
+                        if (countBasseSaison === 3) {
+                              clearInterval(intervalId.value);
+                              intervalId.value = null;
+                        }
+                  }, 500);
             };
 
-            const afficheTarifBasseSaison = () => {
-                  const tarifBasseSaison =
-                        document.getElementById("tarif_basse_saison");
-
-                  const changePlus = document.getElementById(
-                        "tarif_basse_saison_plus"
+            const tarifBasse = () => {
+                  const iconTouch = document.getElementById(
+                        "tarif__basse-saison--awesome"
                   );
 
-                  const titreTarifBasseSaison = document.getElementById(
-                        "tarif_basse_saison_titre"
+                  const ecureuil = document.getElementById("ecureuil");
+
+                  const tarifCard = document.getElementById(
+                        "tarif__basse-saison--card"
                   );
 
-                  //tarifVacance.classList.add("applyActive");
+                  iconTouch.style.opacity = 0;
+                  ecureuil.style.display = "block";
+                  //tarifCard.style.visibility = "visible";
 
-                  tarifBasseSaison.style.opacity = 1;
-                  tarifBasseSaison.style.transition = "1s ease-in";
-                  tarifBasseSaison.style.left = 0;
-
-                  // Changer le plus en text
-                  changePlus.innerHTML =
-                        "<h3 id='newElement_1'>Tarifs basse saison</h3>";
-
-                  const newElement = document.getElementById("newElement_1");
-                  newElement.style.backgroundColor = "#fff";
-                  newElement.style.borderRadius = "0.5em";
-                  newElement.style.padding = "0.5em";
-
-                  //changePlus.style.marginTop = "2.5em";
-
-                  changePlus.classList.add("applyActive");
-
-                  titreTarifBasseSaison.style.display = "none";
+                  tarifCard.style.opacity = 1;
             };
 
+            var compte = 0;
+            const handleBasseSaison = () => {
+                  if (compte < 1) {
+                        intervalBasseSaison(), tarifBasse();
+                        ++compte;
+                  }
+            };
+
+            // A votre arrive
             const afficheAVotreArrive = () => {
-                  const titreArrive =
-                        document.getElementById("tarif_arrive_titre");
+                  const arriveAwesome = document.getElementById(
+                        "tarif__arrive--awesome"
+                  );
 
-                  const tarifArrive = document.getElementById("tarif__arrive");
+                  const arriveText = document.getElementById(
+                        "tarif__arrive--text"
+                  );
 
-                  const changePlus =
-                        document.getElementById("tarif_arrive_plus");
+                  arriveAwesome.style.display = "none";
 
-                  changePlus.innerHTML =
-                        "<h3 id='newElement_2'>A votre arrivée</h3>";
+                  arriveAwesome.scrollTop = arriveAwesome.scrollHeight;
 
-                  const newElement = document.getElementById("newElement_2");
-                  newElement.style.backgroundColor = "#fff";
-                  newElement.style.borderRadius = "0.5em";
-                  newElement.style.padding = "0.5em";
+                  arriveText.style.transition = "1s ease-in";
 
-                  changePlus.classList.add("applyActive");
-
-                  tarifArrive.style.left = 0;
-                  tarifArrive.style.transition = "1s ease-in";
-
-                  titreArrive.style.display = "none";
+                  arriveText.style.opacity = 1;
+                  arriveText.style.left = 0;
             };
 
             // Pour votre confort
             const affichePourVotreConfort = () => {
-                  const confort = document.getElementById("confort");
-
-                  const changePlus =
-                        document.getElementById("tarif_confort_plus");
-
-                  const titreConfort = document.getElementById(
-                        "tarif_confort_titre"
+                  const confortAwesome = document.getElementById(
+                        "tarif__confort--awesome"
                   );
 
-                  confort.style.opacity = 1;
-                  confort.style.transition = "1s ease-in";
-                  confort.style.left = 0;
+                  const confortText = document.getElementById(
+                        "tarif__confort--text"
+                  );
 
-                  // Changer le plus en text
-                  changePlus.innerHTML =
-                        "<h3 id='newElement_3'>Pour votre confort</h3>";
-
-                  const newElement = document.getElementById("newElement_3");
-                  newElement.style.backgroundColor = "#fff";
-                  newElement.style.borderRadius = "0.5em";
-                  newElement.style.padding = "0.5em";
-
-                  //changePlus.style.marginTop = "1em";
-
-                  changePlus.classList.add("applyActive");
-
-                  titreConfort.style.display = "none";
+                  confortAwesome.style.display = "none";
+                  confortText.style.transition = "1s ease-in";
+                  confortText.style.opacity = 1;
+                  confortText.style.left = 0;
             };
 
+            // Réservation
             const afficheReservation = () => {
-                  const reservation = document.getElementById("reservation");
-
-                  const changePlus = document.getElementById(
-                        "tarif_reservation_plus"
+                  const reservationAwesome = document.getElementById(
+                        "tarif__reservation--awesome"
                   );
 
-                  const titreReservation = document.getElementById(
-                        "tarif_reservation_titre"
+                  const reservationText = document.getElementById(
+                        "tarif__reservation--text"
                   );
 
-                  reservation.style.opacity = 1;
-                  reservation.style.transition = "1s ease-in";
-                  reservation.style.left = 0;
+                  reservationAwesome.style.display = "none";
 
-                  // Changer le plus en text
-                  changePlus.innerHTML =
-                        "<h3 id='newElement_4'>Réservation</h3>";
-
-                  const newElement = document.getElementById("newElement_4");
-                  newElement.style.backgroundColor = "#fff";
-                  newElement.style.borderRadius = "0.5em";
-                  newElement.style.padding = "0.5em";
-
-                  changePlus.style.marginTop = "4em";
-
-                  changePlus.classList.add("applyActive");
-
-                  titreReservation.style.display = "none";
+                  reservationText.style.transition = "1s ease-in";
+                  reservationText.style.opacity = 1;
+                  reservationText.style.left = 0;
             };
 
             return {
                   tarifs_vacances,
                   tarifs_basse_saison,
                   position,
+                  positionBasse,
 
-                  afficheTarifVacance,
-                  afficheTarifBasseSaison,
                   afficheAVotreArrive,
                   affichePourVotreConfort,
                   afficheReservation,
 
                   tarifVacance,
 
+                  handleBasseSaison,
                   handleSouris,
             };
       },
@@ -597,14 +535,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.applyActive {
-      //opacity: block;
-      //background: #fff;
-      border-radius: 0.5em;
-      opacity: 0.7;
-      //margin-bottom: 1em;
-}
-
 .blinking {
       animation: blink 3s infinite;
 }
@@ -645,6 +575,7 @@ export default {
       }
 
       100% {
+            transform: translateX(550%);
             opacity: 0;
       }
 }
@@ -652,15 +583,33 @@ export default {
 .tarif {
       width: 95%;
       margin: auto;
-      position: relative;
+      //position: relative;
       .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 0.5em;
       }
 
+      &__part_one {
+            background: url("../assets/Tarifs/tarif_part_one_bg.jpg");
+            width: 25%;
+            //max-width: 25%;
+            height: auto;
+            margin-right: 3em;
+            //padding-top: 10em;
+      }
+
+      &__second_part {
+            width: 100%;
+            //border: 5px solid #08863b;
+      }
+
       &__vacance {
-            display: flex;
+            //display: flex;
+            position: relative;
+            height: 45vh;
+            margin-bottom: 1em;
+            //border: 5px solid orange;
 
             &--bird {
                   //width: 15%;
@@ -675,12 +624,24 @@ export default {
 
             &--card {
                   display: flex;
-                  visibility: hidden;
+                  opacity: 0;
+                  //border: 2px solid orange;
+                  //visibility: hidden;
                   .elements {
                         //display: none;
                         width: 30%;
                         margin-right: 1em;
-                        visibility: visible;
+                        //visibility: visible;
+
+                        .image {
+                              //border: 2px solid red;
+                              //transform: scale(1.5em);
+
+                              &:hover {
+                                    transform: scale(1.5em);
+                                    cursor: pointer;
+                              }
+                        }
                   }
             }
 
@@ -688,155 +649,168 @@ export default {
                   position: absolute;
                   z-index: 100;
                   //background: #fff;
-                  width: 85%;
-                  height: 50vh;
+                  width: 100%;
+                  height: 45vh;
                   text-align: left;
-                  border: 3px solid red;
+                  //border: 10px solid red;
 
                   .font {
                         font-size: 6em;
                         color: #08863b;
-                        animation: blink 2s infinite;
+                        animation: blink 3s infinite;
                   }
             }
       }
 
-      &__vacances {
-            opacity: 0;
+      &__basse-saison {
             position: relative;
-            left: -150%;
-      }
+            height: 40vh;
+            margin-bottom: 1em;
 
-      &__part_one {
-            background: url("../assets/Tarifs/tarif_part_one_bg.jpg");
-            width: 25%;
-            height: auto;
-            margin-right: 1em;
-            //padding-top: 10em;
-
-            .tarif_vacance_plus {
-                  height: 25%;
+            &--ecureuil {
+                  width: 25%;
+                  position: absolute;
+                  height: 25vh;
+                  animation: moving 2s linear;
+                  left: -5%;
+                  z-index: 100;
+                  display: none;
+                  opacity: 0;
             }
 
-            .tarif_basse_saison_plus {
-                  height: 24%;
-                  //transform: translateY(1em);
+            &--awesome {
+                  position: absolute;
+                  z-index: 100;
+                  height: 40vh;
+                  width: 100%;
+                  text-align: left;
+                  //border: 3px solid red;
+
+                  .font {
+                        font-size: 6em;
+                        color: #08863b;
+                        animation: blink 3s infinite;
+                  }
             }
 
-            .tarif_arrive_plus {
-                  height: 11%;
-                  //background: red;
-
-                  /*h3{
-                        transform: translateY(-1em);
-                  }*/
-            }
-
-            .tarif_confort_plus {
-                  height: 25%;
-            }
-
-            /*div {
-                  height: 24%;
-            }*/
-            .plus {
+            &--card {
                   display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  color: #fff;
-                  font-size: 2.5em;
-                  margin-left: 2em;
-                  cursor: pointer;
+                  opacity: 0;
 
-                  &:hover {
-                        font-size: 3em;
+                  .elements {
+                        width: 30%;
+                        margin-right: 1em;
                   }
             }
       }
 
-      &__basse {
-            //display: flex;
-            //justify-content: space-around;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 0.5em;
-
-            opacity: 0;
+      &__arrive {
             position: relative;
-            left: -150%;
-      }
-
-      .titre {
-            border-radius: 0.5em;
-
-            h2 {
-                  padding: 0.5em;
-            }
-      }
-
-      .basse_saison {
-            width: 33%;
-            margin: 1em;
-            background: #08a045;
-            height: 9em;
-            border-radius: 1em;
-
-            h3 {
-                  background: #08a045;
-                  color: #fff;
-                  padding: 1em;
-                  font-size: 1.1em;
-            }
-
-            p {
-                  background: #fff;
-                  font-weight: bold;
-                  font-size: 1.5em;
-                  padding: 0.5em;
-            }
-      }
-
-      .elementCard {
-            margin: 0.5em 0em;
-            background: #fff;
-            border-radius: 0.5em;
-            padding: 1em;
+            height: 16vh;
+            margin-bottom: 1em;
             text-align: left;
-            position: relative;
-            left: -150%;
-            margin-bottom: 2em;
+            //border: 3px solid orange;
+
+            &--awesome {
+                  position: absolute;
+                  font-size: 5em;
+                  //border: 3px solid red;
+                  width: 100%;
+
+                  .icon {
+                        margin-right: 0.3em;
+                        color: #fff;
+                  }
+            }
+
+            &--text {
+                  opacity: 0;
+                  background: #fff;
+                  height: 15vh;
+                  padding: 0.5em;
+                  border-radius: 0.5em;
+                  position: relative;
+                  left: -150%;
+            }
       }
 
       &__confort {
-            p {
-                  text-align: left;
+            position: relative;
+            height: 40vh;
+            //border-radius: 0.5em;
+            //padding-left: 1em;
+            text-align: left;
+            margin-bottom: 1em;
 
-                  img {
-                        width: 30%;
-                        display: inline;
+            &--awesome {
+                  position: absolute;
+                  font-size: 8em;
+                  //border: 2px solid red;
+                  width: 100%;
+                  height: 100%;
+
+                  .iconConfort {
+                        color: #08a045;
                   }
             }
 
-            ul {
-                  text-align: left;
+            &--text {
+                  background: #fff;
+                  //display: none;
+                  opacity: 0;
+                  padding: 1em;
+                  border-radius: 0.5em;
+                  position: relative;
+                  left: -150%;
 
-                  li {
-                        margin-left: 2em;
+                  p {
+                        text-align: left;
+
+                        img {
+                              width: 30%;
+                              display: inline;
+                        }
+                  }
+
+                  ul {
+                        text-align: left;
+
+                        li {
+                              margin-left: 2em;
+                        }
                   }
             }
       }
 
       &__reservation {
-            background: #fff;
+            position: relative;
+            height: 20vh;
+            text-align: left;
 
-            img {
-                  display: inline;
-                  width: 20%;
+            &--awesome {
+                  position: absolute;
+                  font-size: 5em;
+                  width: 100%;
+                  height: 100%;
+            }
+
+            &--text {
+                  background: #fff;
+                  opacity: 0;
+                  height: 100%;
+                  padding: 1em;
+                  border-radius: 0.5em;
+                  position: relative;
+                  left: -150%;
+
+                  img {
+                        display: inline;
+                        width: 20%;
+                  }
             }
       }
 
-      &__title {
+      /*&__title {
             background: #fff;
             width: 30%;
             margin: auto;
@@ -844,7 +818,7 @@ export default {
             margin-bottom: 0.5em;
             margin-top: 1em;
             padding: 0.5em;
-      }
+      }*/
 
       &__card {
             position: relative;
@@ -872,24 +846,9 @@ export default {
                         display: block;
                   }*/
             }
-
-            /*&--image {
-                  position: absolute;
-                  top: 0em;
-                  transform: translate(10em, 8em);
-
-                  /*.prix {
-                        position: relative;
-                        background: #08a045;
-                        color: #fff;
-                        padding: 1em;
-                        border-radius: 0.5em;
-                        display: none;
-                  }
-            }*/
       }
 
-      &__button_reservation {
+      /*&__button_reservation {
             background: #08a045;
             padding: 0.1em 0.3em;
             color: #fff;
@@ -898,7 +857,7 @@ export default {
             &:hover {
                   background: #08863b;
             }
-      }
+      }*/
 
       &__cliquer {
             border-radius: 50%;
