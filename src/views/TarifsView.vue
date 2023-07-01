@@ -79,9 +79,9 @@
                                     <div
                                           v-for="tarif in tarifs_vacances"
                                           :key="tarif.id"
-                                          class="elements"
+                                          class="elements" data-aos="flip-up"
                                     >
-                                          <div>
+                                          <div v-if="tarif.position < position">
                                                 <div
                                                       class="overflow-hidden bg-cover h-[30vh]"
                                                 >
@@ -167,7 +167,7 @@
 
                                     
                               </div>
-                        </div>-->
+                        </div> -->
 
                         <!-- Tarifs basse saison -->
                         <div class="tarif__basse-saison">
@@ -502,7 +502,7 @@ export default {
 
                   iconTouch.style.opacity = 0;
                   myBird.style.display = "block";
-                  myBird.classList.add("animation")
+                  myBird.classList.toggle("animation")
                   //tarifCard.style.visibility = "visible";
 
                   tarifCard.style.opacity = 1;
