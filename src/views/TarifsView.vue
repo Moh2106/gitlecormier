@@ -76,11 +76,11 @@
                                           class="elements"
                                           v-for="tarif in tarifs_vacances"
                                           :key="tarif.id"
-                                          data-aos="flip-up"
                                     >
                                           <div
                                                 class="bg-white rounded-lg"
                                                 v-if="tarif.position < position"
+                                                data-aos="flip-up"
                                           >
                                                 <div
                                                       class="overflow-hidden bg-cover h-[30vh]"
@@ -114,7 +114,7 @@
                               <div
                                     class="tarif__basse--ecureuil"
                                     id="ecureuil"
-                                    :class="{animation : animeBasseSaison}"
+                                    :class="{ animation: animeBasseSaison }"
                               >
                                     <img
                                           src="../assets/Tarifs/ecureuil2.png"
@@ -138,11 +138,14 @@
                                           class="elements"
                                           v-for="tarif in tarifs_basse_saison"
                                           :key="tarif.id"
-                                          data-aos="flip-up"
                                     >
                                           <div
                                                 class="bg-white rounded-lg"
-                                                v-if="tarif.position < positionBasse"
+                                                data-aos="zoom-in-down"
+                                                v-if="
+                                                      tarif.position <
+                                                      positionBasse
+                                                "
                                           >
                                                 <div
                                                       class="overflow-hidden bg-cover h-[30vh]"
@@ -168,72 +171,7 @@
                               </div>
                         </div>
 
-                        <!-- Tarifs basse saison -->
-
-                        <!---<div class="tarif__basse-saison">
-                              <div
-                                    class="tarif__basse-saison--awesome"
-                                    id="tarif__basse-saison--awesome"
-                                    v-on:mouseenter="handleBasseSaison"
-                              >
-                                    <font-awesome-icon
-                                          icon="fa-solid fa-hand-point-right"
-                                          class="font"
-                                    />
-                              </div>
-
-                              <div
-                                    class="tarif__basse-saison--ecureuil"
-                                    id="ecureuil"
-                                    :class="{ animation: animeBasseSaison }"
-                              >
-                                    <img
-                                          src="../assets/Tarifs/ecureuil2.png"
-                                          alt="ecureuil"
-                                    />
-                              </div>
-
-                              <div
-                                    class="tarif__basse-saison--card"
-                                    id="tarif__basse-saison--card"
-                              >
-                                    <div
-                                          v-for="tarif in tarifs_basse_saison"
-                                          :key="tarif.id"
-                                          class="elements"
-                                    >
-                                          <div
-                                                class="bg-white rounded-lg h-[40vh] mb-4"
-                                                data-aos="zoom-in-down"
-                                                v-if="
-                                                      tarif.position <
-                                                      positionBasse
-                                                "
-                                          >
-                                                <div
-                                                      class="overflow-hidden bg-cover h-[30vh]"
-                                                >
-                                                      <img
-                                                            :src="tarif.photo"
-                                                            :alt="tarif.saison"
-                                                            class="transition duration-300 ease-in-out hover:scale-125"
-                                                      />
-                                                </div>
-
-                                                <h1
-                                                      v-text="tarif.saison"
-                                                      class="font-semibold text-lg"
-                                                ></h1>
-                                                <p v-html="tarif.periode"></p>
-                                                <p
-                                                      v-text="tarif.prix"
-                                                      class="text-2xl font-semibold"
-                                                ></p>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>-->
-
+                        <!---- Tarif arrive ---->
                         <div
                               class="tarif__arrive"
                               id="tarif__arrive"
@@ -300,63 +238,67 @@
                               <div
                                     class="tarif__confort--text"
                                     id="tarif__confort--text"
-                                    v-if="animeConfort"
+                                    
                               >
-                                    <p>Par semaine :</p>
-                                    <ul>
-                                          <li>
-                                                Préparation d'un lit 2 personnes
-                                                :
-                                                <span class="tarif__price"
-                                                      >8€</span
+                                    <div v-if="animeConfort">
+                                          <p>Par semaine :</p>
+                                          <ul>
+                                                <li>
+                                                      Préparation d'un lit 2
+                                                      personnes :
+                                                      <span class="tarif__price"
+                                                            >8€</span
+                                                      >
+                                                </li>
+                                                <li>
+                                                      Préparation d'un lit 1
+                                                      personne :
+                                                      <span class="tarif__price"
+                                                            >6€</span
+                                                      >,
+                                                </li>
+                                                <li>
+                                                      Mise à disposition des
+                                                      serviettes de bain :
+                                                      <span class="tarif__price"
+                                                            >6€</span
+                                                      >
+                                                      par personne
+                                                </li>
+                                                <li>
+                                                      forfait ménage :
+                                                      <span class="tarif__price"
+                                                            >40€</span
+                                                      >.
+                                                </li>
+                                                <li>
+                                                      A préciser à la
+                                                      réservation (un simple
+                                                      coup de fil à Cécile
+                                                      suffira).
+                                                </li>
+                                          </ul>
+
+                                          <br />
+
+                                          <p>
+                                                Vos animaux de compagnie sont
+                                                les bienvenus, et
+                                                <span class="font-semibold"
+                                                      >chez nous c'est sans
+                                                      surcoût</span
                                                 >
-                                          </li>
-                                          <li>
-                                                Préparation d'un lit 1 personne
-                                                :
-                                                <span class="tarif__price"
-                                                      >6€</span
-                                                >,
-                                          </li>
-                                          <li>
-                                                Mise à disposition des
-                                                serviettes de bain :
-                                                <span class="tarif__price"
-                                                      >6€</span
-                                                >
-                                                par personne
-                                          </li>
-                                          <li>
-                                                forfait ménage :
-                                                <span class="tarif__price"
-                                                      >40€</span
-                                                >.
-                                          </li>
-                                          <li>
-                                                A préciser à la réservation (un
-                                                simple coup de fil à Cécile
-                                                suffira).
-                                          </li>
-                                    </ul>
+                                          </p>
 
-                                    <br />
+                                          <br />
 
-                                    <p>
-                                          Vos animaux de compagnie sont les
-                                          bienvenus, et
-                                          <span class="font-semibold"
-                                                >chez nous c'est sans
-                                                surcoût</span
-                                          >
-                                    </p>
-
-                                    <br />
-
-                                    <p>
-                                          Pour vos journées en télétravail, le
-                                          gîte est équipé de la fibre internet
-                                          très haut débit 120 Mo/s.
-                                    </p>
+                                          <p>
+                                                Pour vos journées en
+                                                télétravail, le gîte est équipé
+                                                de la fibre internet très haut
+                                                débit 120 Mo/s.
+                                          </p>
+                                    </div>
                               </div>
                         </div>
 
@@ -406,7 +348,6 @@
                         </div>
                   </div>
             </div>
-
       </div>
 </template>
 
@@ -420,7 +361,8 @@ export default {
             var count = 0;
             var bird;
             var ecureuil;
-            //var animeTarifVacance = ref(true);
+
+            // variable pour le tarif vacance
             var animeTarifVac = ref(true);
             var animeBasseSaison = ref(true);
             var animeConfort = ref(false);
@@ -429,16 +371,10 @@ export default {
 
             onMounted(() => {
                   bird = document.getElementById("bird");
-                  
+
                   ecureuil = document.getElementById("ecureuil");
                   position.value = 0;
                   positionBasse.value = 0;
-
-                  // Pour récupérer la position de l'élement
-                  //const elementPosition = bird.getBoundingClientRect();
-
-                  // Pour récupérer la position en x du bird lors de l'animation
-                  //position.value = elementPosition.x;
             });
 
             /**
@@ -520,9 +456,7 @@ export default {
 
                   const ecureuil = document.getElementById("ecureuil");
 
-                  const tarifCard = document.getElementById(
-                        "basse--card"
-                  );
+                  const tarifCard = document.getElementById("basse--card");
 
                   iconTouch.style.opacity = 0;
                   ecureuil.style.display = "block";
@@ -539,8 +473,6 @@ export default {
                         ++compte;
                   }
             };
-
-            
 
             // A votre arrive
             const afficheAVotreArrive = () => {
@@ -564,22 +496,20 @@ export default {
 
             // Pour votre confort
             const affichePourVotreConfort = () => {
-                  animeConfort.value =! animeConfort.value;
-
-                  console.log(animeConfort.value);
+                  animeConfort.value = true
 
                   const confortAwesome = document.getElementById(
                         "tarif__confort--awesome"
                   );
 
-                  //const confortText = document.getElementById(
-                  //      "tarif__confort--text"
-                  //);
+                  const confortText = document.getElementById(
+                        "tarif__confort--text"
+                  );
 
                   confortAwesome.style.display = "none";
-                  //confortText.style.transition = "1s ease-in";
+                  confortText.style.transition = "1s ease-in";
                   //confortText.style.opacity = 1;
-                  //confortText.style.left = 0;
+                  confortText.style.left = 0;
             };
 
             // Réservation
@@ -647,21 +577,17 @@ export default {
       }
 
       33% {
-            //position: relative;
             transform: translateX(150%);
             opacity: 1;
       }
 
       66% {
-            // position: relative;
             transform: translateX(300%);
       }
 
       99% {
-            //position: relative;
             transform: translateX(500%);
             opacity: 1;
-            //display: none;
       }
 
       100% {
@@ -901,7 +827,8 @@ export default {
                   padding: 1em;
                   border-radius: 0.5em;
                   position: relative;
-                  //left: -150%;
+                  left: -150%;
+                  transition: 3s ease-in;
 
                   p {
                         text-align: left;
