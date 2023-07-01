@@ -14,7 +14,7 @@ export const tarifs_vacances = [
             saison: "HAUTE SAISON",
             date: "Début juillet, Fin août et <br> les vacances de Noël ",
             prix: "420 €",
-            position: 800,
+            position: 750,
       },
 
       {
@@ -23,7 +23,7 @@ export const tarifs_vacances = [
             saison: "MOYENNE SAISON",
             date: "Les autres vacances scolaires, et mai - juin - septembre",
             prix: "270 €",
-            position: 1100,
+            position: 1000,
       },
 ];
 
@@ -49,6 +49,6 @@ export const tarifs_basse_saison = [
             photo: "/pictures/Tarifs/jardin_plante.jpg",
             periode: "Le mid-week (5 nuits)",
             prix: "210 €",
-            position: 1100,
+            position: 1000,
       },
 ];

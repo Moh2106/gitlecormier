@@ -15,7 +15,7 @@
 
                         <!--  Tarifs basse saison -->
                         <div
-                              class="bg-white opacity-90 rounded-lg h-[40vh] mb-4"
+                              class="bg-white opacity-90 rounded-lg h-[38vh] mb-4"
                         >
                               <h2>Tarifs basse saison</h2>
                         </div>
@@ -45,18 +45,14 @@
 
                   <div class="tarif__second_part">
                         <!-- Insertion des saisons, dates et prix à partir de tarifs de database -->
+                        <!----<h2 class="bg-white">{{ position }}</h2>-->
 
-                        <h2 class="bg-white">Position {{ position }}, Anime Tarif Vacance {{ animeTarifVacance }}</h2>
-                        <!-------------------------------------------->
-                        <div
-                              class="tarif__vacances"
-                              v-on:mouseenter="handleSouris"
-                              v-once
-                        >
+                        <!------------------------------------>
+                        <div class="tarif__vac" v-on:mouseenter="handleVacance">
                               <div
-                                    class="tarif__vacances--bird"
-                                    id="myBird"
-                                    :class="{animation : animeTarifVacance}"
+                                    class="tarif__vac--bird"
+                                    id="bird"
+                                    :class="{ animation: animeTarifVac }"
                               >
                                     <img
                                           src="../assets/Tarifs/bird.png"
@@ -64,7 +60,10 @@
                                     />
                               </div>
 
-                              <div class="tarif__vacances--awesome">
+                              <div
+                                    class="tarif__vac--awesome"
+                                    id="vac--awesome"
+                              >
                                     <font-awesome-icon
                                           icon="fa-solid fa-hand-point-right"
                                           class="font"
@@ -72,105 +71,106 @@
                                     />
                               </div>
 
-                              <div
-                                    class="tarif__vacances--card"
-                                    id="tarif__vacance--card"
-                              >
+                              <div class="tarif__vac--cards" id="vac--cards">
                                     <div
+                                          class="elements"
                                           v-for="tarif in tarifs_vacances"
                                           :key="tarif.id"
-                                          class="elements" data-aos="flip-up"
+                                          data-aos="flip-up"
                                     >
-                                          <div>
+                                          <div
+                                                class="bg-white rounded-lg"
+                                                v-if="tarif.position < position"
+                                          >
                                                 <div
                                                       class="overflow-hidden bg-cover h-[30vh]"
                                                 >
                                                       <img
                                                             :src="tarif.photo"
                                                             :alt="tarif.saison"
-                                                            class="transition duration-300 ease-in-out hover:scale-110"
+                                                            class="transition duration-300 ease-in-out hover:scale-125"
                                                       />
                                                 </div>
-                                                <h1
-                                                      v-html="tarif.date"
-                                                      class="mb-4"
-                                                ></h1>
+
+                                                <h2
+                                                      v-text="tarif.saison"
+                                                      class="font-medium"
+                                                ></h2>
+                                                <p v-html="tarif.date"></p>
                                                 <p
-                                                      v-html="tarif.prix"
+                                                      v-text="tarif.prix"
                                                       class="font-semibold text-2xl"
                                                 ></p>
                                           </div>
                                     </div>
                               </div>
                         </div>
-                        <!-------------------------------------------->
 
-                        <!--<div class="tarif__vacance">
+                        <!------------ Basse --------------------------->
+                        <div
+                              class="tarif__basse"
+                              v-on:mouseenter="handleBasseSaison"
+                        >
                               <div
-                                    class="tarif__vacance--awesome"
-                                    id="tarif__vacance--awesome"
-                                    v-on:mouseenter="handleSouris"
-                                    v-once
+                                    class="tarif__basse--ecureuil"
+                                    id="ecureuil"
+                                    :class="{animation : animeBasseSaison}"
+                              >
+                                    <img
+                                          src="../assets/Tarifs/ecureuil2.png"
+                                          alt="ecureuil"
+                                    />
+                              </div>
+
+                              <div
+                                    class="tarif__basse--awesome"
+                                    id="basse--awesome"
                               >
                                     <font-awesome-icon
                                           icon="fa-solid fa-hand-point-right"
                                           class="font"
+                                          id="tarif__basse--awesome"
                                     />
                               </div>
 
-                              <div
-                                    class="tarif__vacance--bird"
-                                    id="myBird"
-                                    :class="{ animation: animeTarifVacance }"
-                              >
-                                    <img
-                                          src="../assets/Tarifs/bird.png"
-                                          alt=""
-                                    />
-                              </div>
-
-                              <div
-                                    class="tarif__vacance--card"
-                                    id="tarif__vacance--card"
-                              >
+                              <div class="tarif__basse--cards" id="basse--card">
                                     <div
-                                          v-for="tarif in tarifs_vacances"
-                                          :key="tarif.id"
                                           class="elements"
+                                          v-for="tarif in tarifs_basse_saison"
+                                          :key="tarif.id"
+                                          data-aos="flip-up"
                                     >
                                           <div
-                                                class="bg-white rounded-lg h-[45vh] mb-4 elements__card"
-                                                data-aos="flip-up"
-                                                v-if="tarif.position < position"
+                                                class="bg-white rounded-lg"
+                                                v-if="tarif.position < positionBasse"
                                           >
                                                 <div
-                                                      class="relative overflow-hidden bg-cover h-[30vh]"
+                                                      class="overflow-hidden bg-cover h-[30vh]"
                                                 >
                                                       <img
                                                             :src="tarif.photo"
                                                             :alt="tarif.saison"
-                                                            class="transition duration-300 ease-in-out hover:scale-110"
+                                                            class="transition duration-300 ease-in-out hover:scale-125"
                                                       />
                                                 </div>
 
-                                                <h1
-                                                      v-text="tarif.saison"
-                                                      class="font-semibold text-lg"
-                                                ></h1>
-                                                <p v-html="tarif.date"></p>
+                                                <h2
+                                                      v-text="tarif.periode"
+                                                      class="font-medium"
+                                                ></h2>
+
                                                 <p
                                                       v-text="tarif.prix"
-                                                      class="text-2xl font-semibold"
+                                                      class="font-semibold text-2xl"
                                                 ></p>
                                           </div>
                                     </div>
-
-                                    
                               </div>
-                        </div> -->
+                        </div>
 
                         <!-- Tarifs basse saison -->
-                        <div class="tarif__basse-saison">
+
+                        <!---<div class="tarif__basse-saison">
                               <div
                                     class="tarif__basse-saison--awesome"
                                     id="tarif__basse-saison--awesome"
@@ -232,7 +232,7 @@
                                           </div>
                                     </div>
                               </div>
-                        </div>
+                        </div>-->
 
                         <div
                               class="tarif__arrive"
@@ -406,15 +406,6 @@
                   </div>
             </div>
 
-            <div
-                  class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat"
-            >
-                  <img
-                        src="https://tecdn.b-cdn.net/img/new/fluid/city/113.webp"
-                        class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
-                        alt="Louvre"
-                  />
-            </div>
       </div>
 </template>
 
@@ -428,23 +419,25 @@ export default {
             var count = 0;
             var bird;
             var ecureuil;
-            var animeTarifVacance = ref(true);
-            var animeBasseSaison = ref(false);
+            //var animeTarifVacance = ref(true);
+            var animeTarifVac = ref(true);
+            var animeBasseSaison = ref(true);
             var animeConfort = ref(false);
             //var compte = 0;
             const intervalId = ref(null);
 
             onMounted(() => {
-                  bird = document.getElementById("myBird");
+                  bird = document.getElementById("bird");
+                  
                   ecureuil = document.getElementById("ecureuil");
                   position.value = 0;
                   positionBasse.value = 0;
 
                   // Pour récupérer la position de l'élement
-                  const elementPosition = bird.getBoundingClientRect();
+                  //const elementPosition = bird.getBoundingClientRect();
 
                   // Pour récupérer la position en x du bird lors de l'animation
-                  position.value = elementPosition.x;
+                  //position.value = elementPosition.x;
             });
 
             /**
@@ -471,17 +464,13 @@ export default {
                   }, 500);
             };
 
-            var compteur = 0;
-            const handleSouris = () => {
-                  //compteur = 0;
-                  console.log("OK");
-                  if (compteur < 1) {
-                        animeTarifVacance.value = true;
-                        interval(), tarifVacance();
-                        ++compteur;
+            var cpt = 0;
+            const handleVacance = () => {
+                  if (cpt < 1) {
+                        //animeTarifVac = true
+                        interval(), tarifVac();
+                        ++cpt;
                   }
-
-                  console.log(animeTarifVacance.value);
             };
 
             /**
@@ -489,26 +478,20 @@ export default {
              * changements dans le DOM dès que je passe
              * la souris sur iconTouch (tarif__vacance--awesome)
              */
-            const tarifVacance = () => {
-                  const iconTouch = document.getElementById(
-                        "tarif__vacance--awesome"
-                  );
 
-                  const myBird = document.getElementById("myBird");
+            const tarifVac = () => {
+                  const awesome = document.getElementById("vac--awesome");
 
-                  const tarifCard = document.getElementById(
-                        "tarif__vacance--card"
-                  );
+                  const bird = document.getElementById("bird");
 
-                  iconTouch.style.opacity = 0;
-                  myBird.style.display = "block";
-                  //myBird.classList.add("animation")
-                  //tarifCard.style.visibility = "visible";
+                  const cards = document.getElementById("vac--cards");
 
-                  tarifCard.style.opacity = 1;
+                  cards.style.opacity = 1;
+                  awesome.style.opacity = 0;
+                  bird.style.display = "block";
             };
 
-            /// basse saison
+            // basse saison
             var countBasseSaison = 0;
             const intervalBasseSaison = () => {
                   intervalId.value = setInterval(() => {
@@ -531,13 +514,13 @@ export default {
 
             const tarifBasse = () => {
                   const iconTouch = document.getElementById(
-                        "tarif__basse-saison--awesome"
+                        "tarif__basse--awesome"
                   );
 
                   const ecureuil = document.getElementById("ecureuil");
 
                   const tarifCard = document.getElementById(
-                        "tarif__basse-saison--card"
+                        "basse--card"
                   );
 
                   iconTouch.style.opacity = 0;
@@ -555,6 +538,8 @@ export default {
                         ++compte;
                   }
             };
+
+            
 
             // A votre arrive
             const afficheAVotreArrive = () => {
@@ -616,18 +601,20 @@ export default {
                   position,
                   positionBasse,
 
-                  animeTarifVacance,
+                  //animeTarifVacance,
                   animeBasseSaison,
                   animeConfort,
+                  animeTarifVac,
 
                   afficheAVotreArrive,
                   affichePourVotreConfort,
                   afficheReservation,
 
-                  tarifVacance,
+                  //tarifVacance,
 
                   handleBasseSaison,
-                  handleSouris,
+                  //handleSouris,
+                  handleVacance,
             };
       },
 };
@@ -681,7 +668,6 @@ export default {
 
 .animation {
       animation: moving 2s linear;
-      background: #7708a0;
 }
 
 /*.affiche{
@@ -726,56 +712,40 @@ export default {
             //border: 5px solid #08863b;
       }
 
-      &__vacances {
+      &__vac {
             position: relative;
             height: 45vh;
-            //text-align: left;
+            margin-bottom: 1em;
 
             &--bird {
                   position: absolute;
-                  left: -15%;
-                  border: #7708a0 2px solid;
-                  width: 25%;
-                  z-index: 100;
+                  left: -5%;
+                  width: 20%;
                   display: none;
                   opacity: 0;
-                  //animation: moving 2s linear;
-                  //z-index: 100;
-
-                   
+                  z-index: 1;
             }
 
             &--awesome {
                   position: absolute;
-                  width: 100%;
-                  height: 100%;
                   text-align: left;
-                  //display: block;
-                  border: 2px solid red;
-                  background: red;
-
-                  .font {
-                        font-size: 6em;
-                        color: #fff;
-                  }
+                  color: #fff;
+                  font-size: 6em;
             }
 
-            &--card {
-                  position: absolute;
+            &--cards {
                   display: flex;
                   width: 100%;
                   height: 100%;
-                  margin-bottom: 1em;
+                  //border: orange 3px solid;
                   opacity: 0;
-                  //display: none;
-                  background: green;
-                  //opacity: 0;
 
                   .elements {
                         width: 32%;
                         margin-right: 1em;
-                        background: #fff;
-                        border-radius: 0.5em;
+                        transition: all 1s ease-in;
+                        height: 100%;
+                        //border: 2px solid rgb(15, 73, 246);
 
                         img {
                               object-fit: contain;
@@ -785,71 +755,46 @@ export default {
             }
       }
 
-      &__vacance {
-            //display: flex;
+      &__basse {
             position: relative;
-            height: 45vh;
+            height: 38vh;
             margin-bottom: 1em;
-            //border: 5px solid orange;
+            //border: 2px solid orange;
 
-            &--bird {
-                  //width: 15%;
+            &--ecureuil {
                   position: absolute;
-                  height: 25vh;
                   left: -5%;
-                  //z-index: 10;
+                  width: 20%;
                   display: none;
                   opacity: 0;
-                  //animation: moving 2s linear;
-            }
-
-            &--card {
-                  position: relative;
-                  //z-index: 100;
-                  display: flex;
-                  opacity: 0;
-                  width: 100%;
-                  //position: absolute;
-                  //border: 2px solid orange;
-                  //visibility: hidden;
-                  .elements {
-                        //display: none;
-                        width: 32%;
-                        margin-right: 1em;
-                        //border: #08a045 solid 2px;
-                        height: 45vh;
-                        //visibility: visible;
-
-                        &__card {
-                              //border: 3px solid #000;
-                              //background: red;
-
-                              &:hover {
-                                    background: green;
-                                    cursor: pointer;
-                                    transform: scale(105%);
-                              }
-                        }
-
-                        .image {
-                              border: 5px solid white;
-                        }
-                  }
+                  z-index: 1;
             }
 
             &--awesome {
                   position: absolute;
-                  z-index: 100;
-                  //background: #fff;
-                  width: 100%;
-                  height: 45vh;
                   text-align: left;
-                  //border: 10px solid red;
+                  color: #fff;
+                  font-size: 6em;
+            }
 
-                  .font {
-                        font-size: 6em;
-                        color: #fff;
-                        //animation: blink 3s infinite;
+            &--cards {
+                  display: flex;
+                  width: 100%;
+                  height: 100%;
+                  //border: orange 3px solid;
+                  opacity: 0;
+
+                  .elements {
+                        width: 32%;
+                        margin-right: 1em;
+                        transition: all 1s ease-in;
+                        height: 100%;
+                        //border: 2px solid rgb(15, 73, 246);
+
+                        img {
+                              object-fit: contain;
+                              border-radius: 0.5em;
+                        }
                   }
             }
       }
