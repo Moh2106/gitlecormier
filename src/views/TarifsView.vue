@@ -46,7 +46,7 @@
                   <div class="tarif__second_part">
                         <!-- Insertion des saisons, dates et prix à partir de tarifs de database -->
 
-                        <h2 class="bg-white">{{ position }}</h2>
+                        <h2 class="bg-white">Position {{ position }}, Anime Tarif Vacance {{ animeTarifVacance }}</h2>
                         <!-------------------------------------------->
                         <div
                               class="tarif__vacances"
@@ -56,7 +56,7 @@
                               <div
                                     class="tarif__vacances--bird"
                                     id="myBird"
-                                    
+                                    :class="{animation : animeTarifVacance}"
                               >
                                     <img
                                           src="../assets/Tarifs/bird.png"
@@ -81,7 +81,7 @@
                                           :key="tarif.id"
                                           class="elements" data-aos="flip-up"
                                     >
-                                          <div v-if="tarif.position < position">
+                                          <div>
                                                 <div
                                                       class="overflow-hidden bg-cover h-[30vh]"
                                                 >
@@ -428,7 +428,7 @@ export default {
             var count = 0;
             var bird;
             var ecureuil;
-            var animeTarifVacance = ref(false);
+            var animeTarifVacance = ref(true);
             var animeBasseSaison = ref(false);
             var animeConfort = ref(false);
             //var compte = 0;
@@ -502,7 +502,7 @@ export default {
 
                   iconTouch.style.opacity = 0;
                   myBird.style.display = "block";
-                  myBird.classList.toggle("animation")
+                  //myBird.classList.add("animation")
                   //tarifCard.style.visibility = "visible";
 
                   tarifCard.style.opacity = 1;
