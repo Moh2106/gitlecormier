@@ -30,7 +30,7 @@ export const tarifs_vacances = [
 export const tarifs_basse_saison = [
       {
             id: 1,
-            photo: "/pictures/Tarifs/basse_saison.jpg",
+            photo: "/pictures/details/jardin/image013.jpg",
             periode: "La semaine",
             prix: "330 €",
             position: 300,
@@ -38,7 +38,7 @@ export const tarifs_basse_saison = [
 
       {
             id: 2,
-            photo: "/pictures/Tarifs/basse_saison.jpg",
+            photo: "/pictures/Tarifs/jardin_cloche.jpg",
             periode: "Le week-end (2 nuits)",
             prix: "180 €",
             position: 800,
@@ -46,7 +46,7 @@ export const tarifs_basse_saison = [
 
       {
             id: 3,
-            photo: "/pictures/Tarifs/basse_saison.jpg",
+            photo: "/pictures/Tarifs/jardin_plante.jpg",
             periode: "Le mid-week (5 nuits)",
             prix: "210 €",
             position: 1100,

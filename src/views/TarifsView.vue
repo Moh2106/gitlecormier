@@ -44,11 +44,68 @@
                   </div>
 
                   <div class="tarif__second_part">
-                        <!--<h2 class="bg-white">{{ position }}</h2>-->
-
                         <!-- Insertion des saisons, dates et prix à partir de tarifs de database -->
 
-                        <div class="tarif__vacance">
+                        <h2 class="bg-white">{{ position }}</h2>
+                        <!-------------------------------------------->
+                        <div
+                              class="tarif__vacances"
+                              v-on:mouseenter="handleSouris"
+                              v-once
+                        >
+                              <div
+                                    class="tarif__vacances--bird"
+                                    id="myBird"
+                                    
+                              >
+                                    <img
+                                          src="../assets/Tarifs/bird.png"
+                                          alt=""
+                                    />
+                              </div>
+
+                              <div class="tarif__vacances--awesome">
+                                    <font-awesome-icon
+                                          icon="fa-solid fa-hand-point-right"
+                                          class="font"
+                                          id="tarif__vacance--awesome"
+                                    />
+                              </div>
+
+                              <div
+                                    class="tarif__vacances--card"
+                                    id="tarif__vacance--card"
+                              >
+                                    <div
+                                          v-for="tarif in tarifs_vacances"
+                                          :key="tarif.id"
+                                          class="elements"
+                                    >
+                                          <div>
+                                                <div
+                                                      class="overflow-hidden bg-cover h-[30vh]"
+                                                >
+                                                      <img
+                                                            :src="tarif.photo"
+                                                            :alt="tarif.saison"
+                                                            class="transition duration-300 ease-in-out hover:scale-110"
+                                                      />
+                                                </div>
+                                                <h1
+                                                      v-html="tarif.date"
+                                                      class="mb-4"
+                                                ></h1>
+                                                <p
+                                                      v-html="tarif.prix"
+                                                      class="font-semibold text-2xl"
+                                                ></p>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <!-------------------------------------------->
+
+                        <!--<div class="tarif__vacance">
                               <div
                                     class="tarif__vacance--awesome"
                                     id="tarif__vacance--awesome"
@@ -61,7 +118,11 @@
                                     />
                               </div>
 
-                              <div class="tarif__vacance--bird" id="myBird" :class="{animation : animeTarifVacance}">
+                              <div
+                                    class="tarif__vacance--bird"
+                                    id="myBird"
+                                    :class="{ animation: animeTarifVacance }"
+                              >
                                     <img
                                           src="../assets/Tarifs/bird.png"
                                           alt=""
@@ -78,17 +139,17 @@
                                           class="elements"
                                     >
                                           <div
-                                                class="bg-white rounded-lg h-[45vh] mb-4"
+                                                class="bg-white rounded-lg h-[45vh] mb-4 elements__card"
                                                 data-aos="flip-up"
                                                 v-if="tarif.position < position"
                                           >
                                                 <div
-                                                      class="overflow-hidden bg-cover h-[30vh] ease-in-out hover:cursor-pointer"
+                                                      class="relative overflow-hidden bg-cover h-[30vh]"
                                                 >
                                                       <img
                                                             :src="tarif.photo"
                                                             :alt="tarif.saison"
-                                                            class="transition duration-300 ease-in-out hover:cursor-pointer hover:scale-150 image"
+                                                            class="transition duration-300 ease-in-out hover:scale-110"
                                                       />
                                                 </div>
 
@@ -103,8 +164,10 @@
                                                 ></p>
                                           </div>
                                     </div>
+
+                                    
                               </div>
-                        </div>
+                        </div>-->
 
                         <!-- Tarifs basse saison -->
                         <div class="tarif__basse-saison">
@@ -122,7 +185,7 @@
                               <div
                                     class="tarif__basse-saison--ecureuil"
                                     id="ecureuil"
-                                    :class="{animation : animeBasseSaison}"
+                                    :class="{ animation: animeBasseSaison }"
                               >
                                     <img
                                           src="../assets/Tarifs/ecureuil2.png"
@@ -342,6 +405,16 @@
                         </div>
                   </div>
             </div>
+
+            <div
+                  class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat"
+            >
+                  <img
+                        src="https://tecdn.b-cdn.net/img/new/fluid/city/113.webp"
+                        class="max-w-xs transition duration-300 ease-in-out hover:scale-110"
+                        alt="Louvre"
+                  />
+            </div>
       </div>
 </template>
 
@@ -357,6 +430,7 @@ export default {
             var ecureuil;
             var animeTarifVacance = ref(false);
             var animeBasseSaison = ref(false);
+            var animeConfort = ref(false);
             //var compte = 0;
             const intervalId = ref(null);
 
@@ -385,6 +459,8 @@ export default {
                         // Pour récupérer la position en x du bird lors de l'animation
                         position.value = elementPosition.x;
 
+                        console.log(position.value);
+
                         count++;
 
                         // Cette partie permet d'arreter la fonction setIntervall
@@ -398,11 +474,14 @@ export default {
             var compteur = 0;
             const handleSouris = () => {
                   //compteur = 0;
+                  console.log("OK");
                   if (compteur < 1) {
                         animeTarifVacance.value = true;
                         interval(), tarifVacance();
                         ++compteur;
                   }
+
+                  console.log(animeTarifVacance.value);
             };
 
             /**
@@ -423,6 +502,7 @@ export default {
 
                   iconTouch.style.opacity = 0;
                   myBird.style.display = "block";
+                  myBird.classList.add("animation")
                   //tarifCard.style.visibility = "visible";
 
                   tarifCard.style.opacity = 1;
@@ -470,7 +550,7 @@ export default {
             var compte = 0;
             const handleBasseSaison = () => {
                   if (compte < 1) {
-                        animeBasseSaison.value = true
+                        animeBasseSaison.value = true;
                         intervalBasseSaison(), tarifBasse();
                         ++compte;
                   }
@@ -498,6 +578,7 @@ export default {
 
             // Pour votre confort
             const affichePourVotreConfort = () => {
+                  animeConfort.value = true;
                   const confortAwesome = document.getElementById(
                         "tarif__confort--awesome"
                   );
@@ -537,6 +618,7 @@ export default {
 
                   animeTarifVacance,
                   animeBasseSaison,
+                  animeConfort,
 
                   afficheAVotreArrive,
                   affichePourVotreConfort,
@@ -599,7 +681,15 @@ export default {
 
 .animation {
       animation: moving 2s linear;
+      background: #7708a0;
 }
+
+/*.affiche{
+      //position: relative;
+      left: 0%;
+      opacity: 1;
+      transition: 1s ease-in;
+}*/
 .tarif {
       width: 95%;
       margin: auto;
@@ -613,15 +703,86 @@ export default {
       &__part_one {
             background: url("../assets/Tarifs/tarif_part_one_bg.jpg");
             width: 25%;
-            //max-width: 25%;
             height: auto;
             margin-right: 3em;
-            //padding-top: 10em;
+
+            div {
+                  background: #08a045;
+
+                  h2 {
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: blanchedalmond;
+                        font-size: 1.1em;
+                        font-weight: 550;
+                  }
+            }
       }
 
       &__second_part {
             width: 100%;
             //border: 5px solid #08863b;
+      }
+
+      &__vacances {
+            position: relative;
+            height: 45vh;
+            //text-align: left;
+
+            &--bird {
+                  position: absolute;
+                  left: -15%;
+                  border: #7708a0 2px solid;
+                  width: 25%;
+                  z-index: 100;
+                  display: none;
+                  opacity: 0;
+                  //animation: moving 2s linear;
+                  //z-index: 100;
+
+                   
+            }
+
+            &--awesome {
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  text-align: left;
+                  //display: block;
+                  border: 2px solid red;
+                  background: red;
+
+                  .font {
+                        font-size: 6em;
+                        color: #fff;
+                  }
+            }
+
+            &--card {
+                  position: absolute;
+                  display: flex;
+                  width: 100%;
+                  height: 100%;
+                  margin-bottom: 1em;
+                  opacity: 0;
+                  //display: none;
+                  background: green;
+                  //opacity: 0;
+
+                  .elements {
+                        width: 32%;
+                        margin-right: 1em;
+                        background: #fff;
+                        border-radius: 0.5em;
+
+                        img {
+                              object-fit: contain;
+                              border-radius: 0.5em;
+                        }
+                  }
+            }
       }
 
       &__vacance {
@@ -636,30 +797,42 @@ export default {
                   position: absolute;
                   height: 25vh;
                   left: -5%;
-                  z-index: 100;
+                  //z-index: 10;
                   display: none;
                   opacity: 0;
+                  //animation: moving 2s linear;
             }
 
             &--card {
+                  position: relative;
+                  //z-index: 100;
                   display: flex;
                   opacity: 0;
+                  width: 100%;
+                  //position: absolute;
                   //border: 2px solid orange;
                   //visibility: hidden;
                   .elements {
                         //display: none;
-                        width: 30%;
+                        width: 32%;
                         margin-right: 1em;
+                        //border: #08a045 solid 2px;
+                        height: 45vh;
                         //visibility: visible;
 
-                        .image {
-                              //border: 2px solid red;
-                              //transform: scale(1.5em);
+                        &__card {
+                              //border: 3px solid #000;
+                              //background: red;
 
                               &:hover {
-                                    transform: scale(1.5em);
+                                    background: green;
                                     cursor: pointer;
+                                    transform: scale(105%);
                               }
+                        }
+
+                        .image {
+                              border: 5px solid white;
                         }
                   }
             }
@@ -675,8 +848,8 @@ export default {
 
                   .font {
                         font-size: 6em;
-                        color: #08863b;
-                        animation: blink 3s infinite;
+                        color: #fff;
+                        //animation: blink 3s infinite;
                   }
             }
       }
@@ -706,8 +879,8 @@ export default {
 
                   .font {
                         font-size: 6em;
-                        color: #08863b;
-                        animation: blink 3s infinite;
+                        color: #fff;
+                        //animation: blink 3s infinite;
                   }
             }
 
@@ -716,7 +889,7 @@ export default {
                   opacity: 0;
 
                   .elements {
-                        width: 30%;
+                        width: 32%;
                         margin-right: 1em;
                   }
             }
@@ -824,28 +997,16 @@ export default {
                   img {
                         display: inline;
                         width: 20%;
+
+                        &:hover {
+                              transform: scale(105%);
+                        }
                   }
             }
       }
 
-      /*&__title {
-            background: #fff;
-            width: 30%;
-            margin: auto;
-            border-radius: 50%;
-            margin-bottom: 0.5em;
-            margin-top: 1em;
-            padding: 0.5em;
-      }*/
-
       &__card {
             position: relative;
-
-            /*&--solo{
-                  img{
-                        width: 110%;
-                  }
-            }*/
 
             &--solo,
             .paragraphe {
@@ -865,17 +1026,6 @@ export default {
                   }*/
             }
       }
-
-      /*&__button_reservation {
-            background: #08a045;
-            padding: 0.1em 0.3em;
-            color: #fff;
-            border-radius: 0.3em;
-
-            &:hover {
-                  background: #08863b;
-            }
-      }*/
 
       &__cliquer {
             border-radius: 50%;
