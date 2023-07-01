@@ -41,7 +41,7 @@ export const tarifs_basse_saison = [
             photo: "/pictures/Tarifs/jardin_cloche.jpg",
             periode: "Le week-end (2 nuits)",
             prix: "180 €",
-            position: 800,
+            position: 750,
       },
 
       {

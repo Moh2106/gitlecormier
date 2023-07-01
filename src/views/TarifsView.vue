@@ -300,6 +300,7 @@
                               <div
                                     class="tarif__confort--text"
                                     id="tarif__confort--text"
+                                    v-if="animeConfort"
                               >
                                     <p>Par semaine :</p>
                                     <ul>
@@ -563,19 +564,22 @@ export default {
 
             // Pour votre confort
             const affichePourVotreConfort = () => {
-                  animeConfort.value = true;
+                  animeConfort.value =! animeConfort.value;
+
+                  console.log(animeConfort.value);
+
                   const confortAwesome = document.getElementById(
                         "tarif__confort--awesome"
                   );
 
-                  const confortText = document.getElementById(
-                        "tarif__confort--text"
-                  );
+                  //const confortText = document.getElementById(
+                  //      "tarif__confort--text"
+                  //);
 
                   confortAwesome.style.display = "none";
-                  confortText.style.transition = "1s ease-in";
-                  confortText.style.opacity = 1;
-                  confortText.style.left = 0;
+                  //confortText.style.transition = "1s ease-in";
+                  //confortText.style.opacity = 1;
+                  //confortText.style.left = 0;
             };
 
             // Réservation
@@ -893,11 +897,11 @@ export default {
             &--text {
                   background: #fff;
                   //display: none;
-                  opacity: 0;
+                  //opacity: 0;
                   padding: 1em;
                   border-radius: 0.5em;
                   position: relative;
-                  left: -150%;
+                  //left: -150%;
 
                   p {
                         text-align: left;
