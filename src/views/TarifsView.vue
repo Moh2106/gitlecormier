@@ -199,7 +199,9 @@
                                     class="tarif__arrive--text"
                                     id="tarif__arrive--text"
                               >
-                                    <p>
+
+                              <div v-if="animeArrive">
+<p>
                                           Une caution de
                                           <span class="tarif__price">300€</span>
                                           vous sera demandée lors de votre
@@ -215,6 +217,8 @@
                                           <span class="tarif__price">10€</span>
                                           par jour en plein hiver.
                                     </p>
+                              </div>
+                                    
                               </div>
                         </div>
 
@@ -375,6 +379,7 @@ export default {
             var animeTarifVac = ref(true);
             var animeBasseSaison = ref(true);
             var animeConfort = ref(false);
+            var animeArrive = ref(false)
             var animeReservation = ref(false)
             //var compte = 0;
             const intervalId = ref(null);
@@ -486,6 +491,7 @@ export default {
 
             // A votre arrive
             const afficheAVotreArrive = () => {
+                  animeArrive.value = true
                   const arriveAwesome = document.getElementById(
                         "tarif__arrive--awesome"
                   );
@@ -550,6 +556,7 @@ export default {
                   animeBasseSaison,
                   animeConfort,
                   animeTarifVac,
+                  animeArrive,
                   animeReservation,
 
                   afficheAVotreArrive,
