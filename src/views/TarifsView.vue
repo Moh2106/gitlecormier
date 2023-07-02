@@ -182,13 +182,13 @@
                                     id="tarif__arrive--awesome"
                               >
                                     <h2>
+                                          <img
+                                                src="../assets/Tarifs/emoji_arrive_gift.gif"
+                                                alt=""
+                                                class="emojiArrive"
+                                          />
+
                                           <font-awesome-icon
-                                                icon="fa-solid fa-question"
-                                                class="icon"
-                                          /><font-awesome-icon
-                                                icon="fa-solid fa-question"
-                                                class="icon"
-                                          /><font-awesome-icon
                                                 icon="fa-solid fa-question"
                                                 class="icon"
                                           />
@@ -228,9 +228,15 @@
                                     id="tarif__confort--awesome"
                               >
                                     <h2>
-                                          <font-awesome-icon
+                                          <!----<font-awesome-icon
                                                 icon="fa-regular fa-face-smile"
                                                 class="iconConfort"
+                                          />-->
+
+                                          <img
+                                                src="../assets/Tarifs/emoji_confort_gift.gif"
+                                                alt=""
+                                                class="emojiConfort"
                                           />
                                     </h2>
                               </div>
@@ -238,7 +244,6 @@
                               <div
                                     class="tarif__confort--text"
                                     id="tarif__confort--text"
-                                    
                               >
                                     <div v-if="animeConfort">
                                           <p>Par semaine :</p>
@@ -313,8 +318,10 @@
                                     id="tarif__reservation--awesome"
                               >
                                     <h2>
-                                          <font-awesome-icon
-                                                icon="fa-regular fa-calendar"
+                                          <img
+                                                src="../assets/Tarifs/emoji_reservation_gif.gif"
+                                                alt=""
+                                                class="emojiReservation"
                                           />
                                     </h2>
                               </div>
@@ -323,27 +330,29 @@
                                     class="tarif__reservation--text"
                                     id="tarif__reservation--text"
                               >
-                                    <p class="">
-                                          Alors n'attendez plus, les
-                                          réservations s'effectuent sur le site
-                                          de gîte de France.
+                                    <div v-if="animeReservation">
+                                          <p class="">
+                                                Alors n'attendez plus, les
+                                                réservations s'effectuent sur le
+                                                site de gîte de France.
 
-                                          <br />
+                                                <br />
 
-                                          <span class="">
-                                                Cliquez
-                                                <a
-                                                      href="https://www.gites-de-france-eure.com/location-vacances-Gite-Hauville-27G818.html"
-                                                >
-                                                      <img
-                                                            src="../assets/Liens/logo_gite_eure_de_france.jpg"
-                                                            alt=""
-                                                            class=""
-                                                      />
-                                                </a>
-                                                pour réserver.
-                                          </span>
-                                    </p>
+                                                <span class="">
+                                                      Cliquez
+                                                      <a
+                                                            href="https://www.gites-de-france-eure.com/location-vacances-Gite-Hauville-27G818.html"
+                                                      >
+                                                            <img
+                                                                  src="../assets/Liens/logo_gite_eure_de_france.jpg"
+                                                                  alt=""
+                                                                  class=""
+                                                            />
+                                                      </a>
+                                                      pour réserver.
+                                                </span>
+                                          </p>
+                                    </div>
                               </div>
                         </div>
                   </div>
@@ -366,6 +375,7 @@ export default {
             var animeTarifVac = ref(true);
             var animeBasseSaison = ref(true);
             var animeConfort = ref(false);
+            var animeReservation = ref(false)
             //var compte = 0;
             const intervalId = ref(null);
 
@@ -496,7 +506,7 @@ export default {
 
             // Pour votre confort
             const affichePourVotreConfort = () => {
-                  animeConfort.value = true
+                  animeConfort.value = true;
 
                   const confortAwesome = document.getElementById(
                         "tarif__confort--awesome"
@@ -514,6 +524,7 @@ export default {
 
             // Réservation
             const afficheReservation = () => {
+                  animeReservation.value = true
                   const reservationAwesome = document.getElementById(
                         "tarif__reservation--awesome"
                   );
@@ -539,6 +550,7 @@ export default {
                   animeBasseSaison,
                   animeConfort,
                   animeTarifVac,
+                  animeReservation,
 
                   afficheAVotreArrive,
                   affichePourVotreConfort,
@@ -555,9 +567,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.blinking {
+/*.blinking {
       animation: blink 3s infinite;
-}
+}*/
 
 @keyframes blink {
       0% {
@@ -783,6 +795,14 @@ export default {
                   //border: 3px solid red;
                   width: 100%;
 
+                  .emojiArrive {
+                        display: inline;
+                        width: 10%;
+                        margin-right: 0.3em;
+                        margin-left: 0.5em;
+                        //border: 2px solid rgb(15, 84, 105);
+                  }
+
                   .icon {
                         margin-right: 0.3em;
                         color: #fff;
@@ -815,8 +835,10 @@ export default {
                   width: 100%;
                   height: 100%;
 
-                  .iconConfort {
-                        color: #08a045;
+                  .emojiConfort {
+                        width: 25%;
+                        height: 100%;
+                        //border: 2px solid rgb(0, 89, 255);
                   }
             }
 
@@ -859,6 +881,12 @@ export default {
                   font-size: 5em;
                   width: 100%;
                   height: 100%;
+
+                  .emojiReservation {
+                        width: 13%;
+                        //border: 2px solid white;
+                        margin-left: 0.5em;
+                  }
             }
 
             &--text {
