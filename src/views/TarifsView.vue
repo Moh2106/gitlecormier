@@ -494,6 +494,12 @@ export default {
 
                   const awesomeVac = document.getElementById("vac--awesome");
                   awesomeVac.style.opacity = 1;
+
+                  const awesomeBasse = document.getElementById(
+                        "basse--awesome"
+                  );
+
+                  awesomeBasse.style.opacity = 1;
             });
 
             /**
@@ -597,7 +603,6 @@ export default {
 
                   iconTouch.style.opacity = 0;
                   ecureuil.style.display = "block";
-                  //tarifCard.style.visibility = "visible";
 
                   tarifCard.style.opacity = 1;
             };
