@@ -1,36 +1,36 @@
 export const tarifs_vacances = [
       {
             id: 1,
-            photo: "/pictures/jardin/RMV_5649.jpg",
+            photo: "/pictures/Tarifs/tarif_tres_haute_saison.jpg",
             saison: "TRES HAUTE SAISON",
             date: "Les vacances d'été <br> (juillet - août)",
             prix: "440 €",
-            position: 300,
+            position: 150,
       },
 
       {
             id: 2,
-            photo: "/pictures/jardin/RMV_5554.jpg",
+            photo: "/pictures/Tarifs/tarif_haute_saison.jpg",
             saison: "HAUTE SAISON",
             date: "Début juillet, Fin août et <br> les vacances de Noël ",
             prix: "420 €",
-            position: 750,
+            position: 450,
       },
 
       {
             id: 3,
-            photo: "/pictures/jardin/IMG20230603175357.jpg",
+            photo: "/pictures/Tarifs/tarif_moyenne_saison.jpg",
             saison: "MOYENNE SAISON",
             date: "Les autres vacances scolaires, et mai - juin - septembre",
             prix: "270 €",
-            position: 1000,
+            position: 700,
       },
 ];
 
 export const tarifs_basse_saison = [
       {
             id: 1,
-            photo: "/pictures/details/jardin/image013.jpg",
+            photo: "/pictures/Tarifs/tarif_semaine.jpg",
             periode: "La semaine",
             prix: "330 €",
             position: 300,
@@ -38,10 +38,10 @@ export const tarifs_basse_saison = [
 
       {
             id: 2,
-            photo: "/pictures/Tarifs/jardin_cloche.jpg",
+            photo: "/pictures/Tarifs/tarif_weekend.jpg",
             periode: "Le week-end (2 nuits)",
             prix: "180 €",
-            position: 750,
+            position: 650,
       },
 
       {
@@ -49,6 +49,6 @@ export const tarifs_basse_saison = [
             photo: "/pictures/Tarifs/jardin_plante.jpg",
             periode: "Le mid-week (5 nuits)",
             prix: "210 €",
-            position: 1000,
+            position: 900,
       },
 ];

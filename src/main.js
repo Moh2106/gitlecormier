@@ -21,6 +21,7 @@ import {
       faCirclePlus,
       faHandPointRight,
       faQuestion,
+      faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -40,7 +41,8 @@ library.add(
       faHandPointRight,
       faQuestion,
       faFaceSmile,
-      faCalendar
+      faCalendar,
+      faCheck
 );
 
 
