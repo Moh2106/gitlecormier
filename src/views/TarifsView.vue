@@ -808,6 +808,7 @@ export default {
                   text-align: left;
                   color: #fff;
                   font-size: 6em;
+                  opacity: 1;
 
                   img {
                         width: 25%;
