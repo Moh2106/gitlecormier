@@ -491,6 +491,9 @@ export default {
                   ecureuil = document.getElementById("ecureuil");
                   position.value = 0;
                   positionBasse.value = 0;
+
+                  const awesomeVac = document.getElementById("vac--awesome");
+                  awesomeVac.style.opacity = 1;
             });
 
             /**
