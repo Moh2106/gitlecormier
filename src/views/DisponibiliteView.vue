@@ -1,12 +1,14 @@
 <template>
       <div class="pt-16 reservation pb-4">
             <div class="reservation__soleil" id="disponibiliteIframe">
-                  <img src="../assets/Disponibilite/soleil.png" alt="" />
+                  <div v-if="showImage">
+                        <img src="../assets/Disponibilite/soleil.png" alt="" />
 
-                  <p>
-                        Cliquer sur votre date d'arrivée pour commencer la
-                        réservation
-                  </p>
+                        <p>
+                              Cliquer sur votre date d'arrivée pour commencer la
+                              réservation
+                        </p>
+                  </div>
             </div>
 
             <div
@@ -64,18 +66,20 @@
                   ></path>
             </svg>
       </div>
-
-      
 </template>
 
 <script>
+import { ref } from "vue";
+
 export default {
       setup() {
+            const showImage = ref(false);
             const moveImage = () => {
                   const myIframe = document.getElementById(
                         "disponibiliteIframe"
                   );
 
+                  showImage.value = true;
                   /**
                    * Vérifier si l'élément myIframe contient déjà la classe move
                    * Le but est d'exécuter l'événement une seule fois
@@ -86,6 +90,7 @@ export default {
 
             return {
                   moveImage,
+                  showImage,
             };
       },
 };
@@ -97,23 +102,23 @@ export default {
 }
 
 .custom-shape-divider-top-1688723126 {
-    //position: absolute;
-    //top: 0;
-    //left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+      //position: absolute;
+      //top: 0;
+      //left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
 }
 
 .custom-shape-divider-top-1688723126 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 59px;
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 59px;
 }
 
 .custom-shape-divider-top-1688723126 .shape-fill {
-    fill: #FFFFFF;
+      fill: #ffffff;
 }
 
 .custom-shape-divider-bottom-1688722987 {

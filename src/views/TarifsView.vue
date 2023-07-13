@@ -155,8 +155,12 @@
                               >
                                     <p>Arrivée libre</p>
 
-                                    <img src="../assets/Tarifs/grive_musicienne.png" alt="grive musicienne" class="move" id="tarif__basse--awesome">
-
+                                    <img
+                                          src="../assets/Tarifs/grive_musicienne.png"
+                                          alt="grive musicienne"
+                                          class="move"
+                                          id="tarif__basse--awesome"
+                                    />
 
                                     <!----<font-awesome-icon
                                           icon="fa-solid fa-hand-point-right"
@@ -320,7 +324,11 @@
                                                 class="emojiConfort"
                                           />-->
 
-                                          <img src="../assets/Tarifs/merle.gif" alt="" class="emojiConfort">
+                                          <img
+                                                src="../assets/Tarifs/merle_1.png"
+                                                alt=""
+                                                class="emojiConfort move"
+                                          />
                                     </h2>
                               </div>
 
@@ -391,7 +399,10 @@
                                                             class="mr-2"
                                                       />
                                                       Pour le bois
-                                                      <span class="tarif__price">50€ </span> le stère
+                                                      <span class="tarif__price"
+                                                            >50€
+                                                      </span>
+                                                      le stère
                                                 </li>
 
                                                 <li>
@@ -495,11 +506,16 @@ export default {
                   const awesomeVac = document.getElementById("vac--awesome");
                   awesomeVac.style.opacity = 1;
 
-                  const awesomeBasse = document.getElementById(
-                        "basse--awesome"
-                  );
+                  const awesomeBasse =
+                        document.getElementById("basse--awesome");
 
                   awesomeBasse.style.opacity = 1;
+
+                  const confortAwesome = document.getElementById(
+                        "tarif__confort--awesome"
+                  );
+
+                  confortAwesome.style.opacity = 1
             });
 
             /**
@@ -593,9 +609,7 @@ export default {
             };
 
             const tarifBasse = () => {
-                  const iconTouch = document.getElementById(
-                        "basse--awesome"
-                  );
+                  const iconTouch = document.getElementById("basse--awesome");
 
                   const ecureuil = document.getElementById("ecureuil");
 
@@ -874,6 +888,7 @@ export default {
                   font-size: 2.5em;
                   transform: translate(-1em, -1.1em);
                   color: #fff;
+                  text-shadow: 4px 4px 6px rgba(66, 90, 66, 1);
             }
 
             .custom-shape-divider-bottom-1688724135 {
@@ -916,9 +931,8 @@ export default {
                   display: flex;
                   position: absolute;
                   text-align: left;
-                  
 
-                  img{
+                  img {
                         width: 35%;
                   }
 
@@ -931,7 +945,6 @@ export default {
                         color: #fff;
                         font-size: 6em;
                         transform: translate(1em, -0.6em);
-                        
                   }
             }
 
@@ -970,6 +983,7 @@ export default {
             height: 15vh;
             margin-bottom: 2rem;
             text-align: left;
+            
             //padding: 0.5em 0;
             //border: 3px solid orange;
 
@@ -1002,7 +1016,7 @@ export default {
                   opacity: 0;
                   background: #fff;
                   height: 15vh;
-                  padding: 1em ;
+                  padding: 1em;
                   border-radius: 0.5em;
                   position: relative;
                   left: -150%;
