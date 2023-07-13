@@ -515,7 +515,7 @@ export default {
                         "tarif__confort--awesome"
                   );
 
-                  confortAwesome.style.opacity = 1
+                  confortAwesome.style.display = "block"
             });
 
             /**
