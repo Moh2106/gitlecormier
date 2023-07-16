@@ -530,7 +530,7 @@ export default {
                         // Pour récupérer la position en x du bird lors de l'animation
                         position.value = elementPosition.x;
 
-                        ++count;
+                        count++;
 
                         // Cette partie permet d'arreter la fonction setIntervall
                         console.log(position.value);
@@ -538,7 +538,7 @@ export default {
                               clearInterval(intervalId.value);
                               intervalId.value = null;
                         }
-                  }, 650);
+                  }, 600);
             };
 
             var cpt = 0;
@@ -778,11 +778,11 @@ export default {
       width: 95%;
       margin: auto;
       //position: relative;
-      .cards {
+      /*.cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 0.5em;
-      }
+      }*/
 
       &__part_one {
             width: 25%;
@@ -834,6 +834,7 @@ export default {
 
                   img {
                         width: 25%;
+                        cursor: zoom-in;
                   }
 
                   p {

@@ -29,6 +29,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="rdc.class"
+                                    :id=rdc.index
                               />
                         </div>
 
@@ -50,6 +51,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="cuisine.class"
+                                    :id=cuisine.index
                               />
                         </div>
 
@@ -63,6 +65,7 @@
                                           :alt="cuisine.alt"
                                           @click="Cliquer"
                                           class="items"
+                                          :id=cuisine.index
                                     />
                               </div>
                         </div>
@@ -83,6 +86,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="salon.class"
+                                    :id=salon.index
                               />
                         </div>
 
@@ -96,6 +100,7 @@
                                           :alt="salon.alt"
                                           @click="Cliquer"
                                           class="items"
+                                          :id=salon.index
                                     />
                               </div>
                         </div>
@@ -115,6 +120,7 @@
                                     :alt="salle.alt"
                                     @click="Cliquer"
                                     class="items"
+                                    :id=salle.index
                               />
                         </div>
 
@@ -128,6 +134,7 @@
                                           :alt="salle.alt"
                                           @click="Cliquer"
                                           class="items"
+                                          :id=salle.index
                                     />
                               </div>
                         </div>
@@ -148,9 +155,11 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="salle.class"
+                                    :id=salle.index
                               />
                         </div>
                   </div>
+
             </div>
 
             <!------------------- 1 ER ETAGE -- CHAMBRE 1 -------------------------------->
@@ -171,6 +180,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="chambre1.class"
+                                    :id=chambre1.index
                               />
                         </div>
 
@@ -184,6 +194,7 @@
                                           :alt="chambre1.alt"
                                           @click="Cliquer"
                                           class="items"
+                                          :id=chambre1.index
                                     />
                               </div>
                         </div>
@@ -208,6 +219,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="chambre2.class"
+                                    :id=chambre2.index
                               />
                         </div>
 
@@ -221,6 +233,7 @@
                                           :alt="chambre2.alt"
                                           @click="Cliquer"
                                           class="items"
+                                          :id=chambre2.index
                                     />
                               </div>
                         </div>
@@ -240,6 +253,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="jardin.class"
+                                    :id=jardin.index
                               />
                         </div>
 
@@ -253,6 +267,7 @@
                                           :alt="jardin.alt"
                                           @click="Cliquer"
                                           class="items"
+                                          :id=jardin.index
                                     />
                               </div>
                         </div>
@@ -327,19 +342,15 @@ export default {
              * Cette fonction permet d'afficher le zoom des photos
              */
 
+            // Indique l'index de l'image
             var ind = 0;
-            //var images = document.querySelectorAll(".items");
 
             const Cliquer = () => {
                   const items = document.querySelectorAll(".items");
-                  /*const arr = Object.entries(items)
-                  console.log(arr);
-                  console.log(typeof items);*/
 
                   items.forEach((image) => {
                         image.onclick = () => {
                               // recupérer la source de l'image
-                              //console.log(items.indexOf(image));
 
                               const imageSource = image.src;
                               document.querySelector(
@@ -348,35 +359,12 @@ export default {
                               document.querySelector(
                                     ".gallerie__popup img"
                               ).src = imageSource;
+
+                              ind = image.id
+
                         };
                   });
-            };
-
-            /**
-             * Show images
-             */
-            var currentIndex = 0;
-            var photos = Array.from(document.getElementsByClassName("items"));
-
-            const showImage = (index) => {
-                  console.log(photos[index]);
-                  photos.forEach((image) => {
-                        image.style.display = "none";
-                  });
-
-                  photos[index].style.display = "block";
-            };
-
-            const precedent = () => {
-                  currentIndex =
-                        (currentIndex - 1 + photos.length) % photos.length;
-                  showImage(currentIndex);
-            };
-
-            const suivant = () => {
-                  currentIndex = (currentIndex + 1) % photos.length;
-                  showImage(currentIndex);
-            };
+            }; 
 
             /**
              * Cette fonction permet de fermer une photo en zoom
@@ -420,26 +408,14 @@ export default {
                   document.querySelector(".gallerie__popup img").src =
                         imageSuivant;
 
-                  //images[ind].style.display = 'block';
-                  //console.log(images.length);
+                  
             };
 
             // Next
 
             const next = () => {
                   var images = document.querySelectorAll(".items");
-
-                  /*var tableau = Object.entries(images).map(function(entry) {
-            return entry;
-          });
-
-          console.log(tableau)
-
-          images.forEach((image) => {
-            ind = tableau.indexOf(image['img.items'])
-            console.log(ind)
-          })*/
-
+                  
                   ind++;
 
                   if (ind >= images.length) {
@@ -450,6 +426,8 @@ export default {
                         //ind = tableau.indexOf(image)
                         //ind++;
                         //console.log(ind);
+                        //ind = image.id;
+                        //ind++;
                         const imageSource = image.src;
                         document.querySelector(
                               ".gallerie__popup"
@@ -467,7 +445,7 @@ export default {
                         imageSuivant;
 
                   //images[ind].style.display = 'block';
-                  console.log(images.length);
+                  //console.log(images.length);
             };
 
             return {
@@ -475,8 +453,6 @@ export default {
                   fermer,
                   next,
                   prev,
-                  precedent,
-                  suivant,
                   chambresRdc,
                   cuisines,
                   cuisinesDetails,
@@ -497,39 +473,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/*.my {
-      display: grid;
-      grid-template-columns: repeat(16, 1fr);
-      //grid-template-rows: repeat(12, 1fr);
-      grid-gap: 2em;
-      width: 80%;
-      margin: auto;
-      transform: translateX(2em);
-      border: 2px solid red;
-
-      &__long {
-            grid-column: span 6;
-            grid-row: auto;
-            margin-right: 0 8em;
-
-            //padding: 0 8em;
-            //padding-left: 2em;
-            //border: 2px solid red;
-      }
-
-      &__court {
-            //transform: translateY(-20em);
-            grid-column: span 9;
-            padding-right: 4em;
-      }
-}*/
-
-/*.photo_long_format {
-      width: calc(1.4981 * 100vh);
-      max-height: calc(0.6675 * 100vh);
-      //max-height: 66%;
-      border: 4px solid red;
-}*/
 
 .gallerie {
       width: 100%;

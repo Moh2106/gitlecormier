@@ -5,7 +5,7 @@ export const tarifs_vacances = [
             saison: "TRES HAUTE SAISON",
             date: "Les vacances d'été <br> (juillet - août)",
             prix: "440 €",
-            position: 150,
+            position: 200,
       },
 
       {
@@ -14,7 +14,7 @@ export const tarifs_vacances = [
             saison: "HAUTE SAISON",
             date: "Début juillet, Fin août et <br> les vacances de Noël ",
             prix: "420 €",
-            position: 450,
+            position: 350,
       },
 
       {
@@ -23,7 +23,7 @@ export const tarifs_vacances = [
             saison: "MOYENNE SAISON",
             date: "Les autres vacances scolaires, et mai - juin - septembre",
             prix: "270 €",
-            position: 700,
+            position: 550,
       },
 ];
 
