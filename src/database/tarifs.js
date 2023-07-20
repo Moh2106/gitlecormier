@@ -47,7 +47,7 @@ export const tarifs_basse_saison = [
       {
             id: 3,
             photo: "/pictures/Tarifs/jardin_plante.jpg",
-            periode: "Le mid-week (5 nuits)",
+            periode: "Le mid-week (4 nuits)",
             prix: "210 €",
             position: 900,
       },

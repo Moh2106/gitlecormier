@@ -171,7 +171,7 @@
 
                               <div class="tarif__basse--cards" id="basse--card">
                                     <div
-                                          class="elements"
+                                          class="elements__basse"
                                           v-for="tarif in tarifs_basse_saison"
                                           :key="tarif.id"
                                     >
@@ -189,7 +189,6 @@
                                                       <img
                                                             :src="tarif.photo"
                                                             :alt="tarif.saison"
-                                                            class="transition duration-300 ease-in-out hover:scale-125"
                                                       />
                                                 </div>
 
@@ -719,17 +718,19 @@ export default {
 <style lang="scss" scoped>
 @keyframes sparkle {
       0% {
-            transform: translate(0, 0);
+            //transform: translate(0, 0);
+            transform: translateY(0);
       }
-      50% {
+      /*50% {
             transform: translate(30px, 50px);
-      }
+      }*/
 
       /*75% {
             transform: translate(100px, 50px);
       }*/
       100% {
-            transform: translate(0, 0);
+            transform: translateY(-7px);
+            //transform: translate(0, 0);
       }
 }
 
@@ -760,7 +761,7 @@ export default {
 }
 
 .move {
-      animation: 0.5s ease-in-out sparkle infinite;
+      animation: 0.1s ease-in-out sparkle infinite alternate;
 }
 
 .animation {
@@ -865,12 +866,12 @@ export default {
                         //border: 2px solid rgb(15, 73, 246);
 
                         img {
-                              transform: scale(200%) translateX(-1em);
+                              transform: scale(120%);
                               border-radius: 0.5em;
 
                               &:hover {
                                     transition: 300ms ease-in-out;
-                                    transform: scale(100%);
+                                    transform: scale(150%);
                               }
                         }
                   }
@@ -887,13 +888,13 @@ export default {
                   font-weight: 700;
                   font-family: "Great Vibes", cursive;
                   font-size: 2.5em;
-                  transform: translate(-1em, -1.1em);
+                  transform: translate(-1.9em, -1.1em);
                   color: #fff;
                   text-shadow: 4px 4px 6px rgba(66, 90, 66, 1);
             }
 
             .custom-shape-divider-bottom-1688724135 {
-                  width: 90%;
+                  width: 85%;
                   overflow: hidden;
                   line-height: 0;
                   transform: rotate(180deg);
@@ -956,7 +957,7 @@ export default {
                   //border: orange 3px solid;
                   opacity: 0;
 
-                  .elements {
+                  .elements__basse {
                         width: 27%;
                         margin-right: 1em;
                         transition: all 1s ease-in;
@@ -965,14 +966,15 @@ export default {
 
                         img {
                               //object-fit: contain;
-                              border-radius: 0.5em;
-                              transform: scale(200%) translateY(2em);
-                              border-radius: 0.5em;
+                              //border-radius: 0.1em;
+                              transform: scale(110%);
+                              border-radius: 0.1em;
                               object-fit: contain;
+                              background: red;
 
                               &:hover {
                                     transition: 300ms ease-in-out;
-                                    transform: scale(100%);
+                                    transform: scale(140%);
                               }
                         }
                   }

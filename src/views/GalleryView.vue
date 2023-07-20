@@ -13,10 +13,10 @@
             </div>
 
             <!------------------- CHAMBRE DU REZ DE CHAUSSE -------------------------------------->
-            <div class="gallerie__frame">
+            <div class="gallerie__frame" id="chambre-rez-de-chaussee">
                   <h1
                         class="title bubble-bottom w-[100%]"
-                        id="chambre-rez-de-chaussee"
+                        
                   >
                         La chambre au rez de chaussée
                   </h1>
@@ -162,10 +162,10 @@
 
             </div>
 
-            <!------------------- 1 ER ETAGE -- CHAMBRE 1 -------------------------------->
+            <!------------------- 1 ER ETAGE -- CHAMBRE PALIERE -------------------------------->
 
             <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom" id="chambre1">
+                  <h1 class="title bubble-bottom" id="chambre-paliere">
                         La chambre palière à l'étage
                   </h1>
 
@@ -204,7 +204,7 @@
             <!--------------------1 ER ETAGE -- CHAMBRE 2 LITS ----------------------------------------->
 
             <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom" id="chambre2">
+                  <h1 class="title bubble-bottom" id="chambre2lits">
                         La chambre 2 lits à l'étage
                   </h1>
 

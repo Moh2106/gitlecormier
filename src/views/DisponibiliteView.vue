@@ -23,7 +23,6 @@
                               border: none;
                         "
                         height="1200"
-                        md:height="2000"
                         width="100%"
                         src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numgite=818&widget-itea=dispo&nbmois=12&nbmois-ligne=3&clicsurcalendrier=1"
                   ></iframe>

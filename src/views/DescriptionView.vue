@@ -9,11 +9,11 @@
                         charme de l'ancien avec le confort actuel. 3000 m² de
                         jardin paysager privatif. Une grande terrasse plein Sud,
                         le jaccuzzi à température, de nombreux jeux pour
-                        enfants, tous les équipements pour cuisiner, la fibre internet très haut débit 120 Mo/s. <br>
-                        Les
-                        méandres de la Seine vous attendent à 10 minutes à vélo,
-                        et la forêt de Brotonne (7000ha) commence juste au bout
-                        de la rue.
+                        enfants, tous les équipements pour cuisiner, la fibre
+                        internet très haut débit 120 Mo/s. <br />
+                        Les méandres de la Seine vous attendent à 10 minutes à
+                        vélo, et la forêt de Brotonne (7000ha) commence juste au
+                        bout de la rue.
                   </p>
             </div>
 
@@ -195,23 +195,17 @@
                                           "
                                           class="plan__rdc-buanderie"
                                     >
-                                          <a
-                                                href="/descriptifs/gallerie#cuisine"
-                                          >
-                                                <img
-                                                      src="../assets/RezDeChaussee/rdc_buanderie_plan.jpg"
-                                                      alt=""
-                                                />
-                                          </a>
+                                          <img
+                                                src="../assets/RezDeChaussee/rdc_buanderie_plan.jpg"
+                                                alt=""
+                                          />
                                     </button>
                               </div>
 
                               <!--<div></div>-->
                         </div>
 
-                        <div
-                              class="blinking"
-                        >
+                        <div class="blinking">
                               Passer la souris sur le plan pour visiter
                         </div>
                   </div>
@@ -263,81 +257,77 @@
                               >
                                     {{ description.details }}
                               </li>
+                        </ul>
 
-                              </ul>
-
-                              <!-- Le plan du 1er étage -->
-                              <div
-                                    class="plan mt-2 mr-8"
-                                    data-aos="fade-left"
-                                    data-aos-duration="500"
-                                    data-aos-easing="ease-in"
-                              >
-                                    <img
-                                          src="../assets/Etage/plan_etage.jpg"
-                                          alt="Plan du 1er étage"
-                                    />
-                                    <div>
-                                          <button
-                                                v-on:mouseenter="
-                                                      afficheChambre2EtageItems
-                                                "
-                                                v-on:mouseleave="
-                                                      supprimeChambre2EtageItemsStyle
-                                                "
-                                                class="etage1_chambre1"
-                                          >
-                                                <a
-                                                      href="/descriptifs/gallerie#chambre1"
-                                                >
-                                                      <img
-                                                            src="../assets/Etage/etage1_chambre1_1.jpg"
-                                                            alt=""
-                                                            class="plan__chambre1_1"
-                                                      />
-
-                                                      <img
-                                                            src="../assets/Etage/etage1_chambre1_2.jpg"
-                                                            alt=""
-                                                            class="plan__chambre1_2"
-                                                      />
-                                                </a>
-                                          </button>
-
-                                          <button
-                                                v-on:mouseenter="
-                                                      afficheChambre1EtageItems
-                                                "
-                                                v-on:mouseleave="
-                                                      supprimeChambre1EtageItemsStyle
-                                                "
-                                                class="etage1_chambre2"
-                                          >
-                                                <a
-                                                      href="/descriptifs/gallerie#chambre2"
-                                                >
-                                                      <img
-                                                            src="../assets/Etage/etage1_chambre2_1.jpg"
-                                                            alt=""
-                                                            class="plan__chambre2_1"
-                                                      />
-
-                                                      <img
-                                                            src="../assets/Etage/etage1_chambre2_2.jpg"
-                                                            alt=""
-                                                            class="plan__chambre2_2"
-                                                      />
-                                                </a>
-                                          </button>
-                                    </div>
-                              </div>
-
-                              <div
-                              class="blinking"
+                        <!-- Le plan du 1er étage -->
+                        <div
+                              class="plan mt-2 mr-8"
+                              data-aos="fade-left"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in"
                         >
+                              <img
+                                    src="../assets/Etage/plan_etage.jpg"
+                                    alt="Plan du 1er étage"
+                              />
+                              <div>
+                                    <button
+                                          v-on:mouseenter="
+                                                afficheChambre2EtageItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeChambre2EtageItemsStyle
+                                          "
+                                          class="etage1_chambre1"
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#chambre2lits"
+                                          >
+                                                <img
+                                                      src="../assets/Etage/etage1_chambre1_1.jpg"
+                                                      alt=""
+                                                      class="plan__chambre1_1"
+                                                />
+
+                                                <img
+                                                      src="../assets/Etage/etage1_chambre1_2.jpg"
+                                                      alt=""
+                                                      class="plan__chambre1_2"
+                                                />
+                                          </a>
+                                    </button>
+
+                                    <button
+                                          v-on:mouseenter="
+                                                afficheChambre1EtageItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeChambre1EtageItemsStyle
+                                          "
+                                          class="etage1_chambre2"
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#chambre-paliere"
+                                          >
+                                                <img
+                                                      src="../assets/Etage/etage1_chambre2_1.jpg"
+                                                      alt=""
+                                                      class="plan__chambre2_1"
+                                                />
+
+                                                <img
+                                                      src="../assets/Etage/etage1_chambre2_2.jpg"
+                                                      alt=""
+                                                      class="plan__chambre2_2"
+                                                />
+                                          </a>
+                                    </button>
+                              </div>
+                        </div>
+
+                        <div class="blinking">
                               Passer la souris sur le plan pour visiter
                         </div>
-                        
                   </div>
             </div>
 
@@ -403,9 +393,7 @@
                               </button>
                         </div>
 
-                        <div
-                              class="blinking"
-                        >
+                        <div class="blinking">
                               Passer la souris sur le plan pour visiter
                         </div>
                   </div>
@@ -937,7 +925,7 @@ export default {
       }
 
       &__section {
-             width: 90%;
+            width: 90%;
 
             @media screen and (max-width: 768px) {
                   display: block;
