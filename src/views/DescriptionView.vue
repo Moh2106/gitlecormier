@@ -537,11 +537,6 @@ export default {
 
                   {
                         id: 3,
-                        details: "Le garage",
-                  },
-
-                  {
-                        id: 4,
                         details: "Le bassin des poissons rouges",
                   },
 
@@ -551,12 +546,12 @@ export default {
                   },
 
                   {
-                        id: 6,
+                        id: 5,
                         details: "Le barbecue",
                   },
 
                   {
-                        id: 7,
+                        id: 6,
                         details: "La table de Ping Pong",
                   },
             ];

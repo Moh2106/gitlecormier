@@ -2,9 +2,7 @@
       <div class="alentours" id="haut" v-motion-pop>
             <!---- Petite paragraphe pour une bref description ---->
             <p class="bg-white bg-opacity-90 text-left alentours__paragraph">
-                  Profitez de votre séjour pour découvrir quelques endroits de
-                  la région, sur cette carte vous trouvevez absolument tout ce
-                  qu'il y a à visiter dans un rayon de 50 km : fermes,
+                  Profitez de votre séjour pour découvrir notre région, sur cette carte vous trouvevez quelques lieux à visiter dans un rayon de 50 km : fermes,
                   restaurants, sites touristiques, paysages, randonnées, etc ...
             </p>
 
@@ -83,6 +81,7 @@
                   </button>
             </div>
       </div>
+
 </template>
 
 <script>

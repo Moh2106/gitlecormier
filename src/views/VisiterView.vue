@@ -35,7 +35,7 @@
                                     </li>
 
                                     <li class="mb-4">
-                                          Dans LE LANDIN prendre à gauche vers
+                                          Au rond-point prendre à gauche vers
                                           HAUVILLE
                                     </li>
 
@@ -43,7 +43,7 @@
                                     <li>
                                           <ul class="ml-10 mb-4">
                                                 <li class="mb-4">
-                                                      1- Une fois sortie de
+                                                      1- Une fois sorti de
                                                       HAUVILLE,
                                                 </li>
                                                 <li class="mb-4">
