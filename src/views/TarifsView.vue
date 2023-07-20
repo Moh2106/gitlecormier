@@ -970,7 +970,7 @@ export default {
                               transform: scale(110%);
                               border-radius: 0.1em;
                               object-fit: contain;
-                              background: red;
+                              //background: red;
 
                               &:hover {
                                     transition: 300ms ease-in-out;
