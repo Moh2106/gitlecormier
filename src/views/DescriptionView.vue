@@ -186,7 +186,7 @@
                                     </button>
 
                                     <!--- La buanderie --->
-                                    <button
+                                    <!----<button
                                           v-on:mouseenter="
                                                 afficheBuanderieItems
                                           "
@@ -199,10 +199,9 @@
                                                 src="../assets/RezDeChaussee/rdc_buanderie_plan.jpg"
                                                 alt=""
                                           />
-                                    </button>
+                                    </button>-->
                               </div>
 
-                              <!--<div></div>-->
                         </div>
 
                         <div class="blinking">

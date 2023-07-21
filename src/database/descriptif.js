@@ -13,7 +13,7 @@ export const rezDeChausses = [
 
       {
             id: 3,
-            img: "/pictures/descriptif/cuisine/rdc_cuisine3.jpg",
+            img: "/pictures/descriptif/cuisine/rdc_cuisine1.jpg",
             alt: "Cuisine",
       },
 

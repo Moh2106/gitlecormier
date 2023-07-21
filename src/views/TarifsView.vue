@@ -5,7 +5,7 @@
                   <div class="tarif__part_one">
                         <!--  Tarifs vacances -->
                         <div
-                              class="bg-white opacity-90 rounded-lg h-[40vh] mb-[3.1rem]"
+                              class="bg-white opacity-90 rounded-lg h-[43vh] mb-[1em]"
                         >
                               <h2>
                                     Tarifs vacances <br />
@@ -15,29 +15,29 @@
 
                         <!--  Tarifs basse saison -->
                         <div
-                              class="bg-white opacity-90 rounded-lg h-[38vh] mb-[3.3rem]"
+                              class="bg-white opacity-90 rounded-lg h-[43vh] mb-[1em]"
                         >
                               <h2>Tarifs basse saison</h2>
                         </div>
 
-                        <!--  A votre arrivée -->
-                        <div
-                              class="bg-white opacity-90 rounded-lg h-[15vh] mb-8"
-                        >
-                              <h2>A votre arrivée</h2>
-                        </div>
-
                         <!--  Pour votre confort -->
                         <div
-                              class="bg-white opacity-90 rounded-lg h-[32vh] mb-8"
+                              class="bg-white opacity-90 rounded-lg h-[31vh] mb-[1em]"
                         >
                               <h2>Pour votre confort</h2>
+                        </div>
+
+                        <!--  A votre arrivée -->
+                        <div
+                              class="bg-white opacity-90 rounded-lg h-[15vh] mb-[1em]"
+                        >
+                              <h2>A votre arrivée</h2>
                         </div>
 
                         <!-- Réservation -->
 
                         <div
-                              class="bg-white opacity-90 rounded-lg h-[20vh] mb-4"
+                              class="bg-white opacity-90 rounded-lg h-[20vh] mb-[1em]"
                         >
                               <h2>Réservation</h2>
                         </div>
@@ -70,13 +70,17 @@
                                           class="move"
                                     />
 
-                                    <p>Arrivée samedi</p>
+                                    <!----<p>Arrivée samedi</p>-->
 
                                     <!----<font-awesome-icon
                                           icon="fa-solid fa-hand-point-right"
                                           class="font"
                                           id="tarif__vacance--awesome"
                                     />-->
+
+                                    <div class="bubble">
+                                          <p>Arrivée samedi</p>
+                                    </div>
                               </div>
 
                               <div class="tarif__vac--cards" id="vac--cards">
@@ -91,12 +95,29 @@
                                                 data-aos="flip-up"
                                           >
                                                 <div
-                                                      class="overflow-hidden bg-cover h-[25vh]"
+                                                      class="overflow-hidden bg-cover h-[23vh]"
                                                 >
                                                       <img
+                                                            :src="
+                                                                  hoveredImageId ===
+                                                                  tarif.id
+                                                                        ? tarif.photo
+                                                                        : tarif.photo2
+                                                            "
+                                                            v-on:mouseover="
+                                                                  onMouseOver(
+                                                                        tarif.id
+                                                                  )
+                                                            "
+                                                            v-on:mouseout="
+                                                                  onMouseOut
+                                                            "
+                                                      />
+
+                                                      <!----<img
                                                             :src="tarif.photo"
                                                             :alt="tarif.saison"
-                                                      />
+                                                      />-->
                                                 </div>
 
                                                 <h2
@@ -153,7 +174,9 @@
                                     class="tarif__basse--awesome"
                                     id="basse--awesome"
                               >
-                                    <p>Arrivée libre</p>
+                                    <div class="bubble_basse">
+                                          <p>Arrivée libre</p>
+                                    </div>
 
                                     <img
                                           src="../assets/Tarifs/grive_musicienne.png"
@@ -184,12 +207,31 @@
                                                 "
                                           >
                                                 <div
-                                                      class="overflow-hidden bg-cover h-[30vh]"
+                                                      class="overflow-hidden bg-cover h-[27vh] transition-all"
                                                 >
+                                                      <img
+                                                            :src="
+                                                                  hoveredImageId ===
+                                                                  tarif.id
+                                                                        ? tarif.photo
+                                                                        : tarif.photo2
+                                                            "
+                                                            v-on:mouseover="
+                                                                  onMouseOver(
+                                                                        tarif.id
+                                                                  )
+                                                            "
+                                                            v-on:mouseout="
+                                                                  onMouseOut
+                                                            "
+                                                      />
+
+                                                      <!----<img :src="tarif.photo2" alt="" cl>
+
                                                       <img
                                                             :src="tarif.photo"
                                                             :alt="tarif.saison"
-                                                      />
+                                                      />-->
                                                 </div>
 
                                                 <h2
@@ -229,79 +271,6 @@
                               </div>
                         </div>
 
-                        <!---- Tarif arrive ---->
-                        <div
-                              class="tarif__arrive"
-                              id="tarif__arrive"
-                              v-on:mouseenter="afficheAVotreArrive"
-                        >
-                              <div
-                                    class="tarif__arrive--awesome"
-                                    id="tarif__arrive--awesome"
-                              >
-                                    <h2>
-                                          <img
-                                                src="../assets/Tarifs/pigeon_ramier.gif"
-                                                alt=""
-                                                class="emojiArrive"
-                                          />
-
-                                          <!----<img src="../assets/Tarifs/pigeon-gif-download-free.gif" alt="" class="emojiArrive">-->
-
-                                          <font-awesome-icon
-                                                icon="fa-solid fa-question"
-                                                class="icon"
-                                          />
-                                    </h2>
-                              </div>
-
-                              <div
-                                    class="tarif__arrive--text"
-                                    id="tarif__arrive--text"
-                              >
-                                    <div v-if="animeArrive">
-                                          <p>
-                                                <font-awesome-icon
-                                                      icon="fa-solid fa-check"
-                                                      class="mr-2"
-                                                />
-                                                Une caution de
-                                                <span class="tarif__price"
-                                                      >300€</span
-                                                >
-                                                vous sera demandée lors de votre
-                                                arrivée puis, restituée à votre
-                                                départ si les écrans plats sont
-                                                toujours là &#128512;.
-                                          </p>
-
-                                          <p>
-                                                <font-awesome-icon
-                                                      icon="fa-solid fa-check"
-                                                      class="mr-2"
-                                                />
-                                                Vos animaux de compagnie sont
-                                                les bienvenus, et
-                                                <span class="font-semibold"
-                                                      >chez nous c'est sans
-                                                      surcoût</span
-                                                >
-                                          </p>
-
-                                          <p>
-                                                <font-awesome-icon
-                                                      icon="fa-solid fa-check"
-                                                      class="mr-2"
-                                                />
-                                                Pour vos journées en
-                                                télétravail, le gîte est équipé
-                                                de la fibre internet très haut
-                                                débit 120 Mo/s.
-                                          </p>
-                                    </div>
-                              </div>
-                        </div>
-
                         <!-----  Pour votre confort ------>
                         <div
                               class="tarif__confort"
@@ -324,7 +293,7 @@
                                           />-->
 
                                           <img
-                                                src="../assets/Tarifs/merle_1.png"
+                                                src="../assets/Tarifs/geai_des_bois.png"
                                                 alt=""
                                                 class="emojiConfort move"
                                           />
@@ -423,6 +392,79 @@
                               </div>
                         </div>
 
+                        <!---- Tarif arrive ---->
+                        <div
+                              class="tarif__arrive"
+                              id="tarif__arrive"
+                              v-on:mouseenter="afficheAVotreArrive"
+                        >
+                              <div
+                                    class="tarif__arrive--awesome"
+                                    id="tarif__arrive--awesome"
+                              >
+                                    <h2>
+                                          <img
+                                                src="../assets/Tarifs/pigeon_ramier.gif"
+                                                alt=""
+                                                class="emojiArrive"
+                                          />
+
+                                          <!----<img src="../assets/Tarifs/pigeon-gif-download-free.gif" alt="" class="emojiArrive">-->
+
+                                          <font-awesome-icon
+                                                icon="fa-solid fa-question"
+                                                class="icon"
+                                          />
+                                    </h2>
+                              </div>
+
+                              <div
+                                    class="tarif__arrive--text"
+                                    id="tarif__arrive--text"
+                              >
+                                    <div v-if="animeArrive">
+                                          <p>
+                                                <font-awesome-icon
+                                                      icon="fa-solid fa-check"
+                                                      class="mr-2"
+                                                />
+                                                Une caution de
+                                                <span class="tarif__price"
+                                                      >300€</span
+                                                >
+                                                vous sera demandée lors de votre
+                                                arrivée puis, restituée à votre
+                                                départ si les écrans plats sont
+                                                toujours là &#128512;.
+                                          </p>
+
+                                          <p>
+                                                <font-awesome-icon
+                                                      icon="fa-solid fa-check"
+                                                      class="mr-2"
+                                                />
+                                                Vos animaux de compagnie sont
+                                                les bienvenus, et
+                                                <span class="font-semibold"
+                                                      >chez nous c'est sans
+                                                      surcoût</span
+                                                >
+                                          </p>
+
+                                          <p>
+                                                <font-awesome-icon
+                                                      icon="fa-solid fa-check"
+                                                      class="mr-2"
+                                                />
+                                                Pour vos journées en
+                                                télétravail, le gîte est équipé
+                                                de la fibre internet très haut
+                                                débit 120 Mo/s.
+                                          </p>
+                                    </div>
+                              </div>
+                        </div>
+
                         <!------- Réservations ------>
 
                         <div class="tarif__reservation">
@@ -485,6 +527,8 @@ export default {
             var ecureuil;
             const activeWaveVacance = ref(false);
             const activeWaveBasse = ref(false);
+            var isHover = ref(false);
+            var hoveredImageId = ref(null);
 
             // variable pour le tarif vacance
             var animeTarifVac = ref(true);
@@ -514,8 +558,19 @@ export default {
                         "tarif__confort--awesome"
                   );
 
-                  confortAwesome.style.display = "block"
+                  confortAwesome.style.display = "block";
             });
+
+            /**
+             * Changement des photos
+             */
+            const onMouseOver = (imageId) => {
+                  hoveredImageId.value = imageId;
+            };
+
+            const onMouseOut = () => {
+                  hoveredImageId.value = null;
+            };
 
             /**
              * Cette fonction permet de recupérer la
@@ -569,7 +624,7 @@ export default {
                   const waneVacance = document.getElementById("tarif__waves");
 
                   activeWaveVacance.value = true;
-                  waneVacance.style.left = 0;
+                  waneVacance.style.left = "-5%";
                   waneVacance.style.transition = "2s ease-in";
 
                   setTimeout(() => {
@@ -580,9 +635,11 @@ export default {
                         const waneBasse =
                               document.getElementById("waves__basse");
 
-                        waneBasse.style.left = 0;
+                        waneBasse.style.left = "-5%";
                         waneBasse.style.transition = "2s ease-in";
                   }, 2000);
+
+                  affichePourVotreConfort();
             };
 
             // basse saison
@@ -618,6 +675,11 @@ export default {
                   ecureuil.style.display = "block";
 
                   tarifCard.style.opacity = 1;
+
+                  /*const waneBasse = document.getElementById("waves__basse");
+
+                  waneBasse.style.left = "-5%";
+                  waneBasse.style.transition = "2s ease-in";*/
             };
 
             var compte = 0;
@@ -668,29 +730,16 @@ export default {
                   confortText.style.left = 0;
             };
 
-            // Réservation
-            /*const afficheReservation = () => {
-                  animeReservation.value = true;
-                  const reservationAwesome = document.getElementById(
-                        "tarif__reservation--awesome"
-                  );
-
-                  const reservationText = document.getElementById(
-                        "tarif__reservation--text"
-                  );
-
-                  reservationAwesome.style.display = "none";
-
-                  reservationText.style.transition = "1s ease-in";
-                  reservationText.style.opacity = 1;
-                  reservationText.style.left = 0;
-            };*/
-
             return {
                   tarifs_vacances,
                   tarifs_basse_saison,
                   position,
                   positionBasse,
+
+                  isHover,
+                  hoveredImageId,
+                  onMouseOver,
+                  onMouseOut,
 
                   //animeTarifVacance,
                   animeBasseSaison,
@@ -760,9 +809,9 @@ export default {
       }
 }
 
-.move {
+/*.move {
       animation: 0.1s ease-in-out sparkle infinite alternate;
-}
+}*/
 
 .animation {
       animation: moving 4s linear;
@@ -775,6 +824,7 @@ export default {
             height: 31px;
       }
 }
+
 .tarif {
       width: 95%;
       margin: auto;
@@ -830,15 +880,55 @@ export default {
                   position: absolute;
                   text-align: left;
                   color: #fff;
-                  font-size: 6em;
+                  margin-top: 2em;
+                  //font-size: 6em;
                   opacity: 1;
 
                   img {
-                        width: 25%;
+                        width: 30%;
                         cursor: zoom-in;
                   }
 
-                  p {
+                  .bubble {
+                        position: relative;
+                        background: rgba(8, 160, 69, 0.8);
+                        color: #ffffff;
+                        font-family: Arial;
+                        font-size: 6em;
+                        line-height: 120px;
+                        text-align: center;
+                        width: 50%;
+                        height: 120px;
+                        border-radius: 10px;
+                        padding: 0px;
+                        transform: translate(-0.5em, 0.3em);
+                        margin: 0 0.2em;
+
+                        &::after {
+                              content: "";
+                              position: absolute;
+                              display: block;
+                              width: 0;
+                              z-index: 1;
+                              border-style: solid;
+                              border-width: 0 20px 20px 0;
+                              border-color: transparent #08a045 transparent
+                                    transparent;
+                              top: 40%;
+                              left: -20px;
+                              margin-top: -10px;
+                        }
+
+                        p {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              font-weight: 550;
+                              font-family: "Great Vibes", cursive;
+                        }
+                  }
+
+                  /*p {
                         //font-size: 2em;
                         font-weight: 550;
                         font-family: "Great Vibes", cursive;
@@ -847,7 +937,7 @@ export default {
                         align-items: center;
                         transform: translateY(0.8em);
                         //margin-top: 1em;
-                  }
+                  }*/
             }
 
             &--cards {
@@ -866,12 +956,15 @@ export default {
                         //border: 2px solid rgb(15, 73, 246);
 
                         img {
-                              transform: scale(120%);
+                              //transform: scale(120%);
                               border-radius: 0.5em;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
 
                               &:hover {
                                     transition: 300ms ease-in-out;
-                                    transform: scale(150%);
+                                    transform: scale(101%);
                               }
                         }
                   }
@@ -881,6 +974,7 @@ export default {
       &__waves {
             position: relative;
             left: -100%;
+            top: -2%;
             height: 5vh;
             margin: 0.5em 0;
 
@@ -894,7 +988,8 @@ export default {
             }
 
             .custom-shape-divider-bottom-1688724135 {
-                  width: 85%;
+                  width: 90%;
+                  height: 100%;
                   overflow: hidden;
                   line-height: 0;
                   transform: rotate(180deg);
@@ -904,12 +999,12 @@ export default {
                   position: relative;
                   display: block;
                   width: calc(100% + 1.3px);
-                  height: 30px;
+                  height: 40px;
                   font-weight: 900;
             }
 
             .custom-shape-divider-bottom-1688724135 .shape-fill {
-                  fill: #45e262;
+                  fill: #08a045;
                   //#f7ef99  #9cfc97
             }
       }
@@ -933,12 +1028,52 @@ export default {
                   display: flex;
                   position: absolute;
                   text-align: left;
+                  margin-top: 2em;
+
+                  .bubble_basse {
+                        position: relative;
+                        background: rgba(8, 160, 69, 0.8);
+                        color: #ffffff;
+                        font-family: Arial;
+                        font-size: 6em;
+                        line-height: 120px;
+                        text-align: center;
+                        width: 50%;
+                        height: 120px;
+                        border-radius: 10px;
+                        padding: 0px;
+
+                        &::after{
+                             content: "";
+                        position: absolute;
+                        display: block;
+                        width: 0;
+                        z-index: 1;
+                        border-style: solid;
+                        border-width: 20px 0 0 20px;
+                        border-color: transparent transparent transparent
+                              rgba(8, 160, 69, 0.8);
+                        top: 50%;
+                        right: -20px;
+                        margin-top: -10px; 
+                        }
+
+
+                        p {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              font-weight: 550;
+                              font-family: "Great Vibes", cursive;
+                        }
+                  }
 
                   img {
                         width: 35%;
+                        transform: translate(-6.5em, 3.5em);
                   }
 
-                  p {
+                  /*p {
                         font-weight: 550;
                         font-family: "Great Vibes", cursive;
                         display: flex;
@@ -947,7 +1082,7 @@ export default {
                         color: #fff;
                         font-size: 6em;
                         transform: translate(1em, -0.6em);
-                  }
+                  }*/
             }
 
             &--cards {
@@ -967,14 +1102,18 @@ export default {
                         img {
                               //object-fit: contain;
                               //border-radius: 0.1em;
-                              transform: scale(110%);
+                              //transform: scale(110%);
                               border-radius: 0.1em;
-                              object-fit: contain;
+                              object-fit: cover;
+                              transition: 300ms ease-in-out;
                               //background: red;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
 
                               &:hover {
                                     transition: 300ms ease-in-out;
-                                    transform: scale(140%);
+                                    transform: scale(101%);
                               }
                         }
                   }
@@ -984,9 +1123,9 @@ export default {
       &__arrive {
             position: relative;
             height: 15vh;
-            margin-bottom: 2rem;
+            margin-bottom: 1em;
             text-align: left;
-            
+
             //padding: 0.5em 0;
             //border: 3px solid orange;
 
@@ -1028,11 +1167,12 @@ export default {
 
       &__confort {
             position: relative;
-            height: 32vh;
+            height: 31vh;
             //border-radius: 0.5em;
             //padding-left: 1em;
             text-align: left;
-            margin-bottom: 2rem;
+            //margin-bottom: 1rem;
+            transform: translateY(-1em);
 
             &--awesome {
                   position: absolute;
@@ -1042,8 +1182,8 @@ export default {
                   height: 100%;
 
                   .emojiConfort {
-                        width: 25%;
-                        height: 100%;
+                        width: 15%;
+                        //height: 30vh;
                         //border: 2px solid rgb(0, 89, 255);
                   }
             }

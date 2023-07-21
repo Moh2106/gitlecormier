@@ -2,19 +2,18 @@
       <div class="alentours" id="haut" v-motion-pop>
             <!---- Petite paragraphe pour une bref description ---->
             <p class="bg-white bg-opacity-90 text-left alentours__paragraph">
-                  Profitez de votre séjour pour découvrir notre région, sur cette carte vous trouvevez quelques lieux à visiter dans un rayon de 50 km : fermes,
-                  restaurants, sites touristiques, paysages, randonnées, etc ...
+                  Profitez de votre séjour pour découvrir notre région, sur
+                  cette carte vous trouvevez quelques lieux à visiter dans un
+                  rayon de 50 km : fermes, restaurants, sites touristiques,
+                  paysages, randonnées, etc ...
             </p>
 
             <!-- Intégration de la carte avec l'api de google map -->
             <div class="alentours__carte">
-                  <iframe
-                        src="https://www.google.com/maps/d/u/0/embed?mid=12r6EtORX4TvW-tF_tddqwHYuHehKG0E&ehbc=2E312F"
-                        width="100%"
-                        height="600"
-                  ></iframe>
-            </div>
 
+                  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12r6EtORX4TvW-tF_tddqwHYuHehKG0E&ehbc=2E312F" width="100%" height="600"></iframe>
+
+            </div>
 
             <!-- 
       Insertion des données comme les photos, le nom des sites aux alentours, le site web
@@ -42,7 +41,10 @@
                                     </div>
 
                                     <div class="mapButton">
-                                          <button class="bg-green-600" v-if="alentour.maps != ''">
+                                          <button
+                                                class="bg-green-600"
+                                                v-if="alentour.maps != ''"
+                                          >
                                                 <a
                                                       :href="alentour.maps"
                                                       target="_blank"
@@ -58,9 +60,76 @@
                                           v-text="alentour.titre"
                                           class="font-bold"
                                     ></h1>
-                                    <button class="bg-red-600" v-if="alentour.site != ''">
-                                          <a :href="alentour.site" target="_blank" rel="noopener noreferrer">Site officiel</a>
-                                          
+                                    <button
+                                          class="bg-red-600"
+                                          v-if="alentour.site != ''"
+                                    >
+                                          <a
+                                                :href="alentour.site"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Site officiel</a
+                                          >
+                                    </button>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            <div class="bubble">
+                  <h2>Quelques sites d'informations</h2>
+            </div>
+
+            <div class="monEnsemble">
+                  <div
+                        v-for="alentour in alentoursSiteInformation"
+                        :key="alentour.id"
+                        class="monEnsemble__element"
+                  >
+                        <div
+                              class="alentours__card"
+                              data-aos="fade-right"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in-out"
+                        >
+                              <div class="alentours__card--image">
+                                    <div class="imageInformation">
+                                          <img
+                                                :src="alentour.img"
+                                                :alt="alentour.titre"
+                                          />
+                                    </div>
+
+                                    <div class="mapButton">
+                                          <button
+                                                class="bg-green-600"
+                                                v-if="alentour.maps != ''"
+                                          >
+                                                <a
+                                                      :href="alentour.maps"
+                                                      target="_blank"
+                                                      rel="noopener noreferrer"
+                                                      >Voir l'itinéraire</a
+                                                >
+                                          </button>
+                                    </div>
+                              </div>
+
+                              <div class="alentours__card--description information">
+                                    <h1
+                                          v-text="alentour.titre"
+                                          class="font-bold"
+                                    ></h1>
+                                    <button
+                                          class="bg-red-600"
+                                          v-if="alentour.site != ''"
+                                    >
+                                          <a
+                                                :href="alentour.site"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Site officiel</a
+                                          >
                                     </button>
                               </div>
                         </div>
@@ -81,12 +150,11 @@
                   </button>
             </div>
       </div>
-
 </template>
 
 <script>
 import { ref } from "@vue/reactivity";
-import { alentours } from "../database/alentours";
+import { alentours, alentoursSiteInformation } from "../database/alentours";
 
 export default {
       setup() {
@@ -98,7 +166,7 @@ export default {
       Ensuite on effectue une recherche sur le tableau alentours récupéré depuis notre base de donnée alentours.js
       On stocke ensuite les résultats dans un tableau newAlentoursArrays
     */
-           /* watch(site, (nouveau) => {
+            /* watch(site, (nouveau) => {
                   console.log(site.value + nouveau);
                   let alentourArray = alentours.filter((element) =>
                         element.titre.includes(nouveau.toUpperCase())
@@ -109,6 +177,7 @@ export default {
             return {
                   mapsButton,
                   alentours,
+                  alentoursSiteInformation,
                   result,
             };
       },
@@ -124,7 +193,7 @@ export default {
       padding-bottom: 2em;
       transition: 0.25s ease-in;
 
-      &__search {
+      /*&__search {
             text-align: left;
 
             input {
@@ -138,7 +207,7 @@ export default {
                         outline-color: #08a045;
                   }
             }
-      }
+      }*/
 
       .monEnsemble {
             //display: flex;
@@ -153,6 +222,39 @@ export default {
             @media screen and (max-width: 550px) {
                   grid-template-columns: repeat(1, 1fr);
             }
+      }
+
+      .bubble {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: rgba(8, 160, 69, 0.8);
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 1.1em;
+            //line-height: 120px;
+            text-align: center;
+            width: 20%;
+            margin: auto;
+            height: 10vh;
+            border-radius: 10px;
+            padding: 0px;
+
+            &::after {
+                  content: "";
+                  position: absolute;
+                  display: block;
+                  width: 0;
+                  z-index: 1;
+                  border-style: solid;
+                  border-width: 20px 20px 0 0;
+                  border-color: rgba(8, 160, 69, 0.8) transparent transparent transparent;
+                  bottom: -20px;
+                  left: 50%;
+                  margin-left: -10px;
+            }
+
       }
 
       &__carte {
@@ -200,11 +302,27 @@ export default {
                   height: 100%;
 
                   .myImage {
-                        width: 100%;
+                        //width: 100%;
 
                         img {
                               width: 100%;
                               height: 250px;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              object-fit: cover;
+                              //object-fit : contain;
+                        }
+                  }
+
+                  .imageInformation{
+                        width: 100%;
+
+                        img{
+                              width: 100%;
+                              margin: auto;
+                              height: 250px;
+                              object-fit: contain;
                         }
                   }
 
@@ -246,6 +364,12 @@ export default {
                               background: rgb(185, 14, 14);
                         }
                   }
+            }
+
+            .information{
+                  //background: rgb(255, 250, 164);
+                  background: rgba(22, 163, 74, 0.5);
+                  border-radius: 0.5em;
             }
       }
 
