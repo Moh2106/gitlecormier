@@ -42,7 +42,7 @@ export const alentours = [
       {
             id: 6,
             titre: "LES BORDS DE SEINE, LA FOULERIE",
-            img: "/pictures/Alentours/bords_de_Seine.jpg",
+            img: "/pictures/Alentours/bords_de_seine.jpg",
             site: "",
             maps: "https://goo.gl/maps/gHgHsTRiLatmuR5t9",
       },
