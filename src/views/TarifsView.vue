@@ -5,7 +5,7 @@
                   <div class="tarif__part_one">
                         <!--  Tarifs vacances -->
                         <div
-                              class="bg-white opacity-90 rounded-lg h-[43vh] mb-[1em]"
+                              class="rounded-lg h-[43vh] mb-[1em]"
                         >
                               <h2>
                                     Tarifs vacances <br />
@@ -15,21 +15,21 @@
 
                         <!--  Tarifs basse saison -->
                         <div
-                              class="bg-white opacity-90 rounded-lg h-[43vh] mb-[1em]"
+                              class="rounded-lg h-[42.8vh] mb-[1em]"
                         >
                               <h2>Tarifs basse saison</h2>
                         </div>
 
                         <!--  Pour votre confort -->
                         <div
-                              class="bg-white opacity-90 rounded-lg h-[31vh] mb-[1em]"
+                              class="rounded-lg h-[31vh] mb-[1em]"
                         >
                               <h2>Pour votre confort</h2>
                         </div>
 
                         <!--  A votre arrivée -->
                         <div
-                              class="bg-white opacity-90 rounded-lg h-[15vh] mb-[1em]"
+                              class="rounded-lg h-[15vh] mb-[1em]"
                         >
                               <h2>A votre arrivée</h2>
                         </div>
@@ -37,7 +37,7 @@
                         <!-- Réservation -->
 
                         <div
-                              class="bg-white opacity-90 rounded-lg h-[16vh] mb-[1em]"
+                              class="rounded-lg h-[16vh] mb-[1em]"
                         >
                               <h2>Réservation</h2>
                         </div>
@@ -450,6 +450,7 @@
                                                       Cliquez
                                                       <a
                                                             href="https://www.gites-de-france-eure.com/location-vacances-Gite-Hauville-27G818.html"
+                                                            target="_blank"
                                                       >
                                                             <img
                                                                   src="../assets/Liens/logo_gite_de_france.jpg"
@@ -885,7 +886,7 @@ export default {
       &__waves {
             position: relative;
             left: -100%;
-            top: -2%;
+            top: -2.5%;
             height: 5vh;
             margin: 0.5em 0;
 

@@ -8,7 +8,7 @@
                         La chaumière normande du 18 <sup>ème </sup> siècle, le
                         charme de l'ancien avec le confort actuel. 3000 m² de
                         jardin paysager privatif. Une grande terrasse plein Sud,
-                        le jaccuzzi à température, de nombreux jeux pour
+                        le jaccuzzi à température, de nombreux jeux pour les
                         enfants, tous les équipements pour cuisiner, la fibre
                         internet très haut débit 120 Mo/s. <br />
                         Les méandres de la Seine vous attendent à 10 minutes à

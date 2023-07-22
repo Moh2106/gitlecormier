@@ -34,7 +34,7 @@ export const alentours = [
       {
             id: 5,
             titre: "LA FORET DE BROTONNE",
-            img: "/pictures/Alentours/foret_de_brotonne.jpg",
+            img: "/pictures/Alentours/foret_brotonne.jpg",
             site: "",
             maps: "https://goo.gl/maps/bPTJ2CYrK9FRZ8CX6",
       },
@@ -82,7 +82,7 @@ export const alentours = [
       {
             id: 11,
             titre: "BASE DE LOISIRS DE JUMIÈGES",
-            img: "/pictures/Alentours/base_de_jumiege.png",
+            img: "/pictures/Alentours/base_jumieges.jpg",
             site: "https://www.basedejumieges.fr/",
             maps: "https://maps.app.goo.gl/ujbBoW3WHjiTR6ew8",
       },
@@ -170,7 +170,7 @@ export const alentours = [
       {
             id: 22,
             titre: "PONT DE NORMANDIE",
-            img: "/pictures/Alentours/pont_tancerville.jpg",
+            img: "/pictures/Alentours/pont_normandie.png",
             site: "http://www.pontsnormandietancarville.fr/",
             maps: "https://maps.app.goo.gl/m4ncBgnQFbfVXtAY8",
       },

@@ -36,7 +36,7 @@
             </span> Maps</h2>
 
         <p class="px-8" title="Google Maps">
-            <a href="https://goo.gl/maps/MNEXCNRCm6RrVQRD7">
+            <a href="https://goo.gl/maps/MNEXCNRCm6RrVQRD7" target="_blank">
                 <font-awesome-icon icon="fa-solid fa-location-dot" 
                 class="text-2xl hover:scale-125 b" />
             </a>
@@ -45,7 +45,7 @@
 
     <!-------------------- -- LIENS ------------------------>
     <div class="liens">
-        <h2 class="mb-2">Liens</h2>
+        <h2 class="mb-2">Lien</h2>
         <div class="liens__logo">
             <a href="https://www.gites-de-france-eure.com/location-vacances-Gite-Hauville-27G818.html" target="_blank">
                 <img src="../assets/Liens/logo_gite_eure_de_france.jpg" alt="logo gite eure de france" class="hover:scale-105">
