@@ -67,7 +67,7 @@
                   <div class="accueil__gallery--items" @click="Cliquer">
                         <img
                               src="../../public/pictures/descriptif/jardin/jeux_enfants.jpg"
-                              alt=""
+                              alt="Jeux pour les enfants - gite le cormier"
                         />
                         <div>
                               <h2>
@@ -94,7 +94,7 @@
                   <div class="accueil__gallery--items" @click="Cliquer">
                         <img
                               src="../../public/pictures/descriptif/jardin/jaccuzzi.jpg"
-                              alt=""
+                              alt="Le jaccuzzi du jardin - gite le cormier"
                         />
                         <div>
                               <h2>
@@ -120,7 +120,7 @@
                   <div class="accueil__gallery--items" @click="Cliquer">
                         <img
                               src="../assets/RezDeChaussee/rdc_chaumiere3.jpg"
-                              alt=""
+                              alt="Chaumière du rez de chausse - gite le cormier"
                         />
                         <div>
                               <h2 class="title">
@@ -148,7 +148,7 @@
                   <div class="accueil__gallery--items" @click="Cliquer">
                         <img
                               src="../assets/Cormier/cormier_ping_pong.jpg"
-                              alt="Terrain de Ping Pong"
+                              alt="Terrain de Ping Pong - gite le cormier"
                         />
 
                         <div>
@@ -179,7 +179,7 @@
                   >
                         <div class="w-4/5 transition-all">
                               <img
-                                    src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp"
+                                    src=""
                                     alt=""
                               />
                         </div>
@@ -323,26 +323,6 @@ export default {
             }
       }
 
-      /*&__details {
-            margin-top: 1em;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            border-radius: 0.5em;
-            width: 80%;
-            margin: auto;
-            background: #fff;
-
-            &--capacite {
-                  width: 40%;
-                  margin: auto;
-                  align-items: center;
-                  justify-content: center;
-                  border-radius: 0.5em;
-                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                  background: #0f4c5c;
-                  color: #fff;
-            }
-      }*/
-
       &__gallery {
             width: 85%;
             margin: auto;
@@ -368,10 +348,6 @@ export default {
                         border-radius: 0.5em;
                         width: 300px;
                         height: 200px;
-
-                        /*@media screen and (max-width: 550px){
-                        width: 150%;
-                    }*/
                   }
 
                   div {
@@ -435,7 +411,6 @@ export default {
             z-index: 100000;
             display: none;
             transition: 0.5s ease-in-out;
-            // backdrop-filter: blur(30px);
             backdrop-filter: contrast(40%) brightness(90%) blur(10px);
 
             &--main {

@@ -17,7 +17,7 @@
                   </p>
             </div>
 
-            <!------------- REZ DE CHAUSSE    -------------------------------------------->
+            <!------------- REZ DE CHAUSSE    ---------------------------------------->
 
             <h1 class="title mt-4 mb-4" data-aos="flip-right">
                   Rez-de-chaussée
@@ -185,21 +185,6 @@
                                           </a>
                                     </button>
 
-                                    <!--- La buanderie --->
-                                    <!----<button
-                                          v-on:mouseenter="
-                                                afficheBuanderieItems
-                                          "
-                                          v-on:mouseleave="
-                                                supprimeBuanderieItemsStyle
-                                          "
-                                          class="plan__rdc-buanderie"
-                                    >
-                                          <img
-                                                src="../assets/RezDeChaussee/rdc_buanderie_plan.jpg"
-                                                alt=""
-                                          />
-                                    </button>-->
                               </div>
 
                         </div>
@@ -524,99 +509,36 @@ export default {
             };
 
             const jardinDescription = [
-                  {
-                        id: 1,
-                        details: "3000 m²",
-                  },
-
-                  {
-                        id: 2,
-                        details: "Le jaccuzzi",
-                  },
-
-                  {
-                        id: 3,
-                        details: "Le bassin des poissons rouges",
-                  },
-
-                  {
-                        id: 4,
-                        details: "Les jeux",
-                  },
-
-                  {
-                        id: 5,
-                        details: "Le barbecue",
-                  },
-
-                  {
-                        id: 6,
-                        details: "La table de Ping Pong",
-                  },
+                  { id: 1, details: "3000 m²", },
+                  { id: 2, details: "Le jaccuzzi",},
+                  { id: 3, details: "Le bassin des poissons rouges",},
+                  { id: 4, details: "Les jeux",},
+                  { id: 5, details: "Le barbecue",},
+                  { id: 6, details: "La table de Ping Pong",},
             ];
 
             const etageDescription = [
-                  {
-                        id: 1,
-                        details: "1 chambre palière (1 lit 1 personne)",
-                        class: "etage_chambre1",
-                  },
-
-                  {
-                        id: 2,
-                        details: "Placard",
-                        class: "etage_placard",
-                  },
-
-                  {
-                        id: 3,
-                        details: "1 chambre (2 lits 1 personnes)",
-                        class: "etage_chambre2",
-                  },
+                  { id: 1, details: "1 chambre palière (1 lit 1 personne)", class: "etage_chambre1",},
+                  { id: 2, details: "Placard", class: "etage_placard",},
+                  { id: 3, details: "1 chambre (2 lits 1 personnes)", class: "etage_chambre2",},
             ];
 
             const rdcDescription = [
-                  {
-                        id: 2,
-                        details: "Salon",
-                        class: "rdc_salon",
+                  { id: 1, details: "Salon", class: "rdc_salon",},
+
+                  { id: 2, details: "Salle à manger", class: "rdc_sam",},
+
+                  { id: 3, details: "Cuisine", class: "rdc_cuisine",},
+
+                  { id: 4, details: "Buanderie", class: "rdc_buanderie",
                   },
 
-                  {
-                        id: 1,
-                        details: "Salle à manger",
-                        class: "rdc_sam",
+                  { id: 5, details: "1 chambre (1 lit 2 personnes)", class: "rdc_chambre",
                   },
 
-                  {
-                        id: 3,
-                        details: "Cuisine",
-                        class: "rdc_cuisine",
-                  },
+                  { id: 6, details: "Salle d'eau", class: "rdc_salledeau",},
 
-                  {
-                        id: 4,
-                        details: "Buanderie",
-                        class: "rdc_buanderie",
-                  },
-
-                  {
-                        id: 4,
-                        details: "1 chambre (1 lit 2 personnes)",
-                        class: "rdc_chambre",
-                  },
-
-                  {
-                        id: 6,
-                        details: "Salle d'eau",
-                        class: "rdc_salledeau",
-                  },
-
-                  {
-                        id: 7,
-                        details: "WC",
-                        class: "rdc_wc",
-                  },
+                  { id: 7, details: "WC", class: "rdc_wc",},
             ];
 
             return {
@@ -745,24 +667,14 @@ export default {
             margin-bottom: 0.5em;
             margin-top: 1em;
             padding: 0.5em;
-            //box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
                   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
             @media screen and (max-width: 550px) {
                   width: 50%;
                   font-weight: 600;
-                  //font-size: 0.8em;
             }
       }
-
-      /*.description{
-          /*:hover{
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-            /*transform: scale3d(0.8em);
-            transition: 0.5s ease-in-out;
-          }
-         }*/
 
       .plan {
             position: relative;
@@ -881,7 +793,6 @@ export default {
                   width: 19%;
                   bottom: 19.9%;
                   left: 36.5%;
-                  //top: 20%;
             }
 
             .etage1_chambre1 {
@@ -949,37 +860,11 @@ export default {
                   width: 70%;
                   margin: auto;
                   background: #fff;
-
-                  /*.taille{
-                width: 70%;
-                height: 50%;
-                text-align: center;
-
-                img{ 
-                  width: 100%;
-                  height: 350px;
-                  object-fit: fill;
-                  object-position: center;
-                }
-            }*/
             }
 
             &--text {
                   width: 30%;
             }
       }
-
-      /*&__gallery {
-            text-align: right;
-            margin: 1em;
-
-            button {
-                  //background: rgba($color: #fff, $alpha: 1);
-                  //color: #000;
-                  //font-weight: 600;
-                  padding: 0.5em;
-                  border-radius: 0.5em;
-            }
-      }*/
 }
 </style>

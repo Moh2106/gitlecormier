@@ -279,7 +279,7 @@
             <div class="gallerie__popup">
                   <span @click="fermer" class="fermer">&times;</span>
                   <div class="flex items-center justify-between">
-                        <span
+                        <!----<span
                               class="bg-[rgb(22,163,74)] text-2xl border-green-600 mt-[25%] p-2"
                         >
                               <button v-on:click="prev">
@@ -288,19 +288,19 @@
                                           class="text-white"
                                     />
                               </button>
-                        </span>
+                        </span>-->
 
                         <!-- Dans cette partie les images cliqués s'afficheront -->
                         <img src="" alt="" />
 
-                        <span class="bg-[rgb(22,163,74)] text-2xl mt-[25%] p-2">
+                        <!----<span class="bg-[rgb(22,163,74)] text-2xl mt-[25%] p-2">
                               <button v-on:click="next" id="previous">
                                     <font-awesome-icon
                                           :icon="['fass', 'arrow-right']"
                                           class="text-white"
                                     />
                               </button>
-                        </span>
+                        </span>-->
                   </div>
             </div>
 
@@ -343,7 +343,7 @@ export default {
              */
 
             // Indique l'index de l'image
-            var ind = 0;
+            //var ind = 0;
 
             const Cliquer = () => {
                   const items = document.querySelectorAll(".items");
@@ -360,7 +360,7 @@ export default {
                                     ".gallerie__popup img"
                               ).src = imageSource;
 
-                              ind = image.id
+                              //ind = image.id
 
                         };
                   });
@@ -378,13 +378,9 @@ export default {
                         };
             };
 
-            const prev = () => {
+            /*const prev = () => {
                   //afficherCodePrecedent()
                   var images = document.querySelectorAll(".items");
-
-                  /*var tableau = Object.entries(images).map(function(entry) {
-            return entry;
-          });*/
 
                   ind--;
                   if (ind < 0) {
@@ -398,8 +394,6 @@ export default {
                         ).style.display = "none";
                         document.querySelector(".gallerie__popup img").src =
                               imageSource;
-
-                        //image.style.display = 'none';
                   });
 
                   const imageSuivant = images[ind].src;
@@ -409,11 +403,11 @@ export default {
                         imageSuivant;
 
                   
-            };
+            };*/
 
             // Next
 
-            const next = () => {
+            /*const next = () => {
                   var images = document.querySelectorAll(".items");
                   
                   ind++;
@@ -423,11 +417,6 @@ export default {
                   }
 
                   images.forEach((image) => {
-                        //ind = tableau.indexOf(image)
-                        //ind++;
-                        //console.log(ind);
-                        //ind = image.id;
-                        //ind++;
                         const imageSource = image.src;
                         document.querySelector(
                               ".gallerie__popup"
@@ -443,16 +432,11 @@ export default {
                         "block";
                   document.querySelector(".gallerie__popup img").src =
                         imageSuivant;
-
-                  //images[ind].style.display = 'block';
-                  //console.log(images.length);
-            };
+            };*/
 
             return {
                   Cliquer,
                   fermer,
-                  next,
-                  prev,
                   chambresRdc,
                   cuisines,
                   cuisinesDetails,
@@ -496,14 +480,9 @@ export default {
             }
       }
 
-      /*.photo_court_format {
-            border: 4px solid green;
-      }*/
-
       &__frame {
             width: 90%;
             margin: auto;
-            //margin-left: 4em;
             transform: translateX(2em);
 
             &--images {
@@ -514,13 +493,11 @@ export default {
                   margin: auto;
                   transform: translateX(2em);
                   margin-bottom: 1em;
-                  //border: 2px solid red;
 
                   div {
                         grid-column: span 12;
 
                         .photo_long_format {
-                              //grid-column: span 12;
                               grid-row: auto;
                               padding: 0 6.4em;
                         }
@@ -534,10 +511,8 @@ export default {
 
                   div {
                         img {
-                              //border-radius: 0.5em;
                               cursor: pointer;
                               object-fit: contain;
-                              //background: gray;
                         }
                   }
 
@@ -546,7 +521,6 @@ export default {
                         flex-wrap: wrap;
 
                         div {
-                              //border: 2px solid red;
                               width: 30%;
                               margin-right: 1em;
                               margin-bottom: 0.5em;
@@ -572,7 +546,6 @@ export default {
       }
 
       .title {
-            //width: 35%;
             margin: auto;
             padding: 0.3em;
             border-radius: 50%;

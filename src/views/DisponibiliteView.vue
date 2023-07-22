@@ -2,7 +2,10 @@
       <div class="pt-16 reservation pb-4">
             <div class="reservation__soleil" id="disponibiliteIframe">
                   <div v-if="showImage">
-                        <img src="../assets/Disponibilite/soleil.png" alt="" />
+                        <img
+                              src="../assets/Disponibilite/soleil.png"
+                              alt="Soleil - gite le cormier"
+                        />
 
                         <p>
                               Cliquer sur votre date d'arrivée pour commencer la
@@ -64,9 +67,6 @@ export default {
 }
 
 .custom-shape-divider-top-1688723126 {
-      //position: absolute;
-      //top: 0;
-      //left: 0;
       width: 100%;
       overflow: hidden;
       line-height: 0;
@@ -79,43 +79,13 @@ export default {
       height: 59px;
 }
 
-.custom-shape-divider-top-1688723126 .shape-fill {
-      fill: #ffffff;
-}
-
-.custom-shape-divider-bottom-1688722987 {
-      //position: absolute;
-      //bottom: 0;
-      //left: 0;
-      width: 100%;
-      overflow: hidden;
-      line-height: 0;
-      transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1688722987 svg {
-      position: relative;
-      display: block;
-      width: calc(100% + 1.3px);
-      height: 59px;
-}
-
-.custom-shape-divider-bottom-1688722987 .shape-fill {
-      fill: #ffffff;
-}
-
 @keyframes move {
       0% {
             opacity: 1;
       }
       50% {
-            //position: absolute;
-            //top: 20%;
-            //left: 50%;
             opacity: 1;
             transform: translate(155%, 55%);
-            //transform: translateX(285%);
-            //transform: translateY(55%);
       }
 
       75% {
@@ -131,13 +101,6 @@ export default {
 .reservation {
       width: 100%;
       position: relative;
-      //height: 100vh;
-      //background: orange;
-
-      /*&__css{
-      background: #af2;
-      display: flex;
-    }*/
 
       &__soleil {
             width: 30%;

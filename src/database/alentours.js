@@ -1,6 +1,6 @@
 export const alentours = [
       {
-            id: 31,
+            id: 1,
             titre: "LA HAYE DE ROUTOT",
             img: "/pictures/Alentours/la_haye_de_routot.jpg",
             site: "",
@@ -8,7 +8,7 @@ export const alentours = [
       },
 
       {
-            id: 32,
+            id: 2,
             titre: "LE MOULIN DE HAUVILLE",
             img: "/pictures/Alentours/moulin_de_hauville.jpg",
             site: "",
@@ -16,7 +16,7 @@ export const alentours = [
       },
 
       {
-            id: 33,
+            id: 3,
             titre: "LES BACS DE SEINE",
             img: "/pictures/Alentours/bac_de_seine.png",
             site: "",
@@ -24,7 +24,7 @@ export const alentours = [
       },
 
       {
-            id: 3,
+            id: 4,
             titre: "ABBAYE DE JUMIEGES",
             img: "/pictures/Alentours/abbaye_de_jumieges.webp",
             site: "https://www.abbayedejumieges.fr/",
@@ -32,7 +32,7 @@ export const alentours = [
       },
 
       {
-            id: 34,
+            id: 5,
             titre: "LA FORET DE BROTONNE",
             img: "/pictures/Alentours/foret_de_brotonne.jpg",
             site: "",
@@ -40,7 +40,7 @@ export const alentours = [
       },
 
       {
-            id: 35,
+            id: 6,
             titre: "LES BORDS DE SEINE, LA FOULERIE",
             img: "/pictures/Alentours/bords_de_Seine.JPG",
             site: "",
@@ -48,7 +48,7 @@ export const alentours = [
       },
 
       {
-            id: 23,
+            id: 7,
             titre: "LA MAISON DU LIN EN NORMANDIE",
             img: "/pictures/Alentours/la_maison_du_lin.JPG",
             site: "https://www.terresvivantes-normandie.fr/",
@@ -56,7 +56,7 @@ export const alentours = [
       },
 
       {
-            id: 19,
+            id: 8,
             titre: "FERME LULU MARKET",
             img: "/pictures/Alentours/ferme_lulu_market.png",
             site: "https://earl-la-chapelle-brestot.jimdofree.com/",
@@ -64,7 +64,7 @@ export const alentours = [
       },
 
       {
-            id: 7,
+            id: 9,
             titre: "PONT-AUDEMER VAL DE RISLE",
             img: "/pictures/Alentours/pont_audemar2.png",
             site: "https://www.tourisme-pontaudemer-rislenormande.com/",
@@ -72,15 +72,15 @@ export const alentours = [
       },
 
       {
-            id: 6,
+            id: 10,
             titre: "MANOIR DE VILLERS",
-            img: "/pictures/Alentours/manoir_des_villers.png",
+            img: "/pictures/Alentours/manoir_de_villers_1.jpg",
             site: "",
             maps: "https://maps.app.goo.gl/gZfogdowr5M2o8Gt9",
       },
 
       {
-            id: 5,
+            id: 11,
             titre: "BASE DE LOISIRS DE JUMIÈGES",
             img: "/pictures/Alentours/base_de_jumiege.png",
             site: "https://www.basedejumieges.fr/",
@@ -88,7 +88,7 @@ export const alentours = [
       },
 
       {
-            id: 40,
+            id: 12,
             titre: "BASE DE LOISIRS DE BRIONNE",
             img: "/pictures/Alentours/base_de_loisir_brionne.jpg",
             site: "https://www.ville-brionne.fr/",
@@ -96,15 +96,7 @@ export const alentours = [
       },
 
       {
-            id: 8,
-            titre: "LA FERME DU BEC",
-            img: "/pictures/Alentours/ferme_du_bec.png",
-            site: "http://https://www.fermedubec.com/",
-            maps: "https://maps.app.goo.gl/yEbQWnzjhCk7BiUy6",
-      },
-
-      {
-            id: 15,
+            id: 13,
             titre: "CHATEAU DU CHAMP DE BATAILLE",
             img: "/pictures/Alentours/champ_de_bataille.jpg",
             site: "https://www.chateauduchampdebataille.com/",
@@ -112,15 +104,15 @@ export const alentours = [
       },
 
       {
-            id: 10,
+            id: 14,
             titre: "ABBAYE DU BEC",
-            img: "/pictures/Alentours/abbaye_du_bec.png",
+            img: "/pictures/Alentours/abbaye_bec.png",
             site: "https://abbayedubec.org/",
             maps: "https://maps.app.goo.gl/x7rKJNgeytNzRxy2A",
       },
 
       {
-            id: 11,
+            id: 15,
             titre: "CHATEAU DE MARTAINVILLE",
             img: "/pictures/Alentours/chateau_de_martainville.png",
             site: "http://www.chateaudemartainville.fr/",
@@ -128,7 +120,7 @@ export const alentours = [
       },
 
       {
-            id: 14,
+            id: 16,
             titre: "ROUEN TOURISME",
             img: "/pictures/Alentours/rouen_tourisme.jpg",
             site: "https://www.rouentourisme.com/",
@@ -136,7 +128,7 @@ export const alentours = [
       },
 
       {
-            id: 13,
+            id: 17,
             titre: "ABBAYE SAINT GEORGES",
             img: "/pictures/Alentours/abbaye-saint-georges.jpg",
             site: "http://www.abbaye-saint-georges.com/",
@@ -146,13 +138,13 @@ export const alentours = [
       {
             id: 18,
             titre: "PARC DU BOCASSE",
-            img: "/pictures/Alentours/parc_du_bocasse.jpg",
+            img: "/pictures/Alentours/parc_bocasse_2.png",
             site: "https://www.parcdubocasse.fr/",
             maps: "https://maps.app.goo.gl/oNpZwP2t3fKvZYaaA",
       },
 
       {
-            id: 27,
+            id: 19,
             titre: "ABBAYE DE BONPORT",
             img: "/pictures/Alentours/abbaye_bon_port.png",
             site: "https://www.abbayedebonport.com/",
@@ -160,7 +152,7 @@ export const alentours = [
       },
 
       {
-            id: 4,
+            id: 20,
             titre: "ABBAYE DE SAINT-WANDRILLE",
             img: "/pictures/Alentours/abbaye_saint_wandrille.jpg",
             site: "https://st-wandrille.com/",
@@ -168,7 +160,7 @@ export const alentours = [
       },
 
       {
-            id: 30,
+            id: 21,
             titre: "CHATEAU DE MONFORT SUR RISLES",
             img: "/pictures/Alentours/chateau_de_monfort.jpg",
             site: "",
@@ -176,7 +168,7 @@ export const alentours = [
       },
 
       {
-            id: 12,
+            id: 22,
             titre: "PONT DE NORMANDIE",
             img: "/pictures/Alentours/pont_tancerville.jpg",
             site: "http://www.pontsnormandietancarville.fr/",
@@ -184,7 +176,7 @@ export const alentours = [
       },
 
       {
-            id: 16,
+            id: 23,
             titre: "HARCOURT NORMANDIE",
             img: "/pictures/Alentours/harcourt_normandie.jpg",
             site: "http://www.harcourt-normandie.fr/",
@@ -192,7 +184,7 @@ export const alentours = [
       },
 
       {
-            id: 17,
+            id: 24,
             titre: "LERY POSES",
             img: "/pictures/Alentours/lery_poses.jfif",
             site: "http://www.lery-poses.fr/",
@@ -200,7 +192,7 @@ export const alentours = [
       },
 
       {
-            id: 20,
+            id: 25,
             titre: "ESCARGOT DE BROTONNE",
             img: "/pictures/Alentours/escargot_de_brotonne.png",
             site: "https://escargotsdebrotonne.com/",
@@ -208,7 +200,7 @@ export const alentours = [
       },
 
       {
-            id: 21,
+            id: 26,
             titre: "LES ECURIES DU QUESNEY",
             img: "/pictures/Alentours/ecuries_du_quesney.png",
             site: "https://www.lesecuriesduquesney.fr/",
@@ -216,7 +208,7 @@ export const alentours = [
       },
 
       {
-            id: 28,
+            id: 27,
             titre: "PARC DE CLERES",
             img: "/pictures/Alentours/parc_le_clerc.jpeg",
             site: "http://www.parcdecleres.net/",
@@ -224,7 +216,7 @@ export const alentours = [
       },
 
       {
-            id: 29,
+            id: 28,
             titre: "HONFLEUR TERRE D'ESTUAIRE",
             img: "/pictures/Alentours/honfleur.jpg",
             site: "https://www.ot-honfleur.fr/",
@@ -232,7 +224,7 @@ export const alentours = [
       },
 
       {
-            id: 36,
+            id: 29,
             titre: "THEATRE ROMAIN LILLEBONNE",
             img: "/pictures/Alentours/theatre_romain_lillebone.webp",
             site: "https://www.theatreromaindelillebonne.fr/",
@@ -240,7 +232,7 @@ export const alentours = [
       },
 
       {
-            id: 38,
+            id: 30,
             titre: "LE CHÂTEAU DE ROBERT LE DIABLE",
             img: "/pictures/Alentours/robert_le_diable.jpg",
             site: "https://www.chateauderobertlediable.fr/",
@@ -248,7 +240,23 @@ export const alentours = [
       },
 
       {
-            id: 1,
+            id: 31,
+            titre: "BIOTROPICA",
+            img: "/pictures/Alentours/biotropica.jpg",
+            site: "https://www.biotropica.fr/",
+            maps: "https://goo.gl/maps/6E6qce5GUGXQ8nws5",
+      },
+
+      {
+            id: 32,
+            titre: "ZOO DE CERSA",
+            img: "/pictures/Alentours/zoo_de_cerza.jpg",
+            site: "https://www.cerza.com/",
+            maps: "https://goo.gl/maps/8RMKRbqXYexXspj88",
+      },
+
+      {
+            id: 33,
             titre: "CENTAURE PARIS - NORMANDIE",
             img: "/pictures/Alentours/centaure_normandie_paris.jpg",
             site: "http://paris-normandie.centaure.com/",
@@ -258,35 +266,11 @@ export const alentours = [
 
 export const alentoursSiteInformation = [
       {
-            id: 22,
-            titre: "LA NORMANDIE INFO",
-            img: "/pictures/Alentours/logo_normandie_info.jpg",
-            site: "https://www.la-normandie.info/",
-            maps: "",
-      },
-
-      {
-            id: 24,
+            id: 1,
             titre: "ROUMOIS SEINE",
             img: "/pictures/Alentours/logo_communaute_roumois_seine.jpg",
             site: "https://www.roumoiseine.fr/",
-            maps: "https://maps.app.goo.gl/pDuF5RP5aoSuTvsE8",
-      },
-
-      {
-            id: 25,
-            titre: "CAUX-SEINE NORMANDIE TOURISME",
-            img: "/pictures/Alentours/logo_caux_seine_normandie.jpg",
-            site: "https://www.entreseineetmer.fr/",
             maps: "",
-      },
-
-      {
-            id: 26,
-            titre: "GRAINE DE VIKING",
-            img: "/pictures/Alentours/logo_graine_vikings.jpg",
-            site: "https://www.grainedeviking.fr/",
-            maps: "https://maps.app.goo.gl/wkuYHNK2AP5XAGyx9",
       },
 
       {
@@ -298,18 +282,66 @@ export const alentoursSiteInformation = [
       },
 
       {
-            id: 9,
-            titre: "EURE TOURISME",
-            img: "/pictures/Alentours/eure_tourisme.png",
-            site: "https://www.eure-tourisme.fr/",
+            id: 3,
+            titre: "EUREKA",
+            img: "/pictures/Alentours/eureka.jpg",
+            site: "https://www.eureka-attractivite.fr/",
             maps: "",
       },
 
       {
-            id: 39,
-            titre: "EUREKA",
-            img: "/pictures/Alentours/eureka.jpg",
-            site: "https://www.eureka-attractivite.fr/",
+            id: 4,
+            titre: "CAUX-SEINE NORMANDIE TOURISME",
+            img: "/pictures/Alentours/caux_seine_normandie.jpg",
+            site: "https://www.entreseineetmer.fr/",
+            maps: "",
+      },
+
+      {
+            id: 5,
+            titre: "SEINE EURE TOURISME",
+            img: "/pictures/Alentours/seine_eure_tourisme.jpg",
+            site: "https://www.tourisme-seine-eure.com/",
+            maps: "",
+      },
+
+      {
+            id: 6,
+            titre: "BIENVENUE A LA FERME",
+            img: "/pictures/Alentours/bienvenue_a_la_ferme.jpg",
+            site: "https://www.bienvenue-a-la-ferme.com/",
+            maps: "",
+      },
+
+      {
+            id: 7,
+            titre: "LA NORMANDIE INFO",
+            img: "/pictures/Alentours/logo_normandie_info.jpg",
+            site: "https://www.la-normandie.info/",
+            maps: "",
+      },
+
+      {
+            id: 8,
+            titre: "GRAINE DE VIKING",
+            img: "/pictures/Alentours/logo_graine_vikings.jpg",
+            site: "https://www.grainedeviking.fr/",
+            maps: "",
+      },
+
+      {
+            id: 9,
+            titre: "EURE MEDIAVALE",
+            img: "/pictures/Alentours/eure_medievale.png",
+            site: "https://euremedievale.fr/",
+            maps: "",
+      },
+
+      {
+            id: 10,
+            titre: "SEINE MARITIME TOURISME",
+            img: "/pictures/Alentours/seine_maritime.jpg",
+            site: "https://www.seine-maritime-tourisme.com/",
             maps: "",
       },
 ];

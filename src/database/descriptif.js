@@ -1,12 +1,12 @@
 export const rezDeChausses = [
       {
-            id: 2,
+            id: 1,
             img: "/pictures/descriptif/salon/rdc_chaumiere5.jpg",
             alt: "Salon",
       },
 
       {
-            id: 1,
+            id: 2,
             img: "/pictures/descriptif/sallemanger/rdc_salon2.jpg",
             alt: "Salle à manger",
       },
@@ -52,55 +52,49 @@ export const etages = [
 
 export const jardins = [
       {
-            id: 10,
+            id: 1,
             img: "/pictures/descriptif/jardin/jardin_vue_ensemble.jpg",
             alt: "Jardin vue d'ensemble",
       },
 
       {
-            id: 11,
+            id: 2,
             img: "/pictures/descriptif/jardin/jardin_vue_ensemble_2.jpg",
             alt: "Jardin vue d'ensemble",
       },
 
       {
-            id: 9,
+            id: 3,
             img: "/pictures/descriptif/jardin/jardin_terrasse.jpg",
             alt: "jardin_terrasse.jpg",
       },
 
-      /*{
-            id: 4,
-            img: "/pictures/descriptif/jardin/fleur_jardin.jpg",
-            alt: "Fleur dans le jardin",
-      },*/
-
       {
-            id: 2,
+            id: 4,
             img: "/pictures/descriptif/jardin/chaise_jardin_2.jpg",
             alt: "Chaise jardin",
       },
 
       {
-            id: 3,
+            id: 5,
             img: "/pictures/descriptif/jardin/chaise_jardin.jpg",
             alt: "Chaise jardin",
       },
 
       {
-            id: 5,
+            id: 6,
             img: "/pictures/descriptif/jardin/jaccuzzi.jpg",
             alt: "Jaccuzzi",
       },
 
       {
-            id: 6,
+            id: 7,
             img: "/pictures/descriptif/jardin/jeux_enfants.jpg",
             alt: "Jeux pour enfants",
       },
 
       {
-            id: 7,
+            id: 8,
             img: "/pictures/descriptif/jardin/table_festin_jardin.jpg",
             alt: "Table festin jardin.jpg",
       },

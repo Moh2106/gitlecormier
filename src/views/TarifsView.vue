@@ -37,7 +37,7 @@
                         <!-- Réservation -->
 
                         <div
-                              class="bg-white opacity-90 rounded-lg h-[20vh] mb-[1em]"
+                              class="bg-white opacity-90 rounded-lg h-[16vh] mb-[1em]"
                         >
                               <h2>Réservation</h2>
                         </div>
@@ -69,14 +69,6 @@
                                           alt=""
                                           class="move"
                                     />
-
-                                    <!----<p>Arrivée samedi</p>-->
-
-                                    <!----<font-awesome-icon
-                                          icon="fa-solid fa-hand-point-right"
-                                          class="font"
-                                          id="tarif__vacance--awesome"
-                                    />-->
 
                                     <div class="bubble">
                                           <p>Arrivée samedi</p>
@@ -114,10 +106,6 @@
                                                             "
                                                       />
 
-                                                      <!----<img
-                                                            :src="tarif.photo"
-                                                            :alt="tarif.saison"
-                                                      />-->
                                                 </div>
 
                                                 <h2
@@ -158,7 +146,7 @@
                         </div>
 
                         <!------------ Basse --------------------------->
-                        <div class="tarif__basse">
+                        <div class="tarif__basse" v-on:mouseenter="handleVacance">
                               <div
                                     class="tarif__basse--ecureuil"
                                     id="ecureuil"
@@ -185,11 +173,6 @@
                                           id="tarif__basse--awesome"
                                     />
 
-                                    <!----<font-awesome-icon
-                                          icon="fa-solid fa-hand-point-right"
-                                          class="font"
-                                          id="tarif__basse--awesome"
-                                    />-->
                               </div>
 
                               <div class="tarif__basse--cards" id="basse--card">
@@ -225,13 +208,6 @@
                                                                   onMouseOut
                                                             "
                                                       />
-
-                                                      <!----<img :src="tarif.photo2" alt="" cl>
-
-                                                      <img
-                                                            :src="tarif.photo"
-                                                            :alt="tarif.saison"
-                                                      />-->
                                                 </div>
 
                                                 <h2
@@ -280,24 +256,15 @@
                                     class="tarif__confort--awesome"
                                     id="tarif__confort--awesome"
                               >
-                                    <h2>
-                                          <!----<font-awesome-icon
-                                                icon="fa-regular fa-face-smile"
-                                                class="iconConfort"
-                                          />-->
+                                    <div class="bubble_confort">
+                                          <p>En option</p>
+                                    </div>
 
-                                          <!----<img
-                                                src="../assets/Tarifs/emoji_confort_gift.gif"
-                                                alt=""
-                                                class="emojiConfort"
-                                          />-->
-
-                                          <img
-                                                src="../assets/Tarifs/geai_des_bois.png"
-                                                alt=""
-                                                class="emojiConfort move"
-                                          />
-                                    </h2>
+                                    <img
+                                          src="../assets/Tarifs/geai_des_bois.png"
+                                          alt=""
+                                          
+                                    />
                               </div>
 
                               <div
@@ -409,8 +376,6 @@
                                                 class="emojiArrive"
                                           />
 
-                                          <!----<img src="../assets/Tarifs/pigeon-gif-download-free.gif" alt="" class="emojiArrive">-->
-
                                           <font-awesome-icon
                                                 icon="fa-solid fa-question"
                                                 class="icon"
@@ -468,18 +433,6 @@
                         <!------- Réservations ------>
 
                         <div class="tarif__reservation">
-                              <!----<div
-                                    class="tarif__reservation--awesome"
-                                    id="tarif__reservation--awesome"
-                              >
-                                    <h2>
-                                          <img
-                                                src="../assets/Tarifs/emoji_reservation_gif.gif"
-                                                alt=""
-                                                class="emojiReservation"
-                                          />
-                                    </h2>
-                              </div>-->
 
                               <div
                                     class="tarif__reservation--text"
@@ -536,7 +489,6 @@ export default {
             var animeConfort = ref(false);
             var animeArrive = ref(false);
             var animeReservation = ref(false);
-            //var compte = 0;
             const intervalId = ref(null);
 
             onMounted(() => {
@@ -558,16 +510,19 @@ export default {
                         "tarif__confort--awesome"
                   );
 
-                  confortAwesome.style.display = "block";
+                  confortAwesome.style.display = "flex";
             });
 
             /**
-             * Changement des photos
+             * Changement des photos en amenant la souris sur la photo
              */
             const onMouseOver = (imageId) => {
                   hoveredImageId.value = imageId;
             };
 
+            /**
+             * Retour au photo initiale
+             */
             const onMouseOut = () => {
                   hoveredImageId.value = null;
             };
@@ -587,7 +542,7 @@ export default {
                         count++;
 
                         // Cette partie permet d'arreter la fonction setIntervall
-                        console.log(position.value);
+                        //console.log(position.value);
                         if (count === 3) {
                               clearInterval(intervalId.value);
                               intervalId.value = null;
@@ -675,11 +630,6 @@ export default {
                   ecureuil.style.display = "block";
 
                   tarifCard.style.opacity = 1;
-
-                  /*const waneBasse = document.getElementById("waves__basse");
-
-                  waneBasse.style.left = "-5%";
-                  waneBasse.style.transition = "2s ease-in";*/
             };
 
             var compte = 0;
@@ -726,7 +676,6 @@ export default {
 
                   confortAwesome.style.display = "none";
                   confortText.style.transition = "1s ease-in";
-                  //confortText.style.opacity = 1;
                   confortText.style.left = 0;
             };
 
@@ -741,7 +690,6 @@ export default {
                   onMouseOver,
                   onMouseOut,
 
-                  //animeTarifVacance,
                   animeBasseSaison,
                   animeConfort,
                   animeTarifVac,
@@ -752,12 +700,7 @@ export default {
 
                   afficheAVotreArrive,
                   affichePourVotreConfort,
-                  //afficheReservation,
-
-                  //tarifVacance,
-
                   handleBasseSaison,
-                  //handleSouris,
                   handleVacance,
             };
       },
@@ -765,7 +708,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@keyframes sparkle {
+/*@keyframes sparkle {
       0% {
             //transform: translate(0, 0);
             transform: translateY(0);
@@ -776,22 +719,20 @@ export default {
 
       /*75% {
             transform: translate(100px, 50px);
-      }*/
+      }
       100% {
             transform: translateY(-7px);
             //transform: translate(0, 0);
       }
-}
+}*/
 
 @keyframes moving {
       0% {
-            //display: none;
             opacity: 1;
       }
 
       33% {
             transform: translateX(150%);
-            //opacity: 1;
       }
 
       66% {
@@ -809,10 +750,6 @@ export default {
       }
 }
 
-/*.move {
-      animation: 0.1s ease-in-out sparkle infinite alternate;
-}*/
-
 .animation {
       animation: moving 4s linear;
 }
@@ -828,12 +765,6 @@ export default {
 .tarif {
       width: 95%;
       margin: auto;
-      //position: relative;
-      /*.cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 0.5em;
-      }*/
 
       &__part_one {
             width: 25%;
@@ -849,22 +780,18 @@ export default {
                         justify-content: center;
                         align-items: center;
                         color: blanchedalmond;
-                        //font-size: 2em;
                         font-weight: 550;
-                        //font-family: "Great Vibes", cursive;
                   }
             }
       }
 
       &__second_part {
             width: 100%;
-            //border: 5px solid #08863b;
       }
 
       &__vac {
             position: relative;
             height: 40vh;
-            //margin-bottom: 1em;
 
             &--bird {
                   position: absolute;
@@ -881,7 +808,6 @@ export default {
                   text-align: left;
                   color: #fff;
                   margin-top: 2em;
-                  //font-size: 6em;
                   opacity: 1;
 
                   img {
@@ -901,7 +827,7 @@ export default {
                         height: 120px;
                         border-radius: 10px;
                         padding: 0px;
-                        transform: translate(-0.5em, 0.3em);
+                        transform: translate(0.2em, 0.5em);
                         margin: 0 0.2em;
 
                         &::after {
@@ -911,12 +837,12 @@ export default {
                               width: 0;
                               z-index: 1;
                               border-style: solid;
-                              border-width: 0 20px 20px 0;
-                              border-color: transparent #08a045 transparent
-                                    transparent;
-                              top: 40%;
-                              left: -20px;
-                              margin-top: -10px;
+                              border-width: 0 92px 40px 0;
+                              border-color: transparent rgba(8, 160, 69, 0.8)
+                                    transparent transparent;
+                              top: 35%;
+                              left: -92px;
+                              margin-top: -20px;
                         }
 
                         p {
@@ -927,36 +853,21 @@ export default {
                               font-family: "Great Vibes", cursive;
                         }
                   }
-
-                  /*p {
-                        //font-size: 2em;
-                        font-weight: 550;
-                        font-family: "Great Vibes", cursive;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        transform: translateY(0.8em);
-                        //margin-top: 1em;
-                  }*/
             }
 
             &--cards {
                   display: flex;
                   width: 100%;
                   height: 100%;
-                  //border: orange 3px solid;
                   opacity: 0;
-                  //z-index: 1000;
 
                   .elements {
                         width: 27%;
                         margin-right: 1em;
                         transition: all 1s ease-in;
                         height: 100%;
-                        //border: 2px solid rgb(15, 73, 246);
 
                         img {
-                              //transform: scale(120%);
                               border-radius: 0.5em;
                               display: flex;
                               justify-content: center;
@@ -1005,15 +916,12 @@ export default {
 
             .custom-shape-divider-bottom-1688724135 .shape-fill {
                   fill: #08a045;
-                  //#f7ef99  #9cfc97
             }
       }
 
       &__basse {
             position: relative;
             height: 38vh;
-            //margin-bottom: 1em;
-            //border: 2px solid orange;
 
             &--ecureuil {
                   position: absolute;
@@ -1028,7 +936,6 @@ export default {
                   display: flex;
                   position: absolute;
                   text-align: left;
-                  margin-top: 2em;
 
                   .bubble_basse {
                         position: relative;
@@ -1043,21 +950,20 @@ export default {
                         border-radius: 10px;
                         padding: 0px;
 
-                        &::after{
-                             content: "";
-                        position: absolute;
-                        display: block;
-                        width: 0;
-                        z-index: 1;
-                        border-style: solid;
-                        border-width: 20px 0 0 20px;
-                        border-color: transparent transparent transparent
-                              rgba(8, 160, 69, 0.8);
-                        top: 50%;
-                        right: -20px;
-                        margin-top: -10px; 
+                        &::after {
+                              content: "";
+                              position: absolute;
+                              display: block;
+                              width: 0;
+                              z-index: 1;
+                              border-style: solid;
+                              border-width: 40px 0 0 92px;
+                              border-color: transparent transparent transparent
+                                    rgba(8, 160, 69, 0.8);
+                              top: 70%;
+                              right: -92px;
+                              margin-top: -20px;
                         }
-
 
                         p {
                               display: flex;
@@ -1070,26 +976,15 @@ export default {
 
                   img {
                         width: 35%;
-                        transform: translate(-6.5em, 3.5em);
+                        transform: translate(-2.5em, 5.5em);
                   }
 
-                  /*p {
-                        font-weight: 550;
-                        font-family: "Great Vibes", cursive;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: #fff;
-                        font-size: 6em;
-                        transform: translate(1em, -0.6em);
-                  }*/
             }
 
             &--cards {
                   display: flex;
                   width: 100%;
                   height: 100%;
-                  //border: orange 3px solid;
                   opacity: 0;
 
                   .elements__basse {
@@ -1097,16 +992,11 @@ export default {
                         margin-right: 1em;
                         transition: all 1s ease-in;
                         height: 100%;
-                        //border: 2px solid rgb(15, 73, 246);
 
                         img {
-                              //object-fit: contain;
-                              //border-radius: 0.1em;
-                              //transform: scale(110%);
                               border-radius: 0.1em;
                               object-fit: cover;
                               transition: 300ms ease-in-out;
-                              //background: red;
                               display: flex;
                               justify-content: center;
                               align-items: center;
@@ -1126,23 +1016,16 @@ export default {
             margin-bottom: 1em;
             text-align: left;
 
-            //padding: 0.5em 0;
-            //border: 3px solid orange;
-
             &--awesome {
                   position: absolute;
-                  //font-size: 5em;
-                  //border: 3px solid red;
                   width: 100%;
                   height: 100%;
 
                   .emojiArrive {
                         display: inline;
                         width: 8%;
-                        //height: 15vh;
                         margin-right: 0.3em;
                         margin-left: 0.5em;
-                        //border: 2px solid rgb(15, 84, 105);
                   }
 
                   .icon {
@@ -1168,30 +1051,61 @@ export default {
       &__confort {
             position: relative;
             height: 31vh;
-            //border-radius: 0.5em;
-            //padding-left: 1em;
             text-align: left;
-            //margin-bottom: 1rem;
             transform: translateY(-1em);
 
             &--awesome {
                   position: absolute;
-                  font-size: 8em;
-                  //border: 2px solid red;
                   width: 100%;
                   height: 100%;
 
-                  .emojiConfort {
-                        width: 15%;
-                        //height: 30vh;
-                        //border: 2px solid rgb(0, 89, 255);
+                  img{
+                        transform: translate(0.7em,0.2em);
                   }
+
+                  .bubble_confort {
+                        position: relative;
+                        background: rgba(8, 160, 69, 0.8);
+                        color: #ffffff;
+                        font-family: Arial;
+                        font-size: 20px;
+                        line-height: 120px;
+                        text-align: center;
+                        width: 50%;
+                        height: 120px;
+                        border-radius: 10px;
+                        padding: 0px;
+                        transform: translate(0,2em);
+
+                        &::after {
+                              content: "";
+                              position: absolute;
+                              display: block;
+                              width: 0;
+                              z-index: 1;
+                              border-style: solid;
+                              border-width: 40px 92px 0 0;
+                              border-color: rgba(8, 160, 69, 0.8) transparent transparent
+                                    transparent;
+                              top: 37%;
+                              right: -92px;
+                              margin-top: -20px;
+                        }
+
+                        p {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              font-weight: 550;
+                              font-family: "Great Vibes", cursive;
+                              font-size: 5em;
+                        }
+                  }
+                  
             }
 
             &--text {
                   background: #fff;
-                  //display: none;
-                  //opacity: 0;
                   padding: 1em;
                   border-radius: 0.5em;
                   position: relative;
@@ -1215,30 +1129,14 @@ export default {
 
       &__reservation {
             position: relative;
-            height: 20vh;
+            height: 16vh;
             text-align: left;
-
-            /*&--awesome {
-                  position: absolute;
-                  font-size: 5em;
-                  width: 100%;
-                  height: 100%;
-
-                  .emojiReservation {
-                        width: 13%;
-                        //border: 2px solid white;
-                        margin-left: 0.5em;
-                  }
-            }*/
 
             &--text {
                   background: #fff;
-                  //opacity: 0;
                   height: 100%;
                   padding: 1em;
                   border-radius: 0.5em;
-                  //position: relative;
-                  //left: -150%;
 
                   img {
                         display: inline;
@@ -1269,10 +1167,6 @@ export default {
 
             &:hover {
                   cursor: pointer;
-
-                  /*.prix {
-                        display: block;
-                  }*/
             }
       }
 
@@ -1292,13 +1186,6 @@ export default {
       @media screen and (max-width: 768px) {
             padding-top: 5em;
       }
-
-      /*&__title {
-            background: rgb(22 163 74);
-            margin: auto;
-            color: blanchedalmond;
-            font-weight: 600;
-      }*/
 
       @media screen and (max-width: 768px) {
             width: 100%;

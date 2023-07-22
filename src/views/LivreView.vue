@@ -22,8 +22,6 @@
 
                   <p class="iframe w-2/3 flex items-center justify-center h-[3.65em] mt-2">
                       Un grand merci à nos hôtes pour leurs commentaires laissés sur le site de gite de France !
-                        <!--Voici les commentaires qui ont été émis par nos hôtes.
-                        Vous les retrouverez sur le site de gite de France-->
                   </p>
             </div>
 

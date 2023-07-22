@@ -70,7 +70,6 @@ export default {
         height: 15vh;
         color: #fff;
         padding: 0 2em;
-        //border: 3px solid #fff;
 
         @media screen and (max-width : 768px) {
             display: block;
@@ -86,26 +85,14 @@ export default {
 
         .liens{
             width: 18%;
-            //border: 3px solid rgb(0, 26, 255);
             
             &__logo{
                 width: 100%;
-                //margin: auto;
                 margin-bottom: 0.5em;
             }
             
         }
 
-        /*.a{ 
-            @media screen and (max-width : 768px) {
-                margin: 2em 0;
-            }
-
-            @media screen and (max-width : 550px) {
-                margin: 0.5em 0;
-        }
-            
-        }*/
         .b{
             &:hover{ 
                     border-radius: 0.5em;

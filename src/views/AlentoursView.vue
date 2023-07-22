@@ -10,15 +10,17 @@
 
             <!-- Intégration de la carte avec l'api de google map -->
             <div class="alentours__carte">
-
-                  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12r6EtORX4TvW-tF_tddqwHYuHehKG0E&ehbc=2E312F" width="100%" height="600"></iframe>
-
+                  <iframe
+                        src="https://www.google.com/maps/d/u/0/embed?mid=12r6EtORX4TvW-tF_tddqwHYuHehKG0E&ehbc=2E312F"
+                        width="100%"
+                        height="600"
+                  ></iframe>
             </div>
 
             <!-- 
-      Insertion des données comme les photos, le nom des sites aux alentours, le site web
-      des entreprises et le l'itinéraire vers gite le cormier via alentours.js
-    -->
+                  Insertion des données comme les photos, le nom des sites aux alentours, le site web
+                  des entreprises et le l'itinéraire vers gite le cormier via alentours.js
+            -->
 
             <div class="monEnsemble">
                   <div
@@ -101,7 +103,7 @@
                                     </div>
 
                                     <div class="mapButton">
-                                          <button
+                                          <!----<button
                                                 class="bg-green-600"
                                                 v-if="alentour.maps != ''"
                                           >
@@ -111,11 +113,13 @@
                                                       rel="noopener noreferrer"
                                                       >Voir l'itinéraire</a
                                                 >
-                                          </button>
+                                          </button>-->
                                     </div>
                               </div>
 
-                              <div class="alentours__card--description information">
+                              <div
+                                    class="alentours__card--description information"
+                              >
                                     <h1
                                           v-text="alentour.titre"
                                           class="font-bold"
@@ -162,10 +166,11 @@ export default {
             var result = ref(true);
 
             /*
-      Dans cette partie on recupère le mot saisi dans le input concernant la recherche d'un lieu
-      Ensuite on effectue une recherche sur le tableau alentours récupéré depuis notre base de donnée alentours.js
-      On stocke ensuite les résultats dans un tableau newAlentoursArrays
-    */
+                  Dans cette partie on recupère le mot saisi dans le input concernant la recherche d'un lieu
+                  Ensuite on effectue une recherche sur le tableau alentours récupéré depuis notre base de donnée alentours.js
+                  On stocke ensuite les résultats dans un tableau newAlentoursArrays
+            */
+
             /* watch(site, (nouveau) => {
                   console.log(site.value + nouveau);
                   let alentourArray = alentours.filter((element) =>
@@ -210,14 +215,8 @@ export default {
       }*/
 
       .monEnsemble {
-            //display: flex;
-            //flex-wrap: wrap;
-            //width: 95%;
-            //margin: auto;
-            //transform: translateX(2em);
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            //grid-gap: 0.5rem;
 
             @media screen and (max-width: 550px) {
                   grid-template-columns: repeat(1, 1fr);
@@ -231,9 +230,8 @@ export default {
             position: relative;
             background: rgba(8, 160, 69, 0.8);
             color: #ffffff;
-            font-family: Arial;
+            //font-family: Arial;
             font-size: 1.1em;
-            //line-height: 120px;
             text-align: center;
             width: 20%;
             margin: auto;
@@ -249,23 +247,19 @@ export default {
                   z-index: 1;
                   border-style: solid;
                   border-width: 20px 20px 0 0;
-                  border-color: rgba(8, 160, 69, 0.8) transparent transparent transparent;
+                  border-color: rgba(8, 160, 69, 0.8) transparent transparent
+                        transparent;
                   bottom: -20px;
                   left: 50%;
                   margin-left: -10px;
             }
-
       }
 
       &__carte {
-            //width: 90%;
-            //margin: auto;
             margin-bottom: 1em;
       }
 
       &__paragraph {
-            //width: 90%;
-            //margin: auto;
             padding: 1em;
             border-radius: 0.5em;
             margin: 2.5em 0 1em 0;
@@ -280,7 +274,6 @@ export default {
                   rgba(0, 0, 0, 0.12) 0px 4px 6px,
                   rgba(0, 0, 0, 0.17) 0px 12px 13px,
                   rgba(0, 0, 0, 0.09) 0px -3px 5px;
-            //transition: 20s ease-in-out;
 
             &:hover {
                   transition: 0.5s;
@@ -302,7 +295,6 @@ export default {
                   height: 100%;
 
                   .myImage {
-                        //width: 100%;
 
                         img {
                               width: 100%;
@@ -311,14 +303,13 @@ export default {
                               justify-content: center;
                               align-items: center;
                               object-fit: cover;
-                              //object-fit : contain;
                         }
                   }
 
-                  .imageInformation{
+                  .imageInformation {
                         width: 100%;
 
-                        img{
+                        img {
                               width: 100%;
                               margin: auto;
                               height: 250px;
@@ -366,8 +357,7 @@ export default {
                   }
             }
 
-            .information{
-                  //background: rgb(255, 250, 164);
+            .information {
                   background: rgba(22, 163, 74, 0.5);
                   border-radius: 0.5em;
             }

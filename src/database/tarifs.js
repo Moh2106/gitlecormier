@@ -21,8 +21,8 @@ export const tarifs_vacances = [
 
       {
             id: 3,
-            photo: "/pictures/Tarifs/moyenne_saison.jpg",
-            photo2: "/pictures/Tarifs/haute_saison.jpg",
+            photo: "/pictures/Tarifs/jardin_plante.jpg",
+            photo2: "/pictures/Tarifs/tarif_fleur.jpg",
             saison: "MOYENNE SAISON",
             date: "Les autres vacances scolaires, et mai - juin - septembre",
             prix: "270 €",
@@ -53,8 +53,8 @@ export const tarifs_basse_saison = [
 
       {
             id: 6,
-            photo: "/pictures/Tarifs/jardin_plante.jpg",
-            photo2: "/pictures/Tarifs/tarif_fleur.jpg",
+            photo: "/pictures/Tarifs/moyenne_saison.jpg",
+            photo2: "/pictures/Tarifs/haute_saison.jpg",
             periode: "Le mid-week (4 nuits)",
             prix: "210 €",
             position: 900,

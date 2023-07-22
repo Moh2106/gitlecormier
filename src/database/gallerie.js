@@ -34,7 +34,7 @@ export const cuisines = [
       },
 
       {
-            id: 3,
+            id: 2,
             img: "/pictures/descriptif/cuisine/rdc_cuisine3.jpg",
             alt: "Cuisine 3 rez de chausse",
             class: "photo_long_format",
@@ -42,7 +42,7 @@ export const cuisines = [
       },
 
       {
-            id: 2,
+            id: 3,
             img: "/pictures/descriptif/cuisine/rdc_cuisine6.jpg",
             alt: "Cuisine 2 rez de chausse",
             class: "photo_court_format",
@@ -188,34 +188,6 @@ export const sallesDeBain = [
             index: 21,
       },
 ];
-
-/*export const sallesDeBainDetails = [
-      {
-            id: 1,
-            img: "/pictures/descriptif/sallemanger/rdc_salon2.jpg",
-            alt: "Salle à manger du gite le cormier",
-            class: "",
-            index: 22,
-      },
-
-      {
-            id: 2,
-            img: "/pictures/descriptif/sallemanger/rdc_salon3.jpg",
-            alt: "Salle à manger du gite le cormier",
-            class: "",
-            index: 23,
-      },
-
-      {
-            id: 3,
-            img: "/pictures/descriptif/sallemanger/rdc_salon4.jpg",
-            alt: "Salle à manger du gite le cormier",
-            class: "",
-            index: 24,
-      },
-];
-*/
-
 
 export const chambre1Etages = [
       {
@@ -449,10 +421,17 @@ export const jardins = [
             class: "photo_long_format",
             index: 51,
       },
-
+      
       {
             id: 9,
             img: "/pictures/jardin/IMG20230603175726.jpg",
+            alt: "Le jardin du gite le cormier",
+            index: 52,
+      },
+
+      {
+            id: 30,
+            img: "/pictures/jardin/jardin_neige.jpeg",
             alt: "Le jardin du gite le cormier",
             index: 52,
       },

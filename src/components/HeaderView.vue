@@ -3,9 +3,8 @@
     <div class="first ">
       
       <div class="flex">
-        <img src="../assets/Liens/logo_gite_france.png" alt="" class="w-[10%] mt-[0.3rem] ml-[0.3rem]">
+        <img src="../assets/Liens/logo_gite_france.png" alt="Logo de gite de France" class="w-[10%] mt-[0.3rem] ml-[0.3rem]">
         <h1 class="header__title ">
-
           𝕲î𝖙𝖊 𝖑𝖊 𝖈𝖔𝖗𝖒𝖎𝖊𝖗
         </h1>
       </div>
@@ -46,7 +45,6 @@ export default {
       console.log(nav)
 
       nav.forEach( el => {
-        //element.contains(nav).classList.remove('isActive')
         el.addEventListener('click', () => { 
           e.classList.remove('isActive')
         })
@@ -101,35 +99,25 @@ export default {
     
   }
 
-  &__title{ 
-    //border: 3px solid #fff;
-    //border-radius: 25%;
-    //background: #fff;
+  &__title{
     color: #fff;
-    //margin-left: 1em;
     padding: 0 1em;
     display: flex;
     justify-items: center;
     margin-top: 0.5em;
     font-weight: 800;
     font-size: 1.4em;
-    //transform : translateX(-1em);
 
     @media screen and (max-width : 768px) {
       width: 25%;
       margin: auto;
       color: #08a045;
-      //border: 3px solid #bc6c25;
     }
 
     @media screen and (max-width : 550px) {
       width: 100%;
     }
 
-    /*span{ 
-      margin-left: 1em;
-      color: red;
-    }*/
   }
 
   &__menu{ 
@@ -145,7 +133,6 @@ export default {
   }
 
   .flex{
-    //background: #ca0;
     width: 100%;
 
     img{
@@ -157,10 +144,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    //transform: translateX(-2em);
     position: relative;
-    //background: red;
-    //padding: 0 5em;
     width: 170%;
 
     
@@ -168,7 +152,6 @@ export default {
     @media screen and (max-width : 768px) {
       padding: 0 0.5em 0.5em 0.5em;
       font-size: 0.8em;
-      //background: #dda15e;
       width: auto;
     }
 
