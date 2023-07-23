@@ -249,7 +249,7 @@ export const alentours = [
 
       {
             id: 32,
-            titre: "ZOO DE CERSA",
+            titre: "ZOO DE CERZA",
             img: "/pictures/Alentours/zoo_de_cerza.jpg",
             site: "https://www.cerza.com/",
             maps: "https://goo.gl/maps/8RMKRbqXYexXspj88",
