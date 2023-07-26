@@ -5,7 +5,7 @@
                   <div class="tarif__part_one">
                         <!--  Tarifs vacances -->
                         <div
-                              class="rounded-lg h-[43vh] mb-[1em]"
+                              class="rounded-lg h-[46.8vh] mb-[1em]"
                         >
                               <h2>
                                     Tarifs vacances <br />
@@ -15,7 +15,7 @@
 
                         <!--  Tarifs basse saison -->
                         <div
-                              class="rounded-lg h-[42.8vh] mb-[1em]"
+                              class="rounded-lg h-[38.9vh] mb-[1em]"
                         >
                               <h2>Tarifs basse saison</h2>
                         </div>
@@ -87,7 +87,7 @@
                                                 data-aos="flip-up"
                                           >
                                                 <div
-                                                      class="overflow-hidden bg-cover h-[23vh]"
+                                                      class="overflow-hidden bg-cover h-[27vh]"
                                                 >
                                                       <img
                                                             :src="
@@ -727,6 +727,10 @@ export default {
       }
 }*/
 
+.mar{
+      margin-right: 2em;
+}
+
 @keyframes moving {
       0% {
             opacity: 1;
@@ -792,7 +796,9 @@ export default {
 
       &__vac {
             position: relative;
-            height: 40vh;
+            height: 42vh;
+            margin-bottom: 2em;
+            //border: 2px solid red;
 
             &--bird {
                   position: absolute;
@@ -857,16 +863,20 @@ export default {
             }
 
             &--cards {
-                  display: flex;
+                  //display: flex;
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  grid-gap: 2em;
                   width: 100%;
                   height: 100%;
                   opacity: 0;
 
                   .elements {
-                        width: 27%;
-                        margin-right: 1em;
+                        //width: 35%;
+                        //margin-right: 2.5em;
                         transition: all 1s ease-in;
                         height: 100%;
+                        
 
                         img {
                               border-radius: 0.5em;
@@ -894,13 +904,13 @@ export default {
                   font-weight: 700;
                   font-family: "Great Vibes", cursive;
                   font-size: 2.5em;
-                  transform: translate(-1.2em, -1.1em);
+                  transform: translate(0.5em, -1.1em);
                   color: #fff;
                   text-shadow: 4px 4px 6px rgba(66, 90, 66, 1);
             }
 
             .custom-shape-divider-bottom-1688724135 {
-                  width: 100%;
+                  width: 104.8%;
                   height: 100%;
                   overflow: hidden;
                   line-height: 0;
@@ -911,7 +921,7 @@ export default {
                   position: relative;
                   display: block;
                   width: calc(100% + 1.3px);
-                  height: 40px;
+                  height: 30px;
                   font-weight: 900;
             }
 
@@ -922,7 +932,9 @@ export default {
 
       &__basse {
             position: relative;
-            height: 38vh;
+            height: 34vh;
+            transform: translateY(-1.6em);
+            //border: 2px solid red;
 
             &--ecureuil {
                   position: absolute;
@@ -983,14 +995,17 @@ export default {
             }
 
             &--cards {
-                  display: flex;
+                  //display: flex;
+                  display: grid;
+                  grid-template-columns: repeat(4, 1fr);
+                  grid-gap: 1em;
                   width: 100%;
                   height: 100%;
                   opacity: 0;
 
                   .elements__basse {
-                        width: 27%;
-                        margin-right: 1em;
+                        //width: 25%;
+                        //margin-right: 1em;
                         transition: all 1s ease-in;
                         height: 100%;
 

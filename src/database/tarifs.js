@@ -7,6 +7,7 @@ export const tarifs_vacances = [
             date: "Les vacances d'été <br> (juillet - août)",
             prix: "480 €",
             position: 200,
+            class: true,
       },
 
       {
@@ -17,6 +18,7 @@ export const tarifs_vacances = [
             date: "Début juillet, Fin août et <br> les vacances de Noël ",
             prix: "460 €",
             position: 350,
+            class: true,
       },
 
       {
@@ -27,14 +29,15 @@ export const tarifs_vacances = [
             date: "Les autres vacances scolaires, et mai - juin - septembre",
             prix: "340 €",
             position: 550,
+            class: false,
       },
 ];
 
 export const tarifs_basse_saison = [
       {
             id: 8,
-            photo: "/pictures/Tarifs/basse_semaine_3.jpg",
-            photo2: "/pictures/Tarifs/basse_semaine_2.jpg",
+            photo: "/pictures/Tarifs/basse_hiver_2.jpg",
+            photo2: "/pictures/Tarifs/basse_hiver.jpg",
             periode: "La semaine",
             prix: "260 €",
             position: 300,
