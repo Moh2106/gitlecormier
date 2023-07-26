@@ -4,17 +4,31 @@
                   class="descriptif__paragraph text-left"
                   data-aos="zoom-out-down"
             >
-                  <p>
-                        La chaumière normande du 18 <sup>ème </sup> siècle, le
-                        charme de l'ancien avec le confort actuel. 3000 m² de
-                        jardin paysager privatif. Une grande terrasse plein Sud,
-                        le jaccuzzi à température, de nombreux jeux pour les
-                        enfants, tous les équipements pour cuisiner, la fibre
-                        internet très haut débit 120 Mo/s. <br />
-                        Les méandres de la Seine vous attendent à 10 minutes à
-                        vélo, et la forêt de Brotonne (7000ha) commence juste au
-                        bout de la rue.
-                  </p>
+                  <div>
+                        <p v-if="chooseEnglishVersion">
+                              The 18th-century Normandy cottage, the charm of
+                              the past with modern comfort. 3000 m² of private
+                              landscaped garden. A large south-facing terrace, a
+                              temperature-controlled jacuzzi, numerous games for
+                              children, all the cooking facilities, high-speed
+                              fiber internet at 120 Mbps. <br />
+                              The meanders of the Seine await you just 10
+                              minutes away by bike, and the Brotonne forest
+                              (7000ha) begins right at the end of the street.
+                        </p>
+                        <p v-else>
+                              La chaumière normande du 18
+                              <sup>ème </sup> siècle, le charme de l'ancien avec
+                              le confort actuel. 3000 m² de jardin paysager
+                              privatif. Une grande terrasse plein Sud, le
+                              jaccuzzi à température, de nombreux jeux pour les
+                              enfants, tous les équipements pour cuisiner, la
+                              fibre internet très haut débit 120 Mo/s. <br />
+                              Les méandres de la Seine vous attendent à 10
+                              minutes à vélo, et la forêt de Brotonne (7000ha)
+                              commence juste au bout de la rue.
+                        </p>
+                  </div>
             </div>
 
             <!------------- REZ DE CHAUSSE    ---------------------------------------->
@@ -184,9 +198,7 @@
                                                 />
                                           </a>
                                     </button>
-
                               </div>
-
                         </div>
 
                         <div class="blinking">
@@ -386,6 +398,7 @@
 </template>
 
 <script>
+import { computed } from "vue";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 
@@ -401,6 +414,7 @@ import "../../src/main.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
+import store from "@/store";
 
 export default {
       components: {
@@ -409,6 +423,10 @@ export default {
       },
 
       setup() {
+            var chooseEnglishVersion = computed(() => {
+                  return store.state.englishVersion;
+            });
+
             const afficheCuisineItems = () => {
                   const cuisine = document.getElementById("rdc_cuisine");
 
@@ -509,36 +527,46 @@ export default {
             };
 
             const jardinDescription = [
-                  { id: 1, details: "3000 m²", },
-                  { id: 2, details: "Le jaccuzzi",},
-                  { id: 3, details: "Le bassin des poissons rouges",},
-                  { id: 4, details: "Les jeux",},
-                  { id: 5, details: "Le barbecue",},
-                  { id: 6, details: "La table de Ping Pong",},
+                  { id: 1, details: "3000 m²" },
+                  { id: 2, details: "Le jaccuzzi" },
+                  { id: 3, details: "Le bassin des poissons rouges" },
+                  { id: 4, details: "Les jeux" },
+                  { id: 5, details: "Le barbecue" },
+                  { id: 6, details: "La table de Ping Pong" },
             ];
 
             const etageDescription = [
-                  { id: 1, details: "1 chambre palière (1 lit 1 personne)", class: "etage_chambre1",},
-                  { id: 2, details: "Placard", class: "etage_placard",},
-                  { id: 3, details: "1 chambre (2 lits 1 personnes)", class: "etage_chambre2",},
+                  {
+                        id: 1,
+                        details: "1 chambre palière (1 lit 1 personne)",
+                        class: "etage_chambre1",
+                  },
+                  { id: 2, details: "Placard", class: "etage_placard" },
+                  {
+                        id: 3,
+                        details: "1 chambre (2 lits 1 personne)",
+                        class: "etage_chambre2",
+                  },
             ];
 
             const rdcDescription = [
-                  { id: 1, details: "Salon", class: "rdc_salon",},
+                  { id: 1, details: "Salon", class: "rdc_salon" },
 
-                  { id: 2, details: "Salle à manger", class: "rdc_sam",},
+                  { id: 2, details: "Salle à manger", class: "rdc_sam" },
 
-                  { id: 3, details: "Cuisine", class: "rdc_cuisine",},
+                  { id: 3, details: "Cuisine", class: "rdc_cuisine" },
 
-                  { id: 4, details: "Buanderie", class: "rdc_buanderie",
+                  { id: 4, details: "Buanderie", class: "rdc_buanderie" },
+
+                  {
+                        id: 5,
+                        details: "1 chambre (1 lit 2 personnes)",
+                        class: "rdc_chambre",
                   },
 
-                  { id: 5, details: "1 chambre (1 lit 2 personnes)", class: "rdc_chambre",
-                  },
+                  { id: 6, details: "Salle d'eau", class: "rdc_salledeau" },
 
-                  { id: 6, details: "Salle d'eau", class: "rdc_salledeau",},
-
-                  { id: 7, details: "WC", class: "rdc_wc",},
+                  { id: 7, details: "WC", class: "rdc_wc" },
             ];
 
             return {
@@ -566,6 +594,8 @@ export default {
                   supprimeChambre1EtageItemsStyle,
                   afficheChambre2EtageItems,
                   supprimeChambre2EtageItemsStyle,
+
+                  chooseEnglishVersion,
             };
       },
 };

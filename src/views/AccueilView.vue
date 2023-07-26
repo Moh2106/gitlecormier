@@ -29,16 +29,31 @@
             <!--La partie de Bienvenue-->
             <div class="accueil__description bg-green-700 bg-opacity-90">
                   <h1 class="font-medium">
-                        Bienvenue à Hauville dans la chaumière du gîte du
-                        Cormier.
+                        {{
+                              chooseEnglishVersion
+                                    ? "Welcome to Hauville in the thatched cottage of Gîte du Cormier."
+                                    : "Bienvenue à Hauville dans la chaumière du gîte du Cormier."
+                        }}
                   </h1>
-                  <p>
-                        Cécile et Gérard vous accueillent au cœur de l’arrière
-                        pays normand. <br />
-                        Dans les boucles de la Seine. <br />
-                        A 7 min des autoroutes A13 et A28. <br />
-                        A 25 min du centre de Rouen (76).
-                  </p>
+                  <div>
+                        <p v-if="chooseEnglishVersion">
+                              Cécile and Gérard warmly welcome you to the
+                              picturesque countryside of Normandy. <br />
+                              Nestled within the meandering loops of the Seine
+                              River. <br />
+                              Conveniently located just 7 minutes away from the
+                              A13 and A28 highways. <br />
+                              Only 25 minutes away from the center of Rouen
+                              (76).
+                        </p>
+                        <p v-else>
+                              Cécile et Gérard vous accueillent au cœur de
+                              l’arrière pays normand. <br />
+                              Dans les boucles de la Seine. <br />
+                              A 7 min des autoroutes A13 et A28. <br />
+                              A 25 min du centre de Rouen (76).
+                        </p>
+                  </div>
             </div>
 
             <br />
@@ -71,7 +86,11 @@
                         />
                         <div>
                               <h2>
-                                    Pour occuper les enfants
+                                    {{
+                                          chooseEnglishVersion
+                                                ? "To keep the children entertained."
+                                                : "Pour occuper les enfants"
+                                    }}
 
                                     <br />
 
@@ -83,11 +102,21 @@
                         </div>
 
                         <div class="accueil__gallery--text text-left">
-                              Pour se dépenser, <br>
-                              Pour s'amuser, <br>
-                              Pour sauter, <br>
-                              Pour crier, <br>
-                              Pour jouer ...
+                              <div v-if="chooseEnglishVersion">
+                                    "To expend energy, <br />
+                                    To have fun, <br />
+                                    To jump, <br />
+                                    To shout, <br />
+                                    To play..."
+                              </div>
+
+                              <div v-else>
+                                    Pour se dépenser, <br />
+                                    Pour s'amuser, <br />
+                                    Pour sauter, <br />
+                                    Pour crier, <br />
+                                    Pour jouer ...
+                              </div>
                         </div>
                   </div>
 
@@ -98,7 +127,12 @@
                         />
                         <div>
                               <h2>
-                                    Pour profiter des étoiles
+                                    {{
+                                          chooseEnglishVersion
+                                                ? "To enjoy the stars"
+                                                : "Pour profiter des étoiles"
+                                    }}
+
                                     <br />
 
                                     <font-awesome-icon
@@ -109,11 +143,22 @@
                         </div>
 
                         <div class="accueil__gallery--text">
-                              Au coucher du soleil, <br>
-                               Où après diner pour
-                              contempler la voie lactée, <br>
-                               Les petites bulles du
-                              Jaccuzzi à 38 dégrés vous feront tout oublier
+                              <div v-if="chooseEnglishVersion">
+                                    At sunset, <br />
+                                    Or after dinner, to contemplate the Milky
+                                    Way, <br />
+                                    The tiny bubbles in the 38-degree Jacuzzi
+                                    will make you forget everything.
+                              </div>
+
+                              <div v-else>
+                                    Au coucher du soleil, <br />
+                                    Où après diner pour contempler la voie
+                                    lactée,
+                                    <br />
+                                    Les petites bulles du Jaccuzzi à 38 dégrés
+                                    vous feront tout oublier
+                              </div>
                         </div>
                   </div>
 
@@ -124,7 +169,11 @@
                         />
                         <div>
                               <h2 class="title">
-                                    Pour profiter de l'hiver
+                                    {{
+                                          chooseEnglishVersion
+                                                ? "To make the most of winter"
+                                                : "Pour profiter de l'hiver"
+                                    }}
 
                                     <font-awesome-icon
                                           icon="fa-solid fa-magnifying-glass-plus"
@@ -134,14 +183,24 @@
                         </div>
 
                         <div class="accueil__gallery--text text-left">
-                              La cheminée au foyer ouvert, <br>
-                               Le coeur de la
-                              chaumière au 18ème siècle. <br />
+                              <div v-if="chooseEnglishVersion">
+                                    The fireplace with an open hearth, <br />
+                                    The heart of the 18th-century cottage.
+                                    <br />
+                                    The fire joins the aperitif, <br />
+                                    The shadows and crackling capture the
+                                    attention of young and old alike
+                              </div>
 
-                              Le feu s'invite à l'apéritif, <br>
-                              Les ombres et les
-                              crépitements captent l'attention des petits et des
-                              grands.
+                              <div v-else>
+                                    La cheminée au foyer ouvert, <br />
+                                    Le coeur de la chaumière au 18ème siècle.
+                                    <br />
+
+                                    Le feu s'invite à l'apéritif, <br />
+                                    Les ombres et les crépitements captent
+                                    l'attention des petits et des grands.
+                              </div>
                         </div>
                   </div>
 
@@ -153,7 +212,11 @@
 
                         <div>
                               <h2>
-                                    Pour s'amuser en famille
+                                    {{
+                                          chooseEnglishVersion
+                                                ? "To enjoy some family fun"
+                                                : "Pour s'amuser en famille"
+                                    }}
 
                                     <font-awesome-icon
                                           icon="fa-solid fa-magnifying-glass-plus"
@@ -163,10 +226,17 @@
                         </div>
 
                         <div class="accueil__gallery--text">
-                              Pour le tournoi du grand Chelem, <br />
-                              Qui perd gagne ...
-                              <br />
-                              Gagne le droit de débarasser la table.
+                              <div v-if="chooseEnglishVersion">
+                                    For the Grand Slam tournament, <br />
+                                    Whoever loses wins... <br />
+                                    Wins the right to clear the table.
+                              </div>
+                              <div v-else>
+                                    Pour le tournoi du grand Chelem, <br />
+                                    Qui perd gagne ...
+                                    <br />
+                                    Gagne le droit de débarasser la table.
+                              </div>
                         </div>
                   </div>
             </div>
@@ -178,10 +248,7 @@
                         class="accueil__popup--main flex justify-around w-4/5 m-auto pt-12"
                   >
                         <div class="w-4/5 transition-all">
-                              <img
-                                    src=""
-                                    alt=""
-                              />
+                              <img src="" alt="" />
                         </div>
 
                         <div class="accueil__popup--paragraph">Paragraphe</div>
@@ -192,6 +259,7 @@
 
 <script>
 // Import Swiper Vue.js components
+import { computed } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { accueils } from "../database/accueil";
 
@@ -208,6 +276,7 @@ import "../../src/main.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
+import store from "@/store";
 
 export default {
       components: {
@@ -258,9 +327,14 @@ export default {
                         };
             };
 
+            var chooseEnglishVersion = computed(() => {
+                  return store.state.englishVersion;
+            });
+
             return {
                   fermer,
                   Cliquer,
+                  chooseEnglishVersion,
                   accueils,
                   modules: [Autoplay, Pagination, Navigation],
             };
@@ -270,7 +344,6 @@ export default {
 
 <style lang="scss" scoped>
 .accueil {
-
       .monSwipe {
             width: 70%;
             height: 65vh;
@@ -392,7 +465,7 @@ export default {
                                           font-size: 1.7em;
                                           margin: 0 0.5em;
 
-                                          .title{
+                                          .title {
                                                 text-align: left;
                                           }
                                     }
@@ -450,6 +523,5 @@ export default {
                   padding-left: 1rem;
             }
       }
-
 }
 </style>
