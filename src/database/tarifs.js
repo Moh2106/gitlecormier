@@ -26,7 +26,7 @@ export const tarifs_vacances = [
             photo: "/pictures/Tarifs/jardin_plante.jpg",
             photo2: "/pictures/Tarifs/tarif_fleur.jpg",
             saison: "MOYENNE SAISON",
-            date: "Les autres vacances scolaires, et mai - juin Et septembre",
+            date: "Les autres vacances scolaires, et mai - juin, <br> Et septembre",
             prix: "340 €",
             position: 550,
             class: false,
