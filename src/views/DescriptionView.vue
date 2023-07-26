@@ -34,7 +34,7 @@
             <!------------- REZ DE CHAUSSE    ---------------------------------------->
 
             <h1 class="title mt-4 mb-4" data-aos="flip-right">
-                  Rez-de-chaussée
+                  {{chooseEnglishVersion ? "Ground floor" : "Au rez-de-chaussée"}}
             </h1>
             <div class="flex justify-between m-auto descriptif__section">
                   <swiper
@@ -66,7 +66,7 @@
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
                   >
-                        <h1 class="font-semibold">Au rez-de-chaussée :</h1>
+                        <h1 class="font-semibold">{{chooseEnglishVersion ? "On the ground floor :" : "Au rez-de-chaussée :"}}</h1>
 
                         <ul class="w-4/5 mb-2">
                               <li
@@ -77,7 +77,7 @@
                                     data-aos-duration="500"
                                     data-aos-easing="ease-in"
                               >
-                                    {{ description.details }}
+                                    {{ chooseEnglishVersion ? description.englishDetails : description.details }}
                               </li>
                         </ul>
 
@@ -202,13 +202,13 @@
                         </div>
 
                         <div class="blinking">
-                              Passer la souris sur le plan pour visiter
+                              {{ chooseEnglishVersion ? "Hover over the map to explore" : "Passer la souris sur le plan pour visiter" }}
                         </div>
                   </div>
             </div>
 
             <!-------------------------- 1ER ETAGE ------------------------------------>
-            <h1 class="title" data-aos="flip-right">Au 1er Etage</h1>
+            <h1 class="title" data-aos="flip-right">{{ chooseEnglishVersion ? "On the 1st Floor" : "Au 1er Etage"}}</h1>
             <div class="flex justify-between m-auto descriptif__section">
                   <swiper
                         :slidesPerView="1"
@@ -240,7 +240,7 @@
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
                   >
-                        <h1 class="font-semibold">Au 1 er étage :</h1>
+                        <h1 class="font-semibold">{{ chooseEnglishVersion ? "On the 1st Floor : " : "Au 1er Etage : "}}</h1>
 
                         <ul class="w-5/6 mb-2">
                               <li
@@ -251,7 +251,7 @@
                                     data-aos-easing="ease-in-out"
                                     :id="description.class"
                               >
-                                    {{ description.details }}
+                                    {{ chooseEnglishVersion ? description.englishDetails : description.details }}
                               </li>
                         </ul>
 
@@ -322,13 +322,13 @@
                         </div>
 
                         <div class="blinking">
-                              Passer la souris sur le plan pour visiter
+                              {{ chooseEnglishVersion ? "Hover over the map to explore" : "Passer la souris sur le plan pour visiter" }}
                         </div>
                   </div>
             </div>
 
             <!-------------------------- LE JARDIN ------------------------------------->
-            <h1 class="title" data-aos="flip-right">Le jardin</h1>
+            <h1 class="title" data-aos="flip-right">{{ chooseEnglishVersion ? "The garden " : "Le jardin "}}</h1>
             <div class="flex justify-between m-auto descriptif__section">
                   <swiper
                         :slidesPerView="1"
@@ -359,7 +359,7 @@
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
                   >
-                        <h1 class="font-semibold">Dans le jardin :</h1>
+                        <h1 class="font-semibold">{{ chooseEnglishVersion ? "In the garden : " : "Dans le jardin : "}}</h1>
 
                         <ul class="w-4/5 mb-2">
                               <li
@@ -369,7 +369,7 @@
                                     data-aos-duration="500"
                                     data-aos-easing="ease-in"
                               >
-                                    {{ description.details }}
+                                    {{ chooseEnglishVersion ? description.englishDetails : description.details }}
                               </li>
                         </ul>
 
@@ -390,7 +390,7 @@
                         </div>
 
                         <div class="blinking">
-                              Passer la souris sur le plan pour visiter
+                              {{ chooseEnglishVersion ? "Hover over the map to explore" : "Passer la souris sur le plan pour visiter" }}
                         </div>
                   </div>
             </div>
@@ -527,46 +527,49 @@ export default {
             };
 
             const jardinDescription = [
-                  { id: 1, details: "3000 m²" },
-                  { id: 2, details: "Le jaccuzzi" },
-                  { id: 3, details: "Le bassin des poissons rouges" },
-                  { id: 4, details: "Les jeux" },
-                  { id: 5, details: "Le barbecue" },
-                  { id: 6, details: "La table de Ping Pong" },
+                  { id: 1, details: "3000 m²", englishDetails: "3000 m²" },
+                  { id: 2, details: "Le jaccuzzi", englishDetails: "The Jacuzzi" },
+                  { id: 3, details: "Le bassin des poissons rouges", englishDetails: "The goldfish pond" },
+                  { id: 4, details: "Les jeux", englishDetails: "The games" },
+                  { id: 5, details: "Le barbecue", englishDetails: "The barbecue" },
+                  { id: 6, details: "La table de Ping Pong", englishDetails: "The Ping Pong table" },
             ];
 
             const etageDescription = [
                   {
                         id: 1,
                         details: "1 chambre palière (1 lit 1 personne)",
+                        englishDetails: "One landing room (1 single bed)",
                         class: "etage_chambre1",
                   },
-                  { id: 2, details: "Placard", class: "etage_placard" },
+                  { id: 2, details: "Placard", englishDetails: "Closet", class: "etage_placard" },
                   {
                         id: 3,
                         details: "1 chambre (2 lits 1 personne)",
+                        englishDetails: "One bedroom (2 single beds)",
                         class: "etage_chambre2",
                   },
             ];
 
             const rdcDescription = [
-                  { id: 1, details: "Salon", class: "rdc_salon" },
+                  { id: 1, details: "Salon", englishDetails: "Living room", class: "rdc_salon" },
 
-                  { id: 2, details: "Salle à manger", class: "rdc_sam" },
+                  { id: 2, details: "Salle à manger", englishDetails: "Dining room", class: "rdc_sam" },
 
-                  { id: 3, details: "Cuisine", class: "rdc_cuisine" },
+                  { id: 3, details: "Cuisine", englishDetails: "Kitchen", class: "rdc_cuisine" },
 
-                  { id: 4, details: "Buanderie", class: "rdc_buanderie" },
+                  { id: 4, details: "Buanderie", englishDetails: "Laundry room", class: "rdc_buanderie" },
 
                   {
                         id: 5,
                         details: "1 chambre (1 lit 2 personnes)",
+                        englishDetails: "1 bedroom (1 double bed)",
                         class: "rdc_chambre",
                   },
 
-                  { id: 6, details: "Salle d'eau", class: "rdc_salledeau" },
+                  { id: 6, details: "Salle d'eau", englishDetails: "Bathroom", class: "rdc_salledeau" },
 
-                  { id: 7, details: "WC", class: "rdc_wc" },
+                  { id: 7, details: "WC", englishDetails: "Toilet", class: "rdc_wc" },
             ];
 
             return {

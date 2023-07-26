@@ -8,8 +8,7 @@
                         />
 
                         <p>
-                              Cliquer sur votre date d'arrivée pour commencer la
-                              réservation
+                              {{ chooseEnglishVersion ? "Click on your arrival date to begin the reservation" : "Cliquer sur votre date d'arrivée pour commencer la réservation" }}
                         </p>
                   </div>
             </div>
@@ -34,7 +33,8 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import store from "@/store";
+import { computed, ref } from "vue";
 
 export default {
       setup() {
@@ -53,9 +53,14 @@ export default {
                   myIframe.classList.add("animation");
             };
 
+            var chooseEnglishVersion = computed(() => {
+                  return store.state.englishVersion;
+            });
+
             return {
                   moveImage,
                   showImage,
+                  chooseEnglishVersion,
             };
       },
 };
