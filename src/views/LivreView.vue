@@ -20,7 +20,7 @@
                   <p
                         class="iframe w-2/3 flex items-center  h-[3.65em] mt-2 text-left"
                   >
-                        {{ chooseEnglishVersion ? "A big thank you to our hosts for their reviews left on the Gîte de France website!" : "Un grand merci à nos hôtes pour leurs commentaires laissés sur le site de gîte de France !" }}
+                        {{ chooseEnglishVersion ? "A big thank you to our hosts for their reviews left on the Gîte de France website!" : "Un grand merci à nos hôtes pour leurs commentaires laissés sur le site de Gîtes de France !" }}
                   </p>
             </div>
 

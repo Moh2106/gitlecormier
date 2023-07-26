@@ -442,7 +442,7 @@
                                           <p class="">
                                                 Alors n'attendez plus, les
                                                 réservations s'effectuent sur le
-                                                site de gîte de France.
+                                                site de Gîtes de France.
 
                                                 <br />
 

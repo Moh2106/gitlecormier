@@ -85,7 +85,7 @@
                               Availability
                         </template>
 
-                        <template v-else> Disponibilité </template>
+                        <template v-else> Disponibilités </template>
                   </router-link>
             </nav>
 
