@@ -15,7 +15,7 @@
 
                         <!--  Tarifs basse saison -->
                         <div
-                              class="rounded-lg h-[38.9vh] mb-[1em]"
+                              class="rounded-lg h-[40vh] mb-[1em]"
                         >
                               <h2>Tarifs basse saison</h2>
                         </div>
@@ -934,6 +934,7 @@ export default {
             position: relative;
             height: 34vh;
             transform: translateY(-1.6em);
+            margin-top: 1em;
             //border: 2px solid red;
 
             &--ecureuil {
