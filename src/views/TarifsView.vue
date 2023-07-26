@@ -5,7 +5,7 @@
                   <div class="tarif__part_one">
                         <!--  Tarifs vacances -->
                         <div
-                              class="rounded-lg h-[46.8vh] mb-[1em]"
+                              class="rounded-lg h-[47.5vh] mb-[1em]"
                         >
                               <h2>
                                     Tarifs vacances <br />
@@ -921,7 +921,7 @@ export default {
                   position: relative;
                   display: block;
                   width: calc(100% + 1.3px);
-                  height: 30px;
+                  height: 35px;
                   font-weight: 900;
             }
 
