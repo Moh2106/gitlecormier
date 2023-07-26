@@ -69,7 +69,7 @@
                               Guest book
                         </template>
 
-                        <template v-else> Livres d'or </template>
+                        <template v-else> Livres d'ôr </template>
                   </router-link>
 
                   <router-link to="/tarifs">

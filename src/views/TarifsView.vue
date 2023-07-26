@@ -15,7 +15,7 @@
 
                         <!--  Tarifs basse saison -->
                         <div
-                              class="rounded-lg h-[40vh] mb-[1em]"
+                              class="rounded-lg h-[39.9vh] mb-[1em]"
                         >
                               <h2>Tarifs basse saison</h2>
                         </div>
