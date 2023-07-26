@@ -190,7 +190,7 @@
                                                 "
                                           >
                                                 <div
-                                                      class="overflow-hidden bg-cover h-[27vh] transition-all"
+                                                      class="overflow-hidden bg-cover h-[25vh] transition-all"
                                                 >
                                                       <img
                                                             :src="
@@ -894,13 +894,13 @@ export default {
                   font-weight: 700;
                   font-family: "Great Vibes", cursive;
                   font-size: 2.5em;
-                  transform: translate(-1.9em, -1.1em);
+                  transform: translate(-1.2em, -1.1em);
                   color: #fff;
                   text-shadow: 4px 4px 6px rgba(66, 90, 66, 1);
             }
 
             .custom-shape-divider-bottom-1688724135 {
-                  width: 90%;
+                  width: 100%;
                   height: 100%;
                   overflow: hidden;
                   line-height: 0;

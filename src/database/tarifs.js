@@ -32,12 +32,22 @@ export const tarifs_vacances = [
 
 export const tarifs_basse_saison = [
       {
-            id: 4,
+            id: 8,
+            photo: "/pictures/Tarifs/basse_semaine_3.jpg",
+            photo2: "/pictures/Tarifs/basse_semaine_2.jpg",
+            periode: "La semaine",
+            prix: "260 €",
+            position: 300,
+            isHovered: false,
+      },
+
+      {
+            id: 7,
             photo: "/pictures/Tarifs/tarif_semaine.jpg",
             photo2: "/pictures/Tarifs/tarif_coq.jpg",
             periode: "Weekend basse saison",
             prix: "190 €",
-            position: 300,
+            position: 500,
             isHovered: false,
       },
 
@@ -47,7 +57,7 @@ export const tarifs_basse_saison = [
             photo2: "/pictures/Tarifs/tarif_cloche.jpg",
             periode: "Weekend moyenne saison",
             prix: "220 €",
-            position: 650,
+            position: 700,
             isHovered: false,
       },
 

@@ -11,8 +11,9 @@
                         />
                         <h1 class="header__title">𝕲î𝖙𝖊 𝖑𝖊 𝖈𝖔𝖗𝖒𝖎𝖊𝖗</h1>
 
-                        <div class="first__drap">
-                              <!-- French drap -->
+                        <!----<div class="first__drap">
+                               French drap 
+                               
                               <img
                                     src="../assets/Header/france_drap.png"
                                     alt=""
@@ -20,7 +21,7 @@
                                     v-on:click="frenchVersion"
                               />
 
-                              <!--  English drap -->
+                                English drap 
                               <img
                                     src="../assets/Header/united-kingdom.png"
                                     alt=""
@@ -28,7 +29,7 @@
                                     v-on:click="englishVersion"
                               />
 
-                        </div>
+                        </div>-->
                   </div>
             </div>
 
