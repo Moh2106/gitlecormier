@@ -1,8 +1,6 @@
 <template class="relative">
       <div class="header">
-
             <div class="first">
-
                   <div class="flex">
                         <img
                               src="../assets/Liens/logo_gite_france.png"
@@ -34,7 +32,7 @@
             </div>
 
             <nav id="afficheMenu" class="a">
-                  <router-link to="/" v-on:click="supprimerMenu">
+                  <router-link to="/" >
                         <template v-if="chooseEnglishVersion"> Home </template>
 
                         <template v-else> Accueil </template>
@@ -89,10 +87,17 @@
                   </router-link>
             </nav>
 
-            <div class="header__menu">
+            <div class="header__menu" v-on:click="afficheMenu">
                   <font-awesome-icon
                         icon="fa-solid fa-bars"
-                        v-on:click="afficheMenu"
+                        v-if="afficheHamburger"
+                        v-on:click="changeIcon"
+                  />
+
+                  <font-awesome-icon
+                        icon="fa-solid fa-xmark"
+                        v-if="afficheCroix"
+                        v-on:click="changeIcon"
                   />
             </div>
       </div>
@@ -100,16 +105,25 @@
 
 <script>
 import store from "@/store";
-import { computed } from "vue";
+import { computed, ref } from "vue";
 
 export default {
       setup() {
+            const afficheCroix = ref(false);
+            const afficheHamburger = ref(true);
+
+            // Cette fonction va permettre de changer les icones du menu
+            var changeIcon = () => {
+                  afficheCroix.value = !afficheCroix.value;
+                  afficheHamburger.value = !afficheHamburger.value;
+            };
             var afficheMenu = () => {
                   var e = document.getElementById("afficheMenu");
+                  //e.style.display = "block"
                   e.classList.toggle("isActive");
             };
 
-            var supprimerMenu = () => {
+            /*var supprimerMenu = () => {
                   var nav = document.querySelectorAll(".nav__link");
                   var e = document.getElementById("afficheMenu");
                   console.log(nav);
@@ -119,7 +133,7 @@ export default {
                               e.classList.remove("isActive");
                         });
                   });
-            };
+            };*/
 
             var chooseEnglishVersion = computed(() => {
                   return store.state.englishVersion;
@@ -131,13 +145,15 @@ export default {
 
             const frenchVersion = () => {
                   store.commit("setFrenchVersion");
-            }
+            };
 
             return {
                   chooseEnglishVersion,
+                  afficheCroix,
+                  afficheHamburger,
                   afficheMenu,
-                  supprimerMenu,
-
+                  //supprimerMenu,
+                  changeIcon,
                   englishVersion,
                   frenchVersion,
             };
@@ -160,9 +176,16 @@ export default {
       left: 0;
       z-index: 100000;
       width: 100%;
+      //border: 4px solid red;
 
       @media screen and (max-width: 768px) {
-            display: block;
+            //display: block;
+            //display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            height: 10vh;
+            width: 100wh;
       }
 
       @media screen and (max-width: 550px) {
@@ -172,6 +195,23 @@ export default {
 
       .first {
             width: 120%;
+
+            @media screen and (max-width: 768px) {
+                  width: 100%;
+                  //display: flex;
+                  //justify-content: center;
+                  //align-items: center;
+                  //background: #fff;
+                  //width: 50%;
+                  //margin: auto;
+                  //border: 5px solid red;
+                  //height: 10vh;
+            }
+
+            @media screen and (max-width: 550px) {
+                  //background: #fff;
+            }
+
             &__drap {
                   //border: red solid 3px;
                   width: 20%;
@@ -187,27 +227,25 @@ export default {
                         cursor: pointer;
                   }
             }
-            @media screen and (max-width: 768px) {
-                  background: #fff;
-            }
-
-            @media screen and (max-width: 550px) {
-                  //background: #fff;
-            }
       }
 
       &__title {
             color: #fff;
             padding: 0 1em;
             display: flex;
+            //justify-content: center;
+            //align-items: center;
             justify-items: center;
             margin-top: 0.5em;
             font-weight: 800;
             font-size: 1.4em;
 
             @media screen and (max-width: 768px) {
-                  width: 25%;
-                  margin: auto;
+                  //width: 100%;
+                  //margin: auto;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
                   color: #08a045;
             }
 
@@ -219,13 +257,22 @@ export default {
       &__menu {
             display: none;
 
-            @media screen and (max-width: 550px) {
+            @media screen and (max-width: 768px) {
                   font-size: 2em;
                   font-weight: 900;
                   margin-right: 0.5em;
                   z-index: 1000;
                   display: block;
+                  color: #08a045;
             }
+
+            /*@media screen and (max-width: 550px) {
+                  font-size: 2em;
+                  font-weight: 900;
+                  margin-right: 0.5em;
+                  z-index: 1000;
+                  display: block;
+            }*/
       }
 
       .flex {
@@ -242,15 +289,20 @@ export default {
             align-items: center;
             position: relative;
             width: 230%;
+            transition: 1s ease-in-out;
 
             @media screen and (max-width: 768px) {
-                  padding: 0 0.5em 0.5em 0.5em;
-                  font-size: 0.8em;
-                  width: auto;
+                  //padding: 0 0.5em 0.5em 0.5em;
+                  //font-size: 0.8em;
+                  //width: auto;
+                  position: absolute;
+                  top: 5em;
+                  display: none;
+                  width: 100%;
             }
 
             @media screen and (max-width: 550px) {
-                  display: block;
+                  /*display: block;
                   background: rgb(112, 7, 165);
                   width: 50%;
                   position: absolute;
@@ -259,7 +311,7 @@ export default {
                   border-radius: 0.2em;
                   opacity: 0;
                   font-size: 1em;
-                  font-weight: 600;
+                  font-weight: 600;*/
             }
 
             a {
@@ -267,8 +319,10 @@ export default {
                   align-items: center;
 
                   @media screen and (max-width: 768px) {
-                        padding: 0 0.5em 0.5em 0.5em;
-                        font-size: 0.8em;
+                        background: #08a045;
+                        display: block;
+                        padding: 1em;
+                        font-size: 1em;
                   }
 
                   @media screen and (max-width: 550px) {
@@ -284,8 +338,11 @@ export default {
                         margin: 0 0.3rem;
 
                         @media screen and (max-width: 768px) {
-                              transform: translateX(0.2em);
-                              font-size: 0.8em;
+                              //transform: translateX(0.2em);
+                              //font-size: 0.8em;
+                              //transform: scale3d(0em);
+                              //border-radius: 0em;
+                              //margin: 0em;
                         }
                   }
 
@@ -297,7 +354,9 @@ export default {
                         color: #fff;
 
                         @media screen and (max-width: 768px) {
-                              border-bottom: 2px solid #fff;
+                              border-bottom: 0px ;
+                              background: #fff;
+                              color: #08a045;
                         }
                   }
             }
@@ -305,9 +364,11 @@ export default {
 }
 
 .a.isActive {
-      position: absolute;
+      display: block;
+      //transition: 20s ease-in;
+      /*position: absolute;
       left: 195px;
       top: 5px;
-      opacity: 1;
+      opacity: 1;*/
 }
 </style>

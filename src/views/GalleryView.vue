@@ -485,6 +485,11 @@ export default {
             margin: auto;
             transform: translateX(2em);
 
+            @media screen and (max-width: 768px){
+                width: 95%;
+                transform: translateX(0.75em);  
+            }
+
             &--images {
                   display: grid;
                   grid-template-columns: repeat(25, 1fr);
@@ -493,6 +498,10 @@ export default {
                   margin: auto;
                   transform: translateX(2em);
                   margin-bottom: 1em;
+
+                  @media screen and (max-width: 768px){
+                        grid-gap: 1em;
+                  }
 
                   div {
                         grid-column: span 12;

@@ -1,6 +1,6 @@
 <template>
       <div class="accueil pt-20 pb-4">
-            <div>
+            <div class="accueil__swipe">
                   <!--La partie du slide-->
                   <swiper
                         :spaceBetween="30"
@@ -19,6 +19,30 @@
                         <swiper-slide
                               class="monSwipe__capture"
                               v-for="accueil in accueils"
+                              :key="accueil.id"
+                        >
+                              <img :src="accueil.img" alt="" />
+                        </swiper-slide>
+                  </swiper>
+
+                  <!--La partie du slide pour la version tablette-->
+                  <swiper
+                        :spaceBetween="30"
+                        :centeredSlides="true"
+                        :autoplay="{
+                              delay: 3500,
+                              disableOnInteraction: false,
+                        }"
+                        :pagination="{
+                              clickable: true,
+                        }"
+                        :navigation="true"
+                        :modules="modules"
+                        class="monSwipeTablette mb-4 container"
+                  >
+                        <swiper-slide
+                              class="monSwipeTablette__capture"
+                              v-for="accueil in accueilsTablette"
                               :key="accueil.id"
                         >
                               <img :src="accueil.img" alt="" />
@@ -261,7 +285,7 @@
 // Import Swiper Vue.js components
 import { computed } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { accueils } from "../database/accueil";
+import { accueils, accueilsTablette } from "../database/accueil";
 
 // Import Swiper styles
 import "swiper/css";
@@ -336,6 +360,7 @@ export default {
                   Cliquer,
                   chooseEnglishVersion,
                   accueils,
+                  accueilsTablette,
                   modules: [Autoplay, Pagination, Navigation],
             };
       },
@@ -344,19 +369,44 @@ export default {
 
 <style lang="scss" scoped>
 .accueil {
-      .monSwipe {
-            width: 70%;
-            height: 65vh;
-            margin-bottom: 1.5em;
+      &__swipe {
+            .monSwipe {
+                  width: 70%;
+                  height: 65vh;
+                  margin-bottom: 1.5em;
 
-            &__capture {
-                  img {
-                        width: 100%;
-                        margin: auto;
-                        max-width: 1380px;
-                        min-width: 800px;
-                        height: 100%;
-                        object-fit: contain;
+                  @media (max-width: 768px) {
+                        display: none;
+                  }
+
+                  &__capture {
+                        img {
+                              width: 100%;
+                              margin: auto;
+                              max-width: 1380px;
+                              min-width: 800px;
+                              height: 100%;
+                              object-fit: contain;
+                        }
+                  }
+            }
+
+            .monSwipeTablette {
+                  display: none;
+
+                  @media (max-width: 768px) {
+                        display: block;
+                        width: 80%;
+                        height: 50vh;
+                        margin-top: 2em;
+                  }
+
+                  &__capture {
+                        img {
+                              width: 100%;
+                              height: 100%;
+                              object-fit: contain;
+                        }
                   }
             }
       }
@@ -371,14 +421,24 @@ export default {
             h1 {
                   font-size: 2em;
 
+                  @media screen and (max-width: 768px) {
+                        font-size: 1.3em;
+                  }
+
                   @media screen and (max-width: 550px) {
                         font-size: 1em;
                   }
             }
 
             p {
+                  @media screen and (max-width: 768px) {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1em;
+                  }
+
                   @media screen and (max-width: 550px) {
-                        font-size: 0.8em;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 0.5em;
                   }
             }
       }
@@ -389,6 +449,10 @@ export default {
             margin: auto;
             margin-bottom: 2em;
             object-fit: cover;
+
+            @media screen and (max-width: 768px) {
+                  width: 80%;
+            }
 
             video {
                   width: 100%;
@@ -404,6 +468,12 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @media screen and (max-width: 768px) {
+                  width: 90%;
+                  display: grid;
+                  grid-template-columns: repeat(2,1fr);
+            }
 
             &--text {
                   display: none;
@@ -485,6 +555,14 @@ export default {
             display: none;
             transition: 0.5s ease-in-out;
             backdrop-filter: contrast(40%) brightness(90%) blur(10px);
+
+            div{
+                 @media screen and (max-width: 768px){
+                        display: block;
+                        width: 90%;
+                        margin: 0.5em auto;
+                  } 
+            }
 
             &--main {
                   position: absolute;

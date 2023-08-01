@@ -8,7 +8,11 @@
                         />
 
                         <p>
-                              {{ chooseEnglishVersion ? "Click on your arrival date to begin the reservation" : "Cliquer sur votre date d'arrivée pour commencer la réservation" }}
+                              {{
+                                    chooseEnglishVersion
+                                          ? "Click on your arrival date to begin the reservation"
+                                          : "Cliquer sur votre date d'arrivée pour commencer la réservation"
+                              }}
                         </p>
                   </div>
             </div>
@@ -71,7 +75,7 @@ export default {
       animation: move 10s ease-in-out;
 }
 
-.custom-shape-divider-top-1688723126 {
+/*.custom-shape-divider-top-1688723126 {
       width: 100%;
       overflow: hidden;
       line-height: 0;
@@ -82,7 +86,7 @@ export default {
       display: block;
       width: calc(100% + 1.3px);
       height: 59px;
-}
+}*/
 
 @keyframes move {
       0% {
@@ -107,6 +111,10 @@ export default {
       width: 100%;
       position: relative;
 
+      @media screen and (max-width: 768px) {
+            margin-top: 3em;
+      }
+
       &__soleil {
             width: 30%;
             position: absolute;
@@ -127,7 +135,7 @@ export default {
             color: #ccc;
 
             @media screen and (max-width: 768px) {
-                  width: 70%;
+                  width: 99%;
                   margin: auto;
             }
 

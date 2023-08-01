@@ -72,8 +72,12 @@ export default {
         padding: 0 2em;
 
         @media screen and (max-width : 768px) {
-            display: block;
+            height: auto;
+            //display: block;
             font-weight: 500;
+            padding: 0.5em;
+            font-size: 0.9em;
+            
         }
 
         @media screen and (max-width : 550px) {
@@ -83,8 +87,20 @@ export default {
             font-weight: 500;
         }
 
+        address{
+            p{
+                @media screen and (max-width : 768px){
+                    margin: 0;
+                }
+            }
+        }
+
         .liens{
             width: 18%;
+
+            @media screen and (max-width : 768px){
+                width: 19%;
+            }
             
             &__logo{
                 width: 100%;

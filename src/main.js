@@ -22,6 +22,7 @@ import {
       faHandPointRight,
       faQuestion,
       faCheck,
+      faXmark
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -42,7 +43,8 @@ library.add(
       faQuestion,
       faFaceSmile,
       faCalendar,
-      faCheck
+      faCheck,
+      faXmark
 );
 
 

@@ -34,7 +34,11 @@
             <!------------- REZ DE CHAUSSE    ---------------------------------------->
 
             <h1 class="title mt-4 mb-4" data-aos="flip-right">
-                  {{chooseEnglishVersion ? "Ground floor" : "Au rez-de-chaussée"}}
+                  {{
+                        chooseEnglishVersion
+                              ? "Ground floor"
+                              : "Au rez-de-chaussée"
+                  }}
             </h1>
             <div class="flex justify-between m-auto descriptif__section">
                   <swiper
@@ -61,12 +65,18 @@
 
                   <!----------------Texte descriptif -------------------------------->
                   <div
-                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg"
+                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg descriptif__section--texte"
                         data-aos="fade-left"
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
                   >
-                        <h1 class="font-semibold">{{chooseEnglishVersion ? "On the ground floor :" : "Au rez-de-chaussée :"}}</h1>
+                        <h1 class="font-semibold">
+                              {{
+                                    chooseEnglishVersion
+                                          ? "On the ground floor :"
+                                          : "Au rez-de-chaussée :"
+                              }}
+                        </h1>
 
                         <ul class="w-4/5 mb-2">
                               <li
@@ -77,7 +87,11 @@
                                     data-aos-duration="500"
                                     data-aos-easing="ease-in"
                               >
-                                    {{ chooseEnglishVersion ? description.englishDetails : description.details }}
+                                    {{
+                                          chooseEnglishVersion
+                                                ? description.englishDetails
+                                                : description.details
+                                    }}
                               </li>
                         </ul>
 
@@ -202,13 +216,23 @@
                         </div>
 
                         <div class="blinking">
-                              {{ chooseEnglishVersion ? "Hover over the map to explore" : "Passer la souris sur le plan pour visiter" }}
+                              {{
+                                    chooseEnglishVersion
+                                          ? "Hover over the map to explore"
+                                          : "Passer la souris sur le plan pour visiter"
+                              }}
                         </div>
                   </div>
             </div>
 
             <!-------------------------- 1ER ETAGE ------------------------------------>
-            <h1 class="title" data-aos="flip-right">{{ chooseEnglishVersion ? "On the 1st Floor" : "Au 1er Etage"}}</h1>
+            <h1 class="title" data-aos="flip-right">
+                  {{
+                        chooseEnglishVersion
+                              ? "On the 1st Floor"
+                              : "Au 1er Etage"
+                  }}
+            </h1>
             <div class="flex justify-between m-auto descriptif__section">
                   <swiper
                         :slidesPerView="1"
@@ -240,7 +264,13 @@
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
                   >
-                        <h1 class="font-semibold">{{ chooseEnglishVersion ? "On the 1st Floor : " : "Au 1er Etage : "}}</h1>
+                        <h1 class="font-semibold">
+                              {{
+                                    chooseEnglishVersion
+                                          ? "On the 1st Floor : "
+                                          : "Au 1er Etage : "
+                              }}
+                        </h1>
 
                         <ul class="w-5/6 mb-2">
                               <li
@@ -251,7 +281,11 @@
                                     data-aos-easing="ease-in-out"
                                     :id="description.class"
                               >
-                                    {{ chooseEnglishVersion ? description.englishDetails : description.details }}
+                                    {{
+                                          chooseEnglishVersion
+                                                ? description.englishDetails
+                                                : description.details
+                                    }}
                               </li>
                         </ul>
 
@@ -322,13 +356,19 @@
                         </div>
 
                         <div class="blinking">
-                              {{ chooseEnglishVersion ? "Hover over the map to explore" : "Passer la souris sur le plan pour visiter" }}
+                              {{
+                                    chooseEnglishVersion
+                                          ? "Hover over the map to explore"
+                                          : "Passer la souris sur le plan pour visiter"
+                              }}
                         </div>
                   </div>
             </div>
 
             <!-------------------------- LE JARDIN ------------------------------------->
-            <h1 class="title" data-aos="flip-right">{{ chooseEnglishVersion ? "The garden " : "Le jardin "}}</h1>
+            <h1 class="title" data-aos="flip-right">
+                  {{ chooseEnglishVersion ? "The garden " : "Le jardin " }}
+            </h1>
             <div class="flex justify-between m-auto descriptif__section">
                   <swiper
                         :slidesPerView="1"
@@ -359,7 +399,13 @@
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
                   >
-                        <h1 class="font-semibold">{{ chooseEnglishVersion ? "In the garden : " : "Dans le jardin : "}}</h1>
+                        <h1 class="font-semibold">
+                              {{
+                                    chooseEnglishVersion
+                                          ? "In the garden : "
+                                          : "Dans le jardin : "
+                              }}
+                        </h1>
 
                         <ul class="w-4/5 mb-2">
                               <li
@@ -369,7 +415,11 @@
                                     data-aos-duration="500"
                                     data-aos-easing="ease-in"
                               >
-                                    {{ chooseEnglishVersion ? description.englishDetails : description.details }}
+                                    {{
+                                          chooseEnglishVersion
+                                                ? description.englishDetails
+                                                : description.details
+                                    }}
                               </li>
                         </ul>
 
@@ -390,7 +440,11 @@
                         </div>
 
                         <div class="blinking">
-                              {{ chooseEnglishVersion ? "Hover over the map to explore" : "Passer la souris sur le plan pour visiter" }}
+                              {{
+                                    chooseEnglishVersion
+                                          ? "Hover over the map to explore"
+                                          : "Passer la souris sur le plan pour visiter"
+                              }}
                         </div>
                   </div>
             </div>
@@ -528,11 +582,27 @@ export default {
 
             const jardinDescription = [
                   { id: 1, details: "3000 m²", englishDetails: "3000 m²" },
-                  { id: 2, details: "Le jaccuzzi", englishDetails: "The Jacuzzi" },
-                  { id: 3, details: "Le bassin des poissons rouges", englishDetails: "The goldfish pond" },
+                  {
+                        id: 2,
+                        details: "Le jaccuzzi",
+                        englishDetails: "The Jacuzzi",
+                  },
+                  {
+                        id: 3,
+                        details: "Le bassin des poissons rouges",
+                        englishDetails: "The goldfish pond",
+                  },
                   { id: 4, details: "Les jeux", englishDetails: "The games" },
-                  { id: 5, details: "Le barbecue", englishDetails: "The barbecue" },
-                  { id: 6, details: "La table de Ping Pong", englishDetails: "The Ping Pong table" },
+                  {
+                        id: 5,
+                        details: "Le barbecue",
+                        englishDetails: "The barbecue",
+                  },
+                  {
+                        id: 6,
+                        details: "La table de Ping Pong",
+                        englishDetails: "The Ping Pong table",
+                  },
             ];
 
             const etageDescription = [
@@ -542,7 +612,12 @@ export default {
                         englishDetails: "One landing room (1 single bed)",
                         class: "etage_chambre1",
                   },
-                  { id: 2, details: "Placard", englishDetails: "Closet", class: "etage_placard" },
+                  {
+                        id: 2,
+                        details: "Placard",
+                        englishDetails: "Closet",
+                        class: "etage_placard",
+                  },
                   {
                         id: 3,
                         details: "1 chambre (2 lits 1 personne)",
@@ -552,13 +627,33 @@ export default {
             ];
 
             const rdcDescription = [
-                  { id: 1, details: "Salon", englishDetails: "Living room", class: "rdc_salon" },
+                  {
+                        id: 1,
+                        details: "Salon",
+                        englishDetails: "Living room",
+                        class: "rdc_salon",
+                  },
 
-                  { id: 2, details: "Salle à manger", englishDetails: "Dining room", class: "rdc_sam" },
+                  {
+                        id: 2,
+                        details: "Salle à manger",
+                        englishDetails: "Dining room",
+                        class: "rdc_sam",
+                  },
 
-                  { id: 3, details: "Cuisine", englishDetails: "Kitchen", class: "rdc_cuisine" },
+                  {
+                        id: 3,
+                        details: "Cuisine",
+                        englishDetails: "Kitchen",
+                        class: "rdc_cuisine",
+                  },
 
-                  { id: 4, details: "Buanderie", englishDetails: "Laundry room", class: "rdc_buanderie" },
+                  {
+                        id: 4,
+                        details: "Buanderie",
+                        englishDetails: "Laundry room",
+                        class: "rdc_buanderie",
+                  },
 
                   {
                         id: 5,
@@ -567,9 +662,19 @@ export default {
                         class: "rdc_chambre",
                   },
 
-                  { id: 6, details: "Salle d'eau", englishDetails: "Bathroom", class: "rdc_salledeau" },
+                  {
+                        id: 6,
+                        details: "Salle d'eau",
+                        englishDetails: "Bathroom",
+                        class: "rdc_salledeau",
+                  },
 
-                  { id: 7, details: "WC", englishDetails: "Toilet", class: "rdc_wc" },
+                  {
+                        id: 7,
+                        details: "WC",
+                        englishDetails: "Toilet",
+                        class: "rdc_wc",
+                  },
             ];
 
             return {
@@ -672,7 +777,8 @@ export default {
       margin: auto;
 
       @media screen and (max-width: 768px) {
-            width: 90%;
+            width: 80%;
+            margin-top: 1.5em ;
       }
 
       @media screen and (max-width: 550px) {
@@ -690,6 +796,10 @@ export default {
 
             @media screen and (max-width: 768px) {
                   //font-size: 0.7em;
+                  font-family: Arial, Helvetica, sans-serif;
+                  //border: 4px solid red;
+                  width: 90%;
+                  margin: auto;
             }
       }
       .title {
@@ -703,6 +813,11 @@ export default {
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
                   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
+            @media screen and (max-width: 768px) {
+                  width: 40%;
+                  //font-weight: 600;
+            }
+
             @media screen and (max-width: 550px) {
                   width: 50%;
                   font-weight: 600;
@@ -711,6 +826,12 @@ export default {
 
       .plan {
             position: relative;
+
+            @media screen and (max-width: 768px){
+                  width: 85%;
+                  //margin: auto;
+                  //border: 2px solid #08a045;
+            }
 
             // Rez de chaussee
             &__rdc-chambre_1 {
@@ -864,9 +985,14 @@ export default {
 
       &__section {
             width: 90%;
+            //max-width: 90vw;
 
             @media screen and (max-width: 768px) {
-                  display: block;
+                  //display: flex;
+                  width: 80%;
+                  display: flex;
+                  flex-direction: column-reverse;
+                  //border: 4px solid red;
             }
 
             @media screen and (max-width: 550px) {
@@ -879,6 +1005,18 @@ export default {
                         margin-bottom: 0.5em;
                         border-radius: 0.5em;
                   }
+            }
+
+            /*&--texte{
+                  width: 70%;
+            }*/
+
+            div {
+                  @media screen and (max-width: 768px) {
+                        width: 100%;
+                        font-family: Arial, Helvetica, sans-serif;
+                  }
+
             }
       }
 

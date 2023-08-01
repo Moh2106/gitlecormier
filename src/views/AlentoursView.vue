@@ -62,17 +62,43 @@
                                           v-text="alentour.titre"
                                           class="font-bold"
                                     ></h1>
-                                    <button
-                                          class="bg-red-600"
-                                          v-if="alentour.site != ''"
-                                    >
-                                          <a
-                                                :href="alentour.site"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                >Site officiel</a
+
+                                    <div class="description_tablette_screen">
+                                          <div
+                                                class="mapButton_tablette_screen"
                                           >
-                                    </button>
+                                                <button
+                                                      class="bg-green-600"
+                                                      v-if="alentour.maps != ''"
+                                                >
+                                                      <a
+                                                            :href="
+                                                                  alentour.maps
+                                                            "
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            >Voir
+                                                            l'itinéraire</a
+                                                      >
+                                                </button>
+                                          </div>
+
+                                          <div>
+                                                <button
+                                                      class="bg-red-600"
+                                                      v-if="alentour.site != ''"
+                                                >
+                                                      <a
+                                                            :href="
+                                                                  alentour.site
+                                                            "
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            >Site officiel</a
+                                                      >
+                                                </button>
+                                          </div>
+                                    </div>
                               </div>
                         </div>
                   </div>
@@ -102,19 +128,7 @@
                                           />
                                     </div>
 
-                                    <div class="mapButton">
-                                          <!----<button
-                                                class="bg-green-600"
-                                                v-if="alentour.maps != ''"
-                                          >
-                                                <a
-                                                      :href="alentour.maps"
-                                                      target="_blank"
-                                                      rel="noopener noreferrer"
-                                                      >Voir l'itinéraire</a
-                                                >
-                                          </button>-->
-                                    </div>
+                                    <div class="mapButton"></div>
                               </div>
 
                               <div
@@ -198,6 +212,11 @@ export default {
       padding-bottom: 2em;
       transition: 0.25s ease-in;
 
+      @media screen and (max-width: 768px) {
+            margin-top: 1.5em;
+            width: 99%;
+      }
+
       /*&__search {
             text-align: left;
 
@@ -217,6 +236,10 @@ export default {
       .monEnsemble {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+
+            @media screen and (max-width: 768px) {
+                  grid-template-columns: repeat(2, 1fr);
+            }
 
             @media screen and (max-width: 550px) {
                   grid-template-columns: repeat(1, 1fr);
@@ -238,6 +261,11 @@ export default {
             height: 10vh;
             border-radius: 10px;
             padding: 0px;
+
+            @media screen and (max-width: 768px) {
+                  width: 40%;
+                  height: 8vh;
+            }
 
             &::after {
                   content: "";
@@ -263,12 +291,17 @@ export default {
             padding: 1em;
             border-radius: 0.5em;
             margin: 2.5em 0 1em 0;
+
+            @media screen and (max-width: 768px) {
+                  font-family: Arial, Helvetica, sans-serif;
+            }
       }
 
       &__card {
             background: #fff;
             border-radius: 0.5em;
             margin: 1em;
+            //position: relative;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
                   rgba(0, 0, 0, 0.12) 0px -12px 30px,
                   rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -283,6 +316,10 @@ export default {
                         display: block;
                         background: rgba(170, 221, 204, 0.5);
 
+                        @media screen and (max-width: 768px) {
+                              display: none;
+                        }
+
                         button {
                               animation: tada; /* referring directly to the animation's @keyframe declaration */
                               animation-duration: 2s; /* don't forget to set a duration! */
@@ -295,7 +332,6 @@ export default {
                   height: 100%;
 
                   .myImage {
-
                         img {
                               width: 100%;
                               height: 250px;
@@ -336,6 +372,10 @@ export default {
                               background: rgb(22, 163, 74);
                               border: none;
 
+                              @media screen and (max-width: 768px) {
+                                    width: 50%;
+                              }
+
                               &:hover {
                                     background: rgb(22, 163, 74);
                                     border: none;
@@ -345,6 +385,27 @@ export default {
             }
 
             &--description {
+                  .description_tablette_screen {
+                        @media screen and (max-width: 768px) {
+                              display: flex;
+                              justify-content: center;
+                        }
+
+                        button {
+                              @media screen and (max-width: 768px) {
+                                    padding: 0.5em;
+                                    margin: 0 0.5em 0.5em 0.3em;
+                              }
+                        }
+                  }
+
+                  .mapButton_tablette_screen {
+                        display: none;
+
+                        @media screen and (max-width: 768px) {
+                              display: block;
+                        }
+                  }
                   button {
                         color: #fff;
                         padding: 0.3em;
@@ -374,6 +435,10 @@ export default {
                   background: #08a045;
                   color: #fff;
                   transform: translateX(2.5em);
+
+                  @media screen and (max-width: 768px) {
+                        transform: translateX(0em);
+                  }
             }
       }
 }

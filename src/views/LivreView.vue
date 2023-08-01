@@ -2,8 +2,8 @@
       <div class="pt-16 pb-4 livre">
             <!------- Insertion du widget pour la note globale ------------------------>
 
-            <div class="mr-4 flex w-full h-[7em]">
-                  <div class="w-1/3 mr-2">
+            <div class="mr-4 flex w-full h-[7em] paragraph">
+                  <div class="w-1/3 mr-2 avisEtoile">
                         <iframe
                               style="
                                     overflow: auto;
@@ -18,9 +18,13 @@
                   </div>
 
                   <p
-                        class="iframe w-2/3 flex items-center  h-[3.65em] mt-2 text-left"
+                        class="iframe w-2/3 flex items-center h-[3.65em] mt-2 text-left"
                   >
-                        {{ chooseEnglishVersion ? "A big thank you to our hosts for their reviews left on the Gîte de France website!" : "Un grand merci à nos hôtes pour leurs commentaires laissés sur le site de Gîtes de France !" }}
+                        {{
+                              chooseEnglishVersion
+                                    ? "A big thank you to our hosts for their reviews left on the Gîte de France website!"
+                                    : "Un grand merci à nos hôtes pour leurs commentaires laissés sur le site de Gîtes de France !"
+                        }}
                   </p>
             </div>
 
@@ -33,7 +37,7 @@
                               border: none;
                               border-radius: 0.5em;
                         "
-                        height="1500"
+                        height="1525"
                         width="100%"
                         src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"
                   ></iframe>
@@ -43,7 +47,7 @@
 
 <script>
 import { computed } from "vue";
-import store from '@/store';
+import store from "@/store";
 
 export default {
       setup() {
@@ -51,10 +55,9 @@ export default {
                   return store.state.englishVersion;
             });
 
-
-            return{
+            return {
                   chooseEnglishVersion,
-            }
+            };
       },
 };
 </script>
@@ -63,6 +66,28 @@ export default {
 .livre {
       width: 90%;
       margin: auto;
+
+      @media screen and (max-width: 768px) {
+            width: 95%;
+            margin-top: 2em;
+      }
+}
+
+.paragraph {
+      @media screen and (max-width: 768px) {
+            height: auto;
+            display: block;
+            font-size: 0.9em;
+            font-family: Arial, Helvetica, sans-serif;
+
+            div {
+                  height: auto;
+            }
+      }
+}
+
+.avisEtoile {
+      height: 17vh;
 }
 
 .iframe {
@@ -76,4 +101,10 @@ export default {
       border-radius: 0.5em;
       padding: 0.5rem;
 }
+
+/*.avis{
+      iframe{
+            height: 350vh;
+      }
+}*/
 </style>

@@ -39,7 +39,9 @@
                                           HAUVILLE
                                     </li>
 
-                                    <li class="mb-4">Depuis HAUVILLE (2 possibilités)</li>
+                                    <li class="mb-4">
+                                          Depuis HAUVILLE (2 possibilités)
+                                    </li>
                                     <li>
                                           <ul class="ml-10 mb-4">
                                                 <li class="mb-4">
@@ -97,11 +99,21 @@ export default {
 <style lang="scss" scoped>
 .visite {
       transition: 0.25s ease-in;
+
+      @media screen and (max-width: 768px) {
+            margin-top: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+      }
 }
 .paragraph {
       width: 90%;
       margin: auto;
       text-align: justify;
+
+      @media screen and (max-width: 768px) {
+            width: 95%;
+            margin-bottom: 1em;
+      }
 
       p {
             padding: 1em;
@@ -117,21 +129,38 @@ export default {
       height: 85vh;
 
       @media screen and (max-width: 768px) {
-            display: flex;
-            flex-direction: column-reverse;
+            //border: 3px solid red;
+            height: auto;
+            display: block;
+            //flex-direction: column-reverse;
             width: 95%;
-            margin: auto;
+            margin: 0 auto;
+            padding-top: 0rem;
+            //margin: 0;
 
-            &__description {
-                  height: auto;
-                  margin-bottom: 1em;
-                  margin-top: 2em;
-            }
       }
 
       @media screen and (max-width: 550px) {
             font-size: 0.7em;
             font-weight: 450;
+      }
+
+      &__carte {
+            @media screen and (max-width: 768px) {
+                  width: 100%;
+                  margin: 0em;
+            }
+      }
+
+      &__description {
+            @media screen and (max-width: 768px) {
+                  width: 100%;
+                  margin-bottom: 1em;
+                  margin-top: 2em;
+            }
+            //width: 100%;
+            //border: 3px solid blue;
+            //margin: 0;
       }
 }
 </style>
