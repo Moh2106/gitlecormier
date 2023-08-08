@@ -30,6 +30,7 @@
 
             <!-- Insertion du widget avis -->
             <div class="avis">
+                  <!---- Pour la version pc et tablette ---->
                   <iframe
                         style="
                               overflow: auto;
@@ -37,7 +38,22 @@
                               border: none;
                               border-radius: 0.5em;
                         "
+                        class="pc"
                         height="1525"
+                        width="100%"
+                        src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"
+                  ></iframe>
+
+                  <!---- Pour la version mobile ---->
+                  <iframe
+                        style="
+                              overflow: auto;
+                              -webkit-overflow-scrolling: touch;
+                              border: none;
+                              border-radius: 0.5em;
+                        "
+                        class="mobile"
+                        height="2500"
                         width="100%"
                         src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"
                   ></iframe>
@@ -88,6 +104,14 @@ export default {
 
 .avisEtoile {
       height: 17vh;
+
+      @media screen and (max-width: 768px) {
+            width: 100%;
+      }
+
+      @media screen and (max-width: 550px) {
+            width: 100%;
+      }
 }
 
 .iframe {
@@ -100,11 +124,43 @@ export default {
       font-size: 1.3em;
       border-radius: 0.5em;
       padding: 0.5rem;
+
+      @media screen and (max-width: 768px) {
+            transform: translateY(-3em);
+            font-size: 1em;
+      }
+
+      @media screen and (max-width: 550px) {
+            transform: translateY(-3em);
+      }
 }
 
-/*.avis{
-      iframe{
-            height: 350vh;
+.avis {
+      @media screen and (max-width: 768px) {
+            transform: translateY(-2.5em);
       }
-}*/
+
+      @media screen and (max-width: 550px) {
+            transform: translateY(-1em);
+      }
+}
+
+.pc {
+      @media screen and (max-width: 550px) {
+            display: none;
+      }
+}
+
+.mobile {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+            display: none;
+      }
+
+      @media screen and (max-width: 550px) {
+            display: block;
+            transform: translateY(-1.5em);
+      }
+}
 </style>

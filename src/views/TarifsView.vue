@@ -4,9 +4,7 @@
                   <!---------- Armoire de déroulement   ------>
                   <div class="tarif__part_one">
                         <!--  Tarifs vacances -->
-                        <div
-                              class="rounded-lg h-[47.5vh] mb-[1em]"
-                        >
+                        <div class="rounded-lg h-[47.5vh] mb-[1em]">
                               <h2>
                                     Tarifs vacances <br />
                                     (Pour une semaine)
@@ -14,31 +12,23 @@
                         </div>
 
                         <!--  Tarifs basse saison -->
-                        <div
-                              class="rounded-lg h-[39.9vh] mb-[1em]"
-                        >
+                        <div class="rounded-lg h-[39.9vh] mb-[1em]">
                               <h2>Tarifs basse saison</h2>
                         </div>
 
                         <!--  Pour votre confort -->
-                        <div
-                              class="rounded-lg h-[31vh] mb-[1em]"
-                        >
+                        <div class="rounded-lg h-[31vh] mb-[1em]">
                               <h2>Pour votre confort</h2>
                         </div>
 
                         <!--  A votre arrivée -->
-                        <div
-                              class="rounded-lg h-[15vh] mb-[1em]"
-                        >
+                        <div class="rounded-lg h-[15vh] mb-[1em]">
                               <h2>A votre arrivée</h2>
                         </div>
 
                         <!-- Réservation -->
 
-                        <div
-                              class="rounded-lg h-[16vh] mb-[1em]"
-                        >
+                        <div class="rounded-lg h-[16vh] mb-[1em]">
                               <h2>Réservation</h2>
                         </div>
                   </div>
@@ -47,7 +37,6 @@
                         <!-- Insertion des saisons, dates et prix à partir de tarifs de database -->
                         <!----<h2 class="bg-white">{{ position }}</h2>-->
 
-                        <!------------------------------------>
                         <div class="tarif__vac" v-on:mouseenter="handleVacance">
                               <div
                                     class="tarif__vac--bird"
@@ -105,7 +94,6 @@
                                                                   onMouseOut
                                                             "
                                                       />
-
                                                 </div>
 
                                                 <h2
@@ -123,6 +111,7 @@
                         </div>
 
                         <!--  Waves -->
+
                         <div class="tarif__waves" id="tarif__waves">
                               <div v-if="activeWaveVacance">
                                     <div
@@ -146,7 +135,11 @@
                         </div>
 
                         <!------------ Basse --------------------------->
-                        <div class="tarif__basse" v-on:mouseenter="handleVacance">
+
+                        <div
+                              class="tarif__basse"
+                              v-on:mouseenter="handleVacance"
+                        >
                               <div
                                     class="tarif__basse--ecureuil"
                                     id="ecureuil"
@@ -172,7 +165,6 @@
                                           class="move"
                                           id="tarif__basse--awesome"
                                     />
-
                               </div>
 
                               <div class="tarif__basse--cards" id="basse--card">
@@ -263,7 +255,6 @@
                                     <img
                                           src="../assets/Tarifs/geai_des_bois.png"
                                           alt=""
-                                          
                                     />
                               </div>
 
@@ -433,7 +424,457 @@
                         <!------- Réservations ------>
 
                         <div class="tarif__reservation">
+                              <div
+                                    class="tarif__reservation--text"
+                                    id="tarif__reservation--text"
+                              >
+                                    <div>
+                                          <p class="">
+                                                Alors n'attendez plus, les
+                                                réservations s'effectuent sur le
+                                                site de Gîtes de France.
 
+                                                <br />
+
+                                                <span class="">
+                                                      Cliquez
+                                                      <a
+                                                            href="https://www.gites-de-france-eure.com/location-vacances-Gite-Hauville-27G818.html"
+                                                            target="_blank"
+                                                      >
+                                                            <img
+                                                                  src="../assets/Liens/logo_gite_de_france.jpg"
+                                                                  alt=""
+                                                                  class=""
+                                                            />
+                                                      </a>
+                                                      pour réserver.
+                                                </span>
+                                          </p>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+
+                  <!--------- Cette partie est consacrée à la partie screen tablette ---------->
+                  <div class="tarif__third_part">
+                        <!---------- Titre Tarifs Vacances --------------------->
+                        <div
+                              class="tarif__third_part--title"
+                              data-aos="zoom-in-down"
+                        >
+                              <h1>Tarifs vacances</h1>
+                        </div>
+
+                        <!---------- Tarifs Vacances --------------------->
+                        <div
+                              class="tarif__vac"
+                              v-on:mouseenter="handleVacanceTablette"
+                        >
+                              <div
+                                    class="tarif__vac--bird"
+                                    id="bird--tablette"
+                                    :class="{ animation: animeTarifVac }"
+                              >
+                                    <img
+                                          src="../assets/Tarifs/rouge_gorge_vol.png"
+                                          alt=""
+                                    />
+                              </div>
+
+                              <div
+                                    class="tarif__vac--awesome"
+                                    id="vac--awesome--tablette"
+                              >
+                                    <img
+                                          src="../assets/Tarifs/rougegorge.png"
+                                          alt=""
+                                          class="move"
+                                    />
+
+                                    <div class="bubble">
+                                          <p>Arrivée samedi</p>
+                                    </div>
+                              </div>
+
+                              <div
+                                    class="tarif__vac--cards"
+                                    id="vac--cards--tablette"
+                              >
+                                    <div
+                                          class="elements"
+                                          v-for="tarif in tarifs_vacances"
+                                          :key="tarif.id"
+                                    >
+                                          <div
+                                                class="bg-white rounded-lg max-md:h-[30.5vh]"
+                                                v-if="
+                                                      tarif.positionTablette <
+                                                      position
+                                                "
+                                                data-aos="flip-up"
+                                          >
+                                                <div
+                                                      class="overflow-hidden bg-cover h-[27vh] max-md:h-[15vh]"
+                                                >
+                                                      <img
+                                                            :src="
+                                                                  hoveredImageId ===
+                                                                  tarif.id
+                                                                        ? tarif.photo
+                                                                        : tarif.photo2
+                                                            "
+                                                            v-on:mouseover="
+                                                                  onMouseOver(
+                                                                        tarif.id
+                                                                  )
+                                                            "
+                                                            v-on:mouseout="
+                                                                  onMouseOut
+                                                            "
+                                                      />
+                                                </div>
+
+                                                <h2
+                                                      v-text="tarif.saison"
+                                                      class="font-medium"
+                                                ></h2>
+                                                <p v-html="tarif.date"></p>
+                                                <p
+                                                      v-text="tarif.prix"
+                                                      class="font-semibold text-2xl"
+                                                ></p>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <!--  Waves -->
+
+                        <div class="tarif__waves" id="tarif__waves--tablette">
+                              <div v-if="activeWaveVacance">
+                                    <div
+                                          class="custom-shape-divider-bottom-1688724135"
+                                    >
+                                          <svg
+                                                data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 1200 120"
+                                                preserveAspectRatio="none"
+                                          >
+                                                <path
+                                                      d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                                                      class="shape-fill"
+                                                ></path>
+                                          </svg>
+                                    </div>
+
+                                    <p>Arrivée samedi</p>
+                              </div>
+                        </div>
+
+                        <!---------- Titre Tarifs Basse Saison --------------------->
+                        <div
+                              class="tarif__third_part--title"
+                              data-aos="zoom-in-down"
+                        >
+                              <h1>Tarifs Basse Saison</h1>
+                        </div>
+
+                        <!------------ Basse --------------------------->
+
+                        <div
+                              class="tarif__basse"
+                              v-on:mouseenter="handleVacance"
+                        >
+                              <div
+                                    class="tarif__basse--ecureuil"
+                                    id="ecureuil--tablette"
+                                    :class="{ animation: animeBasseSaison }"
+                              >
+                                    <img
+                                          src="../assets/Tarifs/grive_musicienne_vol.png"
+                                          alt="grive musicienne"
+                                    />
+                              </div>
+
+                              <div
+                                    class="tarif__basse--awesome"
+                                    id="basse--awesome--tablette"
+                              >
+                                    <div class="bubble_basse">
+                                          <p>Arrivée libre</p>
+                                    </div>
+
+                                    <img
+                                          src="../assets/Tarifs/grive_musicienne.png"
+                                          alt="grive musicienne"
+                                          class="move"
+                                          id="tarif__basse--awesome"
+                                    />
+                              </div>
+
+                              <div
+                                    class="tarif__basse--cards"
+                                    id="basse--card--tablette"
+                              >
+                                    <div
+                                          class="elements__basse"
+                                          v-for="tarif in tarifs_basse_saison"
+                                          :key="tarif.id"
+                                    >
+                                          <div
+                                                class="bg-white rounded-lg max-md:h-[25vh]"
+                                                data-aos="zoom-in-down"
+                                                v-if="
+                                                      tarif.positionTablette <
+                                                      positionBasse
+                                                "
+                                          >
+                                                <div
+                                                      class="overflow-hidden bg-cover h-[25vh] max-md:h-[15vh] transition-all"
+                                                >
+                                                      <img
+                                                            :src="
+                                                                  hoveredImageId ===
+                                                                  tarif.id
+                                                                        ? tarif.photo
+                                                                        : tarif.photo2
+                                                            "
+                                                            v-on:mouseover="
+                                                                  onMouseOver(
+                                                                        tarif.id
+                                                                  )
+                                                            "
+                                                            v-on:mouseout="
+                                                                  onMouseOut
+                                                            "
+                                                      />
+                                                </div>
+
+                                                <h2
+                                                      v-text="tarif.periode"
+                                                      class="font-medium"
+                                                ></h2>
+
+                                                <p
+                                                      v-text="tarif.prix"
+                                                      class="font-semibold text-2xl"
+                                                ></p>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <!--  Waves -->
+                        <div class="tarif__waves" id="waves__basse--tablette">
+                              <div v-if="activeWaveBasse">
+                                    <div
+                                          class="custom-shape-divider-bottom-1688724135"
+                                    >
+                                          <svg
+                                                data-name="Layer 1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 1200 120"
+                                                preserveAspectRatio="none"
+                                          >
+                                                <path
+                                                      d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                                                      class="shape-fill"
+                                                ></path>
+                                          </svg>
+                                    </div>
+
+                                    <p>Arrivée libre</p>
+                              </div>
+                        </div>
+
+                        <!---------- Titre Pour votre confort --------------------->
+                        <div
+                              class="tarif__third_part--title"
+                              data-aos="zoom-in-down"
+                        >
+                              <h1>Pour votre confort</h1>
+                        </div>
+
+                        <!--- Pour votre confort --->
+                        <div
+                              class="tarif__confort"
+                              data-aos="fade-right"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in-out"
+                        >
+                              <div
+                                    class="tarif__confort--text"
+                                    id="tarif__confort--text"
+                              >
+                                    <div>
+                                          <ul>
+                                                <li>
+                                                      <font-awesome-icon
+                                                            icon="fa-solid fa-check"
+                                                            class="mr-2"
+                                                      />
+                                                      Préparation d'un lit 2
+                                                      personnes :
+                                                      <span class="tarif__price"
+                                                            >8€</span
+                                                      >
+                                                </li>
+                                                <li>
+                                                      <font-awesome-icon
+                                                            icon="fa-solid fa-check"
+                                                            class="mr-2"
+                                                      />
+                                                      Préparation d'un lit 1
+                                                      personne :
+                                                      <span class="tarif__price"
+                                                            >6€</span
+                                                      >,
+                                                </li>
+                                                <li>
+                                                      <font-awesome-icon
+                                                            icon="fa-solid fa-check"
+                                                            class="mr-2"
+                                                      />
+                                                      Mise à disposition des
+                                                      serviettes de bain :
+                                                      <span class="tarif__price"
+                                                            >6€</span
+                                                      >
+                                                      par personne
+                                                </li>
+                                                <li>
+                                                      <font-awesome-icon
+                                                            icon="fa-solid fa-check"
+                                                            class="mr-2"
+                                                      />
+                                                      Forfait ménage :
+                                                      <span class="tarif__price"
+                                                            >40€</span
+                                                      >.
+                                                </li>
+                                                <li>
+                                                      <font-awesome-icon
+                                                            icon="fa-solid fa-check"
+                                                            class="mr-2"
+                                                      />
+                                                      A préciser à la
+                                                      réservation (un simple
+                                                      coup de fil à Cécile
+                                                      suffira).
+                                                </li>
+
+                                                <li>
+                                                      <font-awesome-icon
+                                                            icon="fa-solid fa-check"
+                                                            class="mr-2"
+                                                      />
+                                                      Pour le bois
+                                                      <span class="tarif__price"
+                                                            >50€
+                                                      </span>
+                                                      le stère
+                                                </li>
+
+                                                <li>
+                                                      <font-awesome-icon
+                                                            icon="fa-solid fa-check"
+                                                            class="mr-2"
+                                                      />
+                                                      Attention le chauffage est
+                                                      en plus, et suivant votre
+                                                      consommation. Comptez
+                                                      environ
+                                                      <span class="tarif__price"
+                                                            >10€</span
+                                                      >
+                                                      par jour en plein hiver.
+                                                </li>
+                                          </ul>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <!---------- Titre A votre arrive --------------------->
+                        <div
+                              class="tarif__third_part--title"
+                              data-aos="zoom-in-down"
+                        >
+                              <h1>A votre arrivée</h1>
+                        </div>
+
+                        <!-- A votre arrivée -->
+                        <div
+                              class="tarif__arrive"
+                              id="tarif__arrive"
+                              data-aos="fade-right"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in-out"
+                        >
+                              <div
+                                    class="tarif__arrive--text"
+                                    id="tarif__arrive--text"
+                              >
+                                    <div>
+                                          <p>
+                                                <font-awesome-icon
+                                                      icon="fa-solid fa-check"
+                                                      class="mr-2"
+                                                />
+                                                Une caution de
+                                                <span class="tarif__price"
+                                                      >300€</span
+                                                >
+                                                vous sera demandée lors de votre
+                                                arrivée puis, restituée à votre
+                                                départ si les écrans plats sont
+                                                toujours là &#128512;.
+                                          </p>
+
+                                          <p>
+                                                <font-awesome-icon
+                                                      icon="fa-solid fa-check"
+                                                      class="mr-2"
+                                                />
+                                                Vos animaux de compagnie sont
+                                                les bienvenus, et
+                                                <span class="font-semibold"
+                                                      >chez nous c'est sans
+                                                      surcoût</span
+                                                >
+                                          </p>
+
+                                          <p>
+                                                <font-awesome-icon
+                                                      icon="fa-solid fa-check"
+                                                      class="mr-2"
+                                                />
+                                                Pour vos journées en
+                                                télétravail, le gîte est équipé
+                                                de la fibre internet très haut
+                                                débit 120 Mo/s.
+                                          </p>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <!---------- Titre Réservation --------------------->
+                        <div
+                              class="tarif__third_part--title"
+                              data-aos="zoom-in-down"
+                        >
+                              <h1>Réservations</h1>
+                        </div>
+
+                        <!------- Réservations ------>
+
+                        <div
+                              class="tarif__reservation"
+                              data-aos="fade-right"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in-out"
+                        >
                               <div
                                     class="tarif__reservation--text"
                                     id="tarif__reservation--text"
@@ -478,7 +919,11 @@ export default {
             var positionBasse = ref(0);
             var count = 0;
             var bird;
+            var birdTablette; // variable pour suivre la position de l'oiseau dans Tarifs Vacs dans la version tablette
+
             var ecureuil;
+
+            var ecureuilTablette; // variable pour suivre la position de l'oiseau dans Tarifs Basse dans la version tablette
             const activeWaveVacance = ref(false);
             const activeWaveBasse = ref(false);
             var isHover = ref(false);
@@ -498,6 +943,11 @@ export default {
                   ecureuil = document.getElementById("ecureuil");
                   position.value = 0;
                   positionBasse.value = 0;
+
+                  birdTablette = document.getElementById("bird--tablette");
+
+                  ecureuilTablette =
+                        document.getElementById("ecureuil--tablette");
 
                   const awesomeVac = document.getElementById("vac--awesome");
                   awesomeVac.style.opacity = 1;
@@ -551,12 +1001,46 @@ export default {
                   }, 600);
             };
 
+            // Pour la version PC
             var cpt = 0;
             const handleVacance = () => {
                   if (cpt < 1) {
                         //animeTarifVac = true
                         interval(), tarifVac();
+                        console.log("OK");
                         ++cpt;
+                  }
+            };
+
+            // Pour la version Tablette
+            const intervalTablette = () => {
+                  intervalId.value = setInterval(() => {
+                        // Pour récupérer la position de l'élement
+                        const elementPosition =
+                              birdTablette.getBoundingClientRect();
+
+                        // Pour récupérer la position en x du bird lors de l'animation
+                        position.value = elementPosition.x;
+
+                        count++;
+
+                        // Cette partie permet d'arreter la fonction setIntervall
+                        //console.log(position.value);
+                        if (count === 3) {
+                              clearInterval(intervalId.value);
+                              intervalId.value = null;
+                        }
+                  }, 600);
+            };
+
+            // Pour la version Tablette
+            var cptTablette = 0;
+            const handleVacanceTablette = () => {
+                  if (cptTablette < 1) {
+                        //animeTarifVac = true
+                        intervalTablette(), tarifVacTablette();
+                        console.log("OK");
+                        ++cptTablette;
                   }
             };
 
@@ -568,6 +1052,7 @@ export default {
 
             const tarifVac = () => {
                   const awesome = document.getElementById("vac--awesome");
+                  console.log(awesome);
 
                   const bird = document.getElementById("bird");
 
@@ -590,6 +1075,45 @@ export default {
 
                         const waneBasse =
                               document.getElementById("waves__basse");
+
+                        waneBasse.style.left = "-5%";
+                        waneBasse.style.transition = "2s ease-in";
+                  }, 2000);
+
+                  affichePourVotreConfort();
+            };
+
+            // Tarifs Vac pour la version tablette
+            const tarifVacTablette = () => {
+                  const awesome = document.getElementById(
+                        "vac--awesome--tablette"
+                  );
+                  //console.log(awesome);
+
+                  const bird = document.getElementById("bird--tablette");
+
+                  const cards = document.getElementById("vac--cards--tablette");
+
+                  cards.style.opacity = 1;
+                  awesome.style.opacity = 0;
+                  bird.style.display = "block";
+
+                  const waneVacance = document.getElementById(
+                        "tarif__waves--tablette"
+                  );
+
+                  activeWaveVacance.value = true;
+                  waneVacance.style.left = "-5%";
+                  waneVacance.style.transition = "2s ease-in";
+
+                  setTimeout(() => {
+                        handleBasseSaisonTablette();
+
+                        activeWaveBasse.value = true;
+
+                        const waneBasse = document.getElementById(
+                              "waves__basse--tablette"
+                        );
 
                         waneBasse.style.left = "-5%";
                         waneBasse.style.transition = "2s ease-in";
@@ -638,6 +1162,56 @@ export default {
                   if (compte < 1) {
                         animeBasseSaison.value = true;
                         intervalBasseSaison(), tarifBasse();
+                        ++compte;
+                  }
+            };
+
+            // Pour la version tablette
+            const tarifBasseTablette = () => {
+                  const iconTouch = document.getElementById(
+                        "basse--awesome--tablette"
+                  );
+
+                  const ecureuil =
+                        document.getElementById("ecureuil--tablette");
+
+                  const tarifCard = document.getElementById(
+                        "basse--card--tablette"
+                  );
+
+                  iconTouch.style.opacity = 0;
+                  ecureuil.style.display = "block";
+
+                  tarifCard.style.opacity = 1;
+            };
+
+            // basse saison Tablette
+            var countBasseSaisonTablette = 0;
+            const intervalBasseSaisonTablette = () => {
+                  intervalId.value = setInterval(() => {
+                        // Pour récupérer la position de l'élement
+                        const elementPosition =
+                              ecureuilTablette.getBoundingClientRect();
+
+                        // Pour récupérer la position en x du bird lors de l'animation
+                        positionBasse.value = elementPosition.x;
+
+                        //console.log(positionBasse.value);
+                        countBasseSaisonTablette++;
+
+                        // Cette partie permet d'arreter la fonction setIntervall
+                        if (countBasseSaisonTablette === 5) {
+                              clearInterval(intervalId.value);
+                              intervalId.value = null;
+                        }
+                  }, 800);
+            };
+
+            var compteTablette = 0;
+            const handleBasseSaisonTablette = () => {
+                  if (compteTablette < 1) {
+                        animeBasseSaison.value = true;
+                        intervalBasseSaisonTablette(), tarifBasseTablette();
                         ++compte;
                   }
             };
@@ -703,6 +1277,7 @@ export default {
                   affichePourVotreConfort,
                   handleBasseSaison,
                   handleVacance,
+                  handleVacanceTablette,
             };
       },
 };
@@ -718,7 +1293,7 @@ export default {
             transform: translate(30px, 50px);
       }*/
 
-      /*75% {
+/*75% {
             transform: translate(100px, 50px);
       }
       100% {
@@ -727,7 +1302,7 @@ export default {
       }
 }*/
 
-.mar{
+.mar {
       margin-right: 2em;
 }
 
@@ -771,10 +1346,18 @@ export default {
       width: 95%;
       margin: auto;
 
+      @media screen and (max-width: 768px) {
+            margin-top: 2em;
+      }
+
       &__part_one {
             width: 25%;
             height: auto;
             margin-right: 3em;
+
+            @media screen and (max-width: 768px) {
+                  display: none;
+            }
 
             div {
                   background: #08a045;
@@ -792,6 +1375,10 @@ export default {
 
       &__second_part {
             width: 100%;
+
+            @media screen and (max-width: 768px) {
+                  display: none;
+            }
       }
 
       &__vac {
@@ -799,6 +1386,11 @@ export default {
             height: 42vh;
             margin-bottom: 2em;
             //border: 2px solid red;
+
+            @media screen and (max-width: 768px) {
+                  margin-top: 1em;
+                  height: 30vh;
+            }
 
             &--bird {
                   position: absolute;
@@ -837,6 +1429,11 @@ export default {
                         transform: translate(0.2em, 0.5em);
                         margin: 0 0.2em;
 
+                        @media screen and (max-width: 768px) {
+                              font-size: 5em;
+                              transform: translate(0.4em, 0.3em);
+                        }
+
                         &::after {
                               content: "";
                               position: absolute;
@@ -850,6 +1447,10 @@ export default {
                               top: 35%;
                               left: -92px;
                               margin-top: -20px;
+
+                              @media screen and (max-width: 768px) {
+                                    left: -91px;
+                              }
                         }
 
                         p {
@@ -871,12 +1472,15 @@ export default {
                   height: 100%;
                   opacity: 0;
 
+                  @media screen and (max-width: 768px) {
+                        grid-gap: 0.5em;
+                  }
+
                   .elements {
                         //width: 35%;
                         //margin-right: 2.5em;
                         transition: all 1s ease-in;
                         height: 100%;
-                        
 
                         img {
                               border-radius: 0.5em;
@@ -899,6 +1503,11 @@ export default {
             top: -2.5%;
             height: 5vh;
             margin: 0.5em 0;
+
+            @media screen and (max-width: 768px) {
+                  left: -150%;
+                  top: -0.5%;
+            }
 
             p {
                   font-weight: 700;
@@ -937,6 +1546,11 @@ export default {
             margin-top: 1em;
             //border: 2px solid red;
 
+            @media screen and (max-width: 768px) {
+                  height: 28vh;
+                  transform: translateY(0em);
+            }
+
             &--ecureuil {
                   position: absolute;
                   left: -25%;
@@ -964,6 +1578,10 @@ export default {
                         border-radius: 10px;
                         padding: 0px;
 
+                        @media screen and (max-width: 768px) {
+                              font-size: 5em;
+                        }
+
                         &::after {
                               content: "";
                               position: absolute;
@@ -977,6 +1595,10 @@ export default {
                               top: 70%;
                               right: -92px;
                               margin-top: -20px;
+
+                              @media screen and (max-width: 768px) {
+                                    right: -90px;
+                              }
                         }
 
                         p {
@@ -992,7 +1614,6 @@ export default {
                         width: 35%;
                         transform: translate(-2.5em, 5.5em);
                   }
-
             }
 
             &--cards {
@@ -1003,6 +1624,10 @@ export default {
                   width: 100%;
                   height: 100%;
                   opacity: 0;
+
+                  @media screen and (max-width: 768px) {
+                        grid-gap: 0.5em;
+                  }
 
                   .elements__basse {
                         //width: 25%;
@@ -1033,6 +1658,11 @@ export default {
             margin-bottom: 1em;
             text-align: left;
 
+            @media screen and (max-width: 768px) {
+                  margin-top: 0.5em;
+                  height: auto;
+            }
+
             &--awesome {
                   position: absolute;
                   width: 100%;
@@ -1062,6 +1692,12 @@ export default {
                   border-radius: 0.5em;
                   position: relative;
                   left: -150%;
+
+                  @media screen and (max-width: 768px) {
+                        //position: relative;
+                        left: 0;
+                        opacity: 1;
+                  }
             }
       }
 
@@ -1071,13 +1707,19 @@ export default {
             text-align: left;
             transform: translateY(-1em);
 
+            @media screen and (max-width: 768px) {
+                  transform: translateY(0em);
+                  margin: 0.5em 0;
+                  height: auto;
+            }
+
             &--awesome {
                   position: absolute;
                   width: 100%;
                   height: 100%;
 
-                  img{
-                        transform: translate(0.7em,0.2em);
+                  img {
+                        transform: translate(0.7em, 0.2em);
                   }
 
                   .bubble_confort {
@@ -1092,7 +1734,7 @@ export default {
                         height: 120px;
                         border-radius: 10px;
                         padding: 0px;
-                        transform: translate(0,2em);
+                        transform: translate(0, 2em);
 
                         &::after {
                               content: "";
@@ -1102,8 +1744,8 @@ export default {
                               z-index: 1;
                               border-style: solid;
                               border-width: 40px 92px 0 0;
-                              border-color: rgba(8, 160, 69, 0.8) transparent transparent
-                                    transparent;
+                              border-color: rgba(8, 160, 69, 0.8) transparent
+                                    transparent transparent;
                               top: 37%;
                               right: -92px;
                               margin-top: -20px;
@@ -1118,7 +1760,6 @@ export default {
                               font-size: 5em;
                         }
                   }
-                  
             }
 
             &--text {
@@ -1128,6 +1769,10 @@ export default {
                   position: relative;
                   left: -150%;
                   transition: 3s ease-in;
+
+                  @media screen and (max-width: 768px) {
+                        left: 0;
+                  }
 
                   p {
                         text-align: left;
@@ -1149,6 +1794,11 @@ export default {
             height: 16vh;
             text-align: left;
 
+            @media screen and (max-width: 768px) {
+                  margin: 0.5em 0;
+                  height: auto;
+            }
+
             &--text {
                   background: #fff;
                   height: 100%;
@@ -1158,6 +1808,12 @@ export default {
                   img {
                         display: inline;
                         width: 40%;
+
+                        @media screen and (max-width: 768px) {
+                              width: 60%;
+                              border: 3px solid #45e262;
+                              border-radius: 0.5em;
+                        }
 
                         &:hover {
                               transform: scale(104%);
@@ -1194,9 +1850,37 @@ export default {
       &__price {
             font-weight: 600;
             font-size: 1.2em;
+
+            @media screen and (max-width: 768px){
+                  //font-size: 1em;
+            }
       }
 
-      @media screen and (max-width: 550px) {
+      &__third_part {
+            display: none;
+            width: 100%;
+
+            @media screen and (max-width: 768px) {
+                  display: block;
+            }
+
+            &--title {
+                  display: none;
+
+                  @media screen and (max-width: 768px) {
+                        display: block;
+                        background: #08a045;
+                        color: #fff;
+                        width: 40%;
+                        margin: auto;
+                        padding: 0.5em;
+                        border-radius: 0.5em;
+                        color: blanchedalmond;
+                  }
+            }
+      }
+
+      /*@media screen and (max-width: 550px) {
             padding-top: 3em;
       }
 
@@ -1219,6 +1903,6 @@ export default {
             &__iframe {
                   width: 90%;
             }
-      }
+      }*/
 }
 </style>

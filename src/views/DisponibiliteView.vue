@@ -1,7 +1,24 @@
 <template>
       <div class="pt-16 reservation pb-4">
+            <!----------- SOLEIL PC -------------------->
             <div class="reservation__soleil" id="disponibiliteIframe">
-                  <div v-if="showImage">
+                  <div v-if="showImage" class="reservation__soleil--pc">
+                        <img
+                              src="../assets/Disponibilite/soleil.png"
+                              alt="Soleil - gite le cormier"
+                        />
+
+                        <p>
+                              {{
+                                    chooseEnglishVersion
+                                          ? "Click on your arrival date to begin the reservation"
+                                          : "Cliquer sur votre date d'arrivée pour commencer la réservation"
+                              }}
+                        </p>
+                  </div>
+
+                  <!----------- SOLEIL TABLETTE -------------------->
+                  <div class="reservation__soleil--tablette animationTablette">
                         <img
                               src="../assets/Disponibilite/soleil.png"
                               alt="Soleil - gite le cormier"
@@ -20,15 +37,29 @@
             <div
                   class="m-auto reservation__widget"
                   v-on:mouseenter="moveImage"
-                  v-once
             >
+                  <!-- Pour la version pc -->
                   <iframe
                         style="
                               overflow: auto;
                               -webkit-overflow-scrolling: touch;
                               border: none;
                         "
+                        class="reservation__widget--pc"
                         height="1200"
+                        width="100%"
+                        src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numgite=818&widget-itea=dispo&nbmois=12&nbmois-ligne=3&clicsurcalendrier=1"
+                  ></iframe>
+
+                  <!-- Pour la version mobile : J'ai changé la hauteur-->
+                  <iframe
+                        style="
+                              overflow: auto;
+                              -webkit-overflow-scrolling: touch;
+                              border: none;
+                        "
+                        class="reservation__widget--mobile"
+                        height="2200"
                         width="100%"
                         src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numgite=818&widget-itea=dispo&nbmois=12&nbmois-ligne=3&clicsurcalendrier=1"
                   ></iframe>
@@ -75,18 +106,14 @@ export default {
       animation: move 10s ease-in-out;
 }
 
-/*.custom-shape-divider-top-1688723126 {
-      width: 100%;
-      overflow: hidden;
-      line-height: 0;
+.animationTablette {
+      animation: moveTablette 10s ease-in-out;
+
+      @media screen and (max-width: 550px){
+            animation: moveMobile 10s ease-in-out;
+      }
 }
 
-.custom-shape-divider-top-1688723126 svg {
-      position: relative;
-      display: block;
-      width: calc(100% + 1.3px);
-      height: 59px;
-}*/
 
 @keyframes move {
       0% {
@@ -99,6 +126,44 @@ export default {
 
       75% {
             transform: translate(285%, 0);
+            opacity: 1;
+      }
+
+      100% {
+            opacity: 0;
+      }
+}
+
+@keyframes moveTablette {
+      0% {
+            opacity: 1;
+      }
+      50% {
+            opacity: 1;
+            transform: translate(70%, 50vh);
+      }
+
+      75% {
+            transform: translate(150%, 0);
+            opacity: 1;
+      }
+
+      100% {
+            opacity: 0;
+      }
+}
+
+@keyframes moveMobile {
+      0% {
+            opacity: 1;
+      }
+      50% {
+            opacity: 1;
+            transform: translate(40%, 60vh);
+      }
+
+      75% {
+            transform: translate(100%, 15vh);
             opacity: 1;
       }
 
@@ -122,11 +187,41 @@ export default {
             left: -15%;
             opacity: 0;
 
+            @media screen and (max-width: 768px) {
+                  width: 50%;
+                  opacity: 1;
+            }
+
+            @media screen and (max-width: 550px) {
+                  width: 70%;
+                  opacity: 1;
+            }
+
             p {
                   transform: translateY(-15em);
                   background: #08a045;
                   color: #fff;
                   border-radius: 0.5em;
+
+                  @media screen and (max-width: 768px) {
+                        transform: translateY(-13em);
+                  }
+            }
+
+            &--pc {
+                  @media screen and (max-width: 768px) {
+                        display: none;
+                  }
+            }
+
+            &--tablette {
+                  display: none;
+
+                  @media screen and (max-width: 768px) {
+                        //opacity: 1;
+                        display: block;
+                        opacity: 0;
+                  }
             }
       }
 
@@ -142,6 +237,24 @@ export default {
             @media screen and (max-width: 550px) {
                   width: 90%;
                   margin: auto;
+            }
+
+            &--pc {
+                  @media screen and (max-width: 550px) {
+                        display: none;
+                  }
+            }
+
+            &--mobile {
+                  display: none;
+
+                  @media screen and (max-width: 768px) {
+                        display: none;
+                  }
+
+                  @media screen and (max-width: 550px) {
+                        display: block;
+                  }
             }
       }
 }

@@ -7,6 +7,7 @@ export const tarifs_vacances = [
             date: "Les vacances d'été <br> (juillet - août)",
             prix: "480 €",
             position: 200,
+            positionTablette: 10,
             class: true,
       },
 
@@ -18,6 +19,7 @@ export const tarifs_vacances = [
             date: "Début juillet, Fin août, <br> Et les vacances de Noël ",
             prix: "460 €",
             position: 350,
+            positionTablette: 70,
             class: true,
       },
 
@@ -29,6 +31,7 @@ export const tarifs_vacances = [
             date: "Les autres vacances scolaires, <br> Et mai - juin - septembre",
             prix: "340 €",
             position: 550,
+            positionTablette: 150,
             class: false,
       },
 ];
@@ -41,7 +44,8 @@ export const tarifs_basse_saison = [
             periode: "La semaine",
             prix: "260 €",
             position: 300,
-            isHovered: false,
+            positionTablette: 100,
+            //isHovered: false,
       },
 
       {
@@ -51,7 +55,8 @@ export const tarifs_basse_saison = [
             periode: "Weekend basse saison",
             prix: "190 €",
             position: 500,
-            isHovered: false,
+            positionTablette: 200,
+            //isHovered: false,
       },
 
       {
@@ -61,7 +66,8 @@ export const tarifs_basse_saison = [
             periode: "Weekend moyenne saison",
             prix: "220 €",
             position: 700,
-            isHovered: false,
+            positionTablette: 300,
+            //isHovered: false,
       },
 
       {
@@ -71,5 +77,6 @@ export const tarifs_basse_saison = [
             periode: "Possibilité de séjour mid-week",
             prix: "3,4,5,6 jours",
             position: 900,
+            positionTablette: 400,
       },
 ];

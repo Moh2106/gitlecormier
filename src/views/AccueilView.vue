@@ -472,7 +472,13 @@ export default {
             @media screen and (max-width: 768px) {
                   width: 90%;
                   display: grid;
-                  grid-template-columns: repeat(2,1fr);
+                  grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media screen and (max-width: 550px) {
+                  grid-template-columns: repeat(1, 1fr);
+                  width: 90%;
+                  margin: auto;
             }
 
             &--text {
@@ -485,12 +491,21 @@ export default {
                   position: relative;
 
                   @media screen and (max-width: 550px) {
+                        //width: 90%;
+                        //margin: auto;
                   }
 
                   img {
                         border-radius: 0.5em;
                         width: 300px;
                         height: 200px;
+
+                        @media screen and (max-width: 550px) {
+                              width: 90%;
+                              height: auto;
+                              margin: auto;
+                              object-fit: cover;
+                        }
                   }
 
                   div {
@@ -556,12 +571,12 @@ export default {
             transition: 0.5s ease-in-out;
             backdrop-filter: contrast(40%) brightness(90%) blur(10px);
 
-            div{
-                 @media screen and (max-width: 768px){
+            div {
+                  @media screen and (max-width: 768px) {
                         display: block;
                         width: 90%;
                         margin: 0.5em auto;
-                  } 
+                  }
             }
 
             &--main {
@@ -580,6 +595,10 @@ export default {
                   color: #fff;
                   cursor: pointer;
                   z-index: 100000;
+
+                  @media screen and (max-width: 768px) {
+                        font-size: 50px;
+                  }
             }
 
             img {

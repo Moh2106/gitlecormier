@@ -31,8 +31,8 @@
                   </div>
             </div>
 
-            <nav id="afficheMenu" class="a">
-                  <router-link to="/" >
+            <nav id="afficheMenu" class="">
+                  <router-link to="/">
                         <template v-if="chooseEnglishVersion"> Home </template>
 
                         <template v-else> Accueil </template>
@@ -87,6 +87,75 @@
                   </router-link>
             </nav>
 
+            <div class="tablette_menu">
+                  <nav id="afficheMenuTablette" class="a">
+                        <router-link to="/" v-on:click="supprimerMenu">
+                              <template v-if="chooseEnglishVersion">
+                                    Home
+                              </template>
+
+                              <template v-else> Accueil </template>
+                        </router-link>
+
+                        <router-link
+                              to="/descriptifs"
+                              v-on:click="supprimerMenu"
+                        >
+                              <template v-if="chooseEnglishVersion">
+                                    Description
+                              </template>
+
+                              <template v-else> Descriptifs </template>
+                        </router-link>
+
+                        <router-link
+                              to="/comment-arriver"
+                              v-on:click="supprimerMenu"
+                        >
+                              <template v-if="chooseEnglishVersion">
+                                    How to get there
+                              </template>
+
+                              <template v-else> Comment arriver </template>
+                        </router-link>
+
+                        <router-link to="/alentours" v-on:click="supprimerMenu">
+                              <template v-if="chooseEnglishVersion">
+                                    The surroundings
+                              </template>
+
+                              <template v-else> Aux alentours </template>
+                        </router-link>
+
+                        <router-link to="/livredor" v-on:click="supprimerMenu">
+                              <template v-if="chooseEnglishVersion">
+                                    Guest book
+                              </template>
+
+                              <template v-else> Livres d'or </template>
+                        </router-link>
+
+                        <router-link to="/tarifs" v-on:click="supprimerMenu">
+                              <template v-if="chooseEnglishVersion">
+                                    Prices
+                              </template>
+
+                              <template v-else> Tarifs </template>
+                        </router-link>
+
+                        <router-link
+                              to="/disponibilite"
+                              v-on:click="supprimerMenu"
+                        >
+                              <template v-if="chooseEnglishVersion">
+                                    Availability
+                              </template>
+
+                              <template v-else> Disponibilités </template>
+                        </router-link>
+                  </nav>
+            </div>
+
             <div class="header__menu" v-on:click="afficheMenu">
                   <font-awesome-icon
                         icon="fa-solid fa-bars"
@@ -118,9 +187,16 @@ export default {
                   afficheHamburger.value = !afficheHamburger.value;
             };
             var afficheMenu = () => {
-                  var e = document.getElementById("afficheMenu");
+                  var e = document.getElementById("afficheMenuTablette");
                   //e.style.display = "block"
                   e.classList.toggle("isActive");
+            };
+
+            var supprimerMenu = () => {
+                  var e = document.getElementById("afficheMenuTablette");
+                  changeIcon();
+                  e.classList.toggle("isActive");
+                  //e.style.display = "none"
             };
 
             /*var supprimerMenu = () => {
@@ -151,8 +227,9 @@ export default {
                   chooseEnglishVersion,
                   afficheCroix,
                   afficheHamburger,
+
                   afficheMenu,
-                  //supprimerMenu,
+                  supprimerMenu,
                   changeIcon,
                   englishVersion,
                   frenchVersion,
@@ -295,10 +372,11 @@ export default {
                   //padding: 0 0.5em 0.5em 0.5em;
                   //font-size: 0.8em;
                   //width: auto;
-                  position: absolute;
-                  top: 5em;
+                  //position: absolute;
+                  //top: 5em;
                   display: none;
-                  width: 100%;
+                  //width: 100%;
+                  //height: 100vh;
             }
 
             @media screen and (max-width: 550px) {
@@ -323,6 +401,7 @@ export default {
                         display: block;
                         padding: 1em;
                         font-size: 1em;
+                        margin: 0;
                   }
 
                   @media screen and (max-width: 550px) {
@@ -342,7 +421,7 @@ export default {
                               //font-size: 0.8em;
                               //transform: scale3d(0em);
                               //border-radius: 0em;
-                              //margin: 0em;
+                              margin: 0em;
                         }
                   }
 
@@ -354,18 +433,40 @@ export default {
                         color: #fff;
 
                         @media screen and (max-width: 768px) {
-                              border-bottom: 0px ;
+                              border-bottom: 0;
                               background: #fff;
                               color: #08a045;
                         }
                   }
             }
       }
+
+      .tablette_menu {
+            display: none;
+
+            @media screen and (max-width: 768px) {
+                  display: block;
+
+                  nav {
+                        width: 100%;
+
+                        a{
+                              border: 1px solid #08a045;
+                        }
+                  }
+
+                  //position: absolute;
+                  //right: 20px;
+            }
+      }
 }
 
 .a.isActive {
       display: block;
-      //transition: 20s ease-in;
+      position: absolute;
+      left: 0;
+      top: 5em;
+      transition: 20s ease-in;
       /*position: absolute;
       left: 195px;
       top: 5px;

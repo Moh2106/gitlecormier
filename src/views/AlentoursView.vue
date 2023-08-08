@@ -238,12 +238,21 @@ export default {
             grid-template-columns: repeat(3, 1fr);
 
             @media screen and (max-width: 768px) {
+                  width: 100%;
                   grid-template-columns: repeat(2, 1fr);
+                  grid-gap: 0.1em;
+                  margin: 0;
             }
 
             @media screen and (max-width: 550px) {
                   grid-template-columns: repeat(1, 1fr);
             }
+
+            /*&__element{
+                  @media screen and (max-width: 768px){
+                        width: 100%;
+                  }
+            }*/
       }
 
       .bubble {
@@ -307,6 +316,10 @@ export default {
                   rgba(0, 0, 0, 0.12) 0px 4px 6px,
                   rgba(0, 0, 0, 0.17) 0px 12px 13px,
                   rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            
+            @media screen and (max-width: 768px){
+                  width: 95%;
+            }
 
             &:hover {
                   transition: 0.5s;
