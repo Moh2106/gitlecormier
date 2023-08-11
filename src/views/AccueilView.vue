@@ -48,6 +48,7 @@
                               <img :src="accueil.img" alt="" />
                         </swiper-slide>
                   </swiper>
+
             </div>
 
             <!--La partie de Bienvenue-->
@@ -285,7 +286,7 @@
 // Import Swiper Vue.js components
 import { computed } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { accueils, accueilsTablette } from "../database/accueil";
+import { accueils, accueilsTablette, accueilsMobile } from "../database/accueil";
 
 // Import Swiper styles
 import "swiper/css";
@@ -361,6 +362,7 @@ export default {
                   chooseEnglishVersion,
                   accueils,
                   accueilsTablette,
+                  accueilsMobile,
                   modules: [Autoplay, Pagination, Navigation],
             };
       },
@@ -401,6 +403,17 @@ export default {
                         margin-top: 2em;
                   }
 
+                  /*@media (max-width: 550px){
+                        display: none;
+                  }*/
+
+                  @media (max-width: 550px){
+                        display: block;
+                        width: 80%;
+                        height: 300px;
+                        margin-top: 1em;
+                  }
+
                   &__capture {
                         img {
                               width: 100%;
@@ -409,6 +422,7 @@ export default {
                         }
                   }
             }
+
       }
 
       &__description {
@@ -417,6 +431,10 @@ export default {
             width: 80%;
             margin: auto;
             color: #fff;
+
+            @media screen and (max-width: 768px){
+                  margin-top: 2em;
+            }
 
             h1 {
                   font-size: 2em;
@@ -470,7 +488,7 @@ export default {
             align-items: center;
 
             @media screen and (max-width: 768px) {
-                  width: 90%;
+                  //width: 90%;
                   display: grid;
                   grid-template-columns: repeat(2, 1fr);
             }

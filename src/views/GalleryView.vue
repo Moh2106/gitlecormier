@@ -2,7 +2,7 @@
       <div class="pt-14 gallerie" id="haut">
             <!----------------------  BOUTON DE RETOUR EN ARRIERE -------------------->
             <div class="gallerie__return">
-                  <button class="bg-white rounded-lg">
+                  <button class="bg-white rounded-lg gallerie__return--pc">
                         <router-link to="/descriptifs">
                               <font-awesome-icon
                                     :icon="['fass', 'arrow-left']"
@@ -10,14 +10,19 @@
                               Retour</router-link
                         >
                   </button>
+
+                  <button class="bg-white rounded-lg gallerie__return--tablette">
+                        <router-link to="/descriptifs">
+                              <font-awesome-icon
+                                    :icon="['fass', 'arrow-left']"
+                              /></router-link
+                        >
+                  </button>
             </div>
 
             <!------------------- CHAMBRE DU REZ DE CHAUSSE -------------------------------------->
             <div class="gallerie__frame" id="chambre-rez-de-chaussee">
-                  <h1
-                        class="title bubble-bottom w-[100%]"
-                        
-                  >
+                  <h1 class="title bubble-bottom w-[100%]">
                         La chambre au rez de chaussée
                   </h1>
 
@@ -29,7 +34,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="rdc.class"
-                                    :id=rdc.index
+                                    :id="rdc.index"
                               />
                         </div>
 
@@ -51,7 +56,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="cuisine.class"
-                                    :id=cuisine.index
+                                    :id="cuisine.index"
                               />
                         </div>
 
@@ -65,7 +70,7 @@
                                           :alt="cuisine.alt"
                                           @click="Cliquer"
                                           class="items"
-                                          :id=cuisine.index
+                                          :id="cuisine.index"
                                     />
                               </div>
                         </div>
@@ -86,7 +91,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="salon.class"
-                                    :id=salon.index
+                                    :id="salon.index"
                               />
                         </div>
 
@@ -100,7 +105,7 @@
                                           :alt="salon.alt"
                                           @click="Cliquer"
                                           class="items"
-                                          :id=salon.index
+                                          :id="salon.index"
                                     />
                               </div>
                         </div>
@@ -120,7 +125,7 @@
                                     :alt="salle.alt"
                                     @click="Cliquer"
                                     class="items"
-                                    :id=salle.index
+                                    :id="salle.index"
                               />
                         </div>
 
@@ -134,7 +139,7 @@
                                           :alt="salle.alt"
                                           @click="Cliquer"
                                           class="items"
-                                          :id=salle.index
+                                          :id="salle.index"
                                     />
                               </div>
                         </div>
@@ -155,11 +160,10 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="salle.class"
-                                    :id=salle.index
+                                    :id="salle.index"
                               />
                         </div>
                   </div>
-
             </div>
 
             <!------------------- 1 ER ETAGE -- CHAMBRE PALIERE -------------------------------->
@@ -180,7 +184,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="chambre1.class"
-                                    :id=chambre1.index
+                                    :id="chambre1.index"
                               />
                         </div>
 
@@ -194,7 +198,7 @@
                                           :alt="chambre1.alt"
                                           @click="Cliquer"
                                           class="items"
-                                          :id=chambre1.index
+                                          :id="chambre1.index"
                                     />
                               </div>
                         </div>
@@ -219,7 +223,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="chambre2.class"
-                                    :id=chambre2.index
+                                    :id="chambre2.index"
                               />
                         </div>
 
@@ -233,7 +237,7 @@
                                           :alt="chambre2.alt"
                                           @click="Cliquer"
                                           class="items"
-                                          :id=chambre2.index
+                                          :id="chambre2.index"
                                     />
                               </div>
                         </div>
@@ -253,7 +257,7 @@
                                     @click="Cliquer"
                                     class="items"
                                     :class="jardin.class"
-                                    :id=jardin.index
+                                    :id="jardin.index"
                               />
                         </div>
 
@@ -267,7 +271,7 @@
                                           :alt="jardin.alt"
                                           @click="Cliquer"
                                           class="items"
-                                          :id=jardin.index
+                                          :id="jardin.index"
                                     />
                               </div>
                         </div>
@@ -361,10 +365,9 @@ export default {
                               ).src = imageSource;
 
                               //ind = image.id
-
                         };
                   });
-            }; 
+            };
 
             /**
              * Cette fonction permet de fermer une photo en zoom
@@ -377,62 +380,6 @@ export default {
                               ).style.display = "none";
                         };
             };
-
-            /*const prev = () => {
-                  //afficherCodePrecedent()
-                  var images = document.querySelectorAll(".items");
-
-                  ind--;
-                  if (ind < 0) {
-                        ind = images.length - 1;
-                  }
-
-                  images.forEach((image) => {
-                        const imageSource = image.src;
-                        document.querySelector(
-                              ".gallerie__popup"
-                        ).style.display = "none";
-                        document.querySelector(".gallerie__popup img").src =
-                              imageSource;
-                  });
-
-                  const imageSuivant = images[ind].src;
-                  document.querySelector(".gallerie__popup").style.display =
-                        "block";
-                  document.querySelector(".gallerie__popup img").src =
-                        imageSuivant;
-
-                  
-            };*/
-
-            // Next
-
-            /*const next = () => {
-                  var images = document.querySelectorAll(".items");
-                  
-                  ind++;
-
-                  if (ind >= images.length) {
-                        ind = 0;
-                  }
-
-                  images.forEach((image) => {
-                        const imageSource = image.src;
-                        document.querySelector(
-                              ".gallerie__popup"
-                        ).style.display = "none";
-                        document.querySelector(".gallerie__popup img").src =
-                              imageSource;
-
-                        //image.style.display = 'none';
-                  });
-
-                  const imageSuivant = images[ind].src;
-                  document.querySelector(".gallerie__popup").style.display =
-                        "block";
-                  document.querySelector(".gallerie__popup img").src =
-                        imageSuivant;
-            };*/
 
             return {
                   Cliquer,
@@ -457,12 +404,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .gallerie {
       width: 100%;
       background: rgba($color: #fff, $alpha: 0.3);
       position: relative;
       overflow: hidden;
+
+      @media screen and (max-width: 768px){
+            margin-top: 3em;
+      }
 
       &__return {
             position: fixed;
@@ -478,6 +428,21 @@ export default {
                         background: rgb(25, 183, 83);
                   }
             }
+
+            &--pc{
+                  @media screen and (max-width: 768px){
+                        display: none;
+                  }
+            }
+
+            &--tablette{
+                  display: none;
+
+                  @media screen and (max-width: 768px){
+                        display: block;
+                        margin-left: 0.3em;
+                  }
+            }
       }
 
       &__frame {
@@ -485,9 +450,9 @@ export default {
             margin: auto;
             transform: translateX(2em);
 
-            @media screen and (max-width: 768px){
-                width: 95%;
-                transform: translateX(0.75em);  
+            @media screen and (max-width: 768px) {
+                  width: 95%;
+                  transform: translateX(0.5em);
             }
 
             &--images {
@@ -499,7 +464,7 @@ export default {
                   transform: translateX(2em);
                   margin-bottom: 1em;
 
-                  @media screen and (max-width: 768px){
+                  @media screen and (max-width: 768px) {
                         grid-gap: 1em;
                   }
 
@@ -509,6 +474,10 @@ export default {
                         .photo_long_format {
                               grid-row: auto;
                               padding: 0 6.4em;
+
+                              @media screen and (max-width: 768px){
+                                    padding: 0 3.4em;
+                              }
                         }
 
                         .photo_court_format {
@@ -534,6 +503,11 @@ export default {
                               margin-right: 1em;
                               margin-bottom: 0.5em;
                               border-radius: 0.1em;
+
+                              @media screen and (max-width: 768px){
+                                    width: 30%;
+                                    margin-right: 0.5em;
+                              }
                         }
                   }
             }

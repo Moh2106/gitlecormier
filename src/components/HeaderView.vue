@@ -88,7 +88,13 @@
             </nav>
 
             <div class="tablette_menu">
-                  <nav id="afficheMenuTablette" class="a">
+                  <nav
+                        id="afficheMenuTablette"
+                        class="a"
+                        data-aos="fade-right"
+                        data-aos-duration="700"
+                        data-aos-easing="ease-in-out"
+                  >
                         <router-link to="/" v-on:click="supprimerMenu">
                               <template v-if="chooseEnglishVersion">
                                     Home
@@ -263,11 +269,13 @@ export default {
             background: #fff;
             height: 10vh;
             width: 100wh;
+            //position: relative;
       }
 
       @media screen and (max-width: 550px) {
             display: flex;
-            font-family: "Poppins", sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
+            //font-family: "Poppins", sans-serif;
       }
 
       .first {
@@ -364,7 +372,7 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
+            //position: relative;
             width: 230%;
             transition: 1s ease-in-out;
 
@@ -446,11 +454,18 @@ export default {
 
             @media screen and (max-width: 768px) {
                   display: block;
+                  //position: relative;
 
                   nav {
                         width: 100%;
+                        position: absolute;
+                        //right: -100em;
+                        //top: 5em;
+                        //left: 10em;
+                        //transition: 20s linear all;
+                        //right: 0;
 
-                        a{
+                        a {
                               border: 1px solid #08a045;
                         }
                   }
@@ -466,7 +481,7 @@ export default {
       position: absolute;
       left: 0;
       top: 5em;
-      transition: 20s ease-in;
+      transition: 20s linear all;
       /*position: absolute;
       left: 195px;
       top: 5px;

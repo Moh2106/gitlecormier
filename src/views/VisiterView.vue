@@ -141,7 +141,7 @@ export default {
       }
 
       @media screen and (max-width: 550px) {
-            font-size: 0.7em;
+            font-size: 0.9em;
             font-weight: 450;
       }
 
@@ -157,6 +157,7 @@ export default {
                   width: 100%;
                   margin-bottom: 1em;
                   margin-top: 2em;
+                  //font-size: 1em;
             }
             //width: 100%;
             //border: 3px solid blue;

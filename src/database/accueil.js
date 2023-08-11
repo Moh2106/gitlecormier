@@ -61,4 +61,3 @@ export const accueilsTablette = [
             img: "/pictures/accueil_tablette/accueil_6_chambre.jpg",
       },
 ];
-

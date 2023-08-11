@@ -223,6 +223,7 @@
                               }}
                         </div>
                   </div>
+
             </div>
 
             <!-------------------------- 1ER ETAGE ------------------------------------>
@@ -713,6 +714,10 @@ export default {
 .mySwiper {
       height: 55vh;
       width: 100%;
+
+      @media screen and (max-width: 768px){
+            margin-top: 1em;
+      }
 }
 
 .b {
@@ -795,7 +800,7 @@ export default {
             font-size: 0.9em;
 
             @media screen and (max-width: 768px) {
-                  //font-size: 0.7em;
+                  //font-size: 1em;
                   font-family: Arial, Helvetica, sans-serif;
                   //border: 4px solid red;
                   width: 90%;
@@ -992,6 +997,7 @@ export default {
                   width: 80%;
                   display: flex;
                   flex-direction: column-reverse;
+                  font-size: 1.1em;
                   //border: 4px solid red;
             }
 
@@ -1020,7 +1026,7 @@ export default {
             }
       }
 
-      &__slide {
+      /*&__slide {
             color: #000;
             margin-bottom: 1em;
 
@@ -1036,6 +1042,6 @@ export default {
             &--text {
                   width: 30%;
             }
-      }
+      }*/
 }
 </style>
