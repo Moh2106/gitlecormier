@@ -409,7 +409,7 @@ export default {
 
                   @media (max-width: 550px){
                         display: block;
-                        width: 80%;
+                        width: 90%;
                         height: 300px;
                         margin-top: 1em;
                   }
@@ -436,6 +436,10 @@ export default {
                   margin-top: 2em;
             }
 
+            @media screen and (max-width: 550px){
+                  width: 90%;
+            }
+
             h1 {
                   font-size: 2em;
 
@@ -444,7 +448,7 @@ export default {
                   }
 
                   @media screen and (max-width: 550px) {
-                        font-size: 1em;
+                        font-size: 1.2em;
                   }
             }
 
@@ -456,7 +460,7 @@ export default {
 
                   @media screen and (max-width: 550px) {
                         font-family: Arial, Helvetica, sans-serif;
-                        font-size: 0.5em;
+                        //font-size: 0.5em;
                   }
             }
       }
@@ -470,6 +474,10 @@ export default {
 
             @media screen and (max-width: 768px) {
                   width: 80%;
+            }
+
+            @media screen and (max-width: 550px) {
+                  width: 90%;
             }
 
             video {

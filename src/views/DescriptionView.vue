@@ -95,6 +95,7 @@
                               </li>
                         </ul>
 
+                        <!--plan pc -->
                         <div
                               class="plan mr-8"
                               data-aos="fade-left"
@@ -224,6 +225,168 @@
                         </div>
                   </div>
 
+                  <!----------------Texte descriptif mobile -------------------------------->
+                  <div
+                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg descriptif__section--mobile"
+                        data-aos="fade-right"
+                        data-aos-duration="700"
+                        data-aos-easing="ease-in-out"
+                  >
+                        <h1 class="font-semibold">
+                              {{
+                                    chooseEnglishVersion
+                                          ? "On the ground floor :"
+                                          : "Au rez-de-chaussée :"
+                              }}
+                        </h1>
+
+                        <ul class="w-4/5 mb-2">
+                              <li
+                                    v-for="description in rdcDescription"
+                                    :key="description.id"
+                                    v-bind:id="description.class"
+                                    data-aos="fade-left"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in"
+                              >
+                                    {{
+                                          chooseEnglishVersion
+                                                ? description.englishDetails
+                                                : description.details
+                                    }}
+                              </li>
+                        </ul>
+
+                        <!--plan pc -->
+                        <div
+                              class="plan mr-8"
+                              data-aos="fade-left"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in"
+                        >
+                              <img
+                                    src="../assets/RezDeChaussee/gite_le_cormier_rdc_plan.png"
+                                    alt=""
+                              />
+
+                              <div>
+                                    <!-- Chambre au rez de chaussee -->
+                                    <button
+                                          v-on:mouseenter="
+                                                afficheChambreRdcItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeChambreRdcItemsStyle
+                                          "
+                                          class="chambre_plan_button"
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#chambre-rez-de-chaussee"
+                                          >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_chambre_plan_1.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-chambre_1"
+                                                />
+
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_chambre_plan_2.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-chambre_2"
+                                                />
+                                          </a>
+                                    </button>
+
+                                    <!--- La salle de bain --->
+                                    <button
+                                          v-on:mouseenter="afficheSdbRdcItems"
+                                          v-on:mouseleave="
+                                                supprimeSdbRdcItemsStyle
+                                          "
+                                          class="plan__rdc-sdb"
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#salle-de-bain"
+                                          >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_sdb_plan.jpg"
+                                                      alt=""
+                                                />
+                                          </a>
+                                    </button>
+
+                                    <!--- La cuisine --->
+                                    <button
+                                          v-on:mouseenter="afficheCuisineItems"
+                                          v-on:mouseleave="
+                                                supprimeCuisineItemsStyle
+                                          "
+                                          class="cuisine_plan_button"
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#cuisine"
+                                          >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_cuisine_plan_1.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-cuisine_1"
+                                                />
+
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_cuisine_plan_2.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-cuisine_2"
+                                                />
+                                          </a>
+                                    </button>
+
+                                    <!--- Le salon --->
+                                    <button
+                                          v-on:mouseenter="afficheSalonItems"
+                                          v-on:mouseleave="
+                                                supprimeSalonItemsStyle
+                                          "
+                                          class="plan__rdc-salon"
+                                    >
+                                          <a href="/descriptifs/gallerie#salon">
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_salon_plan.jpg"
+                                                      alt=""
+                                                />
+                                          </a>
+                                    </button>
+
+                                    <!--- La salle à manger --->
+                                    <button
+                                          v-on:mouseenter="
+                                                afficheSalleAMangerItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeSalleAMangerItemsStyle
+                                          "
+                                          class="plan__rdc-sejour"
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#salle-a-manger"
+                                          >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_sejour_plan.jpg"
+                                                      alt=""
+                                                />
+                                          </a>
+                                    </button>
+                              </div>
+                        </div>
+
+                        <div class="blinking">
+                              {{
+                                    chooseEnglishVersion
+                                          ? "Hover over the map to explore"
+                                          : "Cliquer sur un élément du plan pour voir la galerie"
+                              }}
+                        </div>
+                  </div>
+
             </div>
 
             <!-------------------------- 1ER ETAGE ------------------------------------>
@@ -260,7 +423,7 @@
 
                   <!----------------Texte descriptif -------------------------------->
                   <div
-                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg"
+                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg descriptif__section--texte"
                         data-aos="fade-left"
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
@@ -364,6 +527,113 @@
                               }}
                         </div>
                   </div>
+
+                  <!----------------Texte descriptif mobile -------------------------------->
+                  <div
+                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg descriptif__section--mobile"
+                        data-aos="fade-right"
+                        data-aos-duration="700"
+                        data-aos-easing="ease-in-out"
+                  >
+                        <h1 class="font-semibold">
+                              {{
+                                    chooseEnglishVersion
+                                          ? "On the 1st Floor : "
+                                          : "Au 1er Etage : "
+                              }}
+                        </h1>
+
+                        <ul class="w-5/6 mb-2">
+                              <li
+                                    v-for="description in etageDescription"
+                                    :key="description.id"
+                                    data-aos="fade-left"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in-out"
+                                    :id="description.class"
+                              >
+                                    {{
+                                          chooseEnglishVersion
+                                                ? description.englishDetails
+                                                : description.details
+                                    }}
+                              </li>
+                        </ul>
+
+                        <!-- Le plan du 1er étage -->
+                        <div
+                              class="plan mt-2 mr-8"
+                              data-aos="fade-left"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in"
+                        >
+                              <img
+                                    src="../assets/Etage/plan_etage.jpg"
+                                    alt="Plan du 1er étage"
+                              />
+                              <div>
+                                    <button
+                                          v-on:mouseenter="
+                                                afficheChambre2EtageItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeChambre2EtageItemsStyle
+                                          "
+                                          class="etage1_chambre1"
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#chambre2lits"
+                                          >
+                                                <img
+                                                      src="../assets/Etage/etage1_chambre1_1.jpg"
+                                                      alt=""
+                                                      class="plan__chambre1_1"
+                                                />
+
+                                                <img
+                                                      src="../assets/Etage/etage1_chambre1_2.jpg"
+                                                      alt=""
+                                                      class="plan__chambre1_2"
+                                                />
+                                          </a>
+                                    </button>
+
+                                    <button
+                                          v-on:mouseenter="
+                                                afficheChambre1EtageItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeChambre1EtageItemsStyle
+                                          "
+                                          class="etage1_chambre2"
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#chambre-paliere"
+                                          >
+                                                <img
+                                                      src="../assets/Etage/etage1_chambre2_1.jpg"
+                                                      alt=""
+                                                      class="plan__chambre2_1"
+                                                />
+
+                                                <img
+                                                      src="../assets/Etage/etage1_chambre2_2.jpg"
+                                                      alt=""
+                                                      class="plan__chambre2_2"
+                                                />
+                                          </a>
+                                    </button>
+                              </div>
+                        </div>
+
+                        <div class="blinking">
+                              {{
+                                    chooseEnglishVersion
+                                          ? "Hover over the map to explore"
+                                          : "Cliquer sur un élément du plan pour voir la galerie"
+                              }}
+                        </div>
+                  </div>
             </div>
 
             <!-------------------------- LE JARDIN ------------------------------------->
@@ -395,7 +665,7 @@
 
                   <!----------------Texte descriptif -------------------------------->
                   <div
-                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg description"
+                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg description descriptif__section--texte"
                         data-aos="fade-left"
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
@@ -445,6 +715,62 @@
                                     chooseEnglishVersion
                                           ? "Hover over the map to explore"
                                           : "Passer la souris sur le plan pour visiter"
+                              }}
+                        </div>
+                  </div>
+
+                  <!----------------Texte descriptif mobile -------------------------------->
+                  <div
+                        class="bg-white w-[50%] bg-opacity-90 pt-8 pl-8 text-left rounded-lg description descriptif__section--mobile"
+                        data-aos="fade-right"
+                        data-aos-duration="700"
+                        data-aos-easing="ease-in-out"
+                  >
+                        <h1 class="font-semibold">
+                              {{
+                                    chooseEnglishVersion
+                                          ? "In the garden : "
+                                          : "Dans le jardin : "
+                              }}
+                        </h1>
+
+                        <ul class="w-4/5 mb-2">
+                              <li
+                                    v-for="description in jardinDescription"
+                                    :key="description.id"
+                                    data-aos="fade-left"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in"
+                              >
+                                    {{
+                                          chooseEnglishVersion
+                                                ? description.englishDetails
+                                                : description.details
+                                    }}
+                              </li>
+                        </ul>
+
+                        <div
+                              class="plan w-[90%]"
+                              data-aos="fade-left"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in"
+                        >
+                              <button>
+                                    <a href="/descriptifs/gallerie#jardin">
+                                          <img
+                                                src="../assets/Jardin/plan_du_jardin.jpg"
+                                                alt=""
+                                          />
+                                    </a>
+                              </button>
+                        </div>
+
+                        <div class="blinking">
+                              {{
+                                    chooseEnglishVersion
+                                          ? "Hover over the map to explore"
+                                          : "Cliquer sur un élément du plan pour voir la galerie"
                               }}
                         </div>
                   </div>
@@ -717,6 +1043,11 @@ export default {
 
       @media screen and (max-width: 768px){
             margin-top: 1em;
+            height: 350px;
+      }
+
+      @media screen and (max-width: 550px){
+            height: 300px;
       }
 }
 
@@ -788,7 +1119,7 @@ export default {
 
       @media screen and (max-width: 550px) {
             width: 95%;
-            font-size: 0.7em;
+            font-size: 0.9em;
       }
 
       &__paragraph {
@@ -837,6 +1168,12 @@ export default {
                   //margin: auto;
                   //border: 2px solid #08a045;
             }
+
+            @media screen and (max-width: 550px){
+                  //display: none;
+                  //width: 20%;
+            }
+
 
             // Rez de chaussee
             &__rdc-chambre_1 {
@@ -1005,6 +1342,10 @@ export default {
                   display: flex;
                   flex-direction: column-reverse;
                   font-weight: 500;
+                  width: 90%;
+
+                  //width: 20%;
+                  //border: 3px solid red;
 
                   div {
                         width: 100%;
@@ -1013,9 +1354,22 @@ export default {
                   }
             }
 
-            /*&--texte{
-                  width: 70%;
-            }*/
+            &--texte{
+                  @media screen and (max-width: 550px){
+                        display: none;
+                        //background: red;
+                        width: 70%;
+                  }
+                  
+            }
+
+            &--mobile{
+                  display: none;
+
+                  @media screen and (max-width: 550px){
+                        display: block;
+                  }
+            }
 
             div {
                   @media screen and (max-width: 768px) {
@@ -1026,22 +1380,5 @@ export default {
             }
       }
 
-      /*&__slide {
-            color: #000;
-            margin-bottom: 1em;
-
-            &--rezchausse {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 70%;
-                  margin: auto;
-                  background: #fff;
-            }
-
-            &--text {
-                  width: 30%;
-            }
-      }*/
 }
 </style>
