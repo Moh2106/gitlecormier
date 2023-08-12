@@ -36,7 +36,6 @@
                               overflow: auto;
                               -webkit-overflow-scrolling: touch;
                               border: none;
-                              border-radius: 0.5em;
                         "
                         class="pc"
                         height="1525"
@@ -50,9 +49,8 @@
                               overflow: auto;
                               -webkit-overflow-scrolling: touch;
                               border: none;
-                              border-radius: 0.5em;
                         "
-                        class="mobile"
+                        class="phone"
                         height="2500"
                         width="100%"
                         src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"
@@ -151,12 +149,12 @@ export default {
       }
 }
 
-.mobile {
+.phone {
       display: none;
 
-      @media screen and (max-width: 768px) {
+      /*@media screen and (max-width: 768px) {
             display: none;
-      }
+      }*/
 
       @media screen and (max-width: 550px) {
             display: block;

@@ -454,7 +454,8 @@ export default {
 
             p {
                   @media screen and (max-width: 768px) {
-                        font-family: Arial, Helvetica, sans-serif;
+                        //font-family: Arial, Helvetica, sans-serif;
+                        font-family: 'Courier New', Courier, monospace;
                         font-size: 1em;
                   }
 
