@@ -42,10 +42,11 @@
                         width="100%"
                         src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"
                   ></iframe>
+            </div>
 
-                  <!---- Pour la version mobile ---->
-                  <div class="phone">
-                        <iframe
+            <!---- Pour la version mobile ---->
+            <div class="phone">
+                  <iframe
                         style="
                               overflow: auto;
                               -webkit-overflow-scrolling: touch;
@@ -55,8 +56,6 @@
                         width="100%"
                         src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"
                   ></iframe>
-                  </div>
-                  
             </div>
       </div>
 </template>
