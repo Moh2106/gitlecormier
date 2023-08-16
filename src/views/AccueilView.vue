@@ -525,7 +525,7 @@ export default {
                         //width: 90%;
                         //margin: auto;
                         position: relative;
-                        border: solid 3px saddlebrown;
+                        //border: solid 3px saddlebrown;
                   }
 
                   img {
@@ -570,7 +570,7 @@ export default {
                               width: 87%;
                               transform: translateX(1.1em);
                               height: 15%;
-                              border: solid 3px rgb(27, 130, 27);
+                              //border: solid 3px rgb(27, 130, 27);
                         }
 
                         @media screen and (max-width: 376px){
