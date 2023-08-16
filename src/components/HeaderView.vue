@@ -31,7 +31,7 @@
                   </div>
             </div>
 
-            <nav id="afficheMenu" class="">
+            <nav id="afficheMenu" class="afficheMenu">
                   <router-link to="/">
                         <template v-if="chooseEnglishVersion"> Home </template>
 
@@ -87,10 +87,11 @@
                   </router-link>
             </nav>
 
-            <div class="tablette_menu">
+            <div class="tablette_menu" id="tablette_menu">
                   <nav
-                        id="afficheMenuTablette"
                         class="a"
+                        id="afficheMenuTablette"
+                        v-if="showMe"
                         data-aos="fade-right"
                         data-aos-duration="700"
                         data-aos-easing="ease-in-out"
@@ -186,36 +187,24 @@ export default {
       setup() {
             const afficheCroix = ref(false);
             const afficheHamburger = ref(true);
+            const showMe = ref(false);
 
             // Cette fonction va permettre de changer les icones du menu
             var changeIcon = () => {
                   afficheCroix.value = !afficheCroix.value;
                   afficheHamburger.value = !afficheHamburger.value;
             };
+
+            // Cette fonction va permettre d'afficher le menu
             var afficheMenu = () => {
-                  var e = document.getElementById("afficheMenuTablette");
-                  //e.style.display = "block"
-                  e.classList.toggle("isActive");
+                  showMe.value = !showMe.value;
             };
 
+            // Cette fonction va permettre de supprimer le menu du DOM
             var supprimerMenu = () => {
-                  var e = document.getElementById("afficheMenuTablette");
                   changeIcon();
-                  e.classList.toggle("isActive");
-                  //e.style.display = "none"
+                  showMe.value = !showMe.value;
             };
-
-            /*var supprimerMenu = () => {
-                  var nav = document.querySelectorAll(".nav__link");
-                  var e = document.getElementById("afficheMenu");
-                  console.log(nav);
-
-                  nav.forEach((el) => {
-                        el.addEventListener("click", () => {
-                              e.classList.remove("isActive");
-                        });
-                  });
-            };*/
 
             var chooseEnglishVersion = computed(() => {
                   return store.state.englishVersion;
@@ -233,6 +222,7 @@ export default {
                   chooseEnglishVersion,
                   afficheCroix,
                   afficheHamburger,
+                  showMe,
 
                   afficheMenu,
                   supprimerMenu,
@@ -368,7 +358,7 @@ export default {
             }
       }
 
-      nav {
+      .afficheMenu {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -404,13 +394,13 @@ export default {
                   padding: 0 1.5em 0.5em 1.5em;
                   align-items: center;
 
-                  @media screen and (max-width: 768px) {
+                  /*@media screen and (max-width: 768px) {
                         background: #08a045;
                         display: block;
                         padding: 1em;
                         font-size: 1em;
                         margin: 0;
-                  }
+                  }*/
 
                   @media screen and (max-width: 550px) {
                         display: block;
@@ -451,22 +441,52 @@ export default {
 
       .tablette_menu {
             display: none;
+            //position: absolute;
 
             @media screen and (max-width: 768px) {
                   display: block;
-                  //position: relative;
+                  //left: -500px;
+                  //top : 5em;
+                  //right: -500px;
+                  //width: 100%;
+                  //transition: 20s linear all;
 
                   nav {
                         width: 100%;
+                        //display: none;
                         position: absolute;
+
                         //right: -100em;
-                        //top: 5em;
-                        //left: 10em;
+                        top: 5em;
+                        left: 0em;
                         //transition: 20s linear all;
                         //right: 0;
 
                         a {
+                              background: #08a045;
                               border: 1px solid #08a045;
+
+                              @media screen and (max-width: 768px) {
+                                    background: #08a045;
+                                    display: block;
+                                    padding: 1em;
+                                    font-size: 1em;
+                                    margin: 0;
+                              }
+
+                              &.router-link-exact-active {
+                                    border-bottom: 3px solid #fff;
+                                    font-weight: 700;
+                                    background: #08a045;
+                                    border-radius: 0.5em;
+                                    color: #fff;
+
+                                    @media screen and (max-width: 768px) {
+                                          border-bottom: 0;
+                                          background: #fff;
+                                          color: #08a045;
+                                    }
+                              }
                         }
                   }
 
@@ -476,15 +496,21 @@ export default {
       }
 }
 
-.a.isActive {
+/*.a.isActive {
       display: block;
       position: absolute;
       left: 0;
       top: 5em;
-      transition: 20s linear all;
+      //transition: 20s linear all;
       /*position: absolute;
       left: 195px;
       top: 5px;
-      opacity: 1;*/
+      opacity: 1;
 }
+
+.active {
+      display: block;
+      transition: 20s linear all;
+      //left: 0;
+}*/
 </style>
