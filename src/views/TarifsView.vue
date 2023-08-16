@@ -468,7 +468,7 @@
 
                         <!---------- Tarifs Vacances --------------------->
                         <div
-                              class="tarif__vac"
+                              class="tarif__vac vac_tablette"
                               v-on:mouseenter="handleVacanceTablette"
                         >
                               <div
@@ -501,6 +501,7 @@
                                     class="tarif__vac--cards"
                                     id="vac--cards--tablette"
                               >
+                                    <!----- Elements tablette ------->
                                     <div
                                           class="elements"
                                           v-for="tarif in tarifs_vacances"
@@ -516,6 +517,75 @@
                                           >
                                                 <div
                                                       class="overflow-hidden bg-cover h-[27vh] max-md:h-[15vh]"
+                                                >
+                                                      <img
+                                                            :src="
+                                                                  hoveredImageId ===
+                                                                  tarif.id
+                                                                        ? tarif.photo
+                                                                        : tarif.photo2
+                                                            "
+                                                            v-on:mouseover="
+                                                                  onMouseOver(
+                                                                        tarif.id
+                                                                  )
+                                                            "
+                                                            v-on:mouseout="
+                                                                  onMouseOut
+                                                            "
+                                                      />
+                                                </div>
+
+                                                <h2
+                                                      v-text="tarif.saison"
+                                                      class="font-medium"
+                                                ></h2>
+                                                <p v-html="tarif.date"></p>
+                                                <p
+                                                      v-text="tarif.prix"
+                                                      class="font-semibold text-2xl"
+                                                ></p>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <!---------- Tarifs Vacances mobile --------------------->
+                        <div
+                              class="tarif__mobile"
+                              v-on:click="handleTarifVacMobile"
+                        >
+                              <div
+                                    class="tarif__mobile--bird"
+                                    v-if="vacMobileBird"
+                              >
+                                    <img
+                                          src="../assets/Tarifs/rougegorge.png"
+                                          alt=""
+                                    />
+
+                                    <div class="bubble_vac_mobile">
+                                          <p>Arrivée samedi</p>
+                                    </div>
+                              </div>
+
+                              <div
+                                    class="tarif__mobile--cards"
+                                    id="vac--cards--tablette"
+                              >
+                                    <!----- Elements mobile ------->
+                                    <div
+                                          class=""
+                                          v-for="tarif in tarifs_vacances"
+                                          :key="tarif.id"
+                                    >
+                                          <div
+                                                class="bg-white rounded-lg max-md:h-[35vh] card"
+                                                data-aos="flip-up"
+                                                v-if="vacMobile"
+                                          >
+                                                <div
+                                                      class="overflow-hidden bg-cover max-md:h-[20vh]"
                                                 >
                                                       <img
                                                             :src="
@@ -584,7 +654,7 @@
                         <!------------ Basse --------------------------->
 
                         <div
-                              class="tarif__basse"
+                              class="tarif__basse vac_tablette"
                               v-on:mouseenter="handleVacance"
                         >
                               <div
@@ -661,6 +731,80 @@
                                                       v-text="tarif.prix"
                                                       class="font-semibold text-2xl"
                                                 ></p>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+
+                        <!------------ Basse mobile --------------------------->
+                        <div
+                              class="basse_mobile"
+                              v-on:click="handleTarifBasseMobile"
+                        >
+                              <div>
+                                    <div
+                                          class="basse_mobile__bird"
+                                          id="basse--awesome--tablette"
+                                          v-if="basseMobileBird"
+                                    >
+                                          <div class="bubble_basse_mobile">
+                                                <p>Arrivée libre</p>
+                                          </div>
+
+                                          <img
+                                                src="../assets/Tarifs/grive_musicienne.png"
+                                                alt="grive musicienne"
+                                                id="tarif__basse--awesome"
+                                          />
+                                    </div>
+
+                                    <div
+                                          class="basse_mobile__card"
+                                          id="basse--card--tablette"
+                                          v-if="basseMobile"
+                                    >
+                                          <div
+                                                class=""
+                                                v-for="tarif in tarifs_basse_saison"
+                                                :key="tarif.id"
+                                          >
+                                                <div
+                                                      class="bg-white rounded-lg max-md:h-[35vh] max-md:mt-[1em]"
+                                                      data-aos="zoom-in-down"
+                                                >
+                                                      <div
+                                                            class="overflow-hidden bg-cover h-[25vh] max-md:h-[25vh] transition-all"
+                                                      >
+                                                            <img
+                                                                  :src="
+                                                                        hoveredImageId ===
+                                                                        tarif.id
+                                                                              ? tarif.photo
+                                                                              : tarif.photo2
+                                                                  "
+                                                                  v-on:mouseover="
+                                                                        onMouseOver(
+                                                                              tarif.id
+                                                                        )
+                                                                  "
+                                                                  v-on:mouseout="
+                                                                        onMouseOut
+                                                                  "
+                                                            />
+                                                      </div>
+
+                                                      <h2
+                                                            v-text="
+                                                                  tarif.periode
+                                                            "
+                                                            class="font-medium"
+                                                      ></h2>
+
+                                                      <p
+                                                            v-text="tarif.prix"
+                                                            class="font-semibold text-2xl"
+                                                      ></p>
+                                                </div>
                                           </div>
                                     </div>
                               </div>
@@ -1088,7 +1232,6 @@ export default {
                   const awesome = document.getElementById(
                         "vac--awesome--tablette"
                   );
-                  //console.log(awesome);
 
                   const bird = document.getElementById("bird--tablette");
 
@@ -1120,6 +1263,22 @@ export default {
                   }, 2000);
 
                   affichePourVotreConfort();
+            };
+
+            // Fonction pour activer le Tarifs Vac pour la version mobile
+            const vacMobile = ref(false);
+            const vacMobileBird = ref(true);
+            const handleTarifVacMobile = () => {
+                  vacMobile.value = true;
+                  vacMobileBird.value = false;
+            };
+
+            // Fonction pour activer le Tarifs Vac pour la version mobile
+            const basseMobile = ref(false);
+            const basseMobileBird = ref(true);
+            const handleTarifBasseMobile = () => {
+                  basseMobile.value = true;
+                  basseMobileBird.value = false;
             };
 
             // basse saison
@@ -1272,39 +1431,27 @@ export default {
                   animeReservation,
                   activeWaveVacance,
                   activeWaveBasse,
+                  vacMobile,
+                  vacMobileBird,
+                  basseMobile,
+                  basseMobileBird,
 
                   afficheAVotreArrive,
                   affichePourVotreConfort,
                   handleBasseSaison,
                   handleVacance,
                   handleVacanceTablette,
+                  handleTarifVacMobile,
+                  handleTarifBasseMobile,
             };
       },
 };
 </script>
 
 <style lang="scss" scoped>
-/*@keyframes sparkle {
-      0% {
-            //transform: translate(0, 0);
-            transform: translateY(0);
-      }
-      /*50% {
-            transform: translate(30px, 50px);
-      }*/
-
-/*75% {
-            transform: translate(100px, 50px);
-      }
-      100% {
-            transform: translateY(-7px);
-            //transform: translate(0, 0);
-      }
-}*/
-
-.mar {
+/*.mar {
       margin-right: 2em;
-}
+}*/
 
 @keyframes moving {
       0% {
@@ -1381,6 +1528,12 @@ export default {
             }
       }
 
+      .vac_tablette {
+            @media screen and (max-width: 550px) {
+                  display: none;
+            }
+      }
+
       &__vac {
             position: relative;
             height: 42vh;
@@ -1430,7 +1583,7 @@ export default {
                         margin: 0 0.2em;
 
                         @media screen and (max-width: 768px) {
-                              font-size: 5em;
+                              font-size: 4em;
                               transform: translate(0.4em, 0.3em);
                         }
 
@@ -1482,6 +1635,10 @@ export default {
                         transition: all 1s ease-in;
                         height: 100%;
 
+                        @media screen and (max-width: 550px) {
+                              display: none;
+                        }
+
                         img {
                               border-radius: 0.5em;
                               display: flex;
@@ -1495,6 +1652,153 @@ export default {
                         }
                   }
             }
+      }
+
+      &__mobile {
+            display: none;
+
+            @media screen and (max-width: 550px) {
+                  display: block;
+            }
+
+            &--bird {
+                  //background: #fff;
+                  display: flex;
+
+                  img {
+                        width: 50%;
+                  }
+            }
+
+            &--cards {
+                  //display: none;
+
+                  .card {
+                        width: 80%;
+                        margin: auto;
+                        margin-top: 1em;
+                  }
+            }
+
+            .bubble_vac_mobile {
+                  position: relative;
+                  background: rgba(8, 160, 69, 0.8);
+                  color: #ffffff;
+                  font-family: Arial;
+                  font-size: 6em;
+                  line-height: 120px;
+                  text-align: center;
+                  width: 50%;
+                  height: 100px;
+                  border-radius: 10px;
+                  padding: 0px;
+                  transform: translate(0.2em, 0.2em);
+                  margin: 0 0.2em;
+
+                  @media screen and (max-width: 550px) {
+                        font-size: 2em;
+                        transform: translate(0.4em, 0.9em);
+                  }
+
+                  &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 0;
+                        z-index: 1;
+                        border-style: solid;
+                        border-width: 0 60px 40px 0;
+                        border-color: transparent rgba(8, 160, 69, 0.8)
+                              transparent transparent;
+                        top: 35%;
+                        left: -92px;
+                        margin-top: -20px;
+
+                        @media screen and (max-width: 550px) {
+                              left: -59px;
+                        }
+                  }
+
+                  p {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 550;
+                        font-family: "Great Vibes", cursive;
+                  }
+            }
+      }
+
+      .basse_mobile {
+            display: none;
+
+            @media screen and (max-width: 550px) {
+                  display: block;
+            }
+
+            &__bird {
+                  display: flex;
+                  margin: 1em 0 3em 0;
+
+                  img{
+                        width: 50%;
+                        transform: translateY(5em);
+                  }
+            }
+
+            &__card{
+                  width: 80%;
+                  margin: auto;
+            }
+
+            .bubble_basse_mobile {
+                        position: relative;
+                        background: rgba(8, 160, 69, 0.8);
+                        color: #ffffff;
+                        font-family: Arial;
+                        font-size: 2em;
+                        line-height: 100px;
+                        text-align: center;
+                        width: 50%;
+                        height: 100px;
+                        border-radius: 10px;
+                        padding: 0px;
+
+                        /*@media screen and (max-width: 550px) {
+                              font-size: 2em;
+                        }*/
+
+                        &::after {
+                              content: "";
+                              position: absolute;
+                              display: block;
+                              width: 0;
+                              z-index: 1;
+                              border-style: solid;
+                              border-width: 40px 0 0 60px;
+                              border-color: transparent transparent transparent
+                                    rgba(8, 160, 69, 0.8);
+                              top: 70%;
+                              right: -92px;
+                              margin-top: -20px;
+
+                              @media screen and (max-width: 768px) {
+                                    right: -90px;
+                              }
+
+                              @media screen and (max-width: 550px) {
+                                    right: -59px;
+                              }
+                        }
+
+                        p {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              font-weight: 550;
+                              font-family: "Great Vibes", cursive;
+                        }
+                  }
       }
 
       &__waves {
@@ -1663,6 +1967,11 @@ export default {
                   height: auto;
             }
 
+            /*@media screen and (max-width: 550px){
+                  height: 25vh;
+                  border: 5px solid red;
+            }*/
+
             &--awesome {
                   position: absolute;
                   width: 100%;
@@ -1697,7 +2006,10 @@ export default {
                         //position: relative;
                         left: 0;
                         opacity: 1;
+                        height: auto;
                   }
+
+                  
             }
       }
 
@@ -1851,7 +2163,7 @@ export default {
             font-weight: 600;
             font-size: 1.2em;
 
-            @media screen and (max-width: 768px){
+            @media screen and (max-width: 768px) {
                   //font-size: 1em;
             }
       }
@@ -1876,6 +2188,10 @@ export default {
                         padding: 0.5em;
                         border-radius: 0.5em;
                         color: blanchedalmond;
+                  }
+
+                  @media screen and (max-width: 550px){
+                        width: 50%;
                   }
             }
       }

@@ -52,7 +52,7 @@
                               -webkit-overflow-scrolling: touch;
                               border: none;
                         "
-                        height="2500"
+                        height="2600"
                         width="100%"
                         src="https://widget.itea.fr/widget.php?key=vk3_8_ia&numGite=818&widget-itea=avis"
                   ></iframe>
@@ -130,7 +130,8 @@ export default {
       }
 
       @media screen and (max-width: 550px) {
-            transform: translateY(-3em);
+            width: 96%;
+            transform: translate(0.5em,-3em);
       }
 }
 

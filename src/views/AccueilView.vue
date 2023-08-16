@@ -48,7 +48,6 @@
                               <img :src="accueil.img" alt="" />
                         </swiper-slide>
                   </swiper>
-
             </div>
 
             <!--La partie de Bienvenue-->
@@ -286,7 +285,11 @@
 // Import Swiper Vue.js components
 import { computed } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { accueils, accueilsTablette, accueilsMobile } from "../database/accueil";
+import {
+      accueils,
+      accueilsTablette,
+      accueilsMobile,
+} from "../database/accueil";
 
 // Import Swiper styles
 import "swiper/css";
@@ -407,7 +410,7 @@ export default {
                         display: none;
                   }*/
 
-                  @media (max-width: 550px){
+                  @media (max-width: 550px) {
                         display: block;
                         width: 90%;
                         height: 300px;
@@ -422,7 +425,6 @@ export default {
                         }
                   }
             }
-
       }
 
       &__description {
@@ -432,11 +434,11 @@ export default {
             margin: auto;
             color: #fff;
 
-            @media screen and (max-width: 768px){
+            @media screen and (max-width: 768px) {
                   margin-top: 2em;
             }
 
-            @media screen and (max-width: 550px){
+            @media screen and (max-width: 550px) {
                   width: 90%;
             }
 
@@ -448,19 +450,21 @@ export default {
                   }
 
                   @media screen and (max-width: 550px) {
-                        font-size: 1.2em;
+                        font-family: "Great Vibes", cursive;
+                        font-size: 1.5em;
+                        font-weight: 600;
                   }
             }
 
             p {
                   @media screen and (max-width: 768px) {
                         //font-family: Arial, Helvetica, sans-serif;
-                        font-family: 'Courier New', Courier, monospace;
+                        //font-family: 'Courier New', Courier, monospace;
                         font-size: 1em;
                   }
 
                   @media screen and (max-width: 550px) {
-                        font-family: Arial, Helvetica, sans-serif;
+                        font-family: "Roboto", sans-serif;
                         //font-size: 0.5em;
                   }
             }
@@ -520,6 +524,8 @@ export default {
                   @media screen and (max-width: 550px) {
                         //width: 90%;
                         //margin: auto;
+                        position: relative;
+                        border: solid 3px saddlebrown;
                   }
 
                   img {
@@ -529,9 +535,15 @@ export default {
 
                         @media screen and (max-width: 550px) {
                               width: 90%;
-                              height: auto;
+                              //height: auto;
                               margin: auto;
                               object-fit: cover;
+                        }
+                  }
+
+                  .items_ping_pong {
+                        @media screen and (max-width: 550px) {
+                              //top: 21em;
                         }
                   }
 
@@ -544,15 +556,37 @@ export default {
                         opacity: 0;
                         transition: all 0.5s ease-in-out;
 
+                        @media screen and (max-width: 768px) {
+                              position: absolute;
+                              top: 10.4em;
+                              //bottom: 5em;
+                              height: 20%;
+                              width: 94%;
+                              opacity: 1;
+                        }
+
+                        @media screen and (max-width: 550px) {
+                              top: 11em;
+                              width: 87%;
+                              transform: translateX(1.1em);
+                              height: 15%;
+                              border: solid 3px rgb(27, 130, 27);
+                        }
+
+                        @media screen and (max-width: 376px){
+                              transform: translateX(1em);
+                        }
+
                         &:hover {
                               opacity: 1;
                               //
                               h2 {
-                                    transform: translateY(00%);
+                                    transform: translateY(0%);
                                     transition: 0.5s;
                                     text-align: left;
                               }
                         }
+
                         //
                         h2 {
                               font-size: 1.5em;
@@ -568,10 +602,20 @@ export default {
                               font-size: 2rem;
                               text-align: left;
 
+                              @media screen and (max-width: 768px) {
+                                    transform: translateY(0);
+                                    font-size: 1.5em;
+                                    border-radius: 0.1em;
+                              }
+
                               .plus {
                                     font-size: 1.5em;
                                     display: block;
                                     margin: 0 1em;
+
+                                    @media screen and (max-width: 768px){
+                                          display: none;
+                                    }
 
                                     &:hover {
                                           font-size: 1.7em;

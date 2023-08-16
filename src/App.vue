@@ -20,6 +20,7 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
@@ -36,14 +37,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background: url('../src/assets/Cormier/cormier_background.jpg');
-  //background: url('../public/pictures/Jardin/photo_jardin20.jpg');
   background-attachment: scroll;
-  //background-attachment: fixed;
   font-family: 'Poppins', sans-serif;
   
 
   @media screen and (max-width: 768px) {
     font-family: 'Poppins', sans-serif;
+  }
+
+  @media screen and (max-width: 550px) {
+    font-family: 'Roboto', sans-serif;
   }
 }
 

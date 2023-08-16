@@ -11,20 +11,26 @@
                         >
                   </button>
 
-                  <button class="bg-white rounded-lg gallerie__return--tablette">
+                  <button
+                        class="bg-white rounded-lg gallerie__return--tablette"
+                  >
                         <router-link to="/descriptifs">
-                              <font-awesome-icon
-                                    :icon="['fass', 'arrow-left']"
-                              /></router-link
-                        >
+                              <font-awesome-icon :icon="['fass', 'arrow-left']"
+                        /></router-link>
                   </button>
             </div>
 
             <!------------------- CHAMBRE DU REZ DE CHAUSSE -------------------------------------->
             <div class="gallerie__frame" id="chambre-rez-de-chaussee">
-                  <h1 class="title bubble-bottom w-[100%]">
-                        La chambre au rez de chaussée
-                  </h1>
+                  <div class="titres">
+                        <h1 class="title bubble-bottom w-[100%]">
+                              La chambre au rez de chaussée
+                        </h1>
+
+                        <h1 class="title__mobile w-[100%]">
+                              La chambre au rez de chaussée
+                        </h1>
+                  </div>
 
                   <div class="gallerie__frame--images mb-4">
                         <div v-for="rdc in chambresRdc" :key="rdc.id">
@@ -43,10 +49,16 @@
             </div>
 
             <!------------------- CUISINE DU REZ DE CHAUSSE -------------------------------------->
-            <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom w-[100%]" id="cuisine">
-                        La cuisine
-                  </h1>
+            <div class="gallerie__frame" id="cuisine">
+                  <div class="titres">
+                        <h1 class="title bubble-bottom w-[100%]">
+                              La cuisine
+                        </h1>
+
+                        <h1 class="title__mobile w-[100%]">
+                              La cuisine
+                        </h1>
+                  </div>
 
                   <div class="gallerie__frame--images mb-4">
                         <div v-for="cuisine in cuisines" :key="cuisine.id">
@@ -78,10 +90,16 @@
             </div>
 
             <!------------------- SALON DU REZ DE CHAUSSE -------------------------------------->
-            <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom w-[100%]" id="salon">
-                        Le salon
-                  </h1>
+            <div class="gallerie__frame" id="salon">
+                  <div class="titres">
+                        <h1 class="title bubble-bottom w-[100%]">
+                              Le salon
+                        </h1>
+
+                        <h1 class="title__mobile w-[100%]">
+                              Le salon
+                        </h1>
+                  </div>
 
                   <div class="gallerie__frame--images mb-4">
                         <div v-for="salon in salons" :key="salon.id">
@@ -113,10 +131,16 @@
             </div>
 
             <!------------------- SALLE A MANGER -------------------------------------->
-            <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom" id="salle-a-manger">
-                        La salle à manger
-                  </h1>
+            <div class="gallerie__frame" id="salle-a-manger">
+                  <div class="titres">
+                        <h1 class="title bubble-bottom w-[100%]">
+                              La salle à manger
+                        </h1>
+
+                        <h1 class="title__mobile w-[100%]">
+                              La salle à manger
+                        </h1>
+                  </div>
 
                   <div class="gallerie__frame--images mb-4">
                         <div v-for="salle in sallesAManger" :key="salle.id">
@@ -147,10 +171,16 @@
             </div>
 
             <!------------------- SALLE DE BAIN -------------------------------------->
-            <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom" id="salle-de-bain">
-                        La salle de bain
-                  </h1>
+            <div class="gallerie__frame" id="salle-de-bain">
+                  <div class="titres">
+                        <h1 class="title bubble-bottom w-[100%]">
+                              La salle de bain
+                        </h1>
+
+                        <h1 class="title__mobile w-[100%]">
+                              La salle de bain
+                        </h1>
+                  </div>
 
                   <div class="gallerie__frame--images mb-4">
                         <div v-for="salle in sallesDeBain" :key="salle.id">
@@ -168,10 +198,16 @@
 
             <!------------------- 1 ER ETAGE -- CHAMBRE PALIERE -------------------------------->
 
-            <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom" id="chambre-paliere">
-                        La chambre palière à l'étage
-                  </h1>
+            <div class="gallerie__frame" id="chambre-paliere">
+                  <div class="titres">
+                        <h1 class="title bubble-bottom w-[100%]">
+                              La chambre palière à l'étage
+                        </h1>
+
+                        <h1 class="title__mobile w-[100%]">
+                              La chambre palière à l'étage
+                        </h1>
+                  </div>
 
                   <div class="gallerie__frame--images mb-4">
                         <div
@@ -207,10 +243,16 @@
 
             <!--------------------1 ER ETAGE -- CHAMBRE 2 LITS ----------------------------------------->
 
-            <div class="gallerie__frame">
-                  <h1 class="title bubble-bottom" id="chambre2lits">
-                        La chambre 2 lits à l'étage
-                  </h1>
+            <div class="gallerie__frame" id="chambre2lits">
+                  <div class="titres">
+                        <h1 class="title bubble-bottom w-[100%]">
+                              La chambre 2 lits à l'étage
+                        </h1>
+
+                        <h1 class="title__mobile w-[100%]">
+                              La chambre 2 lits à l'étage
+                        </h1>
+                  </div>
 
                   <div class="gallerie__frame--images mb-4">
                         <div
@@ -247,7 +289,15 @@
             <!-------------------- JARDIN ----------------------------------------->
 
             <div class="gallerie__frame" id="jardin">
-                  <h1 class="title bubble-bottom">Le jardin</h1>
+                  <div class="titres">
+                        <h1 class="title bubble-bottom w-[100%]">
+                              Le jardin
+                        </h1>
+
+                        <h1 class="title__mobile w-[100%]">
+                              Le jardin
+                        </h1>
+                  </div>
 
                   <div class="gallerie__frame--images mb-4">
                         <div v-for="jardin in jardins" :key="jardin.id">
@@ -410,13 +460,15 @@ export default {
       position: relative;
       overflow: hidden;
 
-      @media screen and (max-width: 768px){
+      @media screen and (max-width: 768px) {
             margin-top: 3em;
       }
 
       &__return {
             position: fixed;
             transform: translateY(20em);
+            z-index: 10;
+            //border: 2px solid red;
 
             button {
                   background: rgb(22, 163, 74);
@@ -429,18 +481,22 @@ export default {
                   }
             }
 
-            &--pc{
-                  @media screen and (max-width: 768px){
+            &--pc {
+                  @media screen and (max-width: 768px) {
                         display: none;
                   }
             }
 
-            &--tablette{
+            &--tablette {
                   display: none;
 
-                  @media screen and (max-width: 768px){
+                  @media screen and (max-width: 768px) {
                         display: block;
                         margin-left: 0.3em;
+                  }
+
+                  @media screen and (max-width: 550px) {
+                        margin-left: 0em;
                   }
             }
       }
@@ -453,6 +509,11 @@ export default {
             @media screen and (max-width: 768px) {
                   width: 95%;
                   transform: translateX(0.5em);
+            }
+
+            @media screen and (max-width: 550px) {
+                  //width: 100%;
+                  transform: translateX(-0.6em);
             }
 
             &--images {
@@ -468,6 +529,11 @@ export default {
                         grid-gap: 1em;
                   }
 
+                  @media screen and (max-width: 550px) {
+                        margin-top: 0.5em;
+                        grid-gap: 0.5em;
+                  }
+
                   div {
                         grid-column: span 12;
 
@@ -475,8 +541,12 @@ export default {
                               grid-row: auto;
                               padding: 0 6.4em;
 
-                              @media screen and (max-width: 768px){
+                              @media screen and (max-width: 768px) {
                                     padding: 0 3.4em;
+                              }
+
+                              @media screen and (max-width: 476px) {
+                                    padding: 0 2em;
                               }
                         }
 
@@ -504,9 +574,13 @@ export default {
                               margin-bottom: 0.5em;
                               border-radius: 0.1em;
 
-                              @media screen and (max-width: 768px){
+                              @media screen and (max-width: 768px) {
                                     width: 30%;
                                     margin-right: 0.5em;
+                              }
+
+                              @media screen and (max-width: 768px){
+                                    width: 45%;
                               }
                         }
                   }
@@ -528,17 +602,50 @@ export default {
             }
       }
 
-      .title {
-            margin: auto;
-            padding: 0.3em;
-            border-radius: 50%;
-            background: rgb(22, 163, 74);
-            color: #fff;
-            margin-bottom: 1em;
-            font-weight: 600;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+      .titres {
+            //margin-bottom: 0.5em;
+            @media screen and (max-width: 550px){
+                  width: 50%;
+                  margin: auto;
+            }
+            .title {
+                  margin: auto;
+                  padding: 0.3em;
+                  //border-radius: 50%;
+                  background: rgb(22, 163, 74);
+                  color: #fff;
+                  margin-bottom: 1em;
+                  font-weight: 600;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  @media screen and (max-width: 550px) {
+                        display: none;
+                        //font-size: 0.9em;
+                  }
+
+                  &__mobile {
+                        display: none;
+
+                        @media screen and (max-width: 550px) {
+                              display: block;
+                              background: rgb(22, 163, 74);
+                              color: #fff;
+                              margin-bottom: 1em;
+                              font-weight: 600;
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              padding: 0.3em;
+                              width: auto;
+                              margin: auto;
+                              border-radius: 0.5em;
+                              font-size: 0.8em;
+                              transform: translateX(1em);
+                        }
+                  }
+            }
       }
 
       .bubble-bottom {

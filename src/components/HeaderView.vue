@@ -265,6 +265,7 @@ export default {
       @media screen and (max-width: 550px) {
             display: flex;
             font-family: Arial, Helvetica, sans-serif;
+            height: 7vh;
             //font-family: "Poppins", sans-serif;
       }
 
@@ -325,7 +326,8 @@ export default {
             }
 
             @media screen and (max-width: 550px) {
-                  width: 100%;
+                  //width: 100%;
+                  transform: translateY(-0.2em);
             }
       }
 
@@ -457,7 +459,7 @@ export default {
                         position: absolute;
 
                         //right: -100em;
-                        top: 5em;
+                        top: 3.55em;
                         left: 0em;
                         //transition: 20s linear all;
                         //right: 0;

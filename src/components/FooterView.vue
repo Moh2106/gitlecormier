@@ -17,7 +17,7 @@
     </div>
 
     <!-------------------- -- RESEAUX SOCIAUX ------------------------>
-    <div>
+    <div class="reseau">
         <h2 class="mb-4">Réseaux sociaux</h2>
         <div class="contact__icons">
             <p class="px-8" title="facebook ">
@@ -29,7 +29,7 @@
     </div>
 
     <!-------------------- -- GOOGLE MAPS ------------------------>
-    <div>
+    <div class="reseau">
         <h2 class="mb-4"> 
             <span class="font-bold">
                 <span class="text-blue-500">G</span> <span class="text-red-600">o</span> <span class=" text-yellow-500">o</span> <span class="text-blue-500">g</span> <span class=" text-green-500">l</span> <span class="text-red-600">e</span>
@@ -81,10 +81,17 @@ export default {
         }
 
         @media screen and (max-width : 550px) {
-            padding-top: 1.5em;
-            height: 40vh;
-            font-size: 0.8em;
-            font-weight: 500;
+            //padding-top: 1.5em;
+            //height: 40vh;
+            //font-size: 0.8em;
+            //font-weight: 500;
+            display: block;
+        }
+
+        div{
+            @media screen and (max-width : 550px){
+                margin-bottom: 1em;
+            }
         }
 
         address{
@@ -95,11 +102,24 @@ export default {
             }
         }
 
+        .reseau{
+            h2{
+                @media screen and (max-width : 550px){
+                    margin-bottom: 0;
+                }
+            }
+        }
+
         .liens{
             width: 18%;
 
             @media screen and (max-width : 768px){
                 width: 19%;
+            }
+
+            @media screen and (max-width : 550px){
+                width: 70%;
+                margin: auto;
             }
             
             &__logo{
