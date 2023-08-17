@@ -1497,6 +1497,10 @@ export default {
             margin-top: 2em;
       }
 
+      @media screen and (max-width: 550px){
+            margin-top: 1em;
+      }
+
       &__part_one {
             width: 25%;
             height: auto;
@@ -2187,7 +2191,7 @@ export default {
                         margin: auto;
                         padding: 0.5em;
                         border-radius: 0.5em;
-                        color: blanchedalmond;
+                        color: #fff;
                   }
 
                   @media screen and (max-width: 550px){

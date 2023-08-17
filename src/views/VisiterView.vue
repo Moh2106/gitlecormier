@@ -104,6 +104,11 @@ export default {
             margin-top: 1.5em;
             font-family: Arial, Helvetica, sans-serif;
       }
+
+       @media screen and (max-width: 550px) {
+            margin-top: 0em;
+            //padding-top: 3em;
+      }
 }
 .paragraph {
       width: 90%;

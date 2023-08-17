@@ -217,21 +217,9 @@ export default {
             width: 99%;
       }
 
-      /*&__search {
-            text-align: left;
-
-            input {
-                  width: 30%;
-                  border: none;
-                  padding: 0.8em;
-                  border-radius: 0.5em;
-
-                  &:focus {
-                        border: 2px solid #08a045;
-                        outline-color: #08a045;
-                  }
-            }
-      }*/
+      @media screen and (max-width: 550px){
+            margin-top: 0.5em;
+      }
 
       .monEnsemble {
             display: grid;

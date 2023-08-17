@@ -86,6 +86,10 @@ export default {
             width: 95%;
             margin-top: 2em;
       }
+
+      @media screen and (max-width: 550px){
+            margin-top: 0em;
+      }
 }
 
 .paragraph {
@@ -131,6 +135,7 @@ export default {
 
       @media screen and (max-width: 550px) {
             width: 96%;
+            padding: 1em;
             transform: translate(0.5em,-3em);
       }
 }

@@ -1120,6 +1120,7 @@ export default {
       @media screen and (max-width: 550px) {
             width: 95%;
             font-size: 0.9em;
+            padding-top: 3em;
       }
 
       &__paragraph {
@@ -1359,6 +1360,7 @@ export default {
                         display: none;
                         //background: red;
                         width: 70%;
+                        //font-weight: 300;
                   }
                   
             }

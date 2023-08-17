@@ -1,4 +1,4 @@
-<template class="relative">
+<template>
       <div class="header">
             <div class="first">
                   <div class="flex">
@@ -247,7 +247,7 @@ export default {
       bottom: 0;
       right: 0;
       left: 0;
-      z-index: 100000;
+      z-index: 1000;
       width: 100%;
       //border: 4px solid red;
 
@@ -257,7 +257,7 @@ export default {
             justify-content: space-between;
             align-items: center;
             background: #fff;
-            height: 10vh;
+            height: 9vh;
             width: 100wh;
             //position: relative;
       }
@@ -286,6 +286,12 @@ export default {
 
             @media screen and (max-width: 550px) {
                   //background: #fff;
+            }
+
+            img{
+                  @media screen and (max-width: 550px){
+                        width: 12%;
+                  }
             }
 
             &__drap {
@@ -459,7 +465,7 @@ export default {
                         position: absolute;
 
                         //right: -100em;
-                        top: 3.55em;
+                        top: 4.5em;
                         left: 0em;
                         //transition: 20s linear all;
                         //right: 0;

@@ -333,28 +333,7 @@
             <div class="gallerie__popup">
                   <span @click="fermer" class="fermer">&times;</span>
                   <div class="flex items-center justify-between">
-                        <!----<span
-                              class="bg-[rgb(22,163,74)] text-2xl border-green-600 mt-[25%] p-2"
-                        >
-                              <button v-on:click="prev">
-                                    <font-awesome-icon
-                                          :icon="['fass', 'arrow-left']"
-                                          class="text-white"
-                                    />
-                              </button>
-                        </span>-->
-
-                        <!-- Dans cette partie les images cliqués s'afficheront -->
                         <img src="" alt="" />
-
-                        <!----<span class="bg-[rgb(22,163,74)] text-2xl mt-[25%] p-2">
-                              <button v-on:click="next" id="previous">
-                                    <font-awesome-icon
-                                          :icon="['fass', 'arrow-right']"
-                                          class="text-white"
-                                    />
-                              </button>
-                        </span>-->
                   </div>
             </div>
 
@@ -462,6 +441,10 @@ export default {
 
       @media screen and (max-width: 768px) {
             margin-top: 3em;
+      }
+
+      @media screen and (max-width: 550px) {
+            margin-top: 1em;
       }
 
       &__return {
@@ -703,6 +686,10 @@ export default {
                   width: 80%;
                   height: 90vh;
                   object-fit: contain;
+
+                  @media screen and (max-width: 550px){
+                        width: 95%;
+                  }
             }
       }
 

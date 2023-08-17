@@ -374,6 +374,9 @@ export default {
 
 <style lang="scss" scoped>
 .accueil {
+      @media screen and (max-width: 550px) {
+            padding-top: 3em;
+      }
       &__swipe {
             .monSwipe {
                   width: 70%;
@@ -536,6 +539,7 @@ export default {
                         @media screen and (max-width: 550px) {
                               width: 90%;
                               //height: auto;
+                              //height: auto;
                               margin: auto;
                               object-fit: cover;
                         }
@@ -573,7 +577,7 @@ export default {
                               //border: solid 3px rgb(27, 130, 27);
                         }
 
-                        @media screen and (max-width: 376px){
+                        @media screen and (max-width: 376px) {
                               transform: translateX(1em);
                         }
 
@@ -613,7 +617,7 @@ export default {
                                     display: block;
                                     margin: 0 1em;
 
-                                    @media screen and (max-width: 768px){
+                                    @media screen and (max-width: 768px) {
                                           display: none;
                                     }
 
@@ -648,6 +652,12 @@ export default {
                         width: 90%;
                         margin: 0.5em auto;
                   }
+
+                  @media screen and (max-width: 550px) {
+                        //display: block;
+                        width: 98%;
+                        //margin: 0.5em auto;
+                  }
             }
 
             &--main {
@@ -655,6 +665,10 @@ export default {
                   top: 50%;
                   left: 50%;
                   transform: translate(-50%, -50%);
+
+                  @media screen and (max-width: 550px){
+                        transform: translate(-50%, -55%);
+                  }
             }
 
             span {
