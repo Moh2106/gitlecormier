@@ -86,7 +86,7 @@
                                     data-aos="fade-left"
                                     data-aos-duration="500"
                                     data-aos-easing="ease-in"
-                                    class="max-md:font-normal"
+                                    class="max-md:font-light"
                               >
                                     {{
                                           chooseEnglishVersion
