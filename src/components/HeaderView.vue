@@ -453,15 +453,9 @@ export default {
 
             @media screen and (max-width: 768px) {
                   display: block;
-                  //left: -500px;
-                  //top : 5em;
-                  //right: -500px;
-                  //width: 100%;
-                  //transition: 20s linear all;
 
                   nav {
                         width: 100%;
-                        //display: none;
                         position: absolute;
 
                         //right: -100em;
@@ -469,6 +463,10 @@ export default {
                         left: 0em;
                         //transition: 20s linear all;
                         //right: 0;
+
+                        @media screen and (max-width: 550px){
+                              top: 3.5em;
+                        }
 
                         a {
                               background: #08a045;
