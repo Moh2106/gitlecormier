@@ -86,6 +86,7 @@
                                     data-aos="fade-left"
                                     data-aos-duration="500"
                                     data-aos-easing="ease-in"
+                                    class="max-md:font-normal"
                               >
                                     {{
                                           chooseEnglishVersion
@@ -1363,11 +1364,6 @@ export default {
                         //font-weight: 300;
                   }
 
-                  li{
-                         @media screen and (max-width: 550px) {
-                              font-weight: 300;
-                         }
-                  }
                   
             }
 
