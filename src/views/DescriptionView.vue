@@ -1365,7 +1365,7 @@ export default {
 
                   li{
                          @media screen and (max-width: 550px) {
-                              font-family: Arial, Helvetica, sans-serif;
+                              font-weight: 300;
                          }
                   }
                   
