@@ -486,6 +486,7 @@ export default {
 
             @media screen and (max-width: 550px) {
                   width: 90%;
+                  margin-top: 1em;
             }
 
             video {
@@ -572,7 +573,7 @@ export default {
                         @media screen and (max-width: 550px) {
                               top: 11em;
                               width: 87%;
-                              transform: translateX(1.1em);
+                              transform: translateX(0.9em);
                               height: 15%;
                               //border: solid 3px rgb(27, 130, 27);
                         }
