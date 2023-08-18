@@ -180,6 +180,10 @@ export default {
             margin-top: 3em;
       }
 
+      @media screen and (max-width: 550px){
+            margin-top: 0em;
+      }
+
       &__soleil {
             width: 30%;
             position: absolute;
@@ -204,7 +208,7 @@ export default {
                   border-radius: 0.5em;
 
                   @media screen and (max-width: 768px) {
-                        transform: translateY(-13em);
+                        transform: translateY(-13.5em);
                   }
 
                   @media screen and (max-width: 475px) {

@@ -1183,7 +1183,7 @@ export default {
                   if (cptTablette < 1) {
                         //animeTarifVac = true
                         intervalTablette(), tarifVacTablette();
-                        console.log("OK");
+                        //console.log("OK");
                         ++cptTablette;
                   }
             };
@@ -1668,6 +1668,7 @@ export default {
             &--bird {
                   //background: #fff;
                   display: flex;
+                  margin: 4em 0;
 
                   img {
                         width: 50%;
@@ -1681,6 +1682,7 @@ export default {
                         width: 80%;
                         margin: auto;
                         margin-top: 1em;
+                        margin-bottom: 1em;
                   }
             }
 
@@ -1719,7 +1721,7 @@ export default {
                         margin-top: -20px;
 
                         @media screen and (max-width: 550px) {
-                              left: -59px;
+                              left: -60px;
                         }
                   }
 
@@ -1742,7 +1744,7 @@ export default {
 
             &__bird {
                   display: flex;
-                  margin: 1em 0 3em 0;
+                  margin: 4em 0;
 
                   img{
                         width: 50%;
@@ -1791,7 +1793,7 @@ export default {
                               }
 
                               @media screen and (max-width: 550px) {
-                                    right: -59px;
+                                    right: -59.5px;
                               }
                         }
 
