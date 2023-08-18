@@ -457,6 +457,7 @@ export default {
                   nav {
                         width: 100%;
                         position: absolute;
+                        text-align: left;
 
                         //right: -100em;
                         top: 4.5em;
