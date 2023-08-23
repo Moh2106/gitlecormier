@@ -214,6 +214,10 @@ export default {
                   @media screen and (max-width: 475px) {
                         transform: translateY(-11em);
                   }
+
+                  @media screen and (max-width: 376px) {
+                        transform: translateY(-10em);
+                  }
             }
 
             &--pc {

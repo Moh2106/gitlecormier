@@ -217,7 +217,7 @@ export default {
             width: 99%;
       }
 
-      @media screen and (max-width: 550px){
+      @media screen and (max-width: 550px) {
             margin-top: 0.5em;
       }
 
@@ -264,6 +264,11 @@ export default {
                   height: 8vh;
             }
 
+            @media screen and (max-width: 550px) {
+                  width: 45%;
+                  margin-bottom: 0.5em;
+            }
+
             &::after {
                   content: "";
                   position: absolute;
@@ -277,6 +282,10 @@ export default {
                   bottom: -20px;
                   left: 50%;
                   margin-left: -10px;
+
+                  @media screen and (max-width: 550px) {
+                        bottom: -19.5px;
+                  }
             }
       }
 
@@ -304,8 +313,8 @@ export default {
                   rgba(0, 0, 0, 0.12) 0px 4px 6px,
                   rgba(0, 0, 0, 0.17) 0px 12px 13px,
                   rgba(0, 0, 0, 0.09) 0px -3px 5px;
-            
-            @media screen and (max-width: 768px){
+
+            @media screen and (max-width: 768px) {
                   width: 95%;
             }
 
