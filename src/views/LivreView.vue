@@ -82,7 +82,7 @@ export default {
       width: 90%;
       margin: auto;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             width: 95%;
             margin-top: 2em;
       }
@@ -93,7 +93,7 @@ export default {
 }
 
 .paragraph {
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             height: auto;
             display: block;
             font-size: 0.9em;
@@ -108,7 +108,7 @@ export default {
 .avisEtoile {
       height: 17vh;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             width: 100%;
       }
 
@@ -128,7 +128,7 @@ export default {
       border-radius: 0.5em;
       padding: 0.5rem;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             transform: translateY(-3em);
             font-size: 1em;
       }
@@ -141,7 +141,7 @@ export default {
 }
 
 .avis {
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             transform: translateY(-2.5em);
       }
 
@@ -159,7 +159,7 @@ export default {
 .phone {
       display: none;
 
-      /*@media screen and (max-width: 768px) {
+      /*@media screen and (max-width: 769px) {
             display: none;
       }*/
 

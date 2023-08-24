@@ -41,7 +41,7 @@ export default {
   font-family: 'Poppins', sans-serif;
   
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 769px) {
     font-family: 'Poppins', sans-serif;
   }
 

@@ -439,7 +439,7 @@ export default {
       position: relative;
       overflow: hidden;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             margin-top: 3em;
       }
 
@@ -465,7 +465,7 @@ export default {
             }
 
             &--pc {
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         display: none;
                   }
             }
@@ -473,7 +473,7 @@ export default {
             &--tablette {
                   display: none;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         display: block;
                         margin-left: 0.3em;
                   }
@@ -489,7 +489,7 @@ export default {
             margin: auto;
             transform: translateX(2em);
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   width: 95%;
                   transform: translateX(0.5em);
             }
@@ -508,7 +508,7 @@ export default {
                   transform: translateX(2em);
                   margin-bottom: 1em;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         grid-gap: 1em;
                   }
 
@@ -524,7 +524,7 @@ export default {
                               grid-row: auto;
                               padding: 0 6.4em;
 
-                              @media screen and (max-width: 768px) {
+                              @media screen and (max-width: 769px) {
                                     padding: 0 3.4em;
                               }
 
@@ -557,12 +557,12 @@ export default {
                               margin-bottom: 0.5em;
                               border-radius: 0.1em;
 
-                              @media screen and (max-width: 768px) {
+                              @media screen and (max-width: 769px) {
                                     width: 30%;
                                     margin-right: 0.5em;
                               }
 
-                              @media screen and (max-width: 768px){
+                              @media screen and (max-width: 769px){
                                     width: 45%;
                               }
                         }

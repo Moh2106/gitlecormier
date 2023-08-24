@@ -100,7 +100,7 @@ export default {
 .visite {
       transition: 0.25s ease-in;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             margin-top: 1.5em;
             font-family: Arial, Helvetica, sans-serif;
       }
@@ -115,7 +115,7 @@ export default {
       margin: auto;
       text-align: justify;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             width: 95%;
             margin-bottom: 1em;
       }
@@ -133,7 +133,7 @@ export default {
 .visiter {
       height: 85vh;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             //border: 3px solid red;
             height: auto;
             display: block;
@@ -151,14 +151,14 @@ export default {
       }
 
       &__carte {
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   width: 100%;
                   margin: 0em;
             }
       }
 
       &__description {
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   width: 100%;
                   margin-bottom: 1em;
                   margin-top: 2em;

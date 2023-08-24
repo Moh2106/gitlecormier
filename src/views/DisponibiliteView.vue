@@ -176,7 +176,7 @@ export default {
       width: 100%;
       position: relative;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             margin-top: 3em;
       }
 
@@ -191,7 +191,7 @@ export default {
             left: -15%;
             opacity: 0;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   width: 50%;
                   opacity: 1;
             }
@@ -207,7 +207,7 @@ export default {
                   color: #fff;
                   border-radius: 0.5em;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         transform: translateY(-13.5em);
                   }
 
@@ -221,7 +221,7 @@ export default {
             }
 
             &--pc {
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         display: none;
                   }
             }
@@ -229,7 +229,7 @@ export default {
             &--tablette {
                   display: none;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         //opacity: 1;
                         display: block;
                         opacity: 0;
@@ -241,7 +241,7 @@ export default {
             width: 90%;
             color: #ccc;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   width: 99%;
                   margin: auto;
             }
@@ -260,7 +260,7 @@ export default {
             &--mobile {
                   display: none;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         display: none;
                   }
 

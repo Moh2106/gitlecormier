@@ -402,7 +402,7 @@ export default {
                   height: 65vh;
                   margin-bottom: 1.5em;
 
-                  @media (max-width: 768px) {
+                  @media (max-width: 769px) {
                         display: none;
                   }
 
@@ -421,7 +421,7 @@ export default {
             .monSwipeTablette {
                   display: none;
 
-                  @media (max-width: 768px) {
+                  @media (max-width: 769px) {
                         display: block;
                         width: 80%;
                         height: 50vh;
@@ -456,7 +456,7 @@ export default {
             margin: auto;
             color: #fff;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   margin-top: 2em;
             }
 
@@ -467,7 +467,7 @@ export default {
             h1 {
                   font-size: 2em;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         font-size: 1.3em;
                   }
 
@@ -479,7 +479,7 @@ export default {
             }
 
             p {
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         //font-family: Arial, Helvetica, sans-serif;
                         //font-family: 'Courier New', Courier, monospace;
                         font-size: 1em;
@@ -499,7 +499,7 @@ export default {
             margin-bottom: 2em;
             object-fit: cover;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   width: 80%;
             }
 
@@ -523,7 +523,7 @@ export default {
             justify-content: center;
             align-items: center;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   //width: 90%;
                   display: grid;
                   grid-template-columns: repeat(2, 1fr);
@@ -580,7 +580,7 @@ export default {
                         opacity: 0;
                         transition: all 0.5s ease-in-out;
 
-                        @media screen and (max-width: 768px) {
+                        @media screen and (max-width: 769px) {
                               position: absolute;
                               top: 10.4em;
                               //bottom: 5em;
@@ -626,7 +626,7 @@ export default {
                               font-size: 2rem;
                               text-align: left;
 
-                              @media screen and (max-width: 768px) {
+                              @media screen and (max-width: 769px) {
                                     transform: translateY(0);
                                     font-size: 1.5em;
                                     border-radius: 0.1em;
@@ -637,7 +637,7 @@ export default {
                                     display: block;
                                     margin: 0 1em;
 
-                                    @media screen and (max-width: 768px) {
+                                    @media screen and (max-width: 769px) {
                                           display: none;
                                     }
 
@@ -667,7 +667,7 @@ export default {
             backdrop-filter: contrast(40%) brightness(90%) blur(10px);
 
             div {
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         display: block;
                         width: 90%;
                         margin: 0.5em auto;
@@ -701,7 +701,7 @@ export default {
                   cursor: pointer;
                   z-index: 100000;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         font-size: 50px;
                   }
             }

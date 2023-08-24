@@ -212,7 +212,7 @@ export default {
       padding-bottom: 2em;
       transition: 0.25s ease-in;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             margin-top: 1.5em;
             width: 99%;
       }
@@ -225,7 +225,7 @@ export default {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   width: 100%;
                   grid-template-columns: repeat(2, 1fr);
                   grid-gap: 0.1em;
@@ -237,7 +237,7 @@ export default {
             }
 
             /*&__element{
-                  @media screen and (max-width: 768px){
+                  @media screen and (max-width: 769px){
                         width: 100%;
                   }
             }*/
@@ -259,7 +259,7 @@ export default {
             border-radius: 10px;
             padding: 0px;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   width: 40%;
                   height: 8vh;
             }
@@ -298,7 +298,7 @@ export default {
             border-radius: 0.5em;
             margin: 2.5em 0 1em 0;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   font-family: Arial, Helvetica, sans-serif;
             }
       }
@@ -314,7 +314,7 @@ export default {
                   rgba(0, 0, 0, 0.17) 0px 12px 13px,
                   rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   width: 95%;
             }
 
@@ -326,7 +326,7 @@ export default {
                         display: block;
                         background: rgba(170, 221, 204, 0.5);
 
-                        @media screen and (max-width: 768px) {
+                        @media screen and (max-width: 769px) {
                               display: none;
                         }
 
@@ -382,7 +382,7 @@ export default {
                               background: rgb(22, 163, 74);
                               border: none;
 
-                              @media screen and (max-width: 768px) {
+                              @media screen and (max-width: 769px) {
                                     width: 50%;
                               }
 
@@ -396,13 +396,13 @@ export default {
 
             &--description {
                   .description_tablette_screen {
-                        @media screen and (max-width: 768px) {
+                        @media screen and (max-width: 769px) {
                               display: flex;
                               justify-content: center;
                         }
 
                         button {
-                              @media screen and (max-width: 768px) {
+                              @media screen and (max-width: 769px) {
                                     padding: 0.5em;
                                     margin: 0 0.5em 0.5em 0.3em;
                               }
@@ -412,7 +412,7 @@ export default {
                   .mapButton_tablette_screen {
                         display: none;
 
-                        @media screen and (max-width: 768px) {
+                        @media screen and (max-width: 769px) {
                               display: block;
                         }
                   }
@@ -446,7 +446,7 @@ export default {
                   color: #fff;
                   transform: translateX(2.5em);
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         transform: translateX(0em);
                   }
             }

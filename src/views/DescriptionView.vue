@@ -1041,7 +1041,7 @@ export default {
       height: 55vh;
       width: 100%;
 
-      @media screen and (max-width: 768px){
+      @media screen and (max-width: 769px){
             margin-top: 1em;
             height: 350px;
       }
@@ -1112,7 +1112,7 @@ export default {
       width: 80%;
       margin: auto;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             width: 80%;
             margin-top: 1.5em ;
       }
@@ -1131,7 +1131,7 @@ export default {
             margin-bottom: 1em;
             font-size: 0.9em;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   //font-size: 1em;
                   font-family: Arial, Helvetica, sans-serif;
                   //border: 4px solid red;
@@ -1150,7 +1150,7 @@ export default {
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
                   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   width: 40%;
                   //font-weight: 600;
             }
@@ -1164,7 +1164,7 @@ export default {
       .plan {
             position: relative;
 
-            @media screen and (max-width: 768px){
+            @media screen and (max-width: 769px){
                   width: 85%;
                   //margin: auto;
                   //border: 2px solid #08a045;
@@ -1330,7 +1330,7 @@ export default {
             width: 90%;
             //max-width: 90vw;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   //display: flex;
                   width: 80%;
                   display: flex;
@@ -1375,7 +1375,7 @@ export default {
             }
 
             div {
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         width: 100%;
                         font-family: Arial, Helvetica, sans-serif;
                   }

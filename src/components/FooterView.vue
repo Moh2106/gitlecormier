@@ -71,7 +71,7 @@ export default {
         color: #fff;
         padding: 0 2em;
 
-        @media screen and (max-width : 768px) {
+        @media screen and (max-width : 769px) {
             height: auto;
             //display: block;
             font-weight: 500;
@@ -96,7 +96,7 @@ export default {
 
         address{
             p{
-                @media screen and (max-width : 768px){
+                @media screen and (max-width : 769px){
                     margin: 0;
                 }
             }
@@ -113,7 +113,7 @@ export default {
         .liens{
             width: 18%;
 
-            @media screen and (max-width : 768px){
+            @media screen and (max-width : 769px){
                 width: 19%;
             }
 

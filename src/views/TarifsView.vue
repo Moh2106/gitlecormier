@@ -1493,7 +1493,7 @@ export default {
       width: 95%;
       margin: auto;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             margin-top: 2em;
       }
 
@@ -1506,7 +1506,7 @@ export default {
             height: auto;
             margin-right: 3em;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   display: none;
             }
 
@@ -1527,7 +1527,7 @@ export default {
       &__second_part {
             width: 100%;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   display: none;
             }
       }
@@ -1544,7 +1544,7 @@ export default {
             margin-bottom: 2em;
             //border: 2px solid red;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   margin-top: 1em;
                   height: 30vh;
             }
@@ -1586,7 +1586,7 @@ export default {
                         transform: translate(0.2em, 0.5em);
                         margin: 0 0.2em;
 
-                        @media screen and (max-width: 768px) {
+                        @media screen and (max-width: 769px) {
                               font-size: 4em;
                               transform: translate(0.4em, 0.3em);
                         }
@@ -1605,7 +1605,7 @@ export default {
                               left: -92px;
                               margin-top: -20px;
 
-                              @media screen and (max-width: 768px) {
+                              @media screen and (max-width: 769px) {
                                     left: -91px;
                               }
                         }
@@ -1629,7 +1629,7 @@ export default {
                   height: 100%;
                   opacity: 0;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         grid-gap: 0.5em;
                   }
 
@@ -1788,7 +1788,7 @@ export default {
                               right: -92px;
                               margin-top: -20px;
 
-                              @media screen and (max-width: 768px) {
+                              @media screen and (max-width: 769px) {
                                     right: -90px;
                               }
 
@@ -1814,7 +1814,7 @@ export default {
             height: 5vh;
             margin: 0.5em 0;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   left: -150%;
                   top: -0.5%;
             }
@@ -1856,7 +1856,7 @@ export default {
             margin-top: 1em;
             //border: 2px solid red;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   height: 28vh;
                   transform: translateY(0em);
             }
@@ -1888,7 +1888,7 @@ export default {
                         border-radius: 10px;
                         padding: 0px;
 
-                        @media screen and (max-width: 768px) {
+                        @media screen and (max-width: 769px) {
                               font-size: 5em;
                         }
 
@@ -1906,7 +1906,7 @@ export default {
                               right: -92px;
                               margin-top: -20px;
 
-                              @media screen and (max-width: 768px) {
+                              @media screen and (max-width: 769px) {
                                     right: -90px;
                               }
                         }
@@ -1935,7 +1935,7 @@ export default {
                   height: 100%;
                   opacity: 0;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         grid-gap: 0.5em;
                   }
 
@@ -1968,7 +1968,7 @@ export default {
             margin-bottom: 1em;
             text-align: left;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   margin-top: 0.5em;
                   height: auto;
             }
@@ -2008,7 +2008,7 @@ export default {
                   position: relative;
                   left: -150%;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         //position: relative;
                         left: 0;
                         opacity: 1;
@@ -2025,7 +2025,7 @@ export default {
             text-align: left;
             transform: translateY(-1em);
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   transform: translateY(0em);
                   margin: 0.5em 0;
                   height: auto;
@@ -2088,7 +2088,7 @@ export default {
                   left: -150%;
                   transition: 3s ease-in;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         left: 0;
                   }
 
@@ -2112,7 +2112,7 @@ export default {
             height: 16vh;
             text-align: left;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   margin: 0.5em 0;
                   height: auto;
             }
@@ -2127,7 +2127,7 @@ export default {
                         display: inline;
                         width: 40%;
 
-                        @media screen and (max-width: 768px) {
+                        @media screen and (max-width: 769px) {
                               width: 60%;
                               border: 3px solid #45e262;
                               border-radius: 0.5em;
@@ -2174,7 +2174,7 @@ export default {
             font-weight: 600;
             font-size: 1.2em;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   //font-size: 1em;
             }
       }
@@ -2183,14 +2183,14 @@ export default {
             display: none;
             width: 100%;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   display: block;
             }
 
             &--title {
                   display: none;
 
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 769px) {
                         display: block;
                         background: #08a045;
                         color: #fff;

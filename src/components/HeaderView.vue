@@ -251,7 +251,7 @@ export default {
       width: 100%;
       //border: 4px solid red;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 769px) {
             //display: block;
             //display: flex;
             justify-content: space-between;
@@ -272,7 +272,7 @@ export default {
       .first {
             width: 120%;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   width: 100%;
                   //display: flex;
                   //justify-content: center;
@@ -322,7 +322,7 @@ export default {
             font-weight: 800;
             font-size: 1.4em;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   //width: 100%;
                   //margin: auto;
                   display: flex;
@@ -340,7 +340,7 @@ export default {
       &__menu {
             display: none;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   font-size: 2em;
                   font-weight: 900;
                   margin-right: 0.5em;
@@ -374,7 +374,7 @@ export default {
             width: 230%;
             transition: 1s ease-in-out;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   //padding: 0 0.5em 0.5em 0.5em;
                   //font-size: 0.8em;
                   //width: auto;
@@ -402,7 +402,7 @@ export default {
                   padding: 0 1.5em 0.5em 1.5em;
                   align-items: center;
 
-                  /*@media screen and (max-width: 768px) {
+                  /*@media screen and (max-width: 769px) {
                         background: #08a045;
                         display: block;
                         padding: 1em;
@@ -422,7 +422,7 @@ export default {
                         border-radius: 0.5em;
                         margin: 0 0.3rem;
 
-                        @media screen and (max-width: 768px) {
+                        @media screen and (max-width: 769px) {
                               //transform: translateX(0.2em);
                               //font-size: 0.8em;
                               //transform: scale3d(0em);
@@ -438,7 +438,7 @@ export default {
                         border-radius: 0.5em;
                         color: #fff;
 
-                        @media screen and (max-width: 768px) {
+                        @media screen and (max-width: 769px) {
                               border-bottom: 0;
                               background: #fff;
                               color: #08a045;
@@ -451,7 +451,7 @@ export default {
             display: none;
             //position: absolute;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 769px) {
                   display: block;
 
                   nav {
@@ -473,7 +473,7 @@ export default {
                               background: #08a045;
                               border: 1px solid #08a045;
 
-                              @media screen and (max-width: 768px) {
+                              @media screen and (max-width: 769px) {
                                     background: #08a045;
                                     display: block;
                                     padding: 1em;
@@ -488,7 +488,7 @@ export default {
                                     border-radius: 0.5em;
                                     color: #fff;
 
-                                    @media screen and (max-width: 768px) {
+                                    @media screen and (max-width: 769px) {
                                           border-bottom: 0;
                                           background: #fff;
                                           color: #08a045;
