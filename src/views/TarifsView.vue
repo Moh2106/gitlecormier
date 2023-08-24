@@ -2133,6 +2133,11 @@ export default {
                               border-radius: 0.5em;
                         }
 
+                        @media screen and (max-width: 550px){
+                              width: 70%;
+                              border: 2px solid #45e262;
+                        }
+
                         &:hover {
                               transform: scale(104%);
                               border: 3px solid #45e262;

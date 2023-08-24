@@ -492,6 +492,7 @@ export default {
                                           border-bottom: 0;
                                           background: #fff;
                                           color: #08a045;
+                                          border-radius: 0%;
                                     }
                               }
                         }

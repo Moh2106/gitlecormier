@@ -97,13 +97,14 @@
             <br />
 
             <!---------------Gallerie des 4 photos ---------------------------------------->
-            <div
-                  class="accueil__gallery mb-6"
-                  data-aos="fade-right"
-                  data-aos-duration="700"
-                  data-aos-easing="ease-in-out"
-            >
-                  <div class="accueil__gallery--items" @click="Cliquer">
+            <div class="accueil__gallery mb-6">
+                  <div
+                        class="accueil__gallery--items"
+                        @click="Cliquer"
+                        data-aos="fade-right"
+                        data-aos-duration="700"
+                        data-aos-easing="ease-in-out"
+                  >
                         <img
                               src="../../public/pictures/descriptif/jardin/jeux_enfants.jpg"
                               alt="Jeux pour les enfants - gite le cormier"
@@ -144,7 +145,13 @@
                         </div>
                   </div>
 
-                  <div class="accueil__gallery--items" @click="Cliquer">
+                  <div
+                        class="accueil__gallery--items"
+                        @click="Cliquer"
+                        data-aos="fade-right"
+                        data-aos-duration="700"
+                        data-aos-easing="ease-in-out"
+                  >
                         <img
                               src="../../public/pictures/descriptif/jardin/jaccuzzi.jpg"
                               alt="Le jaccuzzi du jardin - gite le cormier"
@@ -186,7 +193,13 @@
                         </div>
                   </div>
 
-                  <div class="accueil__gallery--items" @click="Cliquer">
+                  <div
+                        class="accueil__gallery--items"
+                        @click="Cliquer"
+                        data-aos="fade-right"
+                        data-aos-duration="700"
+                        data-aos-easing="ease-in-out"
+                  >
                         <img
                               src="../assets/RezDeChaussee/rdc_chaumiere3.jpg"
                               alt="Chaumière du rez de chausse - gite le cormier"
@@ -228,7 +241,13 @@
                         </div>
                   </div>
 
-                  <div class="accueil__gallery--items" @click="Cliquer">
+                  <div
+                        class="accueil__gallery--items"
+                        @click="Cliquer"
+                        data-aos="fade-right"
+                        data-aos-duration="700"
+                        data-aos-easing="ease-in-out"
+                  >
                         <img
                               src="../assets/Cormier/cormier_ping_pong.jpg"
                               alt="Terrain de Ping Pong - gite le cormier"
@@ -667,7 +686,7 @@ export default {
                   left: 50%;
                   transform: translate(-50%, -50%);
 
-                  @media screen and (max-width: 550px){
+                  @media screen and (max-width: 550px) {
                         transform: translate(-50%, -55%);
                   }
             }
