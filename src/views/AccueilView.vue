@@ -684,6 +684,10 @@ export default {
                   left: 50%;
                   transform: translate(-50%, -50%);
 
+                  @media screen and (max-width: 769px) {
+                        transform: translate(-50%, -53%);
+                  }
+
                   @media screen and (max-width: 550px) {
                         transform: translate(-50%, -55%);
                   }

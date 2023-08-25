@@ -508,7 +508,7 @@
                                           :key="tarif.id"
                                     >
                                           <div
-                                                class="bg-white rounded-lg max-md:h-[30.5vh]"
+                                                class="bg-white rounded-lg part-vac"
                                                 v-if="
                                                       tarif.positionTablette <
                                                       position
@@ -516,7 +516,7 @@
                                                 data-aos="flip-up"
                                           >
                                                 <div
-                                                      class="overflow-hidden bg-cover h-[27vh] max-md:h-[15vh]"
+                                                      class="overflow-hidden bg-cover h-[27vh]  part-vac__image"
                                                 >
                                                       <img
                                                             :src="
@@ -694,7 +694,7 @@
                                           :key="tarif.id"
                                     >
                                           <div
-                                                class="bg-white rounded-lg max-md:h-[25vh]"
+                                                class="bg-white rounded-lg part-basse"
                                                 data-aos="zoom-in-down"
                                                 v-if="
                                                       tarif.positionTablette <
@@ -702,7 +702,7 @@
                                                 "
                                           >
                                                 <div
-                                                      class="overflow-hidden bg-cover h-[25vh] max-md:h-[15vh] transition-all"
+                                                      class="overflow-hidden bg-cover h-[25vh] transition-all part-basse__image"
                                                 >
                                                       <img
                                                             :src="
@@ -1497,7 +1497,7 @@ export default {
             margin-top: 2em;
       }
 
-      @media screen and (max-width: 550px){
+      @media screen and (max-width: 550px) {
             margin-top: 1em;
       }
 
@@ -1658,6 +1658,30 @@ export default {
             }
       }
 
+      .part-vac {
+            @media screen and (max-width: 769px) {
+                  height: 30.5vh;
+            }
+
+            &__image {
+                  @media screen and (max-width: 769px) {
+                        height: 15vh;
+                  }
+            }
+      }
+
+      .part-basse {
+            @media screen and (max-width: 769px) {
+                  height: 25vh;
+            }
+
+            &__image {
+                  @media screen and (max-width: 769px) {
+                        height: 15vh;
+                  }
+            }
+      }
+
       &__mobile {
             display: none;
 
@@ -1747,65 +1771,65 @@ export default {
                   display: flex;
                   margin: 4em 0;
 
-                  img{
+                  img {
                         width: 50%;
                         transform: translateY(5em);
                   }
             }
 
-            &__card{
+            &__card {
                   width: 80%;
                   margin: auto;
             }
 
             .bubble_basse_mobile {
-                        position: relative;
-                        background: rgba(8, 160, 69, 0.8);
-                        color: #ffffff;
-                        font-family: Arial;
-                        font-size: 2em;
-                        line-height: 100px;
-                        text-align: center;
-                        width: 50%;
-                        height: 100px;
-                        border-radius: 10px;
-                        padding: 0px;
+                  position: relative;
+                  background: rgba(8, 160, 69, 0.8);
+                  color: #ffffff;
+                  font-family: Arial;
+                  font-size: 2em;
+                  line-height: 100px;
+                  text-align: center;
+                  width: 50%;
+                  height: 100px;
+                  border-radius: 10px;
+                  padding: 0px;
 
-                        /*@media screen and (max-width: 550px) {
+                  /*@media screen and (max-width: 550px) {
                               font-size: 2em;
                         }*/
 
-                        &::after {
-                              content: "";
-                              position: absolute;
-                              display: block;
-                              width: 0;
-                              z-index: 1;
-                              border-style: solid;
-                              border-width: 40px 0 0 60px;
-                              border-color: transparent transparent transparent
-                                    rgba(8, 160, 69, 0.8);
-                              top: 70%;
-                              right: -92px;
-                              margin-top: -20px;
+                  &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 0;
+                        z-index: 1;
+                        border-style: solid;
+                        border-width: 40px 0 0 60px;
+                        border-color: transparent transparent transparent
+                              rgba(8, 160, 69, 0.8);
+                        top: 70%;
+                        right: -92px;
+                        margin-top: -20px;
 
-                              @media screen and (max-width: 769px) {
-                                    right: -90px;
-                              }
-
-                              @media screen and (max-width: 550px) {
-                                    right: -59.5px;
-                              }
+                        @media screen and (max-width: 769px) {
+                              right: -90px;
                         }
 
-                        p {
-                              display: flex;
-                              justify-content: center;
-                              align-items: center;
-                              font-weight: 550;
-                              font-family: "Great Vibes", cursive;
+                        @media screen and (max-width: 550px) {
+                              right: -59.5px;
                         }
                   }
+
+                  p {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 550;
+                        font-family: "Great Vibes", cursive;
+                  }
+            }
       }
 
       &__waves {
@@ -2015,8 +2039,6 @@ export default {
                         opacity: 1;
                         height: auto;
                   }
-
-                  
             }
       }
 
@@ -2134,7 +2156,7 @@ export default {
                               border-radius: 0.5em;
                         }
 
-                        @media screen and (max-width: 550px){
+                        @media screen and (max-width: 550px) {
                               width: 70%;
                               border: 2px solid #45e262;
                         }
@@ -2202,7 +2224,7 @@ export default {
                         color: #fff;
                   }
 
-                  @media screen and (max-width: 550px){
+                  @media screen and (max-width: 550px) {
                         width: 50%;
                   }
             }

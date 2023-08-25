@@ -129,7 +129,8 @@ export default {
       padding: 0.5rem;
 
       @media screen and (max-width: 769px) {
-            transform: translateY(-3em);
+            width: 98%;
+            transform: translate(0.5em,-3em);
             font-size: 1em;
       }
 
