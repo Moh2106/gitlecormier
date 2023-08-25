@@ -1731,6 +1731,7 @@ export default {
                         align-items: center;
                         font-weight: 550;
                         font-family: "Great Vibes", cursive;
+                        transform: translateY(-0.4em);
                   }
             }
       }

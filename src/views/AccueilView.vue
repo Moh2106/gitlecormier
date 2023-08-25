@@ -307,7 +307,6 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import {
       accueils,
       accueilsTablette,
-      accueilsMobile,
 } from "../database/accueil";
 
 // Import Swiper styles
@@ -384,7 +383,6 @@ export default {
                   chooseEnglishVersion,
                   accueils,
                   accueilsTablette,
-                  accueilsMobile,
                   modules: [Autoplay, Pagination, Navigation],
             };
       },
