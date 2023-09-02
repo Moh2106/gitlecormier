@@ -131,7 +131,7 @@ export default {
       }
 }
 .visiter {
-      height: 85vh;
+      height: auto;
 
       @media screen and (max-width: 769px) {
             //border: 3px solid red;
@@ -158,6 +158,8 @@ export default {
       }
 
       &__description {
+            height: auto;
+
             @media screen and (max-width: 769px) {
                   width: 100%;
                   margin-bottom: 1em;
