@@ -375,7 +375,7 @@ export default {
             justify-content: center;
             align-items: center;
             //position: relative;
-            width: 350%;
+            width: 300%;
             transition: 1s ease-in-out;
 
             @media screen and (max-width: 1300px) {

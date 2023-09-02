@@ -4,7 +4,7 @@
                   <!---------- Armoire de déroulement   ------>
                   <div class="tarif__part_one">
                         <!--  Tarifs vacances -->
-                        <div class="rounded-lg h-[47.5vh] mb-[1em]">
+                        <div class="rounded-lg mb-[1em] tarif__part_one--vacance">
                               <h2>
                                     Tarifs vacances <br />
                                     (Pour une semaine)
@@ -1209,7 +1209,7 @@ export default {
                   const waneVacance = document.getElementById("tarif__waves");
 
                   activeWaveVacance.value = true;
-                  waneVacance.style.left = "-5%";
+                  waneVacance.style.left = "-7%";
                   waneVacance.style.transition = "2s ease-in";
 
                   setTimeout(() => {
@@ -1508,6 +1508,15 @@ export default {
 
             @media screen and (max-width: 769px) {
                   display: none;
+            }
+
+            &--vacance{
+                  height: 47.5vh;
+
+                  @media screen and (max-width: 1300px){
+                        height: 48vh;
+                  }
+
             }
 
             div {
