@@ -1220,7 +1220,7 @@ export default {
                         const waneBasse =
                               document.getElementById("waves__basse");
 
-                        waneBasse.style.left = "-5%";
+                        waneBasse.style.left = "-7%";
                         waneBasse.style.transition = "2s ease-in";
                   }, 2000);
 
@@ -1847,6 +1847,7 @@ export default {
             top: -2.5%;
             height: 5vh;
             margin: 0.5em 0;
+            width: 103%;
 
             @media screen and (max-width: 769px) {
                   left: -150%;
