@@ -5,7 +5,7 @@
                         <img
                               src="../assets/Liens/logo_gite_france.png"
                               alt="Logo de gite de France"
-                              class="w-[10%] mt-[0.3rem] ml-[0.3rem]"
+                              class="w-[10%] mt-[0.3rem] ml-[0.3rem] flex__images"
                         />
                         <h1 class="header__title">𝕲î𝖙𝖊 𝖑𝖊 𝖈𝖔𝖗𝖒𝖎𝖊𝖗</h1>
 
@@ -288,8 +288,8 @@ export default {
                   //background: #fff;
             }
 
-            img{
-                  @media screen and (max-width: 550px){
+            img {
+                  @media screen and (max-width: 550px) {
                         width: 12%;
                   }
             }
@@ -363,6 +363,10 @@ export default {
 
             img {
                   object-fit: contain;
+
+                  @media screen and (max-width: 1200px){
+                        width: 12%;
+                  }
             }
       }
 
@@ -373,6 +377,10 @@ export default {
             //position: relative;
             width: 230%;
             transition: 1s ease-in-out;
+
+            @media screen and (max-width: 1200px) {
+                  width: 350%;
+            }
 
             @media screen and (max-width: 769px) {
                   //padding: 0 0.5em 0.5em 0.5em;
@@ -401,6 +409,11 @@ export default {
             a {
                   padding: 0 1.5em 0.5em 1.5em;
                   align-items: center;
+                  display: block;
+
+                  @media screen and (max-width: 1200px) {
+                        font-size: 0.9em;
+                  }
 
                   /*@media screen and (max-width: 769px) {
                         background: #08a045;
@@ -421,6 +434,10 @@ export default {
                         background: #08a045;
                         border-radius: 0.5em;
                         margin: 0 0.3rem;
+
+                        @media screen and (max-width: 1200px) {
+                              margin: 0 0.1rem;
+                        }
 
                         @media screen and (max-width: 769px) {
                               //transform: translateX(0.2em);
@@ -465,7 +482,7 @@ export default {
                         //transition: 20s linear all;
                         //right: 0;
 
-                        @media screen and (max-width: 550px){
+                        @media screen and (max-width: 550px) {
                               top: 3.5em;
                         }
 
