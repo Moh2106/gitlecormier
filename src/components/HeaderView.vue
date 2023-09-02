@@ -359,7 +359,7 @@ export default {
       }
 
       .flex {
-            width: 100%;
+            width: 120%;
 
             img {
                   object-fit: contain;
@@ -375,11 +375,11 @@ export default {
             justify-content: center;
             align-items: center;
             //position: relative;
-            width: 230%;
+            width: 350%;
             transition: 1s ease-in-out;
 
-            @media screen and (max-width: 1200px) {
-                  width: 350%;
+            @media screen and (max-width: 1300px) {
+                  width: 360%;
             }
 
             @media screen and (max-width: 769px) {
@@ -411,7 +411,7 @@ export default {
                   align-items: center;
                   display: block;
 
-                  @media screen and (max-width: 1200px) {
+                  @media screen and (max-width: 1300px) {
                         font-size: 0.9em;
                   }
 
