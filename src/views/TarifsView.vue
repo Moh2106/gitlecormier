@@ -12,12 +12,12 @@
                         </div>
 
                         <!--  Tarifs basse saison -->
-                        <div class="rounded-lg h-[39.9vh] mb-[1em]">
+                        <div class="rounded-lg h-[39.9vh] mb-[1.5em]">
                               <h2>Tarifs basse saison</h2>
                         </div>
 
                         <!--  Pour votre confort -->
-                        <div class="rounded-lg h-[31vh] mb-[1em]">
+                        <div class="rounded-lg h-[31.7vh] mb-[1em]">
                               <h2>Pour votre confort</h2>
                         </div>
 
@@ -2001,6 +2001,7 @@ export default {
             position: relative;
             height: 15vh;
             margin-bottom: 1em;
+            margin-top: 0.5em;
             text-align: left;
 
             @media screen and (max-width: 769px) {
