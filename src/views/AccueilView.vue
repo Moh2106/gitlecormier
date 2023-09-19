@@ -470,8 +470,8 @@ export default {
                   }
 
                   @media screen and (max-width: 550px) {
-                        font-family: "Great Vibes", cursive;
-                        font-size: 1.5em;
+                        //font-family: "Great Vibes", cursive;
+                        font-size: 1.2em;
                         font-weight: 600;
                   }
             }

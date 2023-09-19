@@ -85,12 +85,15 @@ export default {
             //height: 40vh;
             //font-size: 0.8em;
             //font-weight: 500;
-            display: block;
+            //display: block;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
         }
 
         div{
             @media screen and (max-width : 550px){
-                margin-bottom: 1em;
+                margin-bottom: 0.5em;
             }
         }
 
@@ -118,7 +121,7 @@ export default {
             }
 
             @media screen and (max-width : 550px){
-                width: 70%;
+                width: 100%;
                 margin: auto;
             }
             

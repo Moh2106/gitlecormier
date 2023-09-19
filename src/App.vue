@@ -43,7 +43,9 @@ export default {
 
   @media screen and (max-width: 769px) {
     //font-family: 'Poppins', sans-serif;
-    background: url('../src/assets/Cormier/cormier_background_mobile.jpg'); 
+    background: url('../src/assets/Cormier/cormier_background_mobile.jpg');
+    //background-attachment: scroll; 
+    background-attachment: local;
   }
 
   /*@media screen and (max-width: 550px) {
