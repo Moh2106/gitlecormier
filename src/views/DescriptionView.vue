@@ -1198,6 +1198,11 @@ export default {
                         transition: 0.5s ease-in;
                         opacity: 0.4;
                   }
+
+                  @media screen and (max-width: 550px){
+                        opacity: 0.1;
+                  }
+
             }
 
             &__rdc-sdb {
@@ -1211,6 +1216,10 @@ export default {
                         transition: 0.5s ease-in;
                         opacity: 0.4;
                   }
+
+                  @media screen and (max-width: 550px){
+                        opacity: 0.1;
+                  }
             }
 
             .cuisine_plan_button {
@@ -1219,6 +1228,10 @@ export default {
                   &:hover {
                         transition: 0.5s ease-in;
                         opacity: 0.4;
+                  }
+
+                  @media screen and (max-width: 550px){
+                        opacity: 0.1;
                   }
             }
 
@@ -1247,6 +1260,10 @@ export default {
                         transition: 0.5s ease-in;
                         opacity: 0.4;
                   }
+
+                  @media screen and (max-width: 550px){
+                        opacity: 0.1;
+                  }
             }
 
             &__rdc-sejour {
@@ -1260,9 +1277,13 @@ export default {
                         transition: 0.5s ease-in;
                         opacity: 0.4;
                   }
+
+                  @media screen and (max-width: 550px){
+                        opacity: 0.1;
+                  }
             }
 
-            &__rdc-buanderie {
+            /*&__rdc-buanderie {
                   position: absolute;
                   width: 23%;
                   top: 1.5%;
@@ -1273,7 +1294,7 @@ export default {
                         transition: 0.5s ease-in;
                         opacity: 0.4;
                   }
-            }
+            }*/
 
             // Les chambres de l'étage 1
 
@@ -1299,6 +1320,10 @@ export default {
                         transition: 0.5s ease-in;
                         opacity: 0.4;
                   }
+
+                  @media screen and (max-width: 550px){
+                        opacity: 0.1;
+                  }
             }
 
             // chambre 2
@@ -1322,6 +1347,10 @@ export default {
                   &:hover {
                         transition: 0.5s ease-in;
                         opacity: 0.4;
+                  }
+
+                  @media screen and (max-width: 550px){
+                        opacity: 0.1;
                   }
             }
       }
