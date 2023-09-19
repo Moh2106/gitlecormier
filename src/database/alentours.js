@@ -58,7 +58,7 @@ export const alentours = [
       {
             id: 8,
             titre: "FERME LULU MARKET",
-            img: "/pictures/Alentours/ferme_lulu_market.png",
+            img: "/pictures/Alentours/lulu_market_2.jpg",
             site: "https://earl-la-chapelle-brestot.jimdofree.com/",
             maps: "https://goo.gl/maps/xQnou5uTPp8uvqo87",
       },

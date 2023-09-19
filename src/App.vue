@@ -42,11 +42,12 @@ export default {
   
 
   @media screen and (max-width: 769px) {
-    font-family: 'Poppins', sans-serif;
+    //font-family: 'Poppins', sans-serif;
+    background: url('../src/assets/Cormier/cormier_background_mobile.jpg'); 
   }
 
   /*@media screen and (max-width: 550px) {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; 
   }*/
 }
 
