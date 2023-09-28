@@ -1201,6 +1201,10 @@ export default {
 
                   @media screen and (max-width: 550px){
                         opacity: 0.1;
+
+                        &:hover{
+                              opacity: 0.2;
+                        }
                   }
 
             }
@@ -1219,6 +1223,10 @@ export default {
 
                   @media screen and (max-width: 550px){
                         opacity: 0.1;
+
+                        &:hover{
+                              opacity: 0.2;
+                        }
                   }
             }
 
@@ -1232,6 +1240,10 @@ export default {
 
                   @media screen and (max-width: 550px){
                         opacity: 0.1;
+
+                        &:hover{
+                              opacity: 0.2;
+                        }
                   }
             }
 
@@ -1263,6 +1275,10 @@ export default {
 
                   @media screen and (max-width: 550px){
                         opacity: 0.1;
+
+                        &:hover{
+                              opacity: 0.2;
+                        }
                   }
             }
 
@@ -1280,21 +1296,12 @@ export default {
 
                   @media screen and (max-width: 550px){
                         opacity: 0.1;
+
+                        &:hover{
+                              opacity: 0.2;
+                        }
                   }
             }
-
-            /*&__rdc-buanderie {
-                  position: absolute;
-                  width: 23%;
-                  top: 1.5%;
-                  right: 29.5%;
-                  opacity: 0;
-
-                  &:hover {
-                        transition: 0.5s ease-in;
-                        opacity: 0.4;
-                  }
-            }*/
 
             // Les chambres de l'étage 1
 
@@ -1323,6 +1330,10 @@ export default {
 
                   @media screen and (max-width: 550px){
                         opacity: 0.1;
+
+                        &:hover{
+                              opacity: 0.2;
+                        }
                   }
             }
 
@@ -1351,6 +1362,10 @@ export default {
 
                   @media screen and (max-width: 550px){
                         opacity: 0.1;
+
+                        &:hover{
+                              opacity: 0.2;
+                        }
                   }
             }
       }

@@ -4,7 +4,9 @@
                   <!---------- Armoire de déroulement   ------>
                   <div class="tarif__part_one">
                         <!--  Tarifs vacances -->
-                        <div class="rounded-lg mb-[1em] tarif__part_one--vacance">
+                        <div
+                              class="rounded-lg mb-[1em] tarif__part_one--vacance"
+                        >
                               <h2>
                                     Tarifs vacances <br />
                                     (Pour une semaine)
@@ -516,7 +518,7 @@
                                                 data-aos="flip-up"
                                           >
                                                 <div
-                                                      class="overflow-hidden bg-cover h-[27vh]  part-vac__image"
+                                                      class="overflow-hidden bg-cover h-[27vh] part-vac__image"
                                                 >
                                                       <img
                                                             :src="
@@ -581,7 +583,9 @@
                                     >
                                           <div
                                                 class="bg-white rounded-lg max-md:h-[35vh] card"
-                                                data-aos="flip-up"
+                                                data-aos="fade-right"
+                                                data-aos-offset="300"
+                                                data-aos-easing="ease-in-sine"
                                                 v-if="vacMobile"
                                           >
                                                 <div
@@ -770,7 +774,9 @@
                                           >
                                                 <div
                                                       class="bg-white rounded-lg max-md:h-[35vh] max-md:mt-[1em]"
-                                                      data-aos="zoom-in-down"
+                                                      data-aos="fade-right"
+                                                data-aos-offset="300"
+                                                data-aos-easing="ease-in-sine"
                                                 >
                                                       <div
                                                             class="overflow-hidden bg-cover h-[25vh] max-md:h-[25vh] transition-all"
@@ -1510,13 +1516,12 @@ export default {
                   display: none;
             }
 
-            &--vacance{
+            &--vacance {
                   height: 47.5vh;
 
-                  @media screen and (max-width: 1300px){
+                  @media screen and (max-width: 1300px) {
                         height: 48vh;
                   }
-
             }
 
             div {
