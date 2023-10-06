@@ -1,5 +1,5 @@
 <template>
-      <div class="pt-14 gallerie" id="haut">
+      <div class="pt-14 gallerie " id="haut">
             <!----------------------  BOUTON DE RETOUR EN ARRIERE -------------------->
             <div class="gallerie__return">
                   <button class="bg-white rounded-lg gallerie__return--pc">
@@ -21,8 +21,8 @@
             </div>
 
             <!------------------- CHAMBRE DU REZ DE CHAUSSE -------------------------------------->
-            <div class="gallerie__frame" id="chambre-rez-de-chaussee">
-                  <div class="titres">
+            <div class="gallerie__frame">
+                  <div class="titres" id="la-cuisine">
                         <h1 class="title bubble-bottom w-[100%]">
                               La chambre au rez de chaussée
                         </h1>
@@ -48,19 +48,15 @@
                   </div>
             </div>
 
-            <!------------------- CUISINE DU REZ DE CHAUSSE -------------------------------------->
-            <div class="gallerie__frame" id="cuisine">
-                  <div class="titres">
-                        <h1 class="title bubble-bottom w-[100%]">
-                              La cuisine
-                        </h1>
+            <!------------------- CUISINE DU REZ DE CHAUSSE ---------------------------------->
+            <div class="gallerie__frame" >
+                  <div class="titres" id="le-salon">
+                        <h1 class="title bubble-bottom w-[100%]">La cuisine</h1>
 
-                        <h1 class="title__mobile w-[100%]">
-                              La cuisine
-                        </h1>
+                        <h1 class="title__mobile w-[100%]">La cuisine</h1>
                   </div>
 
-                  <div class="gallerie__frame--images mb-4">
+                  <div class="gallerie__frame--images mb-4" id="cuisine">
                         <div v-for="cuisine in cuisines" :key="cuisine.id">
                               <img
                                     :src="cuisine.img"
@@ -91,17 +87,13 @@
 
             <!------------------- SALON DU REZ DE CHAUSSE -------------------------------------->
             <div class="gallerie__frame" id="salon">
-                  <div class="titres">
-                        <h1 class="title bubble-bottom w-[100%]">
-                              Le salon
-                        </h1>
+                  <div class="titres" id="salles-a-manger">
+                        <h1 class="title bubble-bottom w-[100%]">Le salon</h1>
 
-                        <h1 class="title__mobile w-[100%]">
-                              Le salon
-                        </h1>
+                        <h1 class="title__mobile w-[100%]">Le salon</h1>
                   </div>
 
-                  <div class="gallerie__frame--images mb-4">
+                  <div class="gallerie__frame--images mb-4" >
                         <div v-for="salon in salons" :key="salon.id">
                               <img
                                     :src="salon.img"
@@ -112,7 +104,7 @@
                                     :id="salon.index"
                               />
                         </div>
-
+                        
                         <div class="details">
                               <div
                                     v-for="salon in salonsDetails"
@@ -132,7 +124,7 @@
 
             <!------------------- SALLE A MANGER -------------------------------------->
             <div class="gallerie__frame" id="salle-a-manger">
-                  <div class="titres">
+                  <div class="titres" id="sdb">
                         <h1 class="title bubble-bottom w-[100%]">
                               La salle à manger
                         </h1>
@@ -172,14 +164,12 @@
 
             <!------------------- SALLE DE BAIN -------------------------------------->
             <div class="gallerie__frame" id="salle-de-bain">
-                  <div class="titres">
+                  <div class="titres" id="chambre-palieres">
                         <h1 class="title bubble-bottom w-[100%]">
                               La salle de bain
                         </h1>
 
-                        <h1 class="title__mobile w-[100%]">
-                              La salle de bain
-                        </h1>
+                        <h1 class="title__mobile w-[100%]">La salle de bain</h1>
                   </div>
 
                   <div class="gallerie__frame--images mb-4">
@@ -197,9 +187,8 @@
             </div>
 
             <!------------------- 1 ER ETAGE -- CHAMBRE PALIERE -------------------------------->
-
             <div class="gallerie__frame" id="chambre-paliere">
-                  <div class="titres">
+                  <div class="titres" id="chambres2lits">
                         <h1 class="title bubble-bottom w-[100%]">
                               La chambre palière à l'étage
                         </h1>
@@ -242,9 +231,8 @@
             </div>
 
             <!--------------------1 ER ETAGE -- CHAMBRE 2 LITS ----------------------------------------->
-
             <div class="gallerie__frame" id="chambre2lits">
-                  <div class="titres">
+                  <div class="titres" id="jardins">
                         <h1 class="title bubble-bottom w-[100%]">
                               La chambre 2 lits à l'étage
                         </h1>
@@ -287,16 +275,11 @@
             </div>
 
             <!-------------------- JARDIN ----------------------------------------->
-
             <div class="gallerie__frame" id="jardin">
                   <div class="titres">
-                        <h1 class="title bubble-bottom w-[100%]">
-                              Le jardin
-                        </h1>
+                        <h1 class="title bubble-bottom w-[100%]">Le jardin</h1>
 
-                        <h1 class="title__mobile w-[100%]">
-                              Le jardin
-                        </h1>
+                        <h1 class="title__mobile w-[100%]">Le jardin</h1>
                   </div>
 
                   <div class="gallerie__frame--images mb-4">
@@ -377,7 +360,7 @@ export default {
 
             // Indique l'index de l'image
             //var ind = 0;
-
+            
             const Cliquer = () => {
                   const items = document.querySelectorAll(".items");
 
@@ -445,6 +428,22 @@ export default {
 
       @media screen and (max-width: 550px) {
             margin-top: 1em;
+      }
+
+      .pc {
+            display: block;
+
+            @media screen and (max-width: 769px) {
+                  display: none;
+            }
+      }
+
+      .mobile {
+            display: none;
+
+            @media screen and (max-width: 769px) {
+                  display: block;
+            }
       }
 
       &__return {
@@ -562,8 +561,9 @@ export default {
                                     margin-right: 0.5em;
                               }
 
-                              @media screen and (max-width: 769px){
-                                    width: 45%;
+                              @media screen and (max-width: 769px) {
+                                    width: 30.5%;
+                                    margin-right: 0.3em;
                               }
                         }
                   }
@@ -587,9 +587,10 @@ export default {
 
       .titres {
             //margin-bottom: 0.5em;
-            @media screen and (max-width: 550px){
+            @media screen and (max-width: 550px) {
                   width: 50%;
                   margin: auto;
+                  //margin-top: 6em;
             }
             .title {
                   margin: auto;
@@ -687,7 +688,7 @@ export default {
                   height: 90vh;
                   object-fit: contain;
 
-                  @media screen and (max-width: 550px){
+                  @media screen and (max-width: 550px) {
                         width: 95%;
                   }
             }
@@ -702,4 +703,6 @@ export default {
             background: rgb(22, 163, 74);
       }
 }
+
+
 </style>

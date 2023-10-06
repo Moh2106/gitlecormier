@@ -177,7 +177,7 @@ export const alentours = [
 
       {
             id: 23,
-            titre: "HARCOURT NORMANDIE",
+            titre: "DOMAINE D'HARCOURT",
             img: "/pictures/Alentours/harcourt_normandie.jpg",
             site: "http://www.harcourt-normandie.fr/",
             maps: "https://goo.gl/maps/WBFXQXRFfXeV5WTMA",

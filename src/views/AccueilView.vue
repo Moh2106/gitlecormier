@@ -161,7 +161,7 @@
                                     {{
                                           chooseEnglishVersion
                                                 ? "To enjoy the stars"
-                                                : "Pour profiter des étoiles"
+                                                : "Pour profiter des étoiles."
                                     }}
 
                                     <br />

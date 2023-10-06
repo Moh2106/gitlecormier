@@ -259,7 +259,8 @@ export default {
             background: #fff;
             height: 9vh;
             width: 100wh;
-            //position: relative;
+            //position: sticky;
+            //top: 1em;
       }
 
       @media screen and (max-width: 550px) {

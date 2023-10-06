@@ -108,7 +108,7 @@
                               />
 
                               <div>
-                                    <!-- Chambre au rez de chaussee -->
+                                    <!-- Chambre au rez de chaussee #chambre-rez-de-chaussee-->
                                     <button
                                           v-on:mouseenter="
                                                 afficheChambreRdcItems
@@ -118,9 +118,7 @@
                                           "
                                           class="chambre_plan_button"
                                     >
-                                          <a
-                                                href="/descriptifs/gallerie#chambre-rez-de-chaussee"
-                                          >
+                                          <a href="/descriptifs/gallerie">
                                                 <img
                                                       src="../assets/RezDeChaussee/rdc_chambre_plan_1.jpg"
                                                       alt=""
@@ -195,6 +193,7 @@
                                     </button>
 
                                     <!--- La salle à manger --->
+                                    <!-- pc --->
                                     <button
                                           v-on:mouseenter="
                                                 afficheSalleAMangerItems
@@ -202,11 +201,29 @@
                                           v-on:mouseleave="
                                                 supprimeSalleAMangerItemsStyle
                                           "
-                                          class="plan__rdc-sejour"
+                                          class="plan__rdc-sejour pc"
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#salle-a-manger"
                                           >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_sejour_plan.jpg"
+                                                      alt=""
+                                                />
+                                          </a>
+                                    </button>
+
+                                    <!-- mobile --->
+                                    <button
+                                          v-on:mouseenter="
+                                                afficheSalleAMangerItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeSalleAMangerItemsStyle
+                                          "
+                                          class="plan__rdc-sejour mobile"
+                                    >
+                                          <a href="/descriptifs/gallerie#salon">
                                                 <img
                                                       src="../assets/RezDeChaussee/rdc_sejour_plan.jpg"
                                                       alt=""
@@ -271,17 +288,12 @@
 
                               <div>
                                     <!-- Chambre au rez de chaussee -->
+                                    <!--pc-->
                                     <button
-                                          v-on:mouseenter="
-                                                afficheChambreRdcItems
-                                          "
-                                          v-on:mouseleave="
-                                                supprimeChambreRdcItemsStyle
-                                          "
                                           class="chambre_plan_button"
                                     >
                                           <a
-                                                href="/descriptifs/gallerie#chambre-rez-de-chaussee"
+                                                href="/descriptifs/gallerie"
                                           >
                                                 <img
                                                       src="../assets/RezDeChaussee/rdc_chambre_plan_1.jpg"
@@ -296,15 +308,10 @@
                                                 />
                                           </a>
                                     </button>
-
+                                    
                                     <!--- La salle de bain --->
-                                    <button
-                                          v-on:mouseenter="afficheSdbRdcItems"
-                                          v-on:mouseleave="
-                                                supprimeSdbRdcItemsStyle
-                                          "
-                                          class="plan__rdc-sdb"
-                                    >
+                                    <!--pc-->
+                                    <button class="plan__rdc-sdb pc">
                                           <a
                                                 href="/descriptifs/gallerie#salle-de-bain"
                                           >
@@ -314,14 +321,24 @@
                                                 />
                                           </a>
                                     </button>
+                                    <!--mobile-->
+                                    <button
+                                          class="plan__rdc-sdb mobile"
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#sdb"
+                                          >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_sdb_plan.jpg"
+                                                      alt=""
+                                                />
+                                          </a>
+                                    </button>
 
                                     <!--- La cuisine --->
+                                    <!--pc-->
                                     <button
-                                          v-on:mouseenter="afficheCuisineItems"
-                                          v-on:mouseleave="
-                                                supprimeCuisineItemsStyle
-                                          "
-                                          class="cuisine_plan_button"
+                                          class="cuisine_plan_button pc"
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#cuisine"
@@ -339,14 +356,30 @@
                                                 />
                                           </a>
                                     </button>
-
-                                    <!--- Le salon --->
+                                    <!--mobile-->
                                     <button
-                                          v-on:mouseenter="afficheSalonItems"
-                                          v-on:mouseleave="
-                                                supprimeSalonItemsStyle
-                                          "
-                                          class="plan__rdc-salon"
+                                          class="cuisine_plan_button mobile"
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#la-cuisine"
+                                          >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_cuisine_plan_1.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-cuisine_1"
+                                                />
+
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_cuisine_plan_2.jpg"
+                                                      alt=""
+                                                      class="plan__rdc-cuisine_2"
+                                                />
+                                          </a>
+                                    </button>
+                                    <!--- Le salon --->
+                                    <!--- pc --->
+                                    <button
+                                          class="plan__rdc-salon pc"
                                     >
                                           <a href="/descriptifs/gallerie#salon">
                                                 <img
@@ -355,19 +388,37 @@
                                                 />
                                           </a>
                                     </button>
-
-                                    <!--- La salle à manger --->
+                                    <!--- mobile --->
                                     <button
-                                          v-on:mouseenter="
-                                                afficheSalleAMangerItems
-                                          "
-                                          v-on:mouseleave="
-                                                supprimeSalleAMangerItemsStyle
-                                          "
-                                          class="plan__rdc-sejour"
+                                          class="plan__rdc-salon mobile"
+                                    >
+                                          <a href="/descriptifs/gallerie#le-salon">
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_salon_plan.jpg"
+                                                      alt=""
+                                                />
+                                          </a>
+                                    </button>
+                                    <!--- La salle à manger --->
+                                    <!--pc-->
+                                    <button
+                                          class="plan__rdc-sejour pc"
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#salle-a-manger"
+                                          >
+                                                <img
+                                                      src="../assets/RezDeChaussee/rdc_sejour_plan.jpg"
+                                                      alt=""
+                                                />
+                                          </a>
+                                    </button>
+                                    <!--mobile-->
+                                    <button
+                                          class="plan__rdc-sejour mobile"
+                                    >
+                                          <a
+                                                href="/descriptifs/gallerie#salles-a-manger"
                                           >
                                                 <img
                                                       src="../assets/RezDeChaussee/rdc_sejour_plan.jpg"
@@ -386,7 +437,6 @@
                               }}
                         </div>
                   </div>
-
             </div>
 
             <!-------------------------- 1ER ETAGE ------------------------------------>
@@ -465,14 +515,10 @@
                                     alt="Plan du 1er étage"
                               />
                               <div>
+                                    <!--Etage chambre 2 lits-->
+                                    <!--pc-->
                                     <button
-                                          v-on:mouseenter="
-                                                afficheChambre2EtageItems
-                                          "
-                                          v-on:mouseleave="
-                                                supprimeChambre2EtageItemsStyle
-                                          "
-                                          class="etage1_chambre1"
+                                          class="etage1_chambre1 pc"
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#chambre2lits"
@@ -491,14 +537,10 @@
                                           </a>
                                     </button>
 
+                                    <!--Chambre palière-->
+                                    <!--pc-->
                                     <button
-                                          v-on:mouseenter="
-                                                afficheChambre1EtageItems
-                                          "
-                                          v-on:mouseleave="
-                                                supprimeChambre1EtageItemsStyle
-                                          "
-                                          class="etage1_chambre2"
+                                          class="etage1_chambre2 pc"
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#chambre-paliere"
@@ -573,16 +615,11 @@
                               />
                               <div>
                                     <button
-                                          v-on:mouseenter="
-                                                afficheChambre2EtageItems
-                                          "
-                                          v-on:mouseleave="
-                                                supprimeChambre2EtageItemsStyle
-                                          "
+                                         
                                           class="etage1_chambre1"
                                     >
                                           <a
-                                                href="/descriptifs/gallerie#chambre2lits"
+                                                href="/descriptifs/gallerie#chambres2lits"
                                           >
                                                 <img
                                                       src="../assets/Etage/etage1_chambre1_1.jpg"
@@ -599,16 +636,10 @@
                                     </button>
 
                                     <button
-                                          v-on:mouseenter="
-                                                afficheChambre1EtageItems
-                                          "
-                                          v-on:mouseleave="
-                                                supprimeChambre1EtageItemsStyle
-                                          "
                                           class="etage1_chambre2"
                                     >
                                           <a
-                                                href="/descriptifs/gallerie#chambre-paliere"
+                                                href="/descriptifs/gallerie#chambre-palieres"
                                           >
                                                 <img
                                                       src="../assets/Etage/etage1_chambre2_1.jpg"
@@ -756,8 +787,19 @@
                               data-aos-duration="500"
                               data-aos-easing="ease-in"
                         >
-                              <button>
+                              <!--pc-->
+                              <button class="pc">
                                     <a href="/descriptifs/gallerie#jardin">
+                                          <img
+                                                src="../assets/Jardin/plan_du_jardin.jpg"
+                                                alt=""
+                                          />
+                                    </a>
+                              </button>
+
+                              <!--mobile-->
+                              <button class="mobile">
+                                    <a href="/descriptifs/gallerie#jardins">
                                           <img
                                                 src="../assets/Jardin/plan_du_jardin.jpg"
                                                 alt=""
@@ -779,7 +821,7 @@
 </template>
 
 <script>
-import { computed } from "vue";
+//import { computed } from "vue";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 
@@ -795,7 +837,7 @@ import "../../src/main.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
-import store from "@/store";
+//import store from "@/store";
 
 export default {
       components: {
@@ -804,10 +846,6 @@ export default {
       },
 
       setup() {
-            var chooseEnglishVersion = computed(() => {
-                  return store.state.englishVersion;
-            });
-
             const afficheCuisineItems = () => {
                   const cuisine = document.getElementById("rdc_cuisine");
 
@@ -1030,7 +1068,7 @@ export default {
                   afficheChambre2EtageItems,
                   supprimeChambre2EtageItemsStyle,
 
-                  chooseEnglishVersion,
+                  //chooseEnglishVersion,
             };
       },
 };
@@ -1041,12 +1079,12 @@ export default {
       height: 55vh;
       width: 100%;
 
-      @media screen and (max-width: 769px){
+      @media screen and (max-width: 769px) {
             margin-top: 1em;
             height: 350px;
       }
 
-      @media screen and (max-width: 550px){
+      @media screen and (max-width: 550px) {
             height: 300px;
       }
 }
@@ -1108,13 +1146,27 @@ export default {
       margin-bottom: calc(var(--size) * 0.13 * -1);
 }
 
+.pc {
+      @media screen and (max-width: 769px) {
+            display: none;
+      }
+}
+
+.mobile{
+      display: none;
+
+      @media screen and (max-width: 769px){
+            display: block;
+      }
+}
+
 .descriptif {
       width: 80%;
       margin: auto;
 
       @media screen and (max-width: 769px) {
             width: 80%;
-            margin-top: 1.5em ;
+            margin-top: 1.5em;
       }
 
       @media screen and (max-width: 550px) {
@@ -1161,20 +1213,35 @@ export default {
             }
       }
 
+      /*.pc{
+            display: block;
+
+            @media screen and (max-width: 769px){
+                  display: none;
+            }
+      }
+
+      .mobile{
+            display: none;
+
+            @media screen and (max-width: 769px){
+                  display: block;
+            }
+      }*/
+
       .plan {
             position: relative;
 
-            @media screen and (max-width: 769px){
+            @media screen and (max-width: 769px) {
                   width: 85%;
                   //margin: auto;
                   //border: 2px solid #08a045;
             }
 
-            @media screen and (max-width: 550px){
+            @media screen and (max-width: 550px) {
                   //display: none;
                   //width: 20%;
             }
-
 
             // Rez de chaussee
             &__rdc-chambre_1 {
@@ -1199,14 +1266,13 @@ export default {
                         opacity: 0.4;
                   }
 
-                  @media screen and (max-width: 550px){
+                  @media screen and (max-width: 550px) {
                         opacity: 0.1;
 
-                        &:hover{
+                        &:hover {
                               opacity: 0.2;
                         }
                   }
-
             }
 
             &__rdc-sdb {
@@ -1221,10 +1287,10 @@ export default {
                         opacity: 0.4;
                   }
 
-                  @media screen and (max-width: 550px){
+                  @media screen and (max-width: 550px) {
                         opacity: 0.1;
 
-                        &:hover{
+                        &:hover {
                               opacity: 0.2;
                         }
                   }
@@ -1238,10 +1304,10 @@ export default {
                         opacity: 0.4;
                   }
 
-                  @media screen and (max-width: 550px){
+                  @media screen and (max-width: 550px) {
                         opacity: 0.1;
 
-                        &:hover{
+                        &:hover {
                               opacity: 0.2;
                         }
                   }
@@ -1273,10 +1339,10 @@ export default {
                         opacity: 0.4;
                   }
 
-                  @media screen and (max-width: 550px){
+                  @media screen and (max-width: 550px) {
                         opacity: 0.1;
 
-                        &:hover{
+                        &:hover {
                               opacity: 0.2;
                         }
                   }
@@ -1294,10 +1360,10 @@ export default {
                         opacity: 0.4;
                   }
 
-                  @media screen and (max-width: 550px){
+                  @media screen and (max-width: 550px) {
                         opacity: 0.1;
 
-                        &:hover{
+                        &:hover {
                               opacity: 0.2;
                         }
                   }
@@ -1328,10 +1394,10 @@ export default {
                         opacity: 0.4;
                   }
 
-                  @media screen and (max-width: 550px){
+                  @media screen and (max-width: 550px) {
                         opacity: 0.1;
 
-                        &:hover{
+                        &:hover {
                               opacity: 0.2;
                         }
                   }
@@ -1360,10 +1426,10 @@ export default {
                         opacity: 0.4;
                   }
 
-                  @media screen and (max-width: 550px){
+                  @media screen and (max-width: 550px) {
                         opacity: 0.1;
 
-                        &:hover{
+                        &:hover {
                               opacity: 0.2;
                         }
                   }
@@ -1399,21 +1465,19 @@ export default {
                   }
             }
 
-            &--texte{
-                  @media screen and (max-width: 550px){
+            &--texte {
+                  @media screen and (max-width: 550px) {
                         display: none;
                         //background: red;
                         width: 70%;
                         //font-weight: 300;
                   }
-
-                  
             }
 
-            &--mobile{
+            &--mobile {
                   display: none;
 
-                  @media screen and (max-width: 550px){
+                  @media screen and (max-width: 550px) {
                         display: block;
                   }
             }
@@ -1423,9 +1487,7 @@ export default {
                         width: 100%;
                         font-family: Arial, Helvetica, sans-serif;
                   }
-
             }
       }
-
 }
 </style>
