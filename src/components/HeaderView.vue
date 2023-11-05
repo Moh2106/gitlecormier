@@ -383,6 +383,10 @@ export default {
                   @media screen and (max-width: 769px){
                         width: 8%;
                   }
+
+                  @media screen and (max-width: 550px){
+                        width: 10%;
+                  }
             }
 
             
