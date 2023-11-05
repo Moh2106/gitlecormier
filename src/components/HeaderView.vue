@@ -385,7 +385,7 @@ export default {
                   }
 
                   @media screen and (max-width: 550px){
-                        width: 10%;
+                        width: 12%;
                   }
             }
 
