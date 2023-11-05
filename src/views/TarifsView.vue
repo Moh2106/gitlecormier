@@ -775,8 +775,8 @@
                                                 <div
                                                       class="bg-white rounded-lg max-md:h-[35vh] max-md:mt-[1em]"
                                                       data-aos="fade-right"
-                                                data-aos-offset="300"
-                                                data-aos-easing="ease-in-sine"
+                                                      data-aos-offset="300"
+                                                      data-aos-easing="ease-in-sine"
                                                 >
                                                       <div
                                                             class="overflow-hidden bg-cover h-[25vh] max-md:h-[25vh] transition-all"
@@ -955,16 +955,32 @@
                         </div>
 
                         <!-- A votre arrivée -->
-                        <div
-                              class="tarif__arrive"
-                              id="tarif__arrive"
-                              data-aos="fade-right"
-                              data-aos-duration="500"
-                              data-aos-easing="ease-in-out"
-                        >
+                        <div class="tarif__arrive" id="tarif__arrive">
+                              <div
+                                    class="tarif__arrive--awesome"
+                                    v-on:click="afficheAVotreArriveMobile"
+                                    v-if="cacher_pigeon"
+                              >
+                                    <h2>
+                                          <img
+                                                src="../assets/Tarifs/pigeon_ramier.gif"
+                                                alt=""
+                                                class="emojiArrive"
+                                          />
+
+                                          <font-awesome-icon
+                                                icon="fa-solid fa-question"
+                                                class="icon"
+                                          />
+                                    </h2>
+                              </div>
+
                               <div
                                     class="tarif__arrive--text"
-                                    id="tarif__arrive--text"
+                                    v-if="arrive_mobile"
+                                    data-aos="fade-right"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in-out"
                               >
                                     <div>
                                           <p>
@@ -1086,6 +1102,8 @@ export default {
             var animeArrive = ref(false);
             var animeReservation = ref(false);
             const intervalId = ref(null);
+            var arrive_mobile = ref(false); // Pour afficher le texte de à votre arrivée lorsqu'on clique sur le pigeon
+            var cacher_pigeon = ref(true); // pour cacher le pigeon lorsqu'on clique sur lui en mobile
 
             onMounted(() => {
                   bird = document.getElementById("bird");
@@ -1419,6 +1437,11 @@ export default {
                   confortText.style.left = 0;
             };
 
+            const afficheAVotreArriveMobile = () => {
+                  arrive_mobile.value = true;
+                  cacher_pigeon.value = false;
+            };
+
             return {
                   tarifs_vacances,
                   tarifs_basse_saison,
@@ -1441,6 +1464,8 @@ export default {
                   vacMobileBird,
                   basseMobile,
                   basseMobileBird,
+                  arrive_mobile,
+                  cacher_pigeon,
 
                   afficheAVotreArrive,
                   affichePourVotreConfort,
@@ -1449,6 +1474,7 @@ export default {
                   handleVacanceTablette,
                   handleTarifVacMobile,
                   handleTarifBasseMobile,
+                  afficheAVotreArriveMobile,
             };
       },
 };
@@ -2024,11 +2050,29 @@ export default {
                   width: 100%;
                   height: 100%;
 
+                  @media screen and (max-width: 769px){
+                        position: relative;
+                        margin-top: 2em;
+                  }
+
+                  @media screen and (max-width: 550px) {
+                        margin-top: 1em;
+                        position: relative;
+                  }
+
                   .emojiArrive {
                         display: inline;
                         width: 8%;
                         margin-right: 0.3em;
                         margin-left: 0.5em;
+
+                        @media screen and (max-width: 769px){
+                              width: 15%;
+                        }
+
+                        @media screen and (max-width: 550px) {
+                              width: 40%;
+                        }
                   }
 
                   .icon {
@@ -2037,6 +2081,14 @@ export default {
                         transform: translateY(-3em);
                         font-size: 1.2em;
                         font-weight: 900;
+
+                        @media screen and (max-width: 769px){
+                              transform: translateY(-4em);
+                        }
+
+                        @media screen and (max-width: 550px) {
+                              transform: translateY(-5em);
+                        }
                   }
             }
 
@@ -2213,9 +2265,6 @@ export default {
             font-weight: 600;
             font-size: 1.2em;
 
-            @media screen and (max-width: 769px) {
-                  //font-size: 1em;
-            }
       }
 
       &__third_part {
@@ -2245,30 +2294,5 @@ export default {
                   }
             }
       }
-
-      /*@media screen and (max-width: 550px) {
-            padding-top: 3em;
-      }
-
-      @media screen and (max-width: 768px) {
-            padding-top: 5em;
-      }
-
-      @media screen and (max-width: 768px) {
-            width: 100%;
-
-            &__iframe {
-                  width: 90%;
-            }
-      }
-
-      @media screen and (max-width: 550px) {
-            width: 100%;
-            font-size: 0.8em;
-
-            &__iframe {
-                  width: 90%;
-            }
-      }*/
 }
 </style>

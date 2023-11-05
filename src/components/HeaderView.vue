@@ -5,7 +5,7 @@
                         <img
                               src="../assets/Liens/logo_gite_france.png"
                               alt="Logo de gite de France"
-                              class="w-[10%] mt-[0.3rem] ml-[0.3rem] flex__images"
+                              class="w-[10%] mt-[0.3rem] ml-[0.3rem]"
                         />
                         <h1 class="header__title">𝕲î𝖙𝖊 𝖑𝖊 𝖈𝖔𝖗𝖒𝖎𝖊𝖗</h1>
 
@@ -160,6 +160,7 @@
 
                               <template v-else> Disponibilités </template>
                         </router-link>
+
                   </nav>
             </div>
 
@@ -218,6 +219,22 @@ export default {
                   store.commit("setFrenchVersion");
             };
 
+            const updateWidthInner = () => {
+                  store.commit("setUpdateWebWidthInner")
+            }
+
+            /*var ma = computed(() => {
+                  return store.state.updateWidthInner;
+            });*/
+
+            /*var corr = () => {
+                  if(ma.value){
+                        updateWidthInner()
+                        window.innerWidth = 1440
+                        console.log(`La valeur de window.innerWidth ${window.innerWidth}`);
+                  }
+            }*/
+
             return {
                   chooseEnglishVersion,
                   afficheCroix,
@@ -229,6 +246,8 @@ export default {
                   changeIcon,
                   englishVersion,
                   frenchVersion,
+                  updateWidthInner,
+                  
             };
       },
 };
@@ -275,14 +294,6 @@ export default {
 
             @media screen and (max-width: 769px) {
                   width: 100%;
-                  //display: flex;
-                  //justify-content: center;
-                  //align-items: center;
-                  //background: #fff;
-                  //width: 50%;
-                  //margin: auto;
-                  //border: 5px solid red;
-                  //height: 10vh;
             }
 
             @media screen and (max-width: 550px) {
@@ -368,7 +379,13 @@ export default {
                   @media screen and (max-width: 1200px){
                         width: 12%;
                   }
+
+                  @media screen and (max-width: 769px){
+                        width: 8%;
+                  }
             }
+
+            
       }
 
       .afficheMenu {

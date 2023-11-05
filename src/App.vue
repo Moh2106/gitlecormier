@@ -8,11 +8,35 @@
 <script>
 import HeaderView from "./components/HeaderView.vue";
 import AOS from "aos";
+import store from "./store";
+import { computed } from "vue";
 
 export default {
       components: { HeaderView },
       setup() {
             AOS.init();
+
+            const updateWidthInner = () => {
+                  store.commit("setUpdateWebWidthInner")
+                  console.log(`La valeur de window.innerWidth ${window.innerWidth}`);
+            };
+
+
+            var ma = computed(() => {
+                  return store.state.updateWidthInner;
+            });
+
+            var corr = () => {
+                  if(ma.value){
+                        window.innerWidth = 1440
+                  }
+            }
+
+            return{
+                  ma,
+                  corr,
+                  updateWidthInner
+            }
       },
 };
 </script>
@@ -47,5 +71,10 @@ export default {
 
 html {
       scroll-behavior: smooth;
+}
+
+.web-version{
+      width: 1440px;
+      transform: scale(0.1em);
 }
 </style>
