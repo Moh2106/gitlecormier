@@ -292,7 +292,7 @@ export const alentoursSiteInformation = [
       {
             id: 4,
             titre: "CAUX-SEINE NORMANDIE TOURISME",
-            img: "/pictures/Alentours/caux_seine_normandie.jpg",
+            img: "/pictures/Alentours/caux-seine-normandie.jpg",
             site: "https://www.entreseineetmer.fr/",
             maps: "",
       },

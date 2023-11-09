@@ -518,7 +518,13 @@
                                     <!--Etage chambre 2 lits-->
                                     <!--pc-->
                                     <button
-                                          class="etage1_chambre1 pc"
+                                          v-on:mouseenter="
+                                                afficheChambre2EtageItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeChambre2EtageItemsStyle
+                                          "
+                                          class="etage1_chambre1 "
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#chambre2lits"
@@ -540,7 +546,13 @@
                                     <!--Chambre palière-->
                                     <!--pc-->
                                     <button
-                                          class="etage1_chambre2 pc"
+                                          v-on:mouseenter="
+                                                afficheChambre1EtageItems
+                                          "
+                                          v-on:mouseleave="
+                                                supprimeChambre1EtageItemsStyle
+                                          "
+                                          class="etage1_chambre2 "
                                     >
                                           <a
                                                 href="/descriptifs/gallerie#chambre-paliere"
@@ -1146,11 +1158,6 @@ export default {
       margin-bottom: calc(var(--size) * 0.13 * -1);
 }
 
-.pc {
-      @media screen and (max-width: 769px) {
-            display: none;
-      }
-}
 
 .mobile{
       display: none;
@@ -1213,7 +1220,7 @@ export default {
             }
       }
 
-      /*.pc{
+      .pc{
             display: block;
 
             @media screen and (max-width: 769px){
@@ -1227,7 +1234,7 @@ export default {
             @media screen and (max-width: 769px){
                   display: block;
             }
-      }*/
+      }
 
       .plan {
             position: relative;
@@ -1266,12 +1273,12 @@ export default {
                         opacity: 0.4;
                   }
 
+                  @media screen and (max-width: 769px){
+                        opacity: 0.1;
+                  }
+
                   @media screen and (max-width: 550px) {
                         opacity: 0.1;
-
-                        &:hover {
-                              opacity: 0.2;
-                        }
                   }
             }
 
@@ -1287,12 +1294,12 @@ export default {
                         opacity: 0.4;
                   }
 
+                  @media screen and (max-width: 769px){
+                        opacity: 0.1;
+                  }
+
                   @media screen and (max-width: 550px) {
                         opacity: 0.1;
-
-                        &:hover {
-                              opacity: 0.2;
-                        }
                   }
             }
 
@@ -1304,12 +1311,12 @@ export default {
                         opacity: 0.4;
                   }
 
+                  @media screen and (max-width: 769px){
+                        opacity: 0.1;
+                  }
+
                   @media screen and (max-width: 550px) {
                         opacity: 0.1;
-
-                        &:hover {
-                              opacity: 0.2;
-                        }
                   }
             }
 
@@ -1339,12 +1346,12 @@ export default {
                         opacity: 0.4;
                   }
 
+                  @media screen and (max-width: 769px){
+                        opacity: 0.1;
+                  }
+
                   @media screen and (max-width: 550px) {
                         opacity: 0.1;
-
-                        &:hover {
-                              opacity: 0.2;
-                        }
                   }
             }
 
@@ -1360,12 +1367,12 @@ export default {
                         opacity: 0.4;
                   }
 
+                  @media screen and (max-width: 769px){
+                        opacity: 0.1;
+                  }
+
                   @media screen and (max-width: 550px) {
                         opacity: 0.1;
-
-                        &:hover {
-                              opacity: 0.2;
-                        }
                   }
             }
 
@@ -1394,12 +1401,12 @@ export default {
                         opacity: 0.4;
                   }
 
+                  @media screen and (max-width: 769px){
+                        opacity: 0.1;
+                  }
+
                   @media screen and (max-width: 550px) {
                         opacity: 0.1;
-
-                        &:hover {
-                              opacity: 0.2;
-                        }
                   }
             }
 
@@ -1426,12 +1433,12 @@ export default {
                         opacity: 0.4;
                   }
 
+                  @media screen and (max-width: 769px){
+                        opacity: 0.1;
+                  }
+
                   @media screen and (max-width: 550px) {
                         opacity: 0.1;
-
-                        &:hover {
-                              opacity: 0.2;
-                        }
                   }
             }
       }
@@ -1444,14 +1451,14 @@ export default {
                   //display: flex;
                   width: 80%;
                   display: flex;
-                  flex-direction: column-reverse;
+                  flex-direction: column;
                   font-size: 1.1em;
                   //border: 4px solid red;
             }
 
             @media screen and (max-width: 550px) {
                   display: flex;
-                  flex-direction: column-reverse;
+                  flex-direction: column;
                   font-weight: 500;
                   width: 90%;
 
